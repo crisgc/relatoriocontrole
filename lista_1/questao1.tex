@@ -18,8 +18,58 @@ Analise os resultados.}
 
 \vspace{0.25cm}
 
-\noindent Sabe-se que a função de transferência de malha fechada pode ser obtida
-a partir da Eq. \ref{eq:G_MF}:
+\noindent Antes de realizar a análise da sensibilidade em malha fechada, deve-se
+verificar a estabilidade relativa do sistema em malha aberta quanto à variação
+do parâmetro $p$. 
+
+Sabe-se que essa estabilidade relativa pode ser observada a partir de duas
+medidas dos diagramas de Bode, denominadas {\it margem de ganho} e {\it margem
+de fase}. Para \cite{dorf}, a {\it margem de ganho} é definida como um acréscimo
+no ganho do sistema quando a fase é igual a -180\textdegree, resultando em um
+sistema marginalmente estável, enquanto que a {\it margem de fase} é definida
+como a quantidade de deslocamento de fase com magnitude unitária que resultará
+em um sistema marginalmente estável.
+
+Assim sendo, ao se observar a Fig. \ref{fig:bode_ma}, verifica-se que essas duas
+medidas variam conforme Tab. \ref{tab:margem_ganho_fase_ma} para o sistema em
+malha aberta.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/bode_ma}
+    \caption{Diagrama de bode para o sistema em malha aberta.}
+    \label{fig:diag_bode_sensib}
+\end{figure}
+
+\begin{table}
+\centering
+    \caption{Margem de ganho e margem de fase para o sistema em malha aberta.}
+    \label{tab:margem_ganho_fase_ma}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & Margem de Ganho (MG) & $\omega_\text{MG}$ & 
+Margem de Fase (MF) & $\omega_\text{MF}$\\
+\hline
+\hline
+1 & $\inf$ & $\inf$ & 18.9175 & 2.9179\\
+\hline
+2 & $\inf$ & $\inf$ & 36.6620 & 2.6869\\
+\hline
+3 & $\inf$ & $\inf$ & 51.8273 & 2.3585\\
+\hline
+4 & $\inf$ & $\inf$ & 63.3162 & 2.0104\\
+\hline
+5 & $\inf$ & $\inf$ & 71.1830 & 1.7038\\
+\hline
+\end{tabular}
+\end{table}
+
+Sabendo que o sistema será estável quando a margem de ganho e a margem de fase
+forem positivas, percebe-se que para os valores de $p = 1\text{,} 2\text{,}
+\ldots\text{,} 5$ o sistema é estável.
+
+Agora, a função de transferência de malha fechada pode ser obtida a partir da
+Eq. \ref{eq:G_MF}:
 
 \begin{equation}\label{eq:G_MF}
 G_{MF}(s) = \frac{G(s)}{1+G(s)H(s)}
@@ -39,16 +89,35 @@ G_{MF}(s) & = & \frac{G(s)}{1+G(s)H(s)}\nonumber\\
           & = & \frac{9}{s^2 + ps + 9}\label{eq:G_MF_q1}
 \end{eqnarray}
 
-A sensibilidade de um sistema é definida como sendo a razão entre a variação
-percentual da função de transferência do sistema e a variação percentual da
-função de transferência do processo (ou parâmetro). Ou seja, para uma dada
-função de transferência do sistema $T(s)$, temos:
+Observando a Fig. \ref{fig:bode_mf}, percebe-se que o sistema possui um
+comportamento oscilatório característico das curvas com picos no diagrama de
+Bode. Esse comportamento é comprovado a partir da resposta ao degrau unitário,
+conforme Fig. \ref{fig:resp_deg_mf}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/bode_mf}
+    \caption{Diagrama de bode para o sistema em malha fechada.}
+    \label{fig:diag_bode_sensib}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/resp_deg_mf}
+    \caption{Resposta ao degrau unitário do sistema em malha fechada.}
+    \label{fig:diag_bode_sensib}
+\end{figure}
+
+Para \cite{dorf}, a sensibilidade de um sistema é definida como sendo a razão
+entre a variação percentual da função de transferência do sistema e a variação
+percentual da função de transferência do processo (ou parâmetro). Ou seja, para
+uma dada função de transferência do sistema $T(s)$, tem-se:
 
 \begin{equation}
 S = \frac{\Delta T(s)/T(s)}{\Delta G(s)/G(s)}
 \end{equation}
 
-No limite, para pequenas variações incrementais, temos:
+No limite, para pequenas variações incrementais, tem-se:
 
 \begin{equation}
 S_G^T(s) = \frac{\partial T / T}{ \partial G / G} 
@@ -56,47 +125,42 @@ S_G^T(s) = \frac{\partial T / T}{ \partial G / G}
 \end{equation}
 
 Assim, para o parâmetro $p$ da função de transferência de malha fechada
-obtida pela Eq. \ref{eq:G_MF_q1}, temos:
+obtida pela Eq. \ref{eq:G_MF_q1}, tem-se:
 
 \begin{eqnarray}
 S_p^G(s) & = & \frac{\partial G}{\partial p} \cdotp \frac{p}{G}\nonumber \\
-         & = & \frac{0(s^2 + ps + 9) - 9(2s+p)}{(s^2 + ps + 9)^2} \cdotp
+         & = & \frac{0(s^2 + ps + 9) - 9(s)}{(s^2 + ps + 9)^2} \cdotp
                \frac{p}{\D\frac{9}{s^2 + ps + 9}}\nonumber\\
-         & = & - \frac{9(2s+p)}{s^2 + ps + 9} \cdotp \frac{p}{9}\nonumber\\
-         & = & - \frac{2ps + p^2}{s^2 + ps + 9}
+         & = & - \frac{9ps}{9(s^2 + ps + 9)}\nonumber\\
+         & = & - \frac{ps}{s^2 + ps + 9}\label{eq:sensib}
 \end{eqnarray}
 
-Substituindo $s$ por $j\omega$, temos:
-\begin{equation}
-S_p^G(j\omega) = - \frac{2pj\omega + p^2}{j\omega^2 + pj\omega + 9}
-\end{equation}
-
 Com $p = 1\text{,} 2\text{,} \ldots\text{,} 5$, obtém-se os diagramas de Bode
-ilustrados pela Fig. \ref{fig:diag_bode_q1}.
+ilustrados pela Fig. \ref{fig:diag_bode_sensib}.
 
 \begin{figure}[htb]
 \centering
-    \includegraphics[width=0.95\textwidth]{imgs/questao1/bode}
-    \caption{Diagrama de bode para $p = 1\text{,} 2\text{,} \ldots\text{,} 5$.}
-    \label{fig:diag_bode_q1}
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/bode_sensib}
+    \caption{Diagrama de bode para a Eq. \ref{eq:sensib}.}
+    \label{fig:diag_bode_sensib}
 \end{figure}
 
-Observa-se que para qualquer um dos valores de $p$, a função de transferência
-possuirá polos complexos conjugados. Considerando a forma geral dos polos
-complexos conjugados, dada pela Eq. \ref{eq:form_geral_polos_comp}, 
+Tendo em vista que os sistemas robustos são aqueles que apresentam baixa
+sensibilidade à variação dos parâmetros, pode-se dizer que, para os sistemas
+mais robustos, a sensibilidade ideal é tão baixa quanto possível.
 
-\begin{equation}\label{eq:form_geral_polos_comp}
-S_p^G(j\omega) = 1 + 
-                 \frac{2\zeta}{\omega_n}j\omega + 
-                 \left(\frac{j\omega}{\omega_n}\right)^2
-\end{equation}
+Analisando então as curvas de módulo da Fig. \ref{fig:diag_bode_sensib},
+verifica-se que todas as curvas apresentam uma baixa sensibilidade para
+frequências baixas e altas. Entretanto, observa-se uma equivalência quanto a
+sensibilidade para frequências em torno de 3 rad/s. Pode-se dizer ainda que o
+sistema apresenta maior robustez para $p = 1$, pois apresenta menores valores
+nas curvas de módulo do diagrama de Bode.
 
-\noindent percebe-se que, à medida que $\zeta$ decresce, as raízes em malha
-fechada se aproximam do eixo imaginário e a resposta se torna cada vez mais
-rápida (quanto ao tempo de subida) e oscilatória. Logo, aumentar o valor de $p$
-leva a um aumento do fator de amortecimento $\zeta$, o que torna o sistema mais
-lento.  Entretanto, essa ``lentidão'' é, de certa forma, compensada pelo ganho
-de estabilidade, pois o sistema passa a ser menos oscilatório.
+Fazendo uma análise comparativa, pode-se dizer que o sistema é estável para a
+faixa de variação do parâmetro $p$ e que apresenta maior robustez quando $p =
+1$. Contudo, observa-se que o sistema se torna bastante oscilatório para esse
+valor de $p$, o que era esperado, uma vez que a relação desempenho/robustez é
+inversa.
 
-Observa-se ainda que o aumento do valor de $p$ leva a um aumento do ganho constante
-do sistema, elevando a curva até aproximadamente 10dB para $p = 5$.
+O {\it script} do Matlab\textupersript{\textregistered} desenvolvido para a
+resolução dessa questão pode ser encontrado no Apêndice \ref{ap:cod_q1}.
