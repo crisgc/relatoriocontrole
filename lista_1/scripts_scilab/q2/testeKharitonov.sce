@@ -7,9 +7,11 @@
 //        Cristiano Gurgel de Castro
 //        Diogo Leite Reboucas
 //        Thiago Medeiros Barros
+clear;
+clc;
 Zc = 0.3;
 Pc = 0.0022;
-Kc = 1;
+Kc = 20;
 
 // Limite para a0
 alpha0 = Zc;
@@ -30,4 +32,14 @@ q3 = poly([beta0 alpha1 alpha2 beta3], "s", "coeff");
 q4 = poly([beta0 beta1 alpha2 alpha3], "s", "coeff");
 
 result = [roots(q1) roots(q2) roots(q3) roots(q4)]
-prettyprint(result)
+str = prettyprint(round(result*1000)/1000);
+[fd,err]=mopen("scripts_scilab/q2/temp.tex" , 'w')
+mfprintf(fd,prettyprint(q1));
+mfprintf(fd,"\n");
+mfprintf(fd,prettyprint(q2));
+mfprintf(fd,"\n");
+mfprintf(fd,prettyprint(q3));
+mfprintf(fd,"\n");
+mfprintf(fd,prettyprint(q4));
+mfprintf(fd,"\n");
+mfprintf(fd,str);

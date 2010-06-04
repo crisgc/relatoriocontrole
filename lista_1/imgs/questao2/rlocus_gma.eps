@@ -1,0 +1,6983 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: (Apache XML Graphics Commons: EPS Generator for Java2D)
+%%CreationDate: 2010-06-04T15:34:35
+%%Pages: (atend)
+%%BoundingBox: 0 0 458 345
+%%LanguageLevel: 3
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset (Apache XML Graphics Std ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2001-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (Basic set of procedures used by the XML Graphics project \(Batik and FOP\))
+/bd{bind def}bind def
+/ld{load def}bd
+/M/moveto ld
+/RM/rmoveto ld
+/t/show ld
+/A/ashow ld
+/cp/closepath ld
+/re {4 2 roll M
+1 index 0 rlineto
+0 exch rlineto
+neg 0 rlineto
+cp } bd
+/_ctm matrix def
+/_tm matrix def
+/BT { _ctm currentmatrix pop matrix _tm copy pop 0 0 moveto } bd
+/ET { _ctm setmatrix } bd
+/iTm { _ctm setmatrix _tm concat } bd
+/Tm { _tm astore pop iTm 0 0 moveto } bd
+/ux 0.0 def
+/uy 0.0 def
+/F {
+  /Tp exch def
+  /Tf exch def
+  Tf findfont Tp scalefont setfont
+  /cf Tf def  /cs Tp def  /cw ( ) stringwidth pop def
+} bd
+/ULS {currentpoint /uy exch def /ux exch def} bd
+/ULE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add moveto  Tcx uy To add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/OLE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs add moveto Tcx uy To add cs add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/SOE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs 10 mul 26 idiv add moveto Tcx uy To add cs 10 mul 26 idiv add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/QUADTO {
+/Y22 exch store
+/X22 exch store
+/Y21 exch store
+/X21 exch store
+currentpoint
+/Y21 load 2 mul add 3 div exch
+/X21 load 2 mul add 3 div exch
+/X21 load 2 mul /X22 load add 3 div
+/Y21 load 2 mul /Y22 load add 3 div
+/X22 load /Y22 load curveto
+} bd
+/SSPD {
+dup length /d exch dict def
+{
+/v exch def
+/k exch def
+currentpagedevice k known {
+/cpdv currentpagedevice k get def
+v cpdv ne {
+/upd false def
+/nullv v type /nulltype eq def
+/nullcpdv cpdv type /nulltype eq def
+nullv nullcpdv or
+{
+/upd true def
+} {
+/sametype v type cpdv type eq def
+sametype {
+v type /arraytype eq {
+/vlen v length def
+/cpdvlen cpdv length def
+vlen cpdvlen eq {
+0 1 vlen 1 sub {
+/i exch def
+/obj v i get def
+/cpdobj cpdv i get def
+obj cpdobj ne {
+/upd true def
+exit
+} if
+} for
+} {
+/upd true def
+} ifelse
+} {
+v type /dicttype eq {
+v {
+/dv exch def
+/dk exch def
+/cpddv cpdv dk get def
+dv cpddv ne {
+/upd true def
+exit
+} if
+} forall
+} {
+/upd true def
+} ifelse
+} ifelse
+} if
+} ifelse
+upd true eq {
+d k v put
+} if
+} if
+} if
+} forall
+d length 0 gt {
+d setpagedevice
+} if
+} bd
+%%EndResource
+%%BeginResource: procset (Apache XML Graphics EPS ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2002-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (EPS procedures used by the Apache XML Graphics project \(Batik and FOP\))
+/BeginEPSF { %def
+/b4_Inc_state save def         % Save state for cleanup
+/dict_count countdictstack def % Count objects on dict stack
+/op_count count 1 sub def      % Count objects on operand stack
+userdict begin                 % Push userdict on dict stack
+/showpage { } def              % Redefine showpage, { } = null proc
+0 setgray 0 setlinecap         % Prepare graphics state
+1 setlinewidth 0 setlinejoin
+10 setmiterlimit [ ] 0 setdash newpath
+/languagelevel where           % If level not equal to 1 then
+{pop languagelevel             % set strokeadjust and
+1 ne                           % overprint to their defaults.
+{false setstrokeadjust false setoverprint
+} if
+} if
+} bd
+/EndEPSF { %def
+count op_count sub {pop} repeat            % Clean up stacks
+countdictstack dict_count sub {end} repeat
+b4_Inc_state restore
+} bd
+%%EndResource
+%FOPBeginFontDict
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier-BoldOblique
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Times-BoldItalic
+%%IncludeResource: font Courier
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Symbol
+%%IncludeResource: font ZapfDingbats
+%%IncludeResource: font Helvetica
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Helvetica-Oblique
+%FOPEndFontDict
+%FOPBeginFontReencode
+%%BeginResource: encoding WinAnsiEncoding
+/WinAnsiEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma
+/hyphen /period /slash /zero /one
+/two /three /four /five /six
+/seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at
+/A /B /C /D /E
+/F /G /H /I /J
+/K /L /M /N /O
+/P /Q /R /S /T
+/U /V /W /X /Y
+/Z /bracketleft /backslash /bracketright /asciicircum
+/underscore /quoteleft /a /b /c
+/d /e /f /g /h
+/i /j /k /l /m
+/n /o /p /q /r
+/s /t /u /v /w
+/x /y /z /braceleft /bar
+/braceright /asciitilde /bullet /Euro /bullet
+/quotesinglbase /florin /quotedblbase /ellipsis /dagger
+/daggerdbl /circumflex /perthousand /Scaron /guilsinglleft
+/OE /bullet /Zcaron /bullet /bullet
+/quoteleft /quoteright /quotedblleft /quotedblright /bullet
+/endash /emdash /asciitilde /trademark /scaron
+/guilsinglright /oe /bullet /zcaron /Ydieresis
+/space /exclamdown /cent /sterling /currency
+/yen /brokenbar /section /dieresis /copyright
+/ordfeminine /guillemotleft /logicalnot /sfthyphen /registered
+/macron /degree /plusminus /twosuperior /threesuperior
+/acute /mu /paragraph /middot /cedilla
+/onesuperior /ordmasculine /guillemotright /onequarter /onehalf
+/threequarters /questiondown /Agrave /Aacute /Acircumflex
+/Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave
+/Iacute /Icircumflex /Idieresis /Eth /Ntilde
+/Ograve /Oacute /Ocircumflex /Otilde /Odieresis
+/multiply /Oslash /Ugrave /Uacute /Ucircumflex
+/Udieresis /Yacute /Thorn /germandbls /agrave
+/aacute /acircumflex /atilde /adieresis /aring
+/ae /ccedilla /egrave /eacute /ecircumflex
+/edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex
+/otilde /odieresis /divide /oslash /ugrave
+/uacute /ucircumflex /udieresis /yacute /thorn
+/ydieresis
+] def
+%%EndResource
+/Courier-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Bold exch definefont pop
+/Courier-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-BoldOblique exch definefont pop
+/Courier-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Oblique exch definefont pop
+/Times-BoldItalic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-BoldItalic exch definefont pop
+/Courier findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier exch definefont pop
+/Times-Italic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Italic exch definefont pop
+/Times-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Bold exch definefont pop
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica exch definefont pop
+/Times-Roman findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Roman exch definefont pop
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-BoldOblique exch definefont pop
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Bold exch definefont pop
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Oblique exch definefont pop
+%FOPEndFontReencode
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 0 0 458 345
+%%BeginPageSetup
+[0.75082 0 0 -0.75 0 345] concat
+%%EndPageSetup
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+431 230 M
+435 226 lineto
+435 234 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+435 226 M
+439 230 lineto
+435 234 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+431 230 M
+435 226 lineto
+439 230 lineto
+435 234 lineto
+431 230 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+446 226 M
+454 234 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+446 234 M
+454 226 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+393 226 M
+401 234 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+393 234 M
+401 226 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+411.75 230 M
+411.75 230 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 1 0 setrgbcolor
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+449.875 230 M
+449.603 230 lineto
+449.337 230 lineto
+449.078 230 lineto
+448.826 230 lineto
+448.58 230 lineto
+448.341 230 lineto
+448.108 230 lineto
+447.881 230 lineto
+447.659 230 lineto
+447.572 230 lineto
+447.486 230 lineto
+447.401 230 lineto
+447.317 230 lineto
+447.234 230 lineto
+447.151 230 lineto
+447.069 230 lineto
+446.988 230 lineto
+446.908 230 lineto
+446.829 230 lineto
+446.751 230 lineto
+446.673 230 lineto
+446.596 230 lineto
+446.52 230 lineto
+446.445 230 lineto
+446.37 230 lineto
+446.297 230 lineto
+446.224 230 lineto
+446.151 230 lineto
+446.08 230 lineto
+446.009 230 lineto
+445.939 230 lineto
+445.87 230 lineto
+445.801 230 lineto
+445.733 230 lineto
+445.666 230 lineto
+445.599 230 lineto
+445.533 230 lineto
+445.468 230 lineto
+445.403 230 lineto
+445.339 230 lineto
+445.276 230 lineto
+445.213 230 lineto
+445.151 230 lineto
+445.089 230 lineto
+445.028 230 lineto
+444.968 230 lineto
+444.908 230 lineto
+444.849 230 lineto
+444.79 230 lineto
+444.732 230 lineto
+444.675 230 lineto
+444.618 230 lineto
+444.561 230 lineto
+444.506 230 lineto
+444.45 230 lineto
+444.395 230 lineto
+444.341 230 lineto
+444.287 230 lineto
+444.234 230 lineto
+444.182 230 lineto
+444.129 230 lineto
+444.078 230 lineto
+444.026 230 lineto
+443.976 230 lineto
+443.925 230 lineto
+443.875 230 lineto
+443.826 230 lineto
+443.777 230 lineto
+443.729 230 lineto
+443.681 230 lineto
+443.633 230 lineto
+443.586 230 lineto
+443.539 230 lineto
+443.493 230 lineto
+443.447 230 lineto
+443.402 230 lineto
+443.357 230 lineto
+443.312 230 lineto
+443.268 230 lineto
+443.224 230 lineto
+443.181 230 lineto
+443.138 230 lineto
+443.095 230 lineto
+443.053 230 lineto
+443.011 230 lineto
+442.969 230 lineto
+442.928 230 lineto
+442.888 230 lineto
+442.847 230 lineto
+442.807 230 lineto
+442.767 230 lineto
+442.728 230 lineto
+442.689 230 lineto
+442.65 230 lineto
+442.612 230 lineto
+442.574 230 lineto
+442.536 230 lineto
+442.499 230 lineto
+442.462 230 lineto
+442.425 230 lineto
+442.388 230 lineto
+442.352 230 lineto
+442.316 230 lineto
+442.281 230 lineto
+442.246 230 lineto
+442.211 230 lineto
+442.176 230 lineto
+442.142 230 lineto
+442.107 230 lineto
+442.074 230 lineto
+442.04 230 lineto
+442.007 230 lineto
+441.974 230 lineto
+441.941 230 lineto
+441.909 230 lineto
+441.877 230 lineto
+441.845 230 lineto
+441.813 230 lineto
+441.781 230 lineto
+441.75 230 lineto
+441.719 230 lineto
+441.689 230 lineto
+441.658 230 lineto
+441.628 230 lineto
+441.598 230 lineto
+441.568 230 lineto
+441.539 230 lineto
+441.51 230 lineto
+441.481 230 lineto
+441.452 230 lineto
+441.423 230 lineto
+441.395 230 lineto
+441.367 230 lineto
+441.339 230 lineto
+441.311 230 lineto
+441.284 230 lineto
+441.256 230 lineto
+441.229 230 lineto
+441.203 230 lineto
+441.176 230 lineto
+441.149 230 lineto
+441.123 230 lineto
+441.097 230 lineto
+441.071 230 lineto
+441.046 230 lineto
+441.02 230 lineto
+440.995 230 lineto
+440.97 230 lineto
+440.945 230 lineto
+440.92 230 lineto
+440.895 230 lineto
+440.871 230 lineto
+440.847 230 lineto
+440.823 230 lineto
+440.799 230 lineto
+440.775 230 lineto
+440.752 230 lineto
+440.728 230 lineto
+440.705 230 lineto
+440.682 230 lineto
+440.659 230 lineto
+440.636 230 lineto
+440.614 230 lineto
+440.592 230 lineto
+440.569 230 lineto
+440.547 230 lineto
+440.525 230 lineto
+440.504 230 lineto
+440.482 230 lineto
+440.461 230 lineto
+440.439 230 lineto
+440.418 230 lineto
+440.397 230 lineto
+440.376 230 lineto
+440.355 230 lineto
+440.335 230 lineto
+440.314 230 lineto
+440.294 230 lineto
+440.274 230 lineto
+440.254 230 lineto
+440.234 230 lineto
+440.214 230 lineto
+440.195 230 lineto
+440.175 230 lineto
+440.156 230 lineto
+440.136 230 lineto
+440.117 230 lineto
+440.098 230 lineto
+440.079 230 lineto
+440.061 230 lineto
+440.042 230 lineto
+440.023 230 lineto
+440.005 230 lineto
+439.987 230 lineto
+439.969 230 lineto
+439.951 230 lineto
+439.933 230 lineto
+439.915 230 lineto
+439.897 230 lineto
+439.88 230 lineto
+439.862 230 lineto
+439.845 230 lineto
+439.828 230 lineto
+439.81 230 lineto
+439.793 230 lineto
+439.776 230 lineto
+439.76 230 lineto
+439.743 230 lineto
+439.726 230 lineto
+439.71 230 lineto
+439.693 230 lineto
+439.677 230 lineto
+439.661 230 lineto
+439.645 230 lineto
+439.629 230 lineto
+439.613 230 lineto
+439.597 230 lineto
+439.581 230 lineto
+439.566 230 lineto
+439.55 230 lineto
+439.535 230 lineto
+439.519 230 lineto
+439.504 230 lineto
+439.489 230 lineto
+439.474 230 lineto
+439.459 230 lineto
+439.444 230 lineto
+439.429 230 lineto
+439.415 230 lineto
+439.4 230 lineto
+439.385 230 lineto
+439.371 230 lineto
+439.357 230 lineto
+439.342 230 lineto
+439.328 230 lineto
+439.314 230 lineto
+439.3 230 lineto
+439.286 230 lineto
+439.272 230 lineto
+439.258 230 lineto
+439.245 230 lineto
+439.231 230 lineto
+439.217 230 lineto
+439.204 230 lineto
+439.19 230 lineto
+439.177 230 lineto
+439.164 230 lineto
+439.151 230 lineto
+439.138 230 lineto
+439.125 230 lineto
+439.112 230 lineto
+439.099 230 lineto
+439.086 230 lineto
+439.073 230 lineto
+439.06 230 lineto
+439.048 230 lineto
+439.035 230 lineto
+439.023 230 lineto
+439.01 230 lineto
+438.998 230 lineto
+438.986 230 lineto
+438.974 230 lineto
+438.961 230 lineto
+438.949 230 lineto
+438.937 230 lineto
+438.925 230 lineto
+438.913 230 lineto
+438.902 230 lineto
+438.89 230 lineto
+438.878 230 lineto
+438.867 230 lineto
+438.855 230 lineto
+438.844 230 lineto
+438.832 230 lineto
+438.821 230 lineto
+438.809 230 lineto
+438.798 230 lineto
+438.787 230 lineto
+438.776 230 lineto
+438.765 230 lineto
+438.754 230 lineto
+438.743 230 lineto
+438.732 230 lineto
+438.721 230 lineto
+438.71 230 lineto
+438.699 230 lineto
+438.689 230 lineto
+438.678 230 lineto
+438.667 230 lineto
+438.657 230 lineto
+438.646 230 lineto
+438.636 230 lineto
+438.625 230 lineto
+438.615 230 lineto
+438.605 230 lineto
+438.595 230 lineto
+438.584 230 lineto
+438.574 230 lineto
+438.564 230 lineto
+438.554 230 lineto
+438.544 230 lineto
+438.534 230 lineto
+438.524 230 lineto
+438.515 230 lineto
+438.505 230 lineto
+438.495 230 lineto
+438.485 230 lineto
+438.476 230 lineto
+438.466 230 lineto
+438.457 230 lineto
+438.447 230 lineto
+438.438 230 lineto
+438.428 230 lineto
+438.419 230 lineto
+438.41 230 lineto
+438.4 230 lineto
+438.391 230 lineto
+438.382 230 lineto
+438.373 230 lineto
+438.364 230 lineto
+438.355 230 lineto
+438.346 230 lineto
+438.337 230 lineto
+438.328 230 lineto
+438.319 230 lineto
+438.31 230 lineto
+438.301 230 lineto
+438.292 230 lineto
+438.284 230 lineto
+438.275 230 lineto
+438.266 230 lineto
+438.258 230 lineto
+438.249 230 lineto
+438.241 230 lineto
+438.232 230 lineto
+438.224 230 lineto
+438.215 230 lineto
+438.207 230 lineto
+438.199 230 lineto
+438.19 230 lineto
+438.182 230 lineto
+438.174 230 lineto
+438.166 230 lineto
+438.158 230 lineto
+438.15 230 lineto
+438.142 230 lineto
+438.133 230 lineto
+438.125 230 lineto
+438.118 230 lineto
+438.11 230 lineto
+438.102 230 lineto
+438.094 230 lineto
+438.086 230 lineto
+438.078 230 lineto
+438.071 230 lineto
+438.063 230 lineto
+438.055 230 lineto
+438.047 230 lineto
+438.04 230 lineto
+438.032 230 lineto
+438.025 230 lineto
+438.017 230 lineto
+438.01 230 lineto
+438.002 230 lineto
+437.995 230 lineto
+437.987 230 lineto
+437.98 230 lineto
+437.973 230 lineto
+437.965 230 lineto
+437.958 230 lineto
+437.951 230 lineto
+437.944 230 lineto
+437.937 230 lineto
+437.93 230 lineto
+437.922 230 lineto
+437.915 230 lineto
+437.908 230 lineto
+437.901 230 lineto
+437.894 230 lineto
+437.887 230 lineto
+437.88 230 lineto
+437.873 230 lineto
+437.867 230 lineto
+437.86 230 lineto
+437.853 230 lineto
+437.846 230 lineto
+437.839 230 lineto
+437.833 230 lineto
+437.826 230 lineto
+437.819 230 lineto
+437.813 230 lineto
+437.806 230 lineto
+437.799 230 lineto
+437.793 230 lineto
+437.786 230 lineto
+437.78 230 lineto
+437.773 230 lineto
+437.767 230 lineto
+437.76 230 lineto
+437.754 230 lineto
+437.747 230 lineto
+437.741 230 lineto
+437.735 230 lineto
+437.729 230 lineto
+437.722 230 lineto
+437.716 230 lineto
+437.71 230 lineto
+437.704 230 lineto
+437.697 230 lineto
+437.691 230 lineto
+437.685 230 lineto
+437.679 230 lineto
+437.673 230 lineto
+437.667 230 lineto
+437.661 230 lineto
+437.655 230 lineto
+437.649 230 lineto
+437.643 230 lineto
+437.637 230 lineto
+437.631 230 lineto
+437.625 230 lineto
+437.619 230 lineto
+437.613 230 lineto
+437.607 230 lineto
+437.602 230 lineto
+437.596 230 lineto
+437.59 230 lineto
+437.584 230 lineto
+437.579 230 lineto
+437.573 230 lineto
+437.567 230 lineto
+437.561 230 lineto
+437.556 230 lineto
+437.55 230 lineto
+437.545 230 lineto
+437.539 230 lineto
+437.534 230 lineto
+437.528 230 lineto
+437.522 230 lineto
+437.517 230 lineto
+437.512 230 lineto
+437.506 230 lineto
+437.501 230 lineto
+437.495 230 lineto
+437.49 230 lineto
+437.484 230 lineto
+437.479 230 lineto
+437.474 230 lineto
+437.468 230 lineto
+437.463 230 lineto
+437.458 230 lineto
+437.453 230 lineto
+437.447 230 lineto
+437.442 230 lineto
+437.437 230 lineto
+437.432 230 lineto
+437.427 230 lineto
+437.422 230 lineto
+437.416 230 lineto
+437.411 230 lineto
+437.406 230 lineto
+437.401 230 lineto
+437.396 230 lineto
+437.391 230 lineto
+437.386 230 lineto
+437.381 230 lineto
+437.376 230 lineto
+437.371 230 lineto
+437.366 230 lineto
+437.361 230 lineto
+437.356 230 lineto
+437.352 230 lineto
+437.347 230 lineto
+437.342 230 lineto
+437.337 230 lineto
+437.332 230 lineto
+437.327 230 lineto
+437.323 230 lineto
+437.318 230 lineto
+437.313 230 lineto
+437.308 230 lineto
+437.304 230 lineto
+437.299 230 lineto
+437.294 230 lineto
+437.289 230 lineto
+437.285 230 lineto
+437.28 230 lineto
+437.276 230 lineto
+437.271 230 lineto
+437.266 230 lineto
+437.262 230 lineto
+437.257 230 lineto
+437.253 230 lineto
+437.248 230 lineto
+437.244 230 lineto
+437.239 230 lineto
+437.235 230 lineto
+437.23 230 lineto
+437.226 230 lineto
+437.221 230 lineto
+437.217 230 lineto
+437.212 230 lineto
+437.208 230 lineto
+437.204 230 lineto
+437.199 230 lineto
+437.195 230 lineto
+437.191 230 lineto
+437.186 230 lineto
+437.182 230 lineto
+437.178 230 lineto
+437.173 230 lineto
+437.169 230 lineto
+437.165 230 lineto
+437.161 230 lineto
+437.157 230 lineto
+437.152 230 lineto
+437.148 230 lineto
+437.144 230 lineto
+437.14 230 lineto
+437.136 230 lineto
+437.131 230 lineto
+437.127 230 lineto
+437.123 230 lineto
+437.119 230 lineto
+437.115 230 lineto
+437.111 230 lineto
+437.107 230 lineto
+437.103 230 lineto
+437.099 230 lineto
+437.095 230 lineto
+437.091 230 lineto
+437.087 230 lineto
+437.083 230 lineto
+437.079 230 lineto
+437.075 230 lineto
+437.071 230 lineto
+437.067 230 lineto
+437.063 230 lineto
+437.059 230 lineto
+437.055 230 lineto
+437.051 230 lineto
+437.048 230 lineto
+437.044 230 lineto
+437.04 230 lineto
+437.036 230 lineto
+437.032 230 lineto
+437.028 230 lineto
+437.025 230 lineto
+437.021 230 lineto
+437.017 230 lineto
+437.013 230 lineto
+437.01 230 lineto
+437.006 230 lineto
+437.002 230 lineto
+436.998 230 lineto
+436.995 230 lineto
+436.991 230 lineto
+436.987 230 lineto
+436.984 230 lineto
+436.98 230 lineto
+436.976 230 lineto
+436.973 230 lineto
+436.969 230 lineto
+436.965 230 lineto
+436.962 230 lineto
+436.958 230 lineto
+436.955 230 lineto
+436.951 230 lineto
+436.948 230 lineto
+436.944 230 lineto
+436.94 230 lineto
+436.937 230 lineto
+436.933 230 lineto
+436.93 230 lineto
+436.926 230 lineto
+436.923 230 lineto
+436.919 230 lineto
+436.916 230 lineto
+436.913 230 lineto
+436.909 230 lineto
+436.906 230 lineto
+436.902 230 lineto
+436.899 230 lineto
+436.895 230 lineto
+436.892 230 lineto
+436.889 230 lineto
+436.885 230 lineto
+436.882 230 lineto
+436.879 230 lineto
+436.875 230 lineto
+436.872 230 lineto
+436.869 230 lineto
+436.865 230 lineto
+436.862 230 lineto
+436.859 230 lineto
+436.855 230 lineto
+436.852 230 lineto
+436.849 230 lineto
+436.846 230 lineto
+436.842 230 lineto
+436.839 230 lineto
+436.836 230 lineto
+436.833 230 lineto
+436.829 230 lineto
+436.826 230 lineto
+436.823 230 lineto
+436.82 230 lineto
+436.817 230 lineto
+436.814 230 lineto
+436.81 230 lineto
+436.807 230 lineto
+436.804 230 lineto
+436.801 230 lineto
+436.798 230 lineto
+436.795 230 lineto
+436.792 230 lineto
+436.789 230 lineto
+436.786 230 lineto
+436.782 230 lineto
+436.779 230 lineto
+436.776 230 lineto
+436.773 230 lineto
+436.77 230 lineto
+436.767 230 lineto
+436.764 230 lineto
+436.761 230 lineto
+436.758 230 lineto
+436.755 230 lineto
+436.752 230 lineto
+436.749 230 lineto
+436.746 230 lineto
+436.743 230 lineto
+436.74 230 lineto
+436.737 230 lineto
+436.734 230 lineto
+436.732 230 lineto
+436.729 230 lineto
+436.726 230 lineto
+436.723 230 lineto
+436.72 230 lineto
+436.717 230 lineto
+436.714 230 lineto
+436.711 230 lineto
+436.708 230 lineto
+436.705 230 lineto
+436.703 230 lineto
+436.7 230 lineto
+436.697 230 lineto
+436.694 230 lineto
+436.691 230 lineto
+436.688 230 lineto
+436.686 230 lineto
+436.683 230 lineto
+436.68 230 lineto
+436.677 230 lineto
+436.675 230 lineto
+436.672 230 lineto
+436.669 230 lineto
+436.666 230 lineto
+436.664 230 lineto
+436.661 230 lineto
+436.658 230 lineto
+436.655 230 lineto
+436.653 230 lineto
+436.65 230 lineto
+436.647 230 lineto
+436.644 230 lineto
+436.642 230 lineto
+436.639 230 lineto
+436.636 230 lineto
+436.634 230 lineto
+436.631 230 lineto
+436.628 230 lineto
+436.626 230 lineto
+436.623 230 lineto
+436.621 230 lineto
+436.618 230 lineto
+436.615 230 lineto
+436.613 230 lineto
+436.61 230 lineto
+436.607 230 lineto
+436.605 230 lineto
+436.602 230 lineto
+436.6 230 lineto
+436.597 230 lineto
+436.595 230 lineto
+436.592 230 lineto
+436.589 230 lineto
+436.587 230 lineto
+436.584 230 lineto
+436.582 230 lineto
+436.579 230 lineto
+436.577 230 lineto
+436.574 230 lineto
+436.572 230 lineto
+436.569 230 lineto
+436.567 230 lineto
+436.564 230 lineto
+436.562 230 lineto
+436.559 230 lineto
+436.557 230 lineto
+436.554 230 lineto
+436.552 230 lineto
+436.549 230 lineto
+436.547 230 lineto
+436.545 230 lineto
+436.542 230 lineto
+436.54 230 lineto
+436.537 230 lineto
+436.535 230 lineto
+436.533 230 lineto
+436.53 230 lineto
+436.528 230 lineto
+436.525 230 lineto
+436.523 230 lineto
+436.521 230 lineto
+436.518 230 lineto
+436.516 230 lineto
+436.513 230 lineto
+436.511 230 lineto
+436.509 230 lineto
+436.506 230 lineto
+436.504 230 lineto
+436.502 230 lineto
+436.499 230 lineto
+436.497 230 lineto
+436.495 230 lineto
+436.493 230 lineto
+436.49 230 lineto
+436.488 230 lineto
+436.486 230 lineto
+436.483 230 lineto
+436.481 230 lineto
+436.479 230 lineto
+436.477 230 lineto
+436.474 230 lineto
+436.472 230 lineto
+436.47 230 lineto
+436.468 230 lineto
+436.465 230 lineto
+436.463 230 lineto
+436.461 230 lineto
+436.459 230 lineto
+436.456 230 lineto
+436.454 230 lineto
+436.452 230 lineto
+436.45 230 lineto
+436.448 230 lineto
+436.445 230 lineto
+436.443 230 lineto
+436.441 230 lineto
+436.439 230 lineto
+436.437 230 lineto
+436.434 230 lineto
+436.432 230 lineto
+436.43 230 lineto
+436.428 230 lineto
+436.426 230 lineto
+436.424 230 lineto
+436.422 230 lineto
+436.419 230 lineto
+436.417 230 lineto
+436.415 230 lineto
+436.413 230 lineto
+436.411 230 lineto
+436.409 230 lineto
+436.407 230 lineto
+436.405 230 lineto
+436.403 230 lineto
+436.4 230 lineto
+436.398 230 lineto
+436.396 230 lineto
+436.394 230 lineto
+436.392 230 lineto
+436.39 230 lineto
+436.388 230 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 1 1 setrgbcolor
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+396.5 230 M
+395.806 230 lineto
+395.106 230 lineto
+394.398 230 lineto
+393.684 230 lineto
+392.963 230 lineto
+392.236 230 lineto
+391.503 230 lineto
+390.764 230 lineto
+390.019 230 lineto
+389.72 230 lineto
+389.419 230 lineto
+389.118 230 lineto
+388.816 230 lineto
+388.513 230 lineto
+388.209 230 lineto
+387.904 230 lineto
+387.599 230 lineto
+387.292 230 lineto
+386.985 230 lineto
+386.677 230 lineto
+386.368 230 lineto
+386.058 230 lineto
+385.748 230 lineto
+385.436 230 lineto
+385.124 230 lineto
+384.812 230 lineto
+384.498 230 lineto
+384.184 230 lineto
+383.869 230 lineto
+383.553 230 lineto
+383.237 230 lineto
+382.92 230 lineto
+382.602 230 lineto
+382.284 230 lineto
+381.964 230 lineto
+381.645 230 lineto
+381.324 230 lineto
+381.003 230 lineto
+380.681 230 lineto
+380.359 230 lineto
+380.035 230 lineto
+379.712 230 lineto
+379.387 230 lineto
+379.062 230 lineto
+378.737 230 lineto
+378.411 230 lineto
+378.084 230 lineto
+377.757 230 lineto
+377.429 230 lineto
+377.1 230 lineto
+376.771 230 lineto
+376.442 230 lineto
+376.112 230 lineto
+375.781 230 lineto
+375.45 230 lineto
+375.118 230 lineto
+374.786 230 lineto
+374.453 230 lineto
+374.12 230 lineto
+373.786 230 lineto
+373.452 230 lineto
+373.117 230 lineto
+372.782 230 lineto
+372.446 230 lineto
+372.11 230 lineto
+371.773 230 lineto
+371.436 230 lineto
+371.098 230 lineto
+370.76 230 lineto
+370.422 230 lineto
+370.083 230 lineto
+369.744 230 lineto
+369.404 230 lineto
+369.064 230 lineto
+368.723 230 lineto
+368.382 230 lineto
+368.04 230 lineto
+367.698 230 lineto
+367.356 230 lineto
+367.013 230 lineto
+366.67 230 lineto
+366.327 230 lineto
+365.983 230 lineto
+365.639 230 lineto
+365.294 230 lineto
+364.949 230 lineto
+364.604 230 lineto
+364.258 230 lineto
+363.912 230 lineto
+363.566 230 lineto
+363.219 230 lineto
+362.872 230 lineto
+362.524 230 lineto
+362.177 230 lineto
+361.828 230 lineto
+361.48 230 lineto
+361.131 230 lineto
+360.782 230 lineto
+360.433 230 lineto
+360.083 230 lineto
+359.733 230 lineto
+359.383 230 lineto
+359.032 230 lineto
+358.681 230 lineto
+358.33 230 lineto
+357.978 230 lineto
+357.626 230 lineto
+357.274 230 lineto
+356.922 230 lineto
+356.569 230 lineto
+356.216 230 lineto
+355.863 230 lineto
+355.509 230 lineto
+355.156 230 lineto
+354.802 230 lineto
+354.447 230 lineto
+354.093 230 lineto
+353.738 230 lineto
+353.383 230 lineto
+353.028 230 lineto
+352.672 230 lineto
+352.316 230 lineto
+351.96 230 lineto
+351.604 230 lineto
+351.247 230 lineto
+350.89 230 lineto
+350.533 230 lineto
+350.176 230 lineto
+349.819 230 lineto
+349.461 230 lineto
+349.103 230 lineto
+348.745 230 lineto
+348.387 230 lineto
+348.028 230 lineto
+347.669 230 lineto
+347.31 230 lineto
+346.951 230 lineto
+346.592 230 lineto
+346.232 230 lineto
+345.872 230 lineto
+345.512 230 lineto
+345.152 230 lineto
+344.791 230 lineto
+344.431 230 lineto
+344.07 230 lineto
+343.709 230 lineto
+343.348 230 lineto
+342.986 230 lineto
+342.625 230 lineto
+342.263 230 lineto
+341.901 230 lineto
+341.539 230 lineto
+341.177 230 lineto
+340.814 230 lineto
+340.452 230 lineto
+340.089 230 lineto
+339.726 230 lineto
+339.363 230 lineto
+338.999 230 lineto
+338.636 230 lineto
+338.272 230 lineto
+337.909 230 lineto
+337.545 230 lineto
+337.18 230 lineto
+336.816 230 lineto
+336.452 230 lineto
+336.087 230 lineto
+335.722 230 lineto
+335.358 230 lineto
+334.993 230 lineto
+334.627 230 lineto
+334.262 230 lineto
+333.897 230 lineto
+333.531 230 lineto
+333.165 230 lineto
+332.799 230 lineto
+332.433 230 lineto
+332.067 230 lineto
+331.701 230 lineto
+331.334 230 lineto
+330.968 230 lineto
+330.601 230 lineto
+330.234 230 lineto
+329.867 230 lineto
+329.5 230 lineto
+329.133 230 lineto
+328.765 230 lineto
+328.398 230 lineto
+328.03 230 lineto
+327.663 230 lineto
+327.295 230 lineto
+326.927 230 lineto
+326.559 230 lineto
+326.19 230 lineto
+325.822 230 lineto
+325.453 230 lineto
+325.085 230 lineto
+324.716 230 lineto
+324.347 230 lineto
+323.979 230 lineto
+323.609 230 lineto
+323.24 230 lineto
+322.871 230 lineto
+322.502 230 lineto
+322.132 230 lineto
+321.763 230 lineto
+321.393 230 lineto
+321.023 230 lineto
+320.653 230 lineto
+320.283 230 lineto
+319.913 230 lineto
+319.543 230 lineto
+319.173 230 lineto
+318.802 230 lineto
+318.432 230 lineto
+318.061 230 lineto
+317.691 230 lineto
+317.32 230 lineto
+316.949 230 lineto
+316.578 230 lineto
+316.207 230 lineto
+315.836 230 lineto
+315.465 230 lineto
+315.093 230 lineto
+314.722 230 lineto
+314.35 230 lineto
+313.979 230 lineto
+313.607 230 lineto
+313.235 230 lineto
+312.863 230 lineto
+312.491 230 lineto
+312.119 230 lineto
+311.747 230 lineto
+311.375 230 lineto
+311.003 230 lineto
+310.63 230 lineto
+310.258 230 lineto
+309.885 230 lineto
+309.513 230 lineto
+309.14 230 lineto
+308.767 230 lineto
+308.394 230 lineto
+308.021 230 lineto
+307.648 230 lineto
+307.275 230 lineto
+306.902 230 lineto
+306.529 230 lineto
+306.156 230 lineto
+305.782 230 lineto
+305.409 230 lineto
+305.035 230 lineto
+304.662 230 lineto
+304.288 230 lineto
+303.914 230 lineto
+303.54 230 lineto
+303.167 230 lineto
+302.793 230 lineto
+302.419 230 lineto
+302.045 230 lineto
+301.67 230 lineto
+301.296 230 lineto
+300.922 230 lineto
+300.548 230 lineto
+300.173 230 lineto
+299.799 230 lineto
+299.424 230 lineto
+299.049 230 lineto
+298.675 230 lineto
+298.3 230 lineto
+297.925 230 lineto
+297.55 230 lineto
+297.175 230 lineto
+296.8 230 lineto
+296.425 230 lineto
+296.05 230 lineto
+295.675 230 lineto
+295.3 230 lineto
+294.925 230 lineto
+294.549 230 lineto
+294.174 230 lineto
+293.798 230 lineto
+293.423 230 lineto
+293.047 230 lineto
+292.672 230 lineto
+292.296 230 lineto
+291.92 230 lineto
+291.544 230 lineto
+291.169 230 lineto
+290.793 230 lineto
+290.417 230 lineto
+290.041 230 lineto
+289.665 230 lineto
+289.289 230 lineto
+288.912 230 lineto
+288.536 230 lineto
+288.16 230 lineto
+287.784 230 lineto
+287.407 230 lineto
+287.031 230 lineto
+286.654 230 lineto
+286.278 230 lineto
+285.901 230 lineto
+285.525 230 lineto
+285.148 230 lineto
+284.771 230 lineto
+284.394 230 lineto
+284.018 230 lineto
+283.641 230 lineto
+283.264 230 lineto
+282.887 230 lineto
+282.51 230 lineto
+282.133 230 lineto
+281.756 230 lineto
+281.379 230 lineto
+281.001 230 lineto
+280.624 230 lineto
+280.247 230 lineto
+279.87 230 lineto
+279.492 230 lineto
+279.115 230 lineto
+278.737 230 lineto
+278.36 230 lineto
+277.982 230 lineto
+277.605 230 lineto
+277.227 230 lineto
+276.85 230 lineto
+276.472 230 lineto
+276.094 230 lineto
+275.716 230 lineto
+275.339 230 lineto
+274.961 230 lineto
+274.583 230 lineto
+274.205 230 lineto
+273.827 230 lineto
+273.449 230 lineto
+273.071 230 lineto
+272.693 230 lineto
+272.315 230 lineto
+271.936 230 lineto
+271.558 230 lineto
+271.18 230 lineto
+270.802 230 lineto
+270.423 230 lineto
+270.045 230 lineto
+269.667 230 lineto
+269.288 230 lineto
+268.91 230 lineto
+268.531 230 lineto
+268.153 230 lineto
+267.774 230 lineto
+267.396 230 lineto
+267.017 230 lineto
+266.638 230 lineto
+266.26 230 lineto
+265.881 230 lineto
+265.502 230 lineto
+265.123 230 lineto
+264.744 230 lineto
+264.365 230 lineto
+263.987 230 lineto
+263.608 230 lineto
+263.229 230 lineto
+262.85 230 lineto
+262.471 230 lineto
+262.091 230 lineto
+261.712 230 lineto
+261.333 230 lineto
+260.954 230 lineto
+260.575 230 lineto
+260.196 230 lineto
+259.816 230 lineto
+259.437 230 lineto
+259.058 230 lineto
+258.678 230 lineto
+258.299 230 lineto
+257.92 230 lineto
+257.54 230 lineto
+257.161 230 lineto
+256.781 230 lineto
+256.402 230 lineto
+256.022 230 lineto
+255.642 230 lineto
+255.263 230 lineto
+254.883 230 lineto
+254.504 230 lineto
+254.124 230 lineto
+253.744 230 lineto
+253.364 230 lineto
+252.985 230 lineto
+252.605 230 lineto
+252.225 230 lineto
+251.845 230 lineto
+251.465 230 lineto
+251.085 230 lineto
+250.705 230 lineto
+250.325 230 lineto
+249.945 230 lineto
+249.565 230 lineto
+249.185 230 lineto
+248.805 230 lineto
+248.425 230 lineto
+248.045 230 lineto
+247.665 230 lineto
+247.284 230 lineto
+246.904 230 lineto
+246.524 230 lineto
+246.144 230 lineto
+245.763 230 lineto
+245.383 230 lineto
+245.003 230 lineto
+244.622 230 lineto
+244.242 230 lineto
+243.862 230 lineto
+243.481 230 lineto
+243.101 230 lineto
+242.72 230 lineto
+242.34 230 lineto
+241.959 230 lineto
+241.579 230 lineto
+241.198 230 lineto
+240.818 230 lineto
+240.437 230 lineto
+240.056 230 lineto
+239.676 230 lineto
+239.295 230 lineto
+238.914 230 lineto
+238.534 230 lineto
+238.153 230 lineto
+237.772 230 lineto
+237.391 230 lineto
+237.01 230 lineto
+236.63 230 lineto
+236.249 230 lineto
+235.868 230 lineto
+235.487 230 lineto
+235.106 230 lineto
+234.725 230 lineto
+234.344 230 lineto
+233.963 230 lineto
+233.582 230 lineto
+233.201 230 lineto
+232.82 230 lineto
+232.439 230 lineto
+232.058 230 lineto
+231.677 230 lineto
+231.296 230 lineto
+230.915 230 lineto
+230.533 230 lineto
+230.152 230 lineto
+229.771 230 lineto
+229.39 230 lineto
+229.009 230 lineto
+228.627 230 lineto
+228.246 230 lineto
+227.865 230 lineto
+227.483 230 lineto
+227.102 230 lineto
+226.721 230 lineto
+226.339 230 lineto
+225.958 230 lineto
+225.576 230 lineto
+225.195 230 lineto
+224.814 230 lineto
+224.432 230 lineto
+224.051 230 lineto
+223.669 230 lineto
+223.288 230 lineto
+222.906 230 lineto
+222.525 230 lineto
+222.143 230 lineto
+221.761 230 lineto
+221.38 230 lineto
+220.998 230 lineto
+220.616 230 lineto
+220.235 230 lineto
+219.853 230 lineto
+219.471 230 lineto
+219.09 230 lineto
+218.708 230 lineto
+218.326 230 lineto
+217.945 230 lineto
+217.563 230 lineto
+217.181 230 lineto
+216.799 230 lineto
+216.417 230 lineto
+216.035 230 lineto
+215.654 230 lineto
+215.272 230 lineto
+214.89 230 lineto
+214.508 230 lineto
+214.126 230 lineto
+213.744 230 lineto
+213.362 230 lineto
+212.98 230 lineto
+212.598 230 lineto
+212.216 230 lineto
+211.834 230 lineto
+211.452 230 lineto
+211.07 230 lineto
+210.688 230 lineto
+210.306 230 lineto
+209.924 230 lineto
+209.542 230 lineto
+209.16 230 lineto
+208.778 230 lineto
+208.395 230 lineto
+208.013 230 lineto
+207.631 230 lineto
+207.249 230 lineto
+206.867 230 lineto
+206.484 230 lineto
+206.102 230 lineto
+205.72 230 lineto
+205.338 230 lineto
+204.955 230 lineto
+204.573 230 lineto
+204.191 230 lineto
+203.808 230 lineto
+203.426 230 lineto
+203.044 230 lineto
+202.661 230 lineto
+202.279 230 lineto
+201.897 230 lineto
+201.514 230 lineto
+201.132 230 lineto
+200.749 230 lineto
+200.367 230 lineto
+199.985 230 lineto
+199.602 230 lineto
+199.22 230 lineto
+198.837 230 lineto
+198.455 230 lineto
+198.072 230 lineto
+197.69 230 lineto
+197.307 230 lineto
+196.925 230 lineto
+196.542 230 lineto
+196.159 230 lineto
+195.777 230 lineto
+195.394 230 lineto
+195.012 230 lineto
+194.629 230 lineto
+194.246 230 lineto
+193.864 230 lineto
+193.481 230 lineto
+193.098 230 lineto
+192.716 230 lineto
+192.333 230 lineto
+191.95 230 lineto
+191.567 230 lineto
+191.185 230 lineto
+190.802 230 lineto
+190.419 230 lineto
+190.036 230 lineto
+189.654 230 lineto
+189.271 230 lineto
+188.888 230 lineto
+188.505 230 lineto
+188.122 230 lineto
+187.74 230 lineto
+187.357 230 lineto
+186.974 230 lineto
+186.591 230 lineto
+186.208 230 lineto
+185.825 230 lineto
+185.442 230 lineto
+185.059 230 lineto
+184.676 230 lineto
+184.294 230 lineto
+183.911 230 lineto
+183.528 230 lineto
+183.145 230 lineto
+182.762 230 lineto
+182.379 230 lineto
+181.996 230 lineto
+181.613 230 lineto
+181.23 230 lineto
+180.847 230 lineto
+180.464 230 lineto
+180.081 230 lineto
+179.697 230 lineto
+179.314 230 lineto
+178.931 230 lineto
+178.548 230 lineto
+178.165 230 lineto
+177.782 230 lineto
+177.399 230 lineto
+177.016 230 lineto
+176.633 230 lineto
+176.249 230 lineto
+175.866 230 lineto
+175.483 230 lineto
+175.1 230 lineto
+174.717 230 lineto
+174.334 230 lineto
+173.95 230 lineto
+173.567 230 lineto
+173.184 230 lineto
+172.801 230 lineto
+172.417 230 lineto
+172.034 230 lineto
+171.651 230 lineto
+171.268 230 lineto
+170.884 230 lineto
+170.501 230 lineto
+170.118 230 lineto
+169.734 230 lineto
+169.351 230 lineto
+168.968 230 lineto
+168.584 230 lineto
+168.201 230 lineto
+167.818 230 lineto
+167.434 230 lineto
+167.051 230 lineto
+166.668 230 lineto
+166.284 230 lineto
+165.901 230 lineto
+165.517 230 lineto
+165.134 230 lineto
+164.75 230 lineto
+164.367 230 lineto
+163.984 230 lineto
+163.6 230 lineto
+163.217 230 lineto
+162.833 230 lineto
+162.45 230 lineto
+162.066 230 lineto
+161.683 230 lineto
+161.299 230 lineto
+160.916 230 lineto
+160.532 230 lineto
+160.149 230 lineto
+159.765 230 lineto
+159.382 230 lineto
+158.998 230 lineto
+158.614 230 lineto
+158.231 230 lineto
+157.847 230 lineto
+157.464 230 lineto
+157.08 230 lineto
+156.696 230 lineto
+156.313 230 lineto
+155.929 230 lineto
+155.546 230 lineto
+155.162 230 lineto
+154.778 230 lineto
+154.395 230 lineto
+154.011 230 lineto
+153.627 230 lineto
+153.244 230 lineto
+152.86 230 lineto
+152.476 230 lineto
+152.093 230 lineto
+151.709 230 lineto
+151.325 230 lineto
+150.941 230 lineto
+150.558 230 lineto
+150.174 230 lineto
+149.79 230 lineto
+149.407 230 lineto
+149.023 230 lineto
+148.639 230 lineto
+148.255 230 lineto
+147.871 230 lineto
+147.488 230 lineto
+147.104 230 lineto
+146.72 230 lineto
+146.336 230 lineto
+145.952 230 lineto
+145.569 230 lineto
+145.185 230 lineto
+144.801 230 lineto
+144.417 230 lineto
+144.033 230 lineto
+143.649 230 lineto
+143.266 230 lineto
+142.882 230 lineto
+142.498 230 lineto
+142.114 230 lineto
+141.73 230 lineto
+141.346 230 lineto
+140.962 230 lineto
+140.578 230 lineto
+140.194 230 lineto
+139.81 230 lineto
+139.427 230 lineto
+139.043 230 lineto
+138.659 230 lineto
+138.275 230 lineto
+137.891 230 lineto
+137.507 230 lineto
+137.123 230 lineto
+136.739 230 lineto
+136.355 230 lineto
+135.971 230 lineto
+135.587 230 lineto
+135.203 230 lineto
+134.819 230 lineto
+134.435 230 lineto
+134.051 230 lineto
+133.667 230 lineto
+133.283 230 lineto
+132.899 230 lineto
+132.515 230 lineto
+132.131 230 lineto
+131.747 230 lineto
+131.363 230 lineto
+130.978 230 lineto
+130.594 230 lineto
+130.21 230 lineto
+129.826 230 lineto
+129.442 230 lineto
+129.058 230 lineto
+128.674 230 lineto
+128.29 230 lineto
+127.906 230 lineto
+127.522 230 lineto
+127.137 230 lineto
+126.753 230 lineto
+126.369 230 lineto
+125.985 230 lineto
+125.601 230 lineto
+125.217 230 lineto
+124.832 230 lineto
+124.448 230 lineto
+124.064 230 lineto
+123.68 230 lineto
+123.296 230 lineto
+122.912 230 lineto
+122.527 230 lineto
+122.143 230 lineto
+121.759 230 lineto
+121.375 230 lineto
+120.99 230 lineto
+120.606 230 lineto
+120.222 230 lineto
+119.838 230 lineto
+119.454 230 lineto
+119.069 230 lineto
+118.685 230 lineto
+118.301 230 lineto
+117.917 230 lineto
+117.532 230 lineto
+117.148 230 lineto
+116.764 230 lineto
+116.379 230 lineto
+115.995 230 lineto
+115.611 230 lineto
+115.227 230 lineto
+114.842 230 lineto
+114.458 230 lineto
+114.074 230 lineto
+113.689 230 lineto
+113.305 230 lineto
+112.921 230 lineto
+112.536 230 lineto
+112.152 230 lineto
+111.768 230 lineto
+111.383 230 lineto
+110.999 230 lineto
+110.614 230 lineto
+110.23 230 lineto
+109.846 230 lineto
+109.461 230 lineto
+109.077 230 lineto
+108.693 230 lineto
+108.308 230 lineto
+107.924 230 lineto
+107.539 230 lineto
+107.155 230 lineto
+106.771 230 lineto
+106.386 230 lineto
+106.002 230 lineto
+105.617 230 lineto
+105.233 230 lineto
+104.848 230 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0.8 setgray
+newpath
+342.35 110.55 M
+342.35 60.45 lineto
+527.287 60.45 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0.8 setgray
+newpath
+342.35 110.55 M
+527.287 60.45 lineto
+527.287 110.55 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+342.35 110.55 M
+342.35 60.45 lineto
+527.287 60.45 lineto
+527.287 110.55 lineto
+342.35 110.55 lineto
+stroke
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1970.656 -391.047 M
+1991.141 -391.047 lineto
+1991.141 -387.109 lineto
+1974.922 -368.25 lineto
+1991.141 -368.25 lineto
+1991.141 -364.797 lineto
+1970.062 -364.797 lineto
+1970.062 -368.734 lineto
+1986.281 -387.609 lineto
+1970.656 -387.609 lineto
+1970.656 -391.047 lineto
+closepath
+2019.984 -379 M
+2019.984 -376.891 lineto
+2000.156 -376.891 lineto
+2000.438 -372.438 2002.836 -370.109 QUADTO 
+2005.234 -367.781 2009.531 -367.781 QUADTO 
+2012.016 -367.781 2014.344 -368.391 QUADTO 
+2016.672 -369 2018.969 -370.219 QUADTO 
+2018.969 -366.141 lineto
+2016.656 -365.156 2014.219 -364.633 QUADTO 
+2011.781 -364.109 2009.266 -364.109 QUADTO 
+2002.984 -364.109 1999.32 -367.773 QUADTO 
+1995.656 -371.438 1995.656 -377.672 QUADTO 
+1995.656 -384.109 1999.133 -387.898 QUADTO 
+2002.609 -391.688 2008.516 -391.688 QUADTO 
+2013.812 -391.688 2016.898 -388.273 QUADTO 
+2019.984 -384.859 2019.984 -379 QUADTO 
+closepath
+2015.672 -380.266 M
+2015.625 -383.812 2013.688 -385.922 QUADTO 
+2011.75 -388.031 2008.562 -388.031 QUADTO 
+2004.953 -388.031 2002.789 -385.992 QUADTO 
+2000.625 -383.953 2000.297 -380.25 QUADTO 
+2015.672 -380.266 lineto
+closepath
+2042.734 -387.016 M
+2042.016 -387.438 2041.156 -387.641 QUADTO 
+2040.297 -387.844 2039.266 -387.844 QUADTO 
+2035.609 -387.844 2033.656 -385.461 QUADTO 
+2031.703 -383.078 2031.703 -378.625 QUADTO 
+2031.703 -364.797 lineto
+2027.359 -364.797 lineto
+2027.359 -391.047 lineto
+2031.703 -391.047 lineto
+2031.703 -386.969 lineto
+2033.062 -389.359 2035.242 -390.523 QUADTO 
+2037.422 -391.688 2040.531 -391.688 QUADTO 
+2040.984 -391.688 2041.523 -391.625 QUADTO 
+2042.062 -391.562 2042.719 -391.453 QUADTO 
+2042.734 -387.016 lineto
+closepath
+2057.703 -388.031 M
+2054.234 -388.031 2052.219 -385.32 QUADTO 
+2050.203 -382.609 2050.203 -377.906 QUADTO 
+2050.203 -373.188 2052.203 -370.484 QUADTO 
+2054.203 -367.781 2057.703 -367.781 QUADTO 
+2061.141 -367.781 2063.156 -370.5 QUADTO 
+2065.172 -373.219 2065.172 -377.906 QUADTO 
+2065.172 -382.562 2063.156 -385.297 QUADTO 
+2061.141 -388.031 2057.703 -388.031 QUADTO 
+closepath
+2057.703 -391.688 M
+2063.328 -391.688 2066.539 -388.031 QUADTO 
+2069.75 -384.375 2069.75 -377.906 QUADTO 
+2069.75 -371.453 2066.539 -367.781 QUADTO 
+2063.328 -364.109 2057.703 -364.109 QUADTO 
+2052.047 -364.109 2048.852 -367.781 QUADTO 
+2045.656 -371.453 2045.656 -377.906 QUADTO 
+2045.656 -384.375 2048.852 -388.031 QUADTO 
+2052.047 -391.688 2057.703 -391.688 QUADTO 
+closepath
+2093.266 -390.281 M
+2093.266 -386.203 lineto
+2091.438 -387.141 2089.469 -387.609 QUADTO 
+2087.5 -388.078 2085.391 -388.078 QUADTO 
+2082.172 -388.078 2080.57 -387.094 QUADTO 
+2078.969 -386.109 2078.969 -384.141 QUADTO 
+2078.969 -382.641 2080.117 -381.781 QUADTO 
+2081.266 -380.922 2084.734 -380.156 QUADTO 
+2086.203 -379.828 lineto
+2090.797 -378.844 2092.734 -377.047 QUADTO 
+2094.672 -375.25 2094.672 -372.047 QUADTO 
+2094.672 -368.391 2091.773 -366.25 QUADTO 
+2088.875 -364.109 2083.812 -364.109 QUADTO 
+2081.703 -364.109 2079.422 -364.523 QUADTO 
+2077.141 -364.938 2074.609 -365.766 QUADTO 
+2074.609 -370.219 lineto
+2077 -368.969 2079.32 -368.352 QUADTO 
+2081.641 -367.734 2083.906 -367.734 QUADTO 
+2086.953 -367.734 2088.594 -368.773 QUADTO 
+2090.234 -369.812 2090.234 -371.719 QUADTO 
+2090.234 -373.469 2089.055 -374.406 QUADTO 
+2087.875 -375.344 2083.859 -376.219 QUADTO 
+2082.359 -376.562 lineto
+2078.359 -377.406 2076.578 -379.156 QUADTO 
+2074.797 -380.906 2074.797 -383.953 QUADTO 
+2074.797 -387.656 2077.422 -389.672 QUADTO 
+2080.047 -391.688 2084.875 -391.688 QUADTO 
+2087.266 -391.688 2089.375 -391.336 QUADTO 
+2091.484 -390.984 2093.266 -390.281 QUADTO 
+closepath
+2133.797 -387.062 M
+2133.797 -401.266 lineto
+2138.109 -401.266 lineto
+2138.109 -364.797 lineto
+2133.797 -364.797 lineto
+2133.797 -368.734 lineto
+2132.438 -366.391 2130.367 -365.25 QUADTO 
+2128.297 -364.109 2125.391 -364.109 QUADTO 
+2120.625 -364.109 2117.641 -367.914 QUADTO 
+2114.656 -371.719 2114.656 -377.906 QUADTO 
+2114.656 -384.094 2117.641 -387.891 QUADTO 
+2120.625 -391.688 2125.391 -391.688 QUADTO 
+2128.297 -391.688 2130.367 -390.547 QUADTO 
+2132.438 -389.406 2133.797 -387.062 QUADTO 
+closepath
+2119.109 -377.906 M
+2119.109 -373.141 2121.062 -370.438 QUADTO 
+2123.016 -367.734 2126.438 -367.734 QUADTO 
+2129.859 -367.734 2131.828 -370.438 QUADTO 
+2133.797 -373.141 2133.797 -377.906 QUADTO 
+2133.797 -382.656 2131.828 -385.367 QUADTO 
+2129.859 -388.078 2126.438 -388.078 QUADTO 
+2123.016 -388.078 2121.062 -385.367 QUADTO 
+2119.109 -382.656 2119.109 -377.906 QUADTO 
+closepath
+2168.984 -379 M
+2168.984 -376.891 lineto
+2149.156 -376.891 lineto
+2149.438 -372.438 2151.836 -370.109 QUADTO 
+2154.234 -367.781 2158.531 -367.781 QUADTO 
+2161.016 -367.781 2163.344 -368.391 QUADTO 
+2165.672 -369 2167.969 -370.219 QUADTO 
+2167.969 -366.141 lineto
+2165.656 -365.156 2163.219 -364.633 QUADTO 
+2160.781 -364.109 2158.266 -364.109 QUADTO 
+2151.984 -364.109 2148.32 -367.773 QUADTO 
+2144.656 -371.438 2144.656 -377.672 QUADTO 
+2144.656 -384.109 2148.133 -387.898 QUADTO 
+2151.609 -391.688 2157.516 -391.688 QUADTO 
+2162.812 -391.688 2165.898 -388.273 QUADTO 
+2168.984 -384.859 2168.984 -379 QUADTO 
+closepath
+2164.672 -380.266 M
+2164.625 -383.812 2162.688 -385.922 QUADTO 
+2160.75 -388.031 2157.562 -388.031 QUADTO 
+2153.953 -388.031 2151.789 -385.992 QUADTO 
+2149.625 -383.953 2149.297 -380.25 QUADTO 
+2164.672 -380.266 lineto
+closepath
+2191.531 -401.266 M
+2195.844 -401.266 lineto
+2195.844 -364.797 lineto
+2191.531 -364.797 lineto
+2191.531 -401.266 lineto
+closepath
+2214.703 -388.031 M
+2211.234 -388.031 2209.219 -385.32 QUADTO 
+2207.203 -382.609 2207.203 -377.906 QUADTO 
+2207.203 -373.188 2209.203 -370.484 QUADTO 
+2211.203 -367.781 2214.703 -367.781 QUADTO 
+2218.141 -367.781 2220.156 -370.5 QUADTO 
+2222.172 -373.219 2222.172 -377.906 QUADTO 
+2222.172 -382.562 2220.156 -385.297 QUADTO 
+2218.141 -388.031 2214.703 -388.031 QUADTO 
+closepath
+2214.703 -391.688 M
+2220.328 -391.688 2223.539 -388.031 QUADTO 
+2226.75 -384.375 2226.75 -377.906 QUADTO 
+2226.75 -371.453 2223.539 -367.781 QUADTO 
+2220.328 -364.109 2214.703 -364.109 QUADTO 
+2209.047 -364.109 2205.852 -367.781 QUADTO 
+2202.656 -371.453 2202.656 -377.906 QUADTO 
+2202.656 -384.375 2205.852 -388.031 QUADTO 
+2209.047 -391.688 2214.703 -391.688 QUADTO 
+closepath
+2243.703 -388.031 M
+2240.234 -388.031 2238.219 -385.32 QUADTO 
+2236.203 -382.609 2236.203 -377.906 QUADTO 
+2236.203 -373.188 2238.203 -370.484 QUADTO 
+2240.203 -367.781 2243.703 -367.781 QUADTO 
+2247.141 -367.781 2249.156 -370.5 QUADTO 
+2251.172 -373.219 2251.172 -377.906 QUADTO 
+2251.172 -382.562 2249.156 -385.297 QUADTO 
+2247.141 -388.031 2243.703 -388.031 QUADTO 
+closepath
+2243.703 -391.688 M
+2249.328 -391.688 2252.539 -388.031 QUADTO 
+2255.75 -384.375 2255.75 -377.906 QUADTO 
+2255.75 -371.453 2252.539 -367.781 QUADTO 
+2249.328 -364.109 2243.703 -364.109 QUADTO 
+2238.047 -364.109 2234.852 -367.781 QUADTO 
+2231.656 -371.453 2231.656 -377.906 QUADTO 
+2231.656 -384.375 2234.852 -388.031 QUADTO 
+2238.047 -391.688 2243.703 -391.688 QUADTO 
+closepath
+2266.703 -368.734 M
+2266.703 -354.812 lineto
+2262.359 -354.812 lineto
+2262.359 -391.047 lineto
+2266.703 -391.047 lineto
+2266.703 -387.062 lineto
+2268.062 -389.406 2270.133 -390.547 QUADTO 
+2272.203 -391.688 2275.094 -391.688 QUADTO 
+2279.875 -391.688 2282.859 -387.891 QUADTO 
+2285.844 -384.094 2285.844 -377.906 QUADTO 
+2285.844 -371.719 2282.859 -367.914 QUADTO 
+2279.875 -364.109 2275.094 -364.109 QUADTO 
+2272.203 -364.109 2270.133 -365.25 QUADTO 
+2268.062 -366.391 2266.703 -368.734 QUADTO 
+closepath
+2281.375 -377.906 M
+2281.375 -382.656 2279.414 -385.367 QUADTO 
+2277.453 -388.078 2274.031 -388.078 QUADTO 
+2270.609 -388.078 2268.656 -385.367 QUADTO 
+2266.703 -382.656 2266.703 -377.906 QUADTO 
+2266.703 -373.141 2268.656 -370.438 QUADTO 
+2270.609 -367.734 2274.031 -367.734 QUADTO 
+2277.453 -367.734 2279.414 -370.438 QUADTO 
+2281.375 -373.141 2281.375 -377.906 QUADTO 
+closepath
+2309.266 -390.281 M
+2309.266 -386.203 lineto
+2307.438 -387.141 2305.469 -387.609 QUADTO 
+2303.5 -388.078 2301.391 -388.078 QUADTO 
+2298.172 -388.078 2296.57 -387.094 QUADTO 
+2294.969 -386.109 2294.969 -384.141 QUADTO 
+2294.969 -382.641 2296.117 -381.781 QUADTO 
+2297.266 -380.922 2300.734 -380.156 QUADTO 
+2302.203 -379.828 lineto
+2306.797 -378.844 2308.734 -377.047 QUADTO 
+2310.672 -375.25 2310.672 -372.047 QUADTO 
+2310.672 -368.391 2307.773 -366.25 QUADTO 
+2304.875 -364.109 2299.812 -364.109 QUADTO 
+2297.703 -364.109 2295.422 -364.523 QUADTO 
+2293.141 -364.938 2290.609 -365.766 QUADTO 
+2290.609 -370.219 lineto
+2293 -368.969 2295.32 -368.352 QUADTO 
+2297.641 -367.734 2299.906 -367.734 QUADTO 
+2302.953 -367.734 2304.594 -368.773 QUADTO 
+2306.234 -369.812 2306.234 -371.719 QUADTO 
+2306.234 -373.469 2305.055 -374.406 QUADTO 
+2303.875 -375.344 2299.859 -376.219 QUADTO 
+2298.359 -376.562 lineto
+2294.359 -377.406 2292.578 -379.156 QUADTO 
+2290.797 -380.906 2290.797 -383.953 QUADTO 
+2290.797 -387.656 2293.422 -389.672 QUADTO 
+2296.047 -391.688 2300.875 -391.688 QUADTO 
+2303.266 -391.688 2305.375 -391.336 QUADTO 
+2307.484 -390.984 2309.266 -390.281 QUADTO 
+closepath
+2344.453 -378 M
+2339.234 -378 2337.219 -376.805 QUADTO 
+2335.203 -375.609 2335.203 -372.719 QUADTO 
+2335.203 -370.422 2336.711 -369.078 QUADTO 
+2338.219 -367.734 2340.828 -367.734 QUADTO 
+2344.406 -367.734 2346.578 -370.273 QUADTO 
+2348.75 -372.812 2348.75 -377.031 QUADTO 
+2348.75 -378 lineto
+2344.453 -378 lineto
+closepath
+2353.062 -379.781 M
+2353.062 -364.797 lineto
+2348.75 -364.797 lineto
+2348.75 -368.781 lineto
+2347.266 -366.391 2345.062 -365.25 QUADTO 
+2342.859 -364.109 2339.672 -364.109 QUADTO 
+2335.641 -364.109 2333.266 -366.375 QUADTO 
+2330.891 -368.641 2330.891 -372.438 QUADTO 
+2330.891 -376.875 2333.852 -379.125 QUADTO 
+2336.812 -381.375 2342.703 -381.375 QUADTO 
+2348.75 -381.375 lineto
+2348.75 -381.797 lineto
+2348.75 -384.766 2346.789 -386.398 QUADTO 
+2344.828 -388.031 2341.297 -388.031 QUADTO 
+2339.047 -388.031 2336.914 -387.492 QUADTO 
+2334.781 -386.953 2332.812 -385.875 QUADTO 
+2332.812 -389.859 lineto
+2335.172 -390.766 2337.398 -391.227 QUADTO 
+2339.625 -391.688 2341.734 -391.688 QUADTO 
+2347.438 -391.688 2350.25 -388.734 QUADTO 
+2353.062 -385.781 2353.062 -379.781 QUADTO 
+closepath
+2380.375 -377.906 M
+2380.375 -382.656 2378.414 -385.367 QUADTO 
+2376.453 -388.078 2373.031 -388.078 QUADTO 
+2369.609 -388.078 2367.656 -385.367 QUADTO 
+2365.703 -382.656 2365.703 -377.906 QUADTO 
+2365.703 -373.141 2367.656 -370.438 QUADTO 
+2369.609 -367.734 2373.031 -367.734 QUADTO 
+2376.453 -367.734 2378.414 -370.438 QUADTO 
+2380.375 -373.141 2380.375 -377.906 QUADTO 
+closepath
+2365.703 -387.062 M
+2367.062 -389.406 2369.133 -390.547 QUADTO 
+2371.203 -391.688 2374.094 -391.688 QUADTO 
+2378.875 -391.688 2381.859 -387.891 QUADTO 
+2384.844 -384.094 2384.844 -377.906 QUADTO 
+2384.844 -371.719 2381.859 -367.914 QUADTO 
+2378.875 -364.109 2374.094 -364.109 QUADTO 
+2371.203 -364.109 2369.133 -365.25 QUADTO 
+2367.062 -366.391 2365.703 -368.734 QUADTO 
+2365.703 -364.797 lineto
+2361.359 -364.797 lineto
+2361.359 -401.266 lineto
+2365.703 -401.266 lineto
+2365.703 -387.062 lineto
+closepath
+2413.984 -379 M
+2413.984 -376.891 lineto
+2394.156 -376.891 lineto
+2394.438 -372.438 2396.836 -370.109 QUADTO 
+2399.234 -367.781 2403.531 -367.781 QUADTO 
+2406.016 -367.781 2408.344 -368.391 QUADTO 
+2410.672 -369 2412.969 -370.219 QUADTO 
+2412.969 -366.141 lineto
+2410.656 -365.156 2408.219 -364.633 QUADTO 
+2405.781 -364.109 2403.266 -364.109 QUADTO 
+2396.984 -364.109 2393.32 -367.773 QUADTO 
+2389.656 -371.438 2389.656 -377.672 QUADTO 
+2389.656 -384.109 2393.133 -387.898 QUADTO 
+2396.609 -391.688 2402.516 -391.688 QUADTO 
+2407.812 -391.688 2410.898 -388.273 QUADTO 
+2413.984 -384.859 2413.984 -379 QUADTO 
+closepath
+2409.672 -380.266 M
+2409.625 -383.812 2407.688 -385.922 QUADTO 
+2405.75 -388.031 2402.562 -388.031 QUADTO 
+2398.953 -388.031 2396.789 -385.992 QUADTO 
+2394.625 -383.953 2394.297 -380.25 QUADTO 
+2409.672 -380.266 lineto
+closepath
+2436.734 -387.016 M
+2436.016 -387.438 2435.156 -387.641 QUADTO 
+2434.297 -387.844 2433.266 -387.844 QUADTO 
+2429.609 -387.844 2427.656 -385.461 QUADTO 
+2425.703 -383.078 2425.703 -378.625 QUADTO 
+2425.703 -364.797 lineto
+2421.359 -364.797 lineto
+2421.359 -391.047 lineto
+2425.703 -391.047 lineto
+2425.703 -386.969 lineto
+2427.062 -389.359 2429.242 -390.523 QUADTO 
+2431.422 -391.688 2434.531 -391.688 QUADTO 
+2434.984 -391.688 2435.523 -391.625 QUADTO 
+2436.062 -391.562 2436.719 -391.453 QUADTO 
+2436.734 -387.016 lineto
+closepath
+2445.797 -398.5 M
+2445.797 -391.047 lineto
+2454.672 -391.047 lineto
+2454.672 -387.703 lineto
+2445.797 -387.703 lineto
+2445.797 -373.453 lineto
+2445.797 -370.234 2446.672 -369.32 QUADTO 
+2447.547 -368.406 2450.25 -368.406 QUADTO 
+2454.672 -368.406 lineto
+2454.672 -364.797 lineto
+2450.25 -364.797 lineto
+2445.25 -364.797 2443.352 -366.664 QUADTO 
+2441.453 -368.531 2441.453 -373.453 QUADTO 
+2441.453 -387.703 lineto
+2438.297 -387.703 lineto
+2438.297 -391.047 lineto
+2441.453 -391.047 lineto
+2441.453 -398.5 lineto
+2445.797 -398.5 lineto
+closepath
+2470.703 -388.031 M
+2467.234 -388.031 2465.219 -385.32 QUADTO 
+2463.203 -382.609 2463.203 -377.906 QUADTO 
+2463.203 -373.188 2465.203 -370.484 QUADTO 
+2467.203 -367.781 2470.703 -367.781 QUADTO 
+2474.141 -367.781 2476.156 -370.5 QUADTO 
+2478.172 -373.219 2478.172 -377.906 QUADTO 
+2478.172 -382.562 2476.156 -385.297 QUADTO 
+2474.141 -388.031 2470.703 -388.031 QUADTO 
+closepath
+2470.703 -391.688 M
+2476.328 -391.688 2479.539 -388.031 QUADTO 
+2482.75 -384.375 2482.75 -377.906 QUADTO 
+2482.75 -371.453 2479.539 -367.781 QUADTO 
+2476.328 -364.109 2470.703 -364.109 QUADTO 
+2465.047 -364.109 2461.852 -367.781 QUADTO 
+2458.656 -371.453 2458.656 -377.906 QUADTO 
+2458.656 -384.375 2461.852 -388.031 QUADTO 
+2465.047 -391.688 2470.703 -391.688 QUADTO 
+closepath
+2506.266 -390.281 M
+2506.266 -386.203 lineto
+2504.438 -387.141 2502.469 -387.609 QUADTO 
+2500.5 -388.078 2498.391 -388.078 QUADTO 
+2495.172 -388.078 2493.57 -387.094 QUADTO 
+2491.969 -386.109 2491.969 -384.141 QUADTO 
+2491.969 -382.641 2493.117 -381.781 QUADTO 
+2494.266 -380.922 2497.734 -380.156 QUADTO 
+2499.203 -379.828 lineto
+2503.797 -378.844 2505.734 -377.047 QUADTO 
+2507.672 -375.25 2507.672 -372.047 QUADTO 
+2507.672 -368.391 2504.773 -366.25 QUADTO 
+2501.875 -364.109 2496.812 -364.109 QUADTO 
+2494.703 -364.109 2492.422 -364.523 QUADTO 
+2490.141 -364.938 2487.609 -365.766 QUADTO 
+2487.609 -370.219 lineto
+2490 -368.969 2492.32 -368.352 QUADTO 
+2494.641 -367.734 2496.906 -367.734 QUADTO 
+2499.953 -367.734 2501.594 -368.773 QUADTO 
+2503.234 -369.812 2503.234 -371.719 QUADTO 
+2503.234 -373.469 2502.055 -374.406 QUADTO 
+2500.875 -375.344 2496.859 -376.219 QUADTO 
+2495.359 -376.562 lineto
+2491.359 -377.406 2489.578 -379.156 QUADTO 
+2487.797 -380.906 2487.797 -383.953 QUADTO 
+2487.797 -387.656 2490.422 -389.672 QUADTO 
+2493.047 -391.688 2497.875 -391.688 QUADTO 
+2500.266 -391.688 2502.375 -391.336 QUADTO 
+2504.484 -390.984 2506.266 -390.281 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1977.453 -463.109 M
+1977.453 -449.953 lineto
+1983.406 -449.953 lineto
+1986.703 -449.953 1988.508 -451.664 QUADTO 
+1990.312 -453.375 1990.312 -456.547 QUADTO 
+1990.312 -459.688 1988.508 -461.398 QUADTO 
+1986.703 -463.109 1983.406 -463.109 QUADTO 
+1977.453 -463.109 lineto
+closepath
+1972.719 -467 M
+1983.406 -467 lineto
+1989.281 -467 1992.297 -464.336 QUADTO 
+1995.312 -461.672 1995.312 -456.547 QUADTO 
+1995.312 -451.359 1992.297 -448.711 QUADTO 
+1989.281 -446.062 1983.406 -446.062 QUADTO 
+1977.453 -446.062 lineto
+1977.453 -432 lineto
+1972.719 -432 lineto
+1972.719 -467 lineto
+closepath
+2011.703 -455.234 M
+2008.234 -455.234 2006.219 -452.523 QUADTO 
+2004.203 -449.812 2004.203 -445.109 QUADTO 
+2004.203 -440.391 2006.203 -437.688 QUADTO 
+2008.203 -434.984 2011.703 -434.984 QUADTO 
+2015.141 -434.984 2017.156 -437.703 QUADTO 
+2019.172 -440.422 2019.172 -445.109 QUADTO 
+2019.172 -449.766 2017.156 -452.5 QUADTO 
+2015.141 -455.234 2011.703 -455.234 QUADTO 
+closepath
+2011.703 -458.891 M
+2017.328 -458.891 2020.539 -455.234 QUADTO 
+2023.75 -451.578 2023.75 -445.109 QUADTO 
+2023.75 -438.656 2020.539 -434.984 QUADTO 
+2017.328 -431.312 2011.703 -431.312 QUADTO 
+2006.047 -431.312 2002.852 -434.984 QUADTO 
+1999.656 -438.656 1999.656 -445.109 QUADTO 
+1999.656 -451.578 2002.852 -455.234 QUADTO 
+2006.047 -458.891 2011.703 -458.891 QUADTO 
+closepath
+2015.266 -470.391 M
+2019.922 -470.391 lineto
+2012.281 -461.578 lineto
+2008.703 -461.578 lineto
+2015.266 -470.391 lineto
+closepath
+2030.531 -468.469 M
+2034.844 -468.469 lineto
+2034.844 -432 lineto
+2030.531 -432 lineto
+2030.531 -468.469 lineto
+closepath
+2053.703 -455.234 M
+2050.234 -455.234 2048.219 -452.523 QUADTO 
+2046.203 -449.812 2046.203 -445.109 QUADTO 
+2046.203 -440.391 2048.203 -437.688 QUADTO 
+2050.203 -434.984 2053.703 -434.984 QUADTO 
+2057.141 -434.984 2059.156 -437.703 QUADTO 
+2061.172 -440.422 2061.172 -445.109 QUADTO 
+2061.172 -449.766 2059.156 -452.5 QUADTO 
+2057.141 -455.234 2053.703 -455.234 QUADTO 
+closepath
+2053.703 -458.891 M
+2059.328 -458.891 2062.539 -455.234 QUADTO 
+2065.75 -451.578 2065.75 -445.109 QUADTO 
+2065.75 -438.656 2062.539 -434.984 QUADTO 
+2059.328 -431.312 2053.703 -431.312 QUADTO 
+2048.047 -431.312 2044.852 -434.984 QUADTO 
+2041.656 -438.656 2041.656 -445.109 QUADTO 
+2041.656 -451.578 2044.852 -455.234 QUADTO 
+2048.047 -458.891 2053.703 -458.891 QUADTO 
+closepath
+2089.266 -457.484 M
+2089.266 -453.406 lineto
+2087.438 -454.344 2085.469 -454.812 QUADTO 
+2083.5 -455.281 2081.391 -455.281 QUADTO 
+2078.172 -455.281 2076.57 -454.297 QUADTO 
+2074.969 -453.312 2074.969 -451.344 QUADTO 
+2074.969 -449.844 2076.117 -448.984 QUADTO 
+2077.266 -448.125 2080.734 -447.359 QUADTO 
+2082.203 -447.031 lineto
+2086.797 -446.047 2088.734 -444.25 QUADTO 
+2090.672 -442.453 2090.672 -439.25 QUADTO 
+2090.672 -435.594 2087.773 -433.453 QUADTO 
+2084.875 -431.312 2079.812 -431.312 QUADTO 
+2077.703 -431.312 2075.422 -431.727 QUADTO 
+2073.141 -432.141 2070.609 -432.969 QUADTO 
+2070.609 -437.422 lineto
+2073 -436.172 2075.32 -435.555 QUADTO 
+2077.641 -434.938 2079.906 -434.938 QUADTO 
+2082.953 -434.938 2084.594 -435.977 QUADTO 
+2086.234 -437.016 2086.234 -438.922 QUADTO 
+2086.234 -440.672 2085.055 -441.609 QUADTO 
+2083.875 -442.547 2079.859 -443.422 QUADTO 
+2078.359 -443.766 lineto
+2074.359 -444.609 2072.578 -446.359 QUADTO 
+2070.797 -448.109 2070.797 -451.156 QUADTO 
+2070.797 -454.859 2073.422 -456.875 QUADTO 
+2076.047 -458.891 2080.875 -458.891 QUADTO 
+2083.266 -458.891 2085.375 -458.539 QUADTO 
+2087.484 -458.188 2089.266 -457.484 QUADTO 
+closepath
+2129.797 -454.266 M
+2129.797 -468.469 lineto
+2134.109 -468.469 lineto
+2134.109 -432 lineto
+2129.797 -432 lineto
+2129.797 -435.938 lineto
+2128.438 -433.594 2126.367 -432.453 QUADTO 
+2124.297 -431.312 2121.391 -431.312 QUADTO 
+2116.625 -431.312 2113.641 -435.117 QUADTO 
+2110.656 -438.922 2110.656 -445.109 QUADTO 
+2110.656 -451.297 2113.641 -455.094 QUADTO 
+2116.625 -458.891 2121.391 -458.891 QUADTO 
+2124.297 -458.891 2126.367 -457.75 QUADTO 
+2128.438 -456.609 2129.797 -454.266 QUADTO 
+closepath
+2115.109 -445.109 M
+2115.109 -440.344 2117.062 -437.641 QUADTO 
+2119.016 -434.938 2122.438 -434.938 QUADTO 
+2125.859 -434.938 2127.828 -437.641 QUADTO 
+2129.797 -440.344 2129.797 -445.109 QUADTO 
+2129.797 -449.859 2127.828 -452.57 QUADTO 
+2125.859 -455.281 2122.438 -455.281 QUADTO 
+2119.016 -455.281 2117.062 -452.57 QUADTO 
+2115.109 -449.859 2115.109 -445.109 QUADTO 
+closepath
+2164.984 -446.203 M
+2164.984 -444.094 lineto
+2145.156 -444.094 lineto
+2145.438 -439.641 2147.836 -437.312 QUADTO 
+2150.234 -434.984 2154.531 -434.984 QUADTO 
+2157.016 -434.984 2159.344 -435.594 QUADTO 
+2161.672 -436.203 2163.969 -437.422 QUADTO 
+2163.969 -433.344 lineto
+2161.656 -432.359 2159.219 -431.836 QUADTO 
+2156.781 -431.312 2154.266 -431.312 QUADTO 
+2147.984 -431.312 2144.32 -434.977 QUADTO 
+2140.656 -438.641 2140.656 -444.875 QUADTO 
+2140.656 -451.312 2144.133 -455.102 QUADTO 
+2147.609 -458.891 2153.516 -458.891 QUADTO 
+2158.812 -458.891 2161.898 -455.477 QUADTO 
+2164.984 -452.062 2164.984 -446.203 QUADTO 
+closepath
+2160.672 -447.469 M
+2160.625 -451.016 2158.688 -453.125 QUADTO 
+2156.75 -455.234 2153.562 -455.234 QUADTO 
+2149.953 -455.234 2147.789 -453.195 QUADTO 
+2145.625 -451.156 2145.297 -447.453 QUADTO 
+2160.672 -447.469 lineto
+closepath
+2187.531 -468.469 M
+2191.844 -468.469 lineto
+2191.844 -432 lineto
+2187.531 -432 lineto
+2187.531 -468.469 lineto
+closepath
+2212.453 -445.203 M
+2207.234 -445.203 2205.219 -444.008 QUADTO 
+2203.203 -442.812 2203.203 -439.922 QUADTO 
+2203.203 -437.625 2204.711 -436.281 QUADTO 
+2206.219 -434.938 2208.828 -434.938 QUADTO 
+2212.406 -434.938 2214.578 -437.477 QUADTO 
+2216.75 -440.016 2216.75 -444.234 QUADTO 
+2216.75 -445.203 lineto
+2212.453 -445.203 lineto
+closepath
+2221.062 -446.984 M
+2221.062 -432 lineto
+2216.75 -432 lineto
+2216.75 -435.984 lineto
+2215.266 -433.594 2213.062 -432.453 QUADTO 
+2210.859 -431.312 2207.672 -431.312 QUADTO 
+2203.641 -431.312 2201.266 -433.578 QUADTO 
+2198.891 -435.844 2198.891 -439.641 QUADTO 
+2198.891 -444.078 2201.852 -446.328 QUADTO 
+2204.812 -448.578 2210.703 -448.578 QUADTO 
+2216.75 -448.578 lineto
+2216.75 -449 lineto
+2216.75 -451.969 2214.789 -453.602 QUADTO 
+2212.828 -455.234 2209.297 -455.234 QUADTO 
+2207.047 -455.234 2204.914 -454.695 QUADTO 
+2202.781 -454.156 2200.812 -453.078 QUADTO 
+2200.812 -457.062 lineto
+2203.172 -457.969 2205.398 -458.43 QUADTO 
+2207.625 -458.891 2209.734 -458.891 QUADTO 
+2215.438 -458.891 2218.25 -455.938 QUADTO 
+2221.062 -452.984 2221.062 -446.984 QUADTO 
+closepath
+2248.422 -457.25 M
+2248.422 -453.219 lineto
+2246.594 -454.219 2244.75 -454.727 QUADTO 
+2242.906 -455.234 2241.031 -455.234 QUADTO 
+2236.844 -455.234 2234.523 -452.57 QUADTO 
+2232.203 -449.906 2232.203 -445.109 QUADTO 
+2232.203 -440.297 2234.523 -437.641 QUADTO 
+2236.844 -434.984 2241.031 -434.984 QUADTO 
+2242.906 -434.984 2244.75 -435.484 QUADTO 
+2246.594 -435.984 2248.422 -437 QUADTO 
+2248.422 -433.016 lineto
+2246.609 -432.172 2244.68 -431.742 QUADTO 
+2242.75 -431.312 2240.562 -431.312 QUADTO 
+2234.641 -431.312 2231.148 -435.047 QUADTO 
+2227.656 -438.781 2227.656 -445.109 QUADTO 
+2227.656 -451.531 2231.18 -455.211 QUADTO 
+2234.703 -458.891 2240.844 -458.891 QUADTO 
+2242.844 -458.891 2244.742 -458.477 QUADTO 
+2246.641 -458.062 2248.422 -457.25 QUADTO 
+closepath
+2241.969 -432 M
+2243.266 -430.547 2243.898 -429.312 QUADTO 
+2244.531 -428.078 2244.531 -426.953 QUADTO 
+2244.531 -424.875 2243.125 -423.805 QUADTO 
+2241.719 -422.734 2238.953 -422.734 QUADTO 
+2237.875 -422.734 2236.852 -422.875 QUADTO 
+2235.828 -423.016 2234.828 -423.297 QUADTO 
+2234.828 -426.375 lineto
+2235.625 -425.969 2236.492 -425.797 QUADTO 
+2237.359 -425.625 2238.453 -425.625 QUADTO 
+2239.844 -425.625 2240.547 -426.188 QUADTO 
+2241.25 -426.75 2241.25 -427.828 QUADTO 
+2241.25 -428.531 2240.742 -429.547 QUADTO 
+2240.234 -430.562 2239.188 -432 QUADTO 
+2241.969 -432 lineto
+closepath
+2265.703 -455.234 M
+2262.234 -455.234 2260.219 -452.523 QUADTO 
+2258.203 -449.812 2258.203 -445.109 QUADTO 
+2258.203 -440.391 2260.203 -437.688 QUADTO 
+2262.203 -434.984 2265.703 -434.984 QUADTO 
+2269.141 -434.984 2271.156 -437.703 QUADTO 
+2273.172 -440.422 2273.172 -445.109 QUADTO 
+2273.172 -449.766 2271.156 -452.5 QUADTO 
+2269.141 -455.234 2265.703 -455.234 QUADTO 
+closepath
+2265.703 -458.891 M
+2271.328 -458.891 2274.539 -455.234 QUADTO 
+2277.75 -451.578 2277.75 -445.109 QUADTO 
+2277.75 -438.656 2274.539 -434.984 QUADTO 
+2271.328 -431.312 2265.703 -431.312 QUADTO 
+2260.047 -431.312 2256.852 -434.984 QUADTO 
+2253.656 -438.656 2253.656 -445.109 QUADTO 
+2253.656 -451.578 2256.852 -455.234 QUADTO 
+2260.047 -458.891 2265.703 -458.891 QUADTO 
+closepath
+2311.453 -445.203 M
+2306.234 -445.203 2304.219 -444.008 QUADTO 
+2302.203 -442.812 2302.203 -439.922 QUADTO 
+2302.203 -437.625 2303.711 -436.281 QUADTO 
+2305.219 -434.938 2307.828 -434.938 QUADTO 
+2311.406 -434.938 2313.578 -437.477 QUADTO 
+2315.75 -440.016 2315.75 -444.234 QUADTO 
+2315.75 -445.203 lineto
+2311.453 -445.203 lineto
+closepath
+2320.062 -446.984 M
+2320.062 -432 lineto
+2315.75 -432 lineto
+2315.75 -435.984 lineto
+2314.266 -433.594 2312.062 -432.453 QUADTO 
+2309.859 -431.312 2306.672 -431.312 QUADTO 
+2302.641 -431.312 2300.266 -433.578 QUADTO 
+2297.891 -435.844 2297.891 -439.641 QUADTO 
+2297.891 -444.078 2300.852 -446.328 QUADTO 
+2303.812 -448.578 2309.703 -448.578 QUADTO 
+2315.75 -448.578 lineto
+2315.75 -449 lineto
+2315.75 -451.969 2313.789 -453.602 QUADTO 
+2311.828 -455.234 2308.297 -455.234 QUADTO 
+2306.047 -455.234 2303.914 -454.695 QUADTO 
+2301.781 -454.156 2299.812 -453.078 QUADTO 
+2299.812 -457.062 lineto
+2302.172 -457.969 2304.398 -458.43 QUADTO 
+2306.625 -458.891 2308.734 -458.891 QUADTO 
+2314.438 -458.891 2317.25 -455.938 QUADTO 
+2320.062 -452.984 2320.062 -446.984 QUADTO 
+closepath
+2347.375 -445.109 M
+2347.375 -449.859 2345.414 -452.57 QUADTO 
+2343.453 -455.281 2340.031 -455.281 QUADTO 
+2336.609 -455.281 2334.656 -452.57 QUADTO 
+2332.703 -449.859 2332.703 -445.109 QUADTO 
+2332.703 -440.344 2334.656 -437.641 QUADTO 
+2336.609 -434.938 2340.031 -434.938 QUADTO 
+2343.453 -434.938 2345.414 -437.641 QUADTO 
+2347.375 -440.344 2347.375 -445.109 QUADTO 
+closepath
+2332.703 -454.266 M
+2334.062 -456.609 2336.133 -457.75 QUADTO 
+2338.203 -458.891 2341.094 -458.891 QUADTO 
+2345.875 -458.891 2348.859 -455.094 QUADTO 
+2351.844 -451.297 2351.844 -445.109 QUADTO 
+2351.844 -438.922 2348.859 -435.117 QUADTO 
+2345.875 -431.312 2341.094 -431.312 QUADTO 
+2338.203 -431.312 2336.133 -432.453 QUADTO 
+2334.062 -433.594 2332.703 -435.938 QUADTO 
+2332.703 -432 lineto
+2328.359 -432 lineto
+2328.359 -468.469 lineto
+2332.703 -468.469 lineto
+2332.703 -454.266 lineto
+closepath
+2380.984 -446.203 M
+2380.984 -444.094 lineto
+2361.156 -444.094 lineto
+2361.438 -439.641 2363.836 -437.312 QUADTO 
+2366.234 -434.984 2370.531 -434.984 QUADTO 
+2373.016 -434.984 2375.344 -435.594 QUADTO 
+2377.672 -436.203 2379.969 -437.422 QUADTO 
+2379.969 -433.344 lineto
+2377.656 -432.359 2375.219 -431.836 QUADTO 
+2372.781 -431.312 2370.266 -431.312 QUADTO 
+2363.984 -431.312 2360.32 -434.977 QUADTO 
+2356.656 -438.641 2356.656 -444.875 QUADTO 
+2356.656 -451.312 2360.133 -455.102 QUADTO 
+2363.609 -458.891 2369.516 -458.891 QUADTO 
+2374.812 -458.891 2377.898 -455.477 QUADTO 
+2380.984 -452.062 2380.984 -446.203 QUADTO 
+closepath
+2376.672 -447.469 M
+2376.625 -451.016 2374.688 -453.125 QUADTO 
+2372.75 -455.234 2369.562 -455.234 QUADTO 
+2365.953 -455.234 2363.789 -453.195 QUADTO 
+2361.625 -451.156 2361.297 -447.453 QUADTO 
+2376.672 -447.469 lineto
+closepath
+2403.734 -454.219 M
+2403.016 -454.641 2402.156 -454.844 QUADTO 
+2401.297 -455.047 2400.266 -455.047 QUADTO 
+2396.609 -455.047 2394.656 -452.664 QUADTO 
+2392.703 -450.281 2392.703 -445.828 QUADTO 
+2392.703 -432 lineto
+2388.359 -432 lineto
+2388.359 -458.25 lineto
+2392.703 -458.25 lineto
+2392.703 -454.172 lineto
+2394.062 -456.562 2396.242 -457.727 QUADTO 
+2398.422 -458.891 2401.531 -458.891 QUADTO 
+2401.984 -458.891 2402.523 -458.828 QUADTO 
+2403.062 -458.766 2403.719 -458.656 QUADTO 
+2403.734 -454.219 lineto
+closepath
+2412.797 -465.703 M
+2412.797 -458.25 lineto
+2421.672 -458.25 lineto
+2421.672 -454.906 lineto
+2412.797 -454.906 lineto
+2412.797 -440.656 lineto
+2412.797 -437.438 2413.672 -436.523 QUADTO 
+2414.547 -435.609 2417.25 -435.609 QUADTO 
+2421.672 -435.609 lineto
+2421.672 -432 lineto
+2417.25 -432 lineto
+2412.25 -432 2410.352 -433.867 QUADTO 
+2408.453 -435.734 2408.453 -440.656 QUADTO 
+2408.453 -454.906 lineto
+2405.297 -454.906 lineto
+2405.297 -458.25 lineto
+2408.453 -458.25 lineto
+2408.453 -465.703 lineto
+2412.797 -465.703 lineto
+closepath
+2437.703 -455.234 M
+2434.234 -455.234 2432.219 -452.523 QUADTO 
+2430.203 -449.812 2430.203 -445.109 QUADTO 
+2430.203 -440.391 2432.203 -437.688 QUADTO 
+2434.203 -434.984 2437.703 -434.984 QUADTO 
+2441.141 -434.984 2443.156 -437.703 QUADTO 
+2445.172 -440.422 2445.172 -445.109 QUADTO 
+2445.172 -449.766 2443.156 -452.5 QUADTO 
+2441.141 -455.234 2437.703 -455.234 QUADTO 
+closepath
+2437.703 -458.891 M
+2443.328 -458.891 2446.539 -455.234 QUADTO 
+2449.75 -451.578 2449.75 -445.109 QUADTO 
+2449.75 -438.656 2446.539 -434.984 QUADTO 
+2443.328 -431.312 2437.703 -431.312 QUADTO 
+2432.047 -431.312 2428.852 -434.984 QUADTO 
+2425.656 -438.656 2425.656 -445.109 QUADTO 
+2425.656 -451.578 2428.852 -455.234 QUADTO 
+2432.047 -458.891 2437.703 -458.891 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1989.797 -526.266 M
+1989.797 -540.469 lineto
+1994.109 -540.469 lineto
+1994.109 -504 lineto
+1989.797 -504 lineto
+1989.797 -507.938 lineto
+1988.438 -505.594 1986.367 -504.453 QUADTO 
+1984.297 -503.312 1981.391 -503.312 QUADTO 
+1976.625 -503.312 1973.641 -507.117 QUADTO 
+1970.656 -510.922 1970.656 -517.109 QUADTO 
+1970.656 -523.297 1973.641 -527.094 QUADTO 
+1976.625 -530.891 1981.391 -530.891 QUADTO 
+1984.297 -530.891 1986.367 -529.75 QUADTO 
+1988.438 -528.609 1989.797 -526.266 QUADTO 
+closepath
+1975.109 -517.109 M
+1975.109 -512.344 1977.062 -509.641 QUADTO 
+1979.016 -506.938 1982.438 -506.938 QUADTO 
+1985.859 -506.938 1987.828 -509.641 QUADTO 
+1989.797 -512.344 1989.797 -517.109 QUADTO 
+1989.797 -521.859 1987.828 -524.57 QUADTO 
+1985.859 -527.281 1982.438 -527.281 QUADTO 
+1979.016 -527.281 1977.062 -524.57 QUADTO 
+1975.109 -521.859 1975.109 -517.109 QUADTO 
+closepath
+2002.531 -530.25 M
+2006.844 -530.25 lineto
+2006.844 -504 lineto
+2002.531 -504 lineto
+2002.531 -530.25 lineto
+closepath
+2002.531 -540.469 M
+2006.844 -540.469 lineto
+2006.844 -535.016 lineto
+2002.531 -535.016 lineto
+2002.531 -540.469 lineto
+closepath
+2030.734 -526.219 M
+2030.016 -526.641 2029.156 -526.844 QUADTO 
+2028.297 -527.047 2027.266 -527.047 QUADTO 
+2023.609 -527.047 2021.656 -524.664 QUADTO 
+2019.703 -522.281 2019.703 -517.828 QUADTO 
+2019.703 -504 lineto
+2015.359 -504 lineto
+2015.359 -530.25 lineto
+2019.703 -530.25 lineto
+2019.703 -526.172 lineto
+2021.062 -528.562 2023.242 -529.727 QUADTO 
+2025.422 -530.891 2028.531 -530.891 QUADTO 
+2028.984 -530.891 2029.523 -530.828 QUADTO 
+2030.062 -530.766 2030.719 -530.656 QUADTO 
+2030.734 -526.219 lineto
+closepath
+2057.984 -518.203 M
+2057.984 -516.094 lineto
+2038.156 -516.094 lineto
+2038.438 -511.641 2040.836 -509.312 QUADTO 
+2043.234 -506.984 2047.531 -506.984 QUADTO 
+2050.016 -506.984 2052.344 -507.594 QUADTO 
+2054.672 -508.203 2056.969 -509.422 QUADTO 
+2056.969 -505.344 lineto
+2054.656 -504.359 2052.219 -503.836 QUADTO 
+2049.781 -503.312 2047.266 -503.312 QUADTO 
+2040.984 -503.312 2037.32 -506.977 QUADTO 
+2033.656 -510.641 2033.656 -516.875 QUADTO 
+2033.656 -523.312 2037.133 -527.102 QUADTO 
+2040.609 -530.891 2046.516 -530.891 QUADTO 
+2051.812 -530.891 2054.898 -527.477 QUADTO 
+2057.984 -524.062 2057.984 -518.203 QUADTO 
+closepath
+2053.672 -519.469 M
+2053.625 -523.016 2051.688 -525.125 QUADTO 
+2049.75 -527.234 2046.562 -527.234 QUADTO 
+2042.953 -527.234 2040.789 -525.195 QUADTO 
+2038.625 -523.156 2038.297 -519.453 QUADTO 
+2053.672 -519.469 lineto
+closepath
+2084.422 -529.25 M
+2084.422 -525.219 lineto
+2082.594 -526.219 2080.75 -526.727 QUADTO 
+2078.906 -527.234 2077.031 -527.234 QUADTO 
+2072.844 -527.234 2070.523 -524.57 QUADTO 
+2068.203 -521.906 2068.203 -517.109 QUADTO 
+2068.203 -512.297 2070.523 -509.641 QUADTO 
+2072.844 -506.984 2077.031 -506.984 QUADTO 
+2078.906 -506.984 2080.75 -507.484 QUADTO 
+2082.594 -507.984 2084.422 -509 QUADTO 
+2084.422 -505.016 lineto
+2082.609 -504.172 2080.68 -503.742 QUADTO 
+2078.75 -503.312 2076.562 -503.312 QUADTO 
+2070.641 -503.312 2067.148 -507.047 QUADTO 
+2063.656 -510.781 2063.656 -517.109 QUADTO 
+2063.656 -523.531 2067.18 -527.211 QUADTO 
+2070.703 -530.891 2076.844 -530.891 QUADTO 
+2078.844 -530.891 2080.742 -530.477 QUADTO 
+2082.641 -530.062 2084.422 -529.25 QUADTO 
+closepath
+2077.969 -504 M
+2079.266 -502.547 2079.898 -501.312 QUADTO 
+2080.531 -500.078 2080.531 -498.953 QUADTO 
+2080.531 -496.875 2079.125 -495.805 QUADTO 
+2077.719 -494.734 2074.953 -494.734 QUADTO 
+2073.875 -494.734 2072.852 -494.875 QUADTO 
+2071.828 -495.016 2070.828 -495.297 QUADTO 
+2070.828 -498.375 lineto
+2071.625 -497.969 2072.492 -497.797 QUADTO 
+2073.359 -497.625 2074.453 -497.625 QUADTO 
+2075.844 -497.625 2076.547 -498.188 QUADTO 
+2077.25 -498.75 2077.25 -499.828 QUADTO 
+2077.25 -500.531 2076.742 -501.547 QUADTO 
+2076.234 -502.562 2075.188 -504 QUADTO 
+2077.969 -504 lineto
+closepath
+2101.703 -527.234 M
+2098.234 -527.234 2096.219 -524.523 QUADTO 
+2094.203 -521.812 2094.203 -517.109 QUADTO 
+2094.203 -512.391 2096.203 -509.688 QUADTO 
+2098.203 -506.984 2101.703 -506.984 QUADTO 
+2105.141 -506.984 2107.156 -509.703 QUADTO 
+2109.172 -512.422 2109.172 -517.109 QUADTO 
+2109.172 -521.766 2107.156 -524.5 QUADTO 
+2105.141 -527.234 2101.703 -527.234 QUADTO 
+closepath
+2101.703 -530.891 M
+2107.328 -530.891 2110.539 -527.234 QUADTO 
+2113.75 -523.578 2113.75 -517.109 QUADTO 
+2113.75 -510.656 2110.539 -506.984 QUADTO 
+2107.328 -503.312 2101.703 -503.312 QUADTO 
+2096.047 -503.312 2092.852 -506.984 QUADTO 
+2089.656 -510.656 2089.656 -517.109 QUADTO 
+2089.656 -523.578 2092.852 -527.234 QUADTO 
+2096.047 -530.891 2101.703 -530.891 QUADTO 
+closepath
+2101.906 -536.109 M
+2100.578 -537.406 lineto
+2100.062 -537.875 2099.672 -538.094 QUADTO 
+2099.281 -538.312 2098.984 -538.312 QUADTO 
+2098.094 -538.312 2097.672 -537.461 QUADTO 
+2097.25 -536.609 2097.203 -534.688 QUADTO 
+2094.266 -534.688 lineto
+2094.312 -537.844 2095.508 -539.57 QUADTO 
+2096.703 -541.297 2098.844 -541.297 QUADTO 
+2099.734 -541.297 2100.484 -540.969 QUADTO 
+2101.234 -540.641 2102.094 -539.859 QUADTO 
+2103.438 -538.578 lineto
+2103.953 -538.109 2104.336 -537.883 QUADTO 
+2104.719 -537.656 2105.031 -537.656 QUADTO 
+2105.922 -537.656 2106.344 -538.516 QUADTO 
+2106.766 -539.375 2106.812 -541.297 QUADTO 
+2109.734 -541.297 lineto
+2109.688 -538.125 2108.492 -536.406 QUADTO 
+2107.297 -534.688 2105.172 -534.688 QUADTO 
+2104.281 -534.688 2103.531 -535.016 QUADTO 
+2102.781 -535.344 2101.906 -536.109 QUADTO 
+closepath
+2142.984 -518.203 M
+2142.984 -516.094 lineto
+2123.156 -516.094 lineto
+2123.438 -511.641 2125.836 -509.312 QUADTO 
+2128.234 -506.984 2132.531 -506.984 QUADTO 
+2135.016 -506.984 2137.344 -507.594 QUADTO 
+2139.672 -508.203 2141.969 -509.422 QUADTO 
+2141.969 -505.344 lineto
+2139.656 -504.359 2137.219 -503.836 QUADTO 
+2134.781 -503.312 2132.266 -503.312 QUADTO 
+2125.984 -503.312 2122.32 -506.977 QUADTO 
+2118.656 -510.641 2118.656 -516.875 QUADTO 
+2118.656 -523.312 2122.133 -527.102 QUADTO 
+2125.609 -530.891 2131.516 -530.891 QUADTO 
+2136.812 -530.891 2139.898 -527.477 QUADTO 
+2142.984 -524.062 2142.984 -518.203 QUADTO 
+closepath
+2138.672 -519.469 M
+2138.625 -523.016 2136.688 -525.125 QUADTO 
+2134.75 -527.234 2131.562 -527.234 QUADTO 
+2127.953 -527.234 2125.789 -525.195 QUADTO 
+2123.625 -523.156 2123.297 -519.453 QUADTO 
+2138.672 -519.469 lineto
+closepath
+2167.266 -529.484 M
+2167.266 -525.406 lineto
+2165.438 -526.344 2163.469 -526.812 QUADTO 
+2161.5 -527.281 2159.391 -527.281 QUADTO 
+2156.172 -527.281 2154.57 -526.297 QUADTO 
+2152.969 -525.312 2152.969 -523.344 QUADTO 
+2152.969 -521.844 2154.117 -520.984 QUADTO 
+2155.266 -520.125 2158.734 -519.359 QUADTO 
+2160.203 -519.031 lineto
+2164.797 -518.047 2166.734 -516.25 QUADTO 
+2168.672 -514.453 2168.672 -511.25 QUADTO 
+2168.672 -507.594 2165.773 -505.453 QUADTO 
+2162.875 -503.312 2157.812 -503.312 QUADTO 
+2155.703 -503.312 2153.422 -503.727 QUADTO 
+2151.141 -504.141 2148.609 -504.969 QUADTO 
+2148.609 -509.422 lineto
+2151 -508.172 2153.32 -507.555 QUADTO 
+2155.641 -506.938 2157.906 -506.938 QUADTO 
+2160.953 -506.938 2162.594 -507.977 QUADTO 
+2164.234 -509.016 2164.234 -510.922 QUADTO 
+2164.234 -512.672 2163.055 -513.609 QUADTO 
+2161.875 -514.547 2157.859 -515.422 QUADTO 
+2156.359 -515.766 lineto
+2152.359 -516.609 2150.578 -518.359 QUADTO 
+2148.797 -520.109 2148.797 -523.156 QUADTO 
+2148.797 -526.859 2151.422 -528.875 QUADTO 
+2154.047 -530.891 2158.875 -530.891 QUADTO 
+2161.266 -530.891 2163.375 -530.539 QUADTO 
+2165.484 -530.188 2167.266 -529.484 QUADTO 
+closepath
+2202.453 -517.203 M
+2197.234 -517.203 2195.219 -516.008 QUADTO 
+2193.203 -514.812 2193.203 -511.922 QUADTO 
+2193.203 -509.625 2194.711 -508.281 QUADTO 
+2196.219 -506.938 2198.828 -506.938 QUADTO 
+2202.406 -506.938 2204.578 -509.477 QUADTO 
+2206.75 -512.016 2206.75 -516.234 QUADTO 
+2206.75 -517.203 lineto
+2202.453 -517.203 lineto
+closepath
+2211.062 -518.984 M
+2211.062 -504 lineto
+2206.75 -504 lineto
+2206.75 -507.984 lineto
+2205.266 -505.594 2203.062 -504.453 QUADTO 
+2200.859 -503.312 2197.672 -503.312 QUADTO 
+2193.641 -503.312 2191.266 -505.578 QUADTO 
+2188.891 -507.844 2188.891 -511.641 QUADTO 
+2188.891 -516.078 2191.852 -518.328 QUADTO 
+2194.812 -520.578 2200.703 -520.578 QUADTO 
+2206.75 -520.578 lineto
+2206.75 -521 lineto
+2206.75 -523.969 2204.789 -525.602 QUADTO 
+2202.828 -527.234 2199.297 -527.234 QUADTO 
+2197.047 -527.234 2194.914 -526.695 QUADTO 
+2192.781 -526.156 2190.812 -525.078 QUADTO 
+2190.812 -529.062 lineto
+2193.172 -529.969 2195.398 -530.43 QUADTO 
+2197.625 -530.891 2199.734 -530.891 QUADTO 
+2205.438 -530.891 2208.25 -527.938 QUADTO 
+2211.062 -524.984 2211.062 -518.984 QUADTO 
+closepath
+2236.266 -529.484 M
+2236.266 -525.406 lineto
+2234.438 -526.344 2232.469 -526.812 QUADTO 
+2230.5 -527.281 2228.391 -527.281 QUADTO 
+2225.172 -527.281 2223.57 -526.297 QUADTO 
+2221.969 -525.312 2221.969 -523.344 QUADTO 
+2221.969 -521.844 2223.117 -520.984 QUADTO 
+2224.266 -520.125 2227.734 -519.359 QUADTO 
+2229.203 -519.031 lineto
+2233.797 -518.047 2235.734 -516.25 QUADTO 
+2237.672 -514.453 2237.672 -511.25 QUADTO 
+2237.672 -507.594 2234.773 -505.453 QUADTO 
+2231.875 -503.312 2226.812 -503.312 QUADTO 
+2224.703 -503.312 2222.422 -503.727 QUADTO 
+2220.141 -504.141 2217.609 -504.969 QUADTO 
+2217.609 -509.422 lineto
+2220 -508.172 2222.32 -507.555 QUADTO 
+2224.641 -506.938 2226.906 -506.938 QUADTO 
+2229.953 -506.938 2231.594 -507.977 QUADTO 
+2233.234 -509.016 2233.234 -510.922 QUADTO 
+2233.234 -512.672 2232.055 -513.609 QUADTO 
+2230.875 -514.547 2226.859 -515.422 QUADTO 
+2225.359 -515.766 lineto
+2221.359 -516.609 2219.578 -518.359 QUADTO 
+2217.797 -520.109 2217.797 -523.156 QUADTO 
+2217.797 -526.859 2220.422 -528.875 QUADTO 
+2223.047 -530.891 2227.875 -530.891 QUADTO 
+2230.266 -530.891 2232.375 -530.539 QUADTO 
+2234.484 -530.188 2236.266 -529.484 QUADTO 
+closepath
+2261.266 -529.484 M
+2261.266 -525.406 lineto
+2259.438 -526.344 2257.469 -526.812 QUADTO 
+2255.5 -527.281 2253.391 -527.281 QUADTO 
+2250.172 -527.281 2248.57 -526.297 QUADTO 
+2246.969 -525.312 2246.969 -523.344 QUADTO 
+2246.969 -521.844 2248.117 -520.984 QUADTO 
+2249.266 -520.125 2252.734 -519.359 QUADTO 
+2254.203 -519.031 lineto
+2258.797 -518.047 2260.734 -516.25 QUADTO 
+2262.672 -514.453 2262.672 -511.25 QUADTO 
+2262.672 -507.594 2259.773 -505.453 QUADTO 
+2256.875 -503.312 2251.812 -503.312 QUADTO 
+2249.703 -503.312 2247.422 -503.727 QUADTO 
+2245.141 -504.141 2242.609 -504.969 QUADTO 
+2242.609 -509.422 lineto
+2245 -508.172 2247.32 -507.555 QUADTO 
+2249.641 -506.938 2251.906 -506.938 QUADTO 
+2254.953 -506.938 2256.594 -507.977 QUADTO 
+2258.234 -509.016 2258.234 -510.922 QUADTO 
+2258.234 -512.672 2257.055 -513.609 QUADTO 
+2255.875 -514.547 2251.859 -515.422 QUADTO 
+2250.359 -515.766 lineto
+2246.359 -516.609 2244.578 -518.359 QUADTO 
+2242.797 -520.109 2242.797 -523.156 QUADTO 
+2242.797 -526.859 2245.422 -528.875 QUADTO 
+2248.047 -530.891 2252.875 -530.891 QUADTO 
+2255.266 -530.891 2257.375 -530.539 QUADTO 
+2259.484 -530.188 2261.266 -529.484 QUADTO 
+closepath
+2269.531 -530.25 M
+2273.844 -530.25 lineto
+2273.844 -504 lineto
+2269.531 -504 lineto
+2269.531 -530.25 lineto
+closepath
+2269.531 -540.469 M
+2273.844 -540.469 lineto
+2273.844 -535.016 lineto
+2269.531 -535.016 lineto
+2269.531 -540.469 lineto
+closepath
+2304.344 -519.844 M
+2304.344 -504 lineto
+2300.031 -504 lineto
+2300.031 -519.703 lineto
+2300.031 -523.438 2298.578 -525.289 QUADTO 
+2297.125 -527.141 2294.219 -527.141 QUADTO 
+2290.734 -527.141 2288.719 -524.914 QUADTO 
+2286.703 -522.688 2286.703 -518.844 QUADTO 
+2286.703 -504 lineto
+2282.359 -504 lineto
+2282.359 -530.25 lineto
+2286.703 -530.25 lineto
+2286.703 -526.172 lineto
+2288.25 -528.547 2290.344 -529.719 QUADTO 
+2292.438 -530.891 2295.188 -530.891 QUADTO 
+2299.703 -530.891 2302.023 -528.086 QUADTO 
+2304.344 -525.281 2304.344 -519.844 QUADTO 
+closepath
+2316.797 -537.703 M
+2316.797 -530.25 lineto
+2325.672 -530.25 lineto
+2325.672 -526.906 lineto
+2316.797 -526.906 lineto
+2316.797 -512.656 lineto
+2316.797 -509.438 2317.672 -508.523 QUADTO 
+2318.547 -507.609 2321.25 -507.609 QUADTO 
+2325.672 -507.609 lineto
+2325.672 -504 lineto
+2321.25 -504 lineto
+2316.25 -504 2314.352 -505.867 QUADTO 
+2312.453 -507.734 2312.453 -512.656 QUADTO 
+2312.453 -526.906 lineto
+2309.297 -526.906 lineto
+2309.297 -530.25 lineto
+2312.453 -530.25 lineto
+2312.453 -537.703 lineto
+2316.797 -537.703 lineto
+closepath
+2341.703 -527.234 M
+2338.234 -527.234 2336.219 -524.523 QUADTO 
+2334.203 -521.812 2334.203 -517.109 QUADTO 
+2334.203 -512.391 2336.203 -509.688 QUADTO 
+2338.203 -506.984 2341.703 -506.984 QUADTO 
+2345.141 -506.984 2347.156 -509.703 QUADTO 
+2349.172 -512.422 2349.172 -517.109 QUADTO 
+2349.172 -521.766 2347.156 -524.5 QUADTO 
+2345.141 -527.234 2341.703 -527.234 QUADTO 
+closepath
+2341.703 -530.891 M
+2347.328 -530.891 2350.539 -527.234 QUADTO 
+2353.75 -523.578 2353.75 -517.109 QUADTO 
+2353.75 -510.656 2350.539 -506.984 QUADTO 
+2347.328 -503.312 2341.703 -503.312 QUADTO 
+2336.047 -503.312 2332.852 -506.984 QUADTO 
+2329.656 -510.656 2329.656 -517.109 QUADTO 
+2329.656 -523.578 2332.852 -527.234 QUADTO 
+2336.047 -530.891 2341.703 -530.891 QUADTO 
+closepath
+2345.266 -542.391 M
+2349.922 -542.391 lineto
+2342.281 -533.578 lineto
+2338.703 -533.578 lineto
+2345.266 -542.391 lineto
+closepath
+2364.797 -537.703 M
+2364.797 -530.25 lineto
+2373.672 -530.25 lineto
+2373.672 -526.906 lineto
+2364.797 -526.906 lineto
+2364.797 -512.656 lineto
+2364.797 -509.438 2365.672 -508.523 QUADTO 
+2366.547 -507.609 2369.25 -507.609 QUADTO 
+2373.672 -507.609 lineto
+2373.672 -504 lineto
+2369.25 -504 lineto
+2364.25 -504 2362.352 -505.867 QUADTO 
+2360.453 -507.734 2360.453 -512.656 QUADTO 
+2360.453 -526.906 lineto
+2357.297 -526.906 lineto
+2357.297 -530.25 lineto
+2360.453 -530.25 lineto
+2360.453 -537.703 lineto
+2364.797 -537.703 lineto
+closepath
+2379.531 -530.25 M
+2383.844 -530.25 lineto
+2383.844 -504 lineto
+2379.531 -504 lineto
+2379.531 -530.25 lineto
+closepath
+2379.531 -540.469 M
+2383.844 -540.469 lineto
+2383.844 -535.016 lineto
+2379.531 -535.016 lineto
+2379.531 -540.469 lineto
+closepath
+2411.422 -529.25 M
+2411.422 -525.219 lineto
+2409.594 -526.219 2407.75 -526.727 QUADTO 
+2405.906 -527.234 2404.031 -527.234 QUADTO 
+2399.844 -527.234 2397.523 -524.57 QUADTO 
+2395.203 -521.906 2395.203 -517.109 QUADTO 
+2395.203 -512.297 2397.523 -509.641 QUADTO 
+2399.844 -506.984 2404.031 -506.984 QUADTO 
+2405.906 -506.984 2407.75 -507.484 QUADTO 
+2409.594 -507.984 2411.422 -509 QUADTO 
+2411.422 -505.016 lineto
+2409.609 -504.172 2407.68 -503.742 QUADTO 
+2405.75 -503.312 2403.562 -503.312 QUADTO 
+2397.641 -503.312 2394.148 -507.047 QUADTO 
+2390.656 -510.781 2390.656 -517.109 QUADTO 
+2390.656 -523.531 2394.18 -527.211 QUADTO 
+2397.703 -530.891 2403.844 -530.891 QUADTO 
+2405.844 -530.891 2407.742 -530.477 QUADTO 
+2409.641 -530.062 2411.422 -529.25 QUADTO 
+closepath
+2430.453 -517.203 M
+2425.234 -517.203 2423.219 -516.008 QUADTO 
+2421.203 -514.812 2421.203 -511.922 QUADTO 
+2421.203 -509.625 2422.711 -508.281 QUADTO 
+2424.219 -506.938 2426.828 -506.938 QUADTO 
+2430.406 -506.938 2432.578 -509.477 QUADTO 
+2434.75 -512.016 2434.75 -516.234 QUADTO 
+2434.75 -517.203 lineto
+2430.453 -517.203 lineto
+closepath
+2439.062 -518.984 M
+2439.062 -504 lineto
+2434.75 -504 lineto
+2434.75 -507.984 lineto
+2433.266 -505.594 2431.062 -504.453 QUADTO 
+2428.859 -503.312 2425.672 -503.312 QUADTO 
+2421.641 -503.312 2419.266 -505.578 QUADTO 
+2416.891 -507.844 2416.891 -511.641 QUADTO 
+2416.891 -516.078 2419.852 -518.328 QUADTO 
+2422.812 -520.578 2428.703 -520.578 QUADTO 
+2434.75 -520.578 lineto
+2434.75 -521 lineto
+2434.75 -523.969 2432.789 -525.602 QUADTO 
+2430.828 -527.234 2427.297 -527.234 QUADTO 
+2425.047 -527.234 2422.914 -526.695 QUADTO 
+2420.781 -526.156 2418.812 -525.078 QUADTO 
+2418.812 -529.062 lineto
+2421.172 -529.969 2423.398 -530.43 QUADTO 
+2425.625 -530.891 2427.734 -530.891 QUADTO 
+2433.438 -530.891 2436.25 -527.938 QUADTO 
+2439.062 -524.984 2439.062 -518.984 QUADTO 
+closepath
+2464.266 -529.484 M
+2464.266 -525.406 lineto
+2462.438 -526.344 2460.469 -526.812 QUADTO 
+2458.5 -527.281 2456.391 -527.281 QUADTO 
+2453.172 -527.281 2451.57 -526.297 QUADTO 
+2449.969 -525.312 2449.969 -523.344 QUADTO 
+2449.969 -521.844 2451.117 -520.984 QUADTO 
+2452.266 -520.125 2455.734 -519.359 QUADTO 
+2457.203 -519.031 lineto
+2461.797 -518.047 2463.734 -516.25 QUADTO 
+2465.672 -514.453 2465.672 -511.25 QUADTO 
+2465.672 -507.594 2462.773 -505.453 QUADTO 
+2459.875 -503.312 2454.812 -503.312 QUADTO 
+2452.703 -503.312 2450.422 -503.727 QUADTO 
+2448.141 -504.141 2445.609 -504.969 QUADTO 
+2445.609 -509.422 lineto
+2448 -508.172 2450.32 -507.555 QUADTO 
+2452.641 -506.938 2454.906 -506.938 QUADTO 
+2457.953 -506.938 2459.594 -507.977 QUADTO 
+2461.234 -509.016 2461.234 -510.922 QUADTO 
+2461.234 -512.672 2460.055 -513.609 QUADTO 
+2458.875 -514.547 2454.859 -515.422 QUADTO 
+2453.359 -515.766 lineto
+2449.359 -516.609 2447.578 -518.359 QUADTO 
+2445.797 -520.109 2445.797 -523.156 QUADTO 
+2445.797 -526.859 2448.422 -528.875 QUADTO 
+2451.047 -530.891 2455.875 -530.891 QUADTO 
+2458.266 -530.891 2460.375 -530.539 QUADTO 
+2462.484 -530.188 2464.266 -529.484 QUADTO 
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+344 100 M
+348 96 lineto
+348 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+348 96 M
+352 100 lineto
+348 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+344 100 M
+348 96 lineto
+352 100 lineto
+348 104 lineto
+344 100 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+367 100 M
+371 96 lineto
+371 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+371 96 M
+375 100 lineto
+371 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+367 100 M
+371 96 lineto
+375 100 lineto
+371 104 lineto
+367 100 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+390 100 M
+394 96 lineto
+394 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+1 setgray
+newpath
+394 96 M
+398 100 lineto
+394 104 lineto
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+390 100 M
+394 96 lineto
+398 100 lineto
+394 104 lineto
+390 100 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+344 82 M
+352 90 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+344 90 M
+352 82 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+367 82 M
+375 90 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+367 90 M
+375 82 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+390 82 M
+398 90 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+390 90 M
+398 82 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+348.062 71.1 M
+370.913 71.1 lineto
+393.762 71.1 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 402.5 M
+76.25 57.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 402.5 M
+69.395 402.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 368 M
+69.395 368 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 333.5 M
+69.395 333.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 299 M
+69.395 299 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 264.5 M
+69.395 264.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 230 M
+69.395 230 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 195.5 M
+69.395 195.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 161 M
+69.395 161 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 126.5 M
+69.395 126.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 92 M
+69.395 92 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 57.5 M
+69.395 57.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 385.25 M
+72.137 385.25 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 350.75 M
+72.137 350.75 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 316.25 M
+72.137 316.25 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 281.75 M
+72.137 281.75 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 247.25 M
+72.137 247.25 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 212.75 M
+72.137 212.75 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 178.25 M
+72.137 178.25 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 143.75 M
+72.137 143.75 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 109.25 M
+72.137 109.25 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 74.75 M
+72.137 74.75 lineto
+stroke
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+170.344 -1968.672 M
+182.984 -1968.672 lineto
+182.984 -1964.828 lineto
+170.344 -1964.828 lineto
+170.344 -1968.672 lineto
+closepath
+200.266 -1985.469 M
+196.609 -1985.469 194.766 -1981.875 QUADTO 
+192.922 -1978.281 192.922 -1971.062 QUADTO 
+192.922 -1963.859 194.766 -1960.266 QUADTO 
+196.609 -1956.672 200.266 -1956.672 QUADTO 
+203.938 -1956.672 205.781 -1960.266 QUADTO 
+207.625 -1963.859 207.625 -1971.062 QUADTO 
+207.625 -1978.281 205.781 -1981.875 QUADTO 
+203.938 -1985.469 200.266 -1985.469 QUADTO 
+closepath
+200.266 -1989.219 M
+206.141 -1989.219 209.25 -1984.57 QUADTO 
+212.359 -1979.922 212.359 -1971.062 QUADTO 
+212.359 -1962.219 209.25 -1957.562 QUADTO 
+206.141 -1952.906 200.266 -1952.906 QUADTO 
+194.375 -1952.906 191.273 -1957.562 QUADTO 
+188.172 -1962.219 188.172 -1971.062 QUADTO 
+188.172 -1979.922 191.273 -1984.57 QUADTO 
+194.375 -1989.219 200.266 -1989.219 QUADTO 
+closepath
+221.141 -1959.547 M
+226.078 -1959.547 lineto
+226.078 -1953.594 lineto
+221.141 -1953.594 lineto
+221.141 -1959.547 lineto
+closepath
+246.266 -1985.469 M
+242.609 -1985.469 240.766 -1981.875 QUADTO 
+238.922 -1978.281 238.922 -1971.062 QUADTO 
+238.922 -1963.859 240.766 -1960.266 QUADTO 
+242.609 -1956.672 246.266 -1956.672 QUADTO 
+249.938 -1956.672 251.781 -1960.266 QUADTO 
+253.625 -1963.859 253.625 -1971.062 QUADTO 
+253.625 -1978.281 251.781 -1981.875 QUADTO 
+249.938 -1985.469 246.266 -1985.469 QUADTO 
+closepath
+246.266 -1989.219 M
+252.141 -1989.219 255.25 -1984.57 QUADTO 
+258.359 -1979.922 258.359 -1971.062 QUADTO 
+258.359 -1962.219 255.25 -1957.562 QUADTO 
+252.141 -1952.906 246.266 -1952.906 QUADTO 
+240.375 -1952.906 237.273 -1957.562 QUADTO 
+234.172 -1962.219 234.172 -1971.062 QUADTO 
+234.172 -1979.922 237.273 -1984.57 QUADTO 
+240.375 -1989.219 246.266 -1989.219 QUADTO 
+closepath
+267.953 -1957.578 M
+275.688 -1957.578 lineto
+275.688 -1984.281 lineto
+267.281 -1982.594 lineto
+267.281 -1986.906 lineto
+275.641 -1988.594 lineto
+280.375 -1988.594 lineto
+280.375 -1957.578 lineto
+288.109 -1957.578 lineto
+288.109 -1953.594 lineto
+267.953 -1953.594 lineto
+267.953 -1957.578 lineto
+closepath
+308.266 -1985.469 M
+304.609 -1985.469 302.766 -1981.875 QUADTO 
+300.922 -1978.281 300.922 -1971.062 QUADTO 
+300.922 -1963.859 302.766 -1960.266 QUADTO 
+304.609 -1956.672 308.266 -1956.672 QUADTO 
+311.938 -1956.672 313.781 -1960.266 QUADTO 
+315.625 -1963.859 315.625 -1971.062 QUADTO 
+315.625 -1978.281 313.781 -1981.875 QUADTO 
+311.938 -1985.469 308.266 -1985.469 QUADTO 
+closepath
+308.266 -1989.219 M
+314.141 -1989.219 317.25 -1984.57 QUADTO 
+320.359 -1979.922 320.359 -1971.062 QUADTO 
+320.359 -1962.219 317.25 -1957.562 QUADTO 
+314.141 -1952.906 308.266 -1952.906 QUADTO 
+302.375 -1952.906 299.273 -1957.562 QUADTO 
+296.172 -1962.219 296.172 -1971.062 QUADTO 
+296.172 -1979.922 299.273 -1984.57 QUADTO 
+302.375 -1989.219 308.266 -1989.219 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+170.344 -1805.469 M
+182.984 -1805.469 lineto
+182.984 -1801.625 lineto
+170.344 -1801.625 lineto
+170.344 -1805.469 lineto
+closepath
+200.266 -1822.266 M
+196.609 -1822.266 194.766 -1818.672 QUADTO 
+192.922 -1815.078 192.922 -1807.859 QUADTO 
+192.922 -1800.656 194.766 -1797.062 QUADTO 
+196.609 -1793.469 200.266 -1793.469 QUADTO 
+203.938 -1793.469 205.781 -1797.062 QUADTO 
+207.625 -1800.656 207.625 -1807.859 QUADTO 
+207.625 -1815.078 205.781 -1818.672 QUADTO 
+203.938 -1822.266 200.266 -1822.266 QUADTO 
+closepath
+200.266 -1826.016 M
+206.141 -1826.016 209.25 -1821.367 QUADTO 
+212.359 -1816.719 212.359 -1807.859 QUADTO 
+212.359 -1799.016 209.25 -1794.359 QUADTO 
+206.141 -1789.703 200.266 -1789.703 QUADTO 
+194.375 -1789.703 191.273 -1794.359 QUADTO 
+188.172 -1799.016 188.172 -1807.859 QUADTO 
+188.172 -1816.719 191.273 -1821.367 QUADTO 
+194.375 -1826.016 200.266 -1826.016 QUADTO 
+closepath
+221.141 -1796.344 M
+226.078 -1796.344 lineto
+226.078 -1790.391 lineto
+221.141 -1790.391 lineto
+221.141 -1796.344 lineto
+closepath
+246.266 -1822.266 M
+242.609 -1822.266 240.766 -1818.672 QUADTO 
+238.922 -1815.078 238.922 -1807.859 QUADTO 
+238.922 -1800.656 240.766 -1797.062 QUADTO 
+242.609 -1793.469 246.266 -1793.469 QUADTO 
+249.938 -1793.469 251.781 -1797.062 QUADTO 
+253.625 -1800.656 253.625 -1807.859 QUADTO 
+253.625 -1815.078 251.781 -1818.672 QUADTO 
+249.938 -1822.266 246.266 -1822.266 QUADTO 
+closepath
+246.266 -1826.016 M
+252.141 -1826.016 255.25 -1821.367 QUADTO 
+258.359 -1816.719 258.359 -1807.859 QUADTO 
+258.359 -1799.016 255.25 -1794.359 QUADTO 
+252.141 -1789.703 246.266 -1789.703 QUADTO 
+240.375 -1789.703 237.273 -1794.359 QUADTO 
+234.172 -1799.016 234.172 -1807.859 QUADTO 
+234.172 -1816.719 237.273 -1821.367 QUADTO 
+240.375 -1826.016 246.266 -1826.016 QUADTO 
+closepath
+277.266 -1822.266 M
+273.609 -1822.266 271.766 -1818.672 QUADTO 
+269.922 -1815.078 269.922 -1807.859 QUADTO 
+269.922 -1800.656 271.766 -1797.062 QUADTO 
+273.609 -1793.469 277.266 -1793.469 QUADTO 
+280.938 -1793.469 282.781 -1797.062 QUADTO 
+284.625 -1800.656 284.625 -1807.859 QUADTO 
+284.625 -1815.078 282.781 -1818.672 QUADTO 
+280.938 -1822.266 277.266 -1822.266 QUADTO 
+closepath
+277.266 -1826.016 M
+283.141 -1826.016 286.25 -1821.367 QUADTO 
+289.359 -1816.719 289.359 -1807.859 QUADTO 
+289.359 -1799.016 286.25 -1794.359 QUADTO 
+283.141 -1789.703 277.266 -1789.703 QUADTO 
+271.375 -1789.703 268.273 -1794.359 QUADTO 
+265.172 -1799.016 265.172 -1807.859 QUADTO 
+265.172 -1816.719 268.273 -1821.367 QUADTO 
+271.375 -1826.016 277.266 -1826.016 QUADTO 
+closepath
+308.266 -1807.016 M
+304.891 -1807.016 302.953 -1805.211 QUADTO 
+301.016 -1803.406 301.016 -1800.234 QUADTO 
+301.016 -1797.078 302.953 -1795.273 QUADTO 
+304.891 -1793.469 308.266 -1793.469 QUADTO 
+311.641 -1793.469 313.586 -1795.281 QUADTO 
+315.531 -1797.094 315.531 -1800.234 QUADTO 
+315.531 -1803.406 313.594 -1805.211 QUADTO 
+311.656 -1807.016 308.266 -1807.016 QUADTO 
+closepath
+303.531 -1809.031 M
+300.484 -1809.781 298.781 -1811.867 QUADTO 
+297.078 -1813.953 297.078 -1816.953 QUADTO 
+297.078 -1821.141 300.07 -1823.578 QUADTO 
+303.062 -1826.016 308.266 -1826.016 QUADTO 
+313.484 -1826.016 316.461 -1823.578 QUADTO 
+319.438 -1821.141 319.438 -1816.953 QUADTO 
+319.438 -1813.953 317.742 -1811.867 QUADTO 
+316.047 -1809.781 313.016 -1809.031 QUADTO 
+316.438 -1808.234 318.352 -1805.914 QUADTO 
+320.266 -1803.594 320.266 -1800.234 QUADTO 
+320.266 -1795.156 317.156 -1792.43 QUADTO 
+314.047 -1789.703 308.266 -1789.703 QUADTO 
+302.469 -1789.703 299.367 -1792.43 QUADTO 
+296.266 -1795.156 296.266 -1800.234 QUADTO 
+296.266 -1803.594 298.188 -1805.914 QUADTO 
+300.109 -1808.234 303.531 -1809.031 QUADTO 
+closepath
+301.797 -1816.5 M
+301.797 -1813.781 303.492 -1812.258 QUADTO 
+305.188 -1810.734 308.266 -1810.734 QUADTO 
+311.312 -1810.734 313.031 -1812.258 QUADTO 
+314.75 -1813.781 314.75 -1816.5 QUADTO 
+314.75 -1819.219 313.031 -1820.742 QUADTO 
+311.312 -1822.266 308.266 -1822.266 QUADTO 
+305.188 -1822.266 303.492 -1820.742 QUADTO 
+301.797 -1819.219 301.797 -1816.5 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+170.344 -1637.469 M
+182.984 -1637.469 lineto
+182.984 -1633.625 lineto
+170.344 -1633.625 lineto
+170.344 -1637.469 lineto
+closepath
+200.266 -1654.266 M
+196.609 -1654.266 194.766 -1650.672 QUADTO 
+192.922 -1647.078 192.922 -1639.859 QUADTO 
+192.922 -1632.656 194.766 -1629.062 QUADTO 
+196.609 -1625.469 200.266 -1625.469 QUADTO 
+203.938 -1625.469 205.781 -1629.062 QUADTO 
+207.625 -1632.656 207.625 -1639.859 QUADTO 
+207.625 -1647.078 205.781 -1650.672 QUADTO 
+203.938 -1654.266 200.266 -1654.266 QUADTO 
+closepath
+200.266 -1658.016 M
+206.141 -1658.016 209.25 -1653.367 QUADTO 
+212.359 -1648.719 212.359 -1639.859 QUADTO 
+212.359 -1631.016 209.25 -1626.359 QUADTO 
+206.141 -1621.703 200.266 -1621.703 QUADTO 
+194.375 -1621.703 191.273 -1626.359 QUADTO 
+188.172 -1631.016 188.172 -1639.859 QUADTO 
+188.172 -1648.719 191.273 -1653.367 QUADTO 
+194.375 -1658.016 200.266 -1658.016 QUADTO 
+closepath
+221.141 -1628.344 M
+226.078 -1628.344 lineto
+226.078 -1622.391 lineto
+221.141 -1622.391 lineto
+221.141 -1628.344 lineto
+closepath
+246.266 -1654.266 M
+242.609 -1654.266 240.766 -1650.672 QUADTO 
+238.922 -1647.078 238.922 -1639.859 QUADTO 
+238.922 -1632.656 240.766 -1629.062 QUADTO 
+242.609 -1625.469 246.266 -1625.469 QUADTO 
+249.938 -1625.469 251.781 -1629.062 QUADTO 
+253.625 -1632.656 253.625 -1639.859 QUADTO 
+253.625 -1647.078 251.781 -1650.672 QUADTO 
+249.938 -1654.266 246.266 -1654.266 QUADTO 
+closepath
+246.266 -1658.016 M
+252.141 -1658.016 255.25 -1653.367 QUADTO 
+258.359 -1648.719 258.359 -1639.859 QUADTO 
+258.359 -1631.016 255.25 -1626.359 QUADTO 
+252.141 -1621.703 246.266 -1621.703 QUADTO 
+240.375 -1621.703 237.273 -1626.359 QUADTO 
+234.172 -1631.016 234.172 -1639.859 QUADTO 
+234.172 -1648.719 237.273 -1653.367 QUADTO 
+240.375 -1658.016 246.266 -1658.016 QUADTO 
+closepath
+277.266 -1654.266 M
+273.609 -1654.266 271.766 -1650.672 QUADTO 
+269.922 -1647.078 269.922 -1639.859 QUADTO 
+269.922 -1632.656 271.766 -1629.062 QUADTO 
+273.609 -1625.469 277.266 -1625.469 QUADTO 
+280.938 -1625.469 282.781 -1629.062 QUADTO 
+284.625 -1632.656 284.625 -1639.859 QUADTO 
+284.625 -1647.078 282.781 -1650.672 QUADTO 
+280.938 -1654.266 277.266 -1654.266 QUADTO 
+closepath
+277.266 -1658.016 M
+283.141 -1658.016 286.25 -1653.367 QUADTO 
+289.359 -1648.719 289.359 -1639.859 QUADTO 
+289.359 -1631.016 286.25 -1626.359 QUADTO 
+283.141 -1621.703 277.266 -1621.703 QUADTO 
+271.375 -1621.703 268.273 -1626.359 QUADTO 
+265.172 -1631.016 265.172 -1639.859 QUADTO 
+265.172 -1648.719 268.273 -1653.367 QUADTO 
+271.375 -1658.016 277.266 -1658.016 QUADTO 
+closepath
+308.844 -1641.781 M
+305.656 -1641.781 303.797 -1639.602 QUADTO 
+301.938 -1637.422 301.938 -1633.625 QUADTO 
+301.938 -1629.844 303.797 -1627.656 QUADTO 
+305.656 -1625.469 308.844 -1625.469 QUADTO 
+312.031 -1625.469 313.898 -1627.656 QUADTO 
+315.766 -1629.844 315.766 -1633.625 QUADTO 
+315.766 -1637.422 313.898 -1639.602 QUADTO 
+312.031 -1641.781 308.844 -1641.781 QUADTO 
+closepath
+318.25 -1656.609 M
+318.25 -1652.297 lineto
+316.469 -1653.141 314.648 -1653.586 QUADTO 
+312.828 -1654.031 311.047 -1654.031 QUADTO 
+306.359 -1654.031 303.891 -1650.867 QUADTO 
+301.422 -1647.703 301.062 -1641.312 QUADTO 
+302.453 -1643.344 304.539 -1644.438 QUADTO 
+306.625 -1645.531 309.125 -1645.531 QUADTO 
+314.406 -1645.531 317.461 -1642.328 QUADTO 
+320.516 -1639.125 320.516 -1633.625 QUADTO 
+320.516 -1628.234 317.328 -1624.969 QUADTO 
+314.141 -1621.703 308.844 -1621.703 QUADTO 
+302.781 -1621.703 299.57 -1626.359 QUADTO 
+296.359 -1631.016 296.359 -1639.859 QUADTO 
+296.359 -1648.156 300.297 -1653.086 QUADTO 
+304.234 -1658.016 310.859 -1658.016 QUADTO 
+312.641 -1658.016 314.461 -1657.664 QUADTO 
+316.281 -1657.312 318.25 -1656.609 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+170.344 -1474.266 M
+182.984 -1474.266 lineto
+182.984 -1470.422 lineto
+170.344 -1470.422 lineto
+170.344 -1474.266 lineto
+closepath
+200.266 -1491.062 M
+196.609 -1491.062 194.766 -1487.469 QUADTO 
+192.922 -1483.875 192.922 -1476.656 QUADTO 
+192.922 -1469.453 194.766 -1465.859 QUADTO 
+196.609 -1462.266 200.266 -1462.266 QUADTO 
+203.938 -1462.266 205.781 -1465.859 QUADTO 
+207.625 -1469.453 207.625 -1476.656 QUADTO 
+207.625 -1483.875 205.781 -1487.469 QUADTO 
+203.938 -1491.062 200.266 -1491.062 QUADTO 
+closepath
+200.266 -1494.812 M
+206.141 -1494.812 209.25 -1490.164 QUADTO 
+212.359 -1485.516 212.359 -1476.656 QUADTO 
+212.359 -1467.812 209.25 -1463.156 QUADTO 
+206.141 -1458.5 200.266 -1458.5 QUADTO 
+194.375 -1458.5 191.273 -1463.156 QUADTO 
+188.172 -1467.812 188.172 -1476.656 QUADTO 
+188.172 -1485.516 191.273 -1490.164 QUADTO 
+194.375 -1494.812 200.266 -1494.812 QUADTO 
+closepath
+221.141 -1465.141 M
+226.078 -1465.141 lineto
+226.078 -1459.188 lineto
+221.141 -1459.188 lineto
+221.141 -1465.141 lineto
+closepath
+246.266 -1491.062 M
+242.609 -1491.062 240.766 -1487.469 QUADTO 
+238.922 -1483.875 238.922 -1476.656 QUADTO 
+238.922 -1469.453 240.766 -1465.859 QUADTO 
+242.609 -1462.266 246.266 -1462.266 QUADTO 
+249.938 -1462.266 251.781 -1465.859 QUADTO 
+253.625 -1469.453 253.625 -1476.656 QUADTO 
+253.625 -1483.875 251.781 -1487.469 QUADTO 
+249.938 -1491.062 246.266 -1491.062 QUADTO 
+closepath
+246.266 -1494.812 M
+252.141 -1494.812 255.25 -1490.164 QUADTO 
+258.359 -1485.516 258.359 -1476.656 QUADTO 
+258.359 -1467.812 255.25 -1463.156 QUADTO 
+252.141 -1458.5 246.266 -1458.5 QUADTO 
+240.375 -1458.5 237.273 -1463.156 QUADTO 
+234.172 -1467.812 234.172 -1476.656 QUADTO 
+234.172 -1485.516 237.273 -1490.164 QUADTO 
+240.375 -1494.812 246.266 -1494.812 QUADTO 
+closepath
+277.266 -1491.062 M
+273.609 -1491.062 271.766 -1487.469 QUADTO 
+269.922 -1483.875 269.922 -1476.656 QUADTO 
+269.922 -1469.453 271.766 -1465.859 QUADTO 
+273.609 -1462.266 277.266 -1462.266 QUADTO 
+280.938 -1462.266 282.781 -1465.859 QUADTO 
+284.625 -1469.453 284.625 -1476.656 QUADTO 
+284.625 -1483.875 282.781 -1487.469 QUADTO 
+280.938 -1491.062 277.266 -1491.062 QUADTO 
+closepath
+277.266 -1494.812 M
+283.141 -1494.812 286.25 -1490.164 QUADTO 
+289.359 -1485.516 289.359 -1476.656 QUADTO 
+289.359 -1467.812 286.25 -1463.156 QUADTO 
+283.141 -1458.5 277.266 -1458.5 QUADTO 
+271.375 -1458.5 268.273 -1463.156 QUADTO 
+265.172 -1467.812 265.172 -1476.656 QUADTO 
+265.172 -1485.516 268.273 -1490.164 QUADTO 
+271.375 -1494.812 277.266 -1494.812 QUADTO 
+closepath
+311.141 -1490.062 M
+299.188 -1471.375 lineto
+311.141 -1471.375 lineto
+311.141 -1490.062 lineto
+closepath
+309.906 -1494.188 M
+315.859 -1494.188 lineto
+315.859 -1471.375 lineto
+320.844 -1471.375 lineto
+320.844 -1467.438 lineto
+315.859 -1467.438 lineto
+315.859 -1459.188 lineto
+311.141 -1459.188 lineto
+311.141 -1467.438 lineto
+295.344 -1467.438 lineto
+295.344 -1472.016 lineto
+309.906 -1494.188 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+175.141 -1306.266 M
+187.781 -1306.266 lineto
+187.781 -1302.422 lineto
+175.141 -1302.422 lineto
+175.141 -1306.266 lineto
+closepath
+205.062 -1323.062 M
+201.406 -1323.062 199.562 -1319.469 QUADTO 
+197.719 -1315.875 197.719 -1308.656 QUADTO 
+197.719 -1301.453 199.562 -1297.859 QUADTO 
+201.406 -1294.266 205.062 -1294.266 QUADTO 
+208.734 -1294.266 210.578 -1297.859 QUADTO 
+212.422 -1301.453 212.422 -1308.656 QUADTO 
+212.422 -1315.875 210.578 -1319.469 QUADTO 
+208.734 -1323.062 205.062 -1323.062 QUADTO 
+closepath
+205.062 -1326.812 M
+210.938 -1326.812 214.047 -1322.164 QUADTO 
+217.156 -1317.516 217.156 -1308.656 QUADTO 
+217.156 -1299.812 214.047 -1295.156 QUADTO 
+210.938 -1290.5 205.062 -1290.5 QUADTO 
+199.172 -1290.5 196.07 -1295.156 QUADTO 
+192.969 -1299.812 192.969 -1308.656 QUADTO 
+192.969 -1317.516 196.07 -1322.164 QUADTO 
+199.172 -1326.812 205.062 -1326.812 QUADTO 
+closepath
+225.938 -1297.141 M
+230.875 -1297.141 lineto
+230.875 -1291.188 lineto
+225.938 -1291.188 lineto
+225.938 -1297.141 lineto
+closepath
+251.062 -1323.062 M
+247.406 -1323.062 245.562 -1319.469 QUADTO 
+243.719 -1315.875 243.719 -1308.656 QUADTO 
+243.719 -1301.453 245.562 -1297.859 QUADTO 
+247.406 -1294.266 251.062 -1294.266 QUADTO 
+254.734 -1294.266 256.578 -1297.859 QUADTO 
+258.422 -1301.453 258.422 -1308.656 QUADTO 
+258.422 -1315.875 256.578 -1319.469 QUADTO 
+254.734 -1323.062 251.062 -1323.062 QUADTO 
+closepath
+251.062 -1326.812 M
+256.938 -1326.812 260.047 -1322.164 QUADTO 
+263.156 -1317.516 263.156 -1308.656 QUADTO 
+263.156 -1299.812 260.047 -1295.156 QUADTO 
+256.938 -1290.5 251.062 -1290.5 QUADTO 
+245.172 -1290.5 242.07 -1295.156 QUADTO 
+238.969 -1299.812 238.969 -1308.656 QUADTO 
+238.969 -1317.516 242.07 -1322.164 QUADTO 
+245.172 -1326.812 251.062 -1326.812 QUADTO 
+closepath
+282.062 -1323.062 M
+278.406 -1323.062 276.562 -1319.469 QUADTO 
+274.719 -1315.875 274.719 -1308.656 QUADTO 
+274.719 -1301.453 276.562 -1297.859 QUADTO 
+278.406 -1294.266 282.062 -1294.266 QUADTO 
+285.734 -1294.266 287.578 -1297.859 QUADTO 
+289.422 -1301.453 289.422 -1308.656 QUADTO 
+289.422 -1315.875 287.578 -1319.469 QUADTO 
+285.734 -1323.062 282.062 -1323.062 QUADTO 
+closepath
+282.062 -1326.812 M
+287.938 -1326.812 291.047 -1322.164 QUADTO 
+294.156 -1317.516 294.156 -1308.656 QUADTO 
+294.156 -1299.812 291.047 -1295.156 QUADTO 
+287.938 -1290.5 282.062 -1290.5 QUADTO 
+276.172 -1290.5 273.07 -1295.156 QUADTO 
+269.969 -1299.812 269.969 -1308.656 QUADTO 
+269.969 -1317.516 273.07 -1322.164 QUADTO 
+276.172 -1326.812 282.062 -1326.812 QUADTO 
+closepath
+307.016 -1295.172 M
+323.531 -1295.172 lineto
+323.531 -1291.188 lineto
+301.312 -1291.188 lineto
+301.312 -1295.172 lineto
+304.016 -1297.969 308.664 -1302.664 QUADTO 
+313.312 -1307.359 314.516 -1308.719 QUADTO 
+316.781 -1311.281 317.688 -1313.047 QUADTO 
+318.594 -1314.812 318.594 -1316.531 QUADTO 
+318.594 -1319.312 316.633 -1321.07 QUADTO 
+314.672 -1322.828 311.531 -1322.828 QUADTO 
+309.312 -1322.828 306.836 -1322.055 QUADTO 
+304.359 -1321.281 301.547 -1319.719 QUADTO 
+301.547 -1324.5 lineto
+304.406 -1325.641 306.891 -1326.227 QUADTO 
+309.375 -1326.812 311.438 -1326.812 QUADTO 
+316.875 -1326.812 320.109 -1324.094 QUADTO 
+323.344 -1321.375 323.344 -1316.828 QUADTO 
+323.344 -1314.672 322.539 -1312.742 QUADTO 
+321.734 -1310.812 319.594 -1308.188 QUADTO 
+319.016 -1307.5 315.875 -1304.258 QUADTO 
+312.734 -1301.016 307.016 -1295.172 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+202.453 -1159.875 M
+198.797 -1159.875 196.953 -1156.281 QUADTO 
+195.109 -1152.688 195.109 -1145.469 QUADTO 
+195.109 -1138.266 196.953 -1134.672 QUADTO 
+198.797 -1131.078 202.453 -1131.078 QUADTO 
+206.125 -1131.078 207.969 -1134.672 QUADTO 
+209.812 -1138.266 209.812 -1145.469 QUADTO 
+209.812 -1152.688 207.969 -1156.281 QUADTO 
+206.125 -1159.875 202.453 -1159.875 QUADTO 
+closepath
+202.453 -1163.625 M
+208.328 -1163.625 211.438 -1158.977 QUADTO 
+214.547 -1154.328 214.547 -1145.469 QUADTO 
+214.547 -1136.625 211.438 -1131.969 QUADTO 
+208.328 -1127.312 202.453 -1127.312 QUADTO 
+196.562 -1127.312 193.461 -1131.969 QUADTO 
+190.359 -1136.625 190.359 -1145.469 QUADTO 
+190.359 -1154.328 193.461 -1158.977 QUADTO 
+196.562 -1163.625 202.453 -1163.625 QUADTO 
+closepath
+223.328 -1133.953 M
+228.266 -1133.953 lineto
+228.266 -1128 lineto
+223.328 -1128 lineto
+223.328 -1133.953 lineto
+closepath
+248.453 -1159.875 M
+244.797 -1159.875 242.953 -1156.281 QUADTO 
+241.109 -1152.688 241.109 -1145.469 QUADTO 
+241.109 -1138.266 242.953 -1134.672 QUADTO 
+244.797 -1131.078 248.453 -1131.078 QUADTO 
+252.125 -1131.078 253.969 -1134.672 QUADTO 
+255.812 -1138.266 255.812 -1145.469 QUADTO 
+255.812 -1152.688 253.969 -1156.281 QUADTO 
+252.125 -1159.875 248.453 -1159.875 QUADTO 
+closepath
+248.453 -1163.625 M
+254.328 -1163.625 257.438 -1158.977 QUADTO 
+260.547 -1154.328 260.547 -1145.469 QUADTO 
+260.547 -1136.625 257.438 -1131.969 QUADTO 
+254.328 -1127.312 248.453 -1127.312 QUADTO 
+242.562 -1127.312 239.461 -1131.969 QUADTO 
+236.359 -1136.625 236.359 -1145.469 QUADTO 
+236.359 -1154.328 239.461 -1158.977 QUADTO 
+242.562 -1163.625 248.453 -1163.625 QUADTO 
+closepath
+279.453 -1159.875 M
+275.797 -1159.875 273.953 -1156.281 QUADTO 
+272.109 -1152.688 272.109 -1145.469 QUADTO 
+272.109 -1138.266 273.953 -1134.672 QUADTO 
+275.797 -1131.078 279.453 -1131.078 QUADTO 
+283.125 -1131.078 284.969 -1134.672 QUADTO 
+286.812 -1138.266 286.812 -1145.469 QUADTO 
+286.812 -1152.688 284.969 -1156.281 QUADTO 
+283.125 -1159.875 279.453 -1159.875 QUADTO 
+closepath
+279.453 -1163.625 M
+285.328 -1163.625 288.438 -1158.977 QUADTO 
+291.547 -1154.328 291.547 -1145.469 QUADTO 
+291.547 -1136.625 288.438 -1131.969 QUADTO 
+285.328 -1127.312 279.453 -1127.312 QUADTO 
+273.562 -1127.312 270.461 -1131.969 QUADTO 
+267.359 -1136.625 267.359 -1145.469 QUADTO 
+267.359 -1154.328 270.461 -1158.977 QUADTO 
+273.562 -1163.625 279.453 -1163.625 QUADTO 
+closepath
+310.453 -1159.875 M
+306.797 -1159.875 304.953 -1156.281 QUADTO 
+303.109 -1152.688 303.109 -1145.469 QUADTO 
+303.109 -1138.266 304.953 -1134.672 QUADTO 
+306.797 -1131.078 310.453 -1131.078 QUADTO 
+314.125 -1131.078 315.969 -1134.672 QUADTO 
+317.812 -1138.266 317.812 -1145.469 QUADTO 
+317.812 -1152.688 315.969 -1156.281 QUADTO 
+314.125 -1159.875 310.453 -1159.875 QUADTO 
+closepath
+310.453 -1163.625 M
+316.328 -1163.625 319.438 -1158.977 QUADTO 
+322.547 -1154.328 322.547 -1145.469 QUADTO 
+322.547 -1136.625 319.438 -1131.969 QUADTO 
+316.328 -1127.312 310.453 -1127.312 QUADTO 
+304.562 -1127.312 301.461 -1131.969 QUADTO 
+298.359 -1136.625 298.359 -1145.469 QUADTO 
+298.359 -1154.328 301.461 -1158.977 QUADTO 
+304.562 -1163.625 310.453 -1163.625 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+207.266 -991.875 M
+203.609 -991.875 201.766 -988.281 QUADTO 
+199.922 -984.688 199.922 -977.469 QUADTO 
+199.922 -970.266 201.766 -966.672 QUADTO 
+203.609 -963.078 207.266 -963.078 QUADTO 
+210.938 -963.078 212.781 -966.672 QUADTO 
+214.625 -970.266 214.625 -977.469 QUADTO 
+214.625 -984.688 212.781 -988.281 QUADTO 
+210.938 -991.875 207.266 -991.875 QUADTO 
+closepath
+207.266 -995.625 M
+213.141 -995.625 216.25 -990.977 QUADTO 
+219.359 -986.328 219.359 -977.469 QUADTO 
+219.359 -968.625 216.25 -963.969 QUADTO 
+213.141 -959.312 207.266 -959.312 QUADTO 
+201.375 -959.312 198.273 -963.969 QUADTO 
+195.172 -968.625 195.172 -977.469 QUADTO 
+195.172 -986.328 198.273 -990.977 QUADTO 
+201.375 -995.625 207.266 -995.625 QUADTO 
+closepath
+228.141 -965.953 M
+233.078 -965.953 lineto
+233.078 -960 lineto
+228.141 -960 lineto
+228.141 -965.953 lineto
+closepath
+253.266 -991.875 M
+249.609 -991.875 247.766 -988.281 QUADTO 
+245.922 -984.688 245.922 -977.469 QUADTO 
+245.922 -970.266 247.766 -966.672 QUADTO 
+249.609 -963.078 253.266 -963.078 QUADTO 
+256.938 -963.078 258.781 -966.672 QUADTO 
+260.625 -970.266 260.625 -977.469 QUADTO 
+260.625 -984.688 258.781 -988.281 QUADTO 
+256.938 -991.875 253.266 -991.875 QUADTO 
+closepath
+253.266 -995.625 M
+259.141 -995.625 262.25 -990.977 QUADTO 
+265.359 -986.328 265.359 -977.469 QUADTO 
+265.359 -968.625 262.25 -963.969 QUADTO 
+259.141 -959.312 253.266 -959.312 QUADTO 
+247.375 -959.312 244.273 -963.969 QUADTO 
+241.172 -968.625 241.172 -977.469 QUADTO 
+241.172 -986.328 244.273 -990.977 QUADTO 
+247.375 -995.625 253.266 -995.625 QUADTO 
+closepath
+284.266 -991.875 M
+280.609 -991.875 278.766 -988.281 QUADTO 
+276.922 -984.688 276.922 -977.469 QUADTO 
+276.922 -970.266 278.766 -966.672 QUADTO 
+280.609 -963.078 284.266 -963.078 QUADTO 
+287.938 -963.078 289.781 -966.672 QUADTO 
+291.625 -970.266 291.625 -977.469 QUADTO 
+291.625 -984.688 289.781 -988.281 QUADTO 
+287.938 -991.875 284.266 -991.875 QUADTO 
+closepath
+284.266 -995.625 M
+290.141 -995.625 293.25 -990.977 QUADTO 
+296.359 -986.328 296.359 -977.469 QUADTO 
+296.359 -968.625 293.25 -963.969 QUADTO 
+290.141 -959.312 284.266 -959.312 QUADTO 
+278.375 -959.312 275.273 -963.969 QUADTO 
+272.172 -968.625 272.172 -977.469 QUADTO 
+272.172 -986.328 275.273 -990.977 QUADTO 
+278.375 -995.625 284.266 -995.625 QUADTO 
+closepath
+309.219 -963.984 M
+325.734 -963.984 lineto
+325.734 -960 lineto
+303.516 -960 lineto
+303.516 -963.984 lineto
+306.219 -966.781 310.867 -971.477 QUADTO 
+315.516 -976.172 316.719 -977.531 QUADTO 
+318.984 -980.094 319.891 -981.859 QUADTO 
+320.797 -983.625 320.797 -985.344 QUADTO 
+320.797 -988.125 318.836 -989.883 QUADTO 
+316.875 -991.641 313.734 -991.641 QUADTO 
+311.516 -991.641 309.039 -990.867 QUADTO 
+306.562 -990.094 303.75 -988.531 QUADTO 
+303.75 -993.312 lineto
+306.609 -994.453 309.094 -995.039 QUADTO 
+311.578 -995.625 313.641 -995.625 QUADTO 
+319.078 -995.625 322.312 -992.906 QUADTO 
+325.547 -990.188 325.547 -985.641 QUADTO 
+325.547 -983.484 324.742 -981.555 QUADTO 
+323.938 -979.625 321.797 -977 QUADTO 
+321.219 -976.312 318.078 -973.07 QUADTO 
+314.938 -969.828 309.219 -963.984 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+202.453 -828.672 M
+198.797 -828.672 196.953 -825.078 QUADTO 
+195.109 -821.484 195.109 -814.266 QUADTO 
+195.109 -807.062 196.953 -803.469 QUADTO 
+198.797 -799.875 202.453 -799.875 QUADTO 
+206.125 -799.875 207.969 -803.469 QUADTO 
+209.812 -807.062 209.812 -814.266 QUADTO 
+209.812 -821.484 207.969 -825.078 QUADTO 
+206.125 -828.672 202.453 -828.672 QUADTO 
+closepath
+202.453 -832.422 M
+208.328 -832.422 211.438 -827.773 QUADTO 
+214.547 -823.125 214.547 -814.266 QUADTO 
+214.547 -805.422 211.438 -800.766 QUADTO 
+208.328 -796.109 202.453 -796.109 QUADTO 
+196.562 -796.109 193.461 -800.766 QUADTO 
+190.359 -805.422 190.359 -814.266 QUADTO 
+190.359 -823.125 193.461 -827.773 QUADTO 
+196.562 -832.422 202.453 -832.422 QUADTO 
+closepath
+223.328 -802.75 M
+228.266 -802.75 lineto
+228.266 -796.797 lineto
+223.328 -796.797 lineto
+223.328 -802.75 lineto
+closepath
+248.453 -828.672 M
+244.797 -828.672 242.953 -825.078 QUADTO 
+241.109 -821.484 241.109 -814.266 QUADTO 
+241.109 -807.062 242.953 -803.469 QUADTO 
+244.797 -799.875 248.453 -799.875 QUADTO 
+252.125 -799.875 253.969 -803.469 QUADTO 
+255.812 -807.062 255.812 -814.266 QUADTO 
+255.812 -821.484 253.969 -825.078 QUADTO 
+252.125 -828.672 248.453 -828.672 QUADTO 
+closepath
+248.453 -832.422 M
+254.328 -832.422 257.438 -827.773 QUADTO 
+260.547 -823.125 260.547 -814.266 QUADTO 
+260.547 -805.422 257.438 -800.766 QUADTO 
+254.328 -796.109 248.453 -796.109 QUADTO 
+242.562 -796.109 239.461 -800.766 QUADTO 
+236.359 -805.422 236.359 -814.266 QUADTO 
+236.359 -823.125 239.461 -827.773 QUADTO 
+242.562 -832.422 248.453 -832.422 QUADTO 
+closepath
+279.453 -828.672 M
+275.797 -828.672 273.953 -825.078 QUADTO 
+272.109 -821.484 272.109 -814.266 QUADTO 
+272.109 -807.062 273.953 -803.469 QUADTO 
+275.797 -799.875 279.453 -799.875 QUADTO 
+283.125 -799.875 284.969 -803.469 QUADTO 
+286.812 -807.062 286.812 -814.266 QUADTO 
+286.812 -821.484 284.969 -825.078 QUADTO 
+283.125 -828.672 279.453 -828.672 QUADTO 
+closepath
+279.453 -832.422 M
+285.328 -832.422 288.438 -827.773 QUADTO 
+291.547 -823.125 291.547 -814.266 QUADTO 
+291.547 -805.422 288.438 -800.766 QUADTO 
+285.328 -796.109 279.453 -796.109 QUADTO 
+273.562 -796.109 270.461 -800.766 QUADTO 
+267.359 -805.422 267.359 -814.266 QUADTO 
+267.359 -823.125 270.461 -827.773 QUADTO 
+273.562 -832.422 279.453 -832.422 QUADTO 
+closepath
+313.328 -827.672 M
+301.375 -808.984 lineto
+313.328 -808.984 lineto
+313.328 -827.672 lineto
+closepath
+312.094 -831.797 M
+318.047 -831.797 lineto
+318.047 -808.984 lineto
+323.031 -808.984 lineto
+323.031 -805.047 lineto
+318.047 -805.047 lineto
+318.047 -796.797 lineto
+313.328 -796.797 lineto
+313.328 -805.047 lineto
+297.531 -805.047 lineto
+297.531 -809.625 lineto
+312.094 -831.797 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+202.453 -660.672 M
+198.797 -660.672 196.953 -657.078 QUADTO 
+195.109 -653.484 195.109 -646.266 QUADTO 
+195.109 -639.062 196.953 -635.469 QUADTO 
+198.797 -631.875 202.453 -631.875 QUADTO 
+206.125 -631.875 207.969 -635.469 QUADTO 
+209.812 -639.062 209.812 -646.266 QUADTO 
+209.812 -653.484 207.969 -657.078 QUADTO 
+206.125 -660.672 202.453 -660.672 QUADTO 
+closepath
+202.453 -664.422 M
+208.328 -664.422 211.438 -659.773 QUADTO 
+214.547 -655.125 214.547 -646.266 QUADTO 
+214.547 -637.422 211.438 -632.766 QUADTO 
+208.328 -628.109 202.453 -628.109 QUADTO 
+196.562 -628.109 193.461 -632.766 QUADTO 
+190.359 -637.422 190.359 -646.266 QUADTO 
+190.359 -655.125 193.461 -659.773 QUADTO 
+196.562 -664.422 202.453 -664.422 QUADTO 
+closepath
+223.328 -634.75 M
+228.266 -634.75 lineto
+228.266 -628.797 lineto
+223.328 -628.797 lineto
+223.328 -634.75 lineto
+closepath
+248.453 -660.672 M
+244.797 -660.672 242.953 -657.078 QUADTO 
+241.109 -653.484 241.109 -646.266 QUADTO 
+241.109 -639.062 242.953 -635.469 QUADTO 
+244.797 -631.875 248.453 -631.875 QUADTO 
+252.125 -631.875 253.969 -635.469 QUADTO 
+255.812 -639.062 255.812 -646.266 QUADTO 
+255.812 -653.484 253.969 -657.078 QUADTO 
+252.125 -660.672 248.453 -660.672 QUADTO 
+closepath
+248.453 -664.422 M
+254.328 -664.422 257.438 -659.773 QUADTO 
+260.547 -655.125 260.547 -646.266 QUADTO 
+260.547 -637.422 257.438 -632.766 QUADTO 
+254.328 -628.109 248.453 -628.109 QUADTO 
+242.562 -628.109 239.461 -632.766 QUADTO 
+236.359 -637.422 236.359 -646.266 QUADTO 
+236.359 -655.125 239.461 -659.773 QUADTO 
+242.562 -664.422 248.453 -664.422 QUADTO 
+closepath
+279.453 -660.672 M
+275.797 -660.672 273.953 -657.078 QUADTO 
+272.109 -653.484 272.109 -646.266 QUADTO 
+272.109 -639.062 273.953 -635.469 QUADTO 
+275.797 -631.875 279.453 -631.875 QUADTO 
+283.125 -631.875 284.969 -635.469 QUADTO 
+286.812 -639.062 286.812 -646.266 QUADTO 
+286.812 -653.484 284.969 -657.078 QUADTO 
+283.125 -660.672 279.453 -660.672 QUADTO 
+closepath
+279.453 -664.422 M
+285.328 -664.422 288.438 -659.773 QUADTO 
+291.547 -655.125 291.547 -646.266 QUADTO 
+291.547 -637.422 288.438 -632.766 QUADTO 
+285.328 -628.109 279.453 -628.109 QUADTO 
+273.562 -628.109 270.461 -632.766 QUADTO 
+267.359 -637.422 267.359 -646.266 QUADTO 
+267.359 -655.125 270.461 -659.773 QUADTO 
+273.562 -664.422 279.453 -664.422 QUADTO 
+closepath
+311.031 -648.188 M
+307.844 -648.188 305.984 -646.008 QUADTO 
+304.125 -643.828 304.125 -640.031 QUADTO 
+304.125 -636.25 305.984 -634.062 QUADTO 
+307.844 -631.875 311.031 -631.875 QUADTO 
+314.219 -631.875 316.086 -634.062 QUADTO 
+317.953 -636.25 317.953 -640.031 QUADTO 
+317.953 -643.828 316.086 -646.008 QUADTO 
+314.219 -648.188 311.031 -648.188 QUADTO 
+closepath
+320.438 -663.016 M
+320.438 -658.703 lineto
+318.656 -659.547 316.836 -659.992 QUADTO 
+315.016 -660.438 313.234 -660.438 QUADTO 
+308.547 -660.438 306.078 -657.273 QUADTO 
+303.609 -654.109 303.25 -647.719 QUADTO 
+304.641 -649.75 306.727 -650.844 QUADTO 
+308.812 -651.938 311.312 -651.938 QUADTO 
+316.594 -651.938 319.648 -648.734 QUADTO 
+322.703 -645.531 322.703 -640.031 QUADTO 
+322.703 -634.641 319.516 -631.375 QUADTO 
+316.328 -628.109 311.031 -628.109 QUADTO 
+304.969 -628.109 301.758 -632.766 QUADTO 
+298.547 -637.422 298.547 -646.266 QUADTO 
+298.547 -654.562 302.484 -659.492 QUADTO 
+306.422 -664.422 313.047 -664.422 QUADTO 
+314.828 -664.422 316.648 -664.07 QUADTO 
+318.469 -663.719 320.438 -663.016 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+202.453 -497.469 M
+198.797 -497.469 196.953 -493.875 QUADTO 
+195.109 -490.281 195.109 -483.062 QUADTO 
+195.109 -475.859 196.953 -472.266 QUADTO 
+198.797 -468.672 202.453 -468.672 QUADTO 
+206.125 -468.672 207.969 -472.266 QUADTO 
+209.812 -475.859 209.812 -483.062 QUADTO 
+209.812 -490.281 207.969 -493.875 QUADTO 
+206.125 -497.469 202.453 -497.469 QUADTO 
+closepath
+202.453 -501.219 M
+208.328 -501.219 211.438 -496.57 QUADTO 
+214.547 -491.922 214.547 -483.062 QUADTO 
+214.547 -474.219 211.438 -469.562 QUADTO 
+208.328 -464.906 202.453 -464.906 QUADTO 
+196.562 -464.906 193.461 -469.562 QUADTO 
+190.359 -474.219 190.359 -483.062 QUADTO 
+190.359 -491.922 193.461 -496.57 QUADTO 
+196.562 -501.219 202.453 -501.219 QUADTO 
+closepath
+223.328 -471.547 M
+228.266 -471.547 lineto
+228.266 -465.594 lineto
+223.328 -465.594 lineto
+223.328 -471.547 lineto
+closepath
+248.453 -497.469 M
+244.797 -497.469 242.953 -493.875 QUADTO 
+241.109 -490.281 241.109 -483.062 QUADTO 
+241.109 -475.859 242.953 -472.266 QUADTO 
+244.797 -468.672 248.453 -468.672 QUADTO 
+252.125 -468.672 253.969 -472.266 QUADTO 
+255.812 -475.859 255.812 -483.062 QUADTO 
+255.812 -490.281 253.969 -493.875 QUADTO 
+252.125 -497.469 248.453 -497.469 QUADTO 
+closepath
+248.453 -501.219 M
+254.328 -501.219 257.438 -496.57 QUADTO 
+260.547 -491.922 260.547 -483.062 QUADTO 
+260.547 -474.219 257.438 -469.562 QUADTO 
+254.328 -464.906 248.453 -464.906 QUADTO 
+242.562 -464.906 239.461 -469.562 QUADTO 
+236.359 -474.219 236.359 -483.062 QUADTO 
+236.359 -491.922 239.461 -496.57 QUADTO 
+242.562 -501.219 248.453 -501.219 QUADTO 
+closepath
+279.453 -497.469 M
+275.797 -497.469 273.953 -493.875 QUADTO 
+272.109 -490.281 272.109 -483.062 QUADTO 
+272.109 -475.859 273.953 -472.266 QUADTO 
+275.797 -468.672 279.453 -468.672 QUADTO 
+283.125 -468.672 284.969 -472.266 QUADTO 
+286.812 -475.859 286.812 -483.062 QUADTO 
+286.812 -490.281 284.969 -493.875 QUADTO 
+283.125 -497.469 279.453 -497.469 QUADTO 
+closepath
+279.453 -501.219 M
+285.328 -501.219 288.438 -496.57 QUADTO 
+291.547 -491.922 291.547 -483.062 QUADTO 
+291.547 -474.219 288.438 -469.562 QUADTO 
+285.328 -464.906 279.453 -464.906 QUADTO 
+273.562 -464.906 270.461 -469.562 QUADTO 
+267.359 -474.219 267.359 -483.062 QUADTO 
+267.359 -491.922 270.461 -496.57 QUADTO 
+273.562 -501.219 279.453 -501.219 QUADTO 
+closepath
+310.453 -482.219 M
+307.078 -482.219 305.141 -480.414 QUADTO 
+303.203 -478.609 303.203 -475.438 QUADTO 
+303.203 -472.281 305.141 -470.477 QUADTO 
+307.078 -468.672 310.453 -468.672 QUADTO 
+313.828 -468.672 315.773 -470.484 QUADTO 
+317.719 -472.297 317.719 -475.438 QUADTO 
+317.719 -478.609 315.781 -480.414 QUADTO 
+313.844 -482.219 310.453 -482.219 QUADTO 
+closepath
+305.719 -484.234 M
+302.672 -484.984 300.969 -487.07 QUADTO 
+299.266 -489.156 299.266 -492.156 QUADTO 
+299.266 -496.344 302.258 -498.781 QUADTO 
+305.25 -501.219 310.453 -501.219 QUADTO 
+315.672 -501.219 318.648 -498.781 QUADTO 
+321.625 -496.344 321.625 -492.156 QUADTO 
+321.625 -489.156 319.93 -487.07 QUADTO 
+318.234 -484.984 315.203 -484.234 QUADTO 
+318.625 -483.438 320.539 -481.117 QUADTO 
+322.453 -478.797 322.453 -475.438 QUADTO 
+322.453 -470.359 319.344 -467.633 QUADTO 
+316.234 -464.906 310.453 -464.906 QUADTO 
+304.656 -464.906 301.555 -467.633 QUADTO 
+298.453 -470.359 298.453 -475.438 QUADTO 
+298.453 -478.797 300.375 -481.117 QUADTO 
+302.297 -483.438 305.719 -484.234 QUADTO 
+closepath
+303.984 -491.703 M
+303.984 -488.984 305.68 -487.461 QUADTO 
+307.375 -485.938 310.453 -485.938 QUADTO 
+313.5 -485.938 315.219 -487.461 QUADTO 
+316.938 -488.984 316.938 -491.703 QUADTO 
+316.938 -494.422 315.219 -495.945 QUADTO 
+313.5 -497.469 310.453 -497.469 QUADTO 
+307.375 -497.469 305.68 -495.945 QUADTO 
+303.984 -494.422 303.984 -491.703 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+202.453 -329.469 M
+198.797 -329.469 196.953 -325.875 QUADTO 
+195.109 -322.281 195.109 -315.062 QUADTO 
+195.109 -307.859 196.953 -304.266 QUADTO 
+198.797 -300.672 202.453 -300.672 QUADTO 
+206.125 -300.672 207.969 -304.266 QUADTO 
+209.812 -307.859 209.812 -315.062 QUADTO 
+209.812 -322.281 207.969 -325.875 QUADTO 
+206.125 -329.469 202.453 -329.469 QUADTO 
+closepath
+202.453 -333.219 M
+208.328 -333.219 211.438 -328.57 QUADTO 
+214.547 -323.922 214.547 -315.062 QUADTO 
+214.547 -306.219 211.438 -301.562 QUADTO 
+208.328 -296.906 202.453 -296.906 QUADTO 
+196.562 -296.906 193.461 -301.562 QUADTO 
+190.359 -306.219 190.359 -315.062 QUADTO 
+190.359 -323.922 193.461 -328.57 QUADTO 
+196.562 -333.219 202.453 -333.219 QUADTO 
+closepath
+223.328 -303.547 M
+228.266 -303.547 lineto
+228.266 -297.594 lineto
+223.328 -297.594 lineto
+223.328 -303.547 lineto
+closepath
+248.453 -329.469 M
+244.797 -329.469 242.953 -325.875 QUADTO 
+241.109 -322.281 241.109 -315.062 QUADTO 
+241.109 -307.859 242.953 -304.266 QUADTO 
+244.797 -300.672 248.453 -300.672 QUADTO 
+252.125 -300.672 253.969 -304.266 QUADTO 
+255.812 -307.859 255.812 -315.062 QUADTO 
+255.812 -322.281 253.969 -325.875 QUADTO 
+252.125 -329.469 248.453 -329.469 QUADTO 
+closepath
+248.453 -333.219 M
+254.328 -333.219 257.438 -328.57 QUADTO 
+260.547 -323.922 260.547 -315.062 QUADTO 
+260.547 -306.219 257.438 -301.562 QUADTO 
+254.328 -296.906 248.453 -296.906 QUADTO 
+242.562 -296.906 239.461 -301.562 QUADTO 
+236.359 -306.219 236.359 -315.062 QUADTO 
+236.359 -323.922 239.461 -328.57 QUADTO 
+242.562 -333.219 248.453 -333.219 QUADTO 
+closepath
+270.141 -301.578 M
+277.875 -301.578 lineto
+277.875 -328.281 lineto
+269.469 -326.594 lineto
+269.469 -330.906 lineto
+277.828 -332.594 lineto
+282.562 -332.594 lineto
+282.562 -301.578 lineto
+290.297 -301.578 lineto
+290.297 -297.594 lineto
+270.141 -297.594 lineto
+270.141 -301.578 lineto
+closepath
+310.453 -329.469 M
+306.797 -329.469 304.953 -325.875 QUADTO 
+303.109 -322.281 303.109 -315.062 QUADTO 
+303.109 -307.859 304.953 -304.266 QUADTO 
+306.797 -300.672 310.453 -300.672 QUADTO 
+314.125 -300.672 315.969 -304.266 QUADTO 
+317.812 -307.859 317.812 -315.062 QUADTO 
+317.812 -322.281 315.969 -325.875 QUADTO 
+314.125 -329.469 310.453 -329.469 QUADTO 
+closepath
+310.453 -333.219 M
+316.328 -333.219 319.438 -328.57 QUADTO 
+322.547 -323.922 322.547 -315.062 QUADTO 
+322.547 -306.219 319.438 -301.562 QUADTO 
+316.328 -296.906 310.453 -296.906 QUADTO 
+304.562 -296.906 301.461 -301.562 QUADTO 
+298.359 -306.219 298.359 -315.062 QUADTO 
+298.359 -323.922 301.461 -328.57 QUADTO 
+304.562 -333.219 310.453 -333.219 QUADTO 
+closepath
+fill
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 402.5 M
+533.75 402.5 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+76.25 402.5 M
+76.25 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+152.5 402.5 M
+152.5 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+228.75 402.5 M
+228.75 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+305 402.5 M
+305 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+381.25 402.5 M
+381.25 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+457.5 402.5 M
+457.5 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+533.75 402.5 M
+533.75 407.675 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+95.312 402.5 M
+95.312 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+114.375 402.5 M
+114.375 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+133.438 402.5 M
+133.438 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+171.563 402.5 M
+171.563 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+190.625 402.5 M
+190.625 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+209.688 402.5 M
+209.688 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+247.813 402.5 M
+247.813 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+266.875 402.5 M
+266.875 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+285.938 402.5 M
+285.938 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+324.063 402.5 M
+324.063 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+343.125 402.5 M
+343.125 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+362.188 402.5 M
+362.188 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+400.313 402.5 M
+400.313 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+419.375 402.5 M
+419.375 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+438.438 402.5 M
+438.438 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+476.563 402.5 M
+476.563 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+495.625 402.5 M
+495.625 405.605 lineto
+stroke
+grestore
+gsave
+newpath
+0 0 M
+610 0 lineto
+610 460 lineto
+0 460 lineto
+0 0 lineto
+closepath
+clip
+0 setlinecap
+0 setlinejoin
+4 setmiterlimit
+0.5 setlinewidth
+newpath
+514.688 402.5 M
+514.688 405.605 lineto
+stroke
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+328.734 -2026.266 M
+341.375 -2026.266 lineto
+341.375 -2022.422 lineto
+328.734 -2022.422 lineto
+328.734 -2026.266 lineto
+closepath
+352.609 -2015.172 M
+369.125 -2015.172 lineto
+369.125 -2011.188 lineto
+346.906 -2011.188 lineto
+346.906 -2015.172 lineto
+349.609 -2017.969 354.258 -2022.664 QUADTO 
+358.906 -2027.359 360.109 -2028.719 QUADTO 
+362.375 -2031.281 363.281 -2033.047 QUADTO 
+364.188 -2034.812 364.188 -2036.531 QUADTO 
+364.188 -2039.312 362.227 -2041.07 QUADTO 
+360.266 -2042.828 357.125 -2042.828 QUADTO 
+354.906 -2042.828 352.43 -2042.055 QUADTO 
+349.953 -2041.281 347.141 -2039.719 QUADTO 
+347.141 -2044.5 lineto
+350 -2045.641 352.484 -2046.227 QUADTO 
+354.969 -2046.812 357.031 -2046.812 QUADTO 
+362.469 -2046.812 365.703 -2044.094 QUADTO 
+368.938 -2041.375 368.938 -2036.828 QUADTO 
+368.938 -2034.672 368.133 -2032.742 QUADTO 
+367.328 -2030.812 365.188 -2028.188 QUADTO 
+364.609 -2027.5 361.469 -2024.258 QUADTO 
+358.328 -2021.016 352.609 -2015.172 QUADTO 
+closepath
+379.578 -2046.188 M
+398.156 -2046.188 lineto
+398.156 -2042.203 lineto
+383.906 -2042.203 lineto
+383.906 -2033.625 lineto
+384.938 -2033.969 385.969 -2034.148 QUADTO 
+387 -2034.328 388.031 -2034.328 QUADTO 
+393.891 -2034.328 397.312 -2031.117 QUADTO 
+400.734 -2027.906 400.734 -2022.422 QUADTO 
+400.734 -2016.766 397.219 -2013.633 QUADTO 
+393.703 -2010.5 387.312 -2010.5 QUADTO 
+385.109 -2010.5 382.82 -2010.883 QUADTO 
+380.531 -2011.266 378.094 -2012.016 QUADTO 
+378.094 -2016.766 lineto
+380.203 -2015.625 382.453 -2015.062 QUADTO 
+384.703 -2014.5 387.219 -2014.5 QUADTO 
+391.266 -2014.5 393.633 -2016.633 QUADTO 
+396 -2018.766 396 -2022.422 QUADTO 
+396 -2026.078 393.633 -2028.211 QUADTO 
+391.266 -2030.344 387.219 -2030.344 QUADTO 
+385.312 -2030.344 383.43 -2029.922 QUADTO 
+381.547 -2029.5 379.578 -2028.609 QUADTO 
+379.578 -2046.188 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+693.531 -2026.266 M
+706.172 -2026.266 lineto
+706.172 -2022.422 lineto
+693.531 -2022.422 lineto
+693.531 -2026.266 lineto
+closepath
+717.406 -2015.172 M
+733.922 -2015.172 lineto
+733.922 -2011.188 lineto
+711.703 -2011.188 lineto
+711.703 -2015.172 lineto
+714.406 -2017.969 719.055 -2022.664 QUADTO 
+723.703 -2027.359 724.906 -2028.719 QUADTO 
+727.172 -2031.281 728.078 -2033.047 QUADTO 
+728.984 -2034.812 728.984 -2036.531 QUADTO 
+728.984 -2039.312 727.023 -2041.07 QUADTO 
+725.062 -2042.828 721.922 -2042.828 QUADTO 
+719.703 -2042.828 717.227 -2042.055 QUADTO 
+714.75 -2041.281 711.938 -2039.719 QUADTO 
+711.938 -2044.5 lineto
+714.797 -2045.641 717.281 -2046.227 QUADTO 
+719.766 -2046.812 721.828 -2046.812 QUADTO 
+727.266 -2046.812 730.5 -2044.094 QUADTO 
+733.734 -2041.375 733.734 -2036.828 QUADTO 
+733.734 -2034.672 732.93 -2032.742 QUADTO 
+732.125 -2030.812 729.984 -2028.188 QUADTO 
+729.406 -2027.5 726.266 -2024.258 QUADTO 
+723.125 -2021.016 717.406 -2015.172 QUADTO 
+closepath
+754.453 -2043.062 M
+750.797 -2043.062 748.953 -2039.469 QUADTO 
+747.109 -2035.875 747.109 -2028.656 QUADTO 
+747.109 -2021.453 748.953 -2017.859 QUADTO 
+750.797 -2014.266 754.453 -2014.266 QUADTO 
+758.125 -2014.266 759.969 -2017.859 QUADTO 
+761.812 -2021.453 761.812 -2028.656 QUADTO 
+761.812 -2035.875 759.969 -2039.469 QUADTO 
+758.125 -2043.062 754.453 -2043.062 QUADTO 
+closepath
+754.453 -2046.812 M
+760.328 -2046.812 763.438 -2042.164 QUADTO 
+766.547 -2037.516 766.547 -2028.656 QUADTO 
+766.547 -2019.812 763.438 -2015.156 QUADTO 
+760.328 -2010.5 754.453 -2010.5 QUADTO 
+748.562 -2010.5 745.461 -2015.156 QUADTO 
+742.359 -2019.812 742.359 -2028.656 QUADTO 
+742.359 -2037.516 745.461 -2042.164 QUADTO 
+748.562 -2046.812 754.453 -2046.812 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1058.344 -2026.266 M
+1070.984 -2026.266 lineto
+1070.984 -2022.422 lineto
+1058.344 -2022.422 lineto
+1058.344 -2026.266 lineto
+closepath
+1078.953 -2015.172 M
+1086.688 -2015.172 lineto
+1086.688 -2041.875 lineto
+1078.281 -2040.188 lineto
+1078.281 -2044.5 lineto
+1086.641 -2046.188 lineto
+1091.375 -2046.188 lineto
+1091.375 -2015.172 lineto
+1099.109 -2015.172 lineto
+1099.109 -2011.188 lineto
+1078.953 -2011.188 lineto
+1078.953 -2015.172 lineto
+closepath
+1109.188 -2046.188 M
+1127.766 -2046.188 lineto
+1127.766 -2042.203 lineto
+1113.516 -2042.203 lineto
+1113.516 -2033.625 lineto
+1114.547 -2033.969 1115.578 -2034.148 QUADTO 
+1116.609 -2034.328 1117.641 -2034.328 QUADTO 
+1123.5 -2034.328 1126.922 -2031.117 QUADTO 
+1130.344 -2027.906 1130.344 -2022.422 QUADTO 
+1130.344 -2016.766 1126.828 -2013.633 QUADTO 
+1123.312 -2010.5 1116.922 -2010.5 QUADTO 
+1114.719 -2010.5 1112.43 -2010.883 QUADTO 
+1110.141 -2011.266 1107.703 -2012.016 QUADTO 
+1107.703 -2016.766 lineto
+1109.812 -2015.625 1112.062 -2015.062 QUADTO 
+1114.312 -2014.5 1116.828 -2014.5 QUADTO 
+1120.875 -2014.5 1123.242 -2016.633 QUADTO 
+1125.609 -2018.766 1125.609 -2022.422 QUADTO 
+1125.609 -2026.078 1123.242 -2028.211 QUADTO 
+1120.875 -2030.344 1116.828 -2030.344 QUADTO 
+1114.922 -2030.344 1113.039 -2029.922 QUADTO 
+1111.156 -2029.5 1109.188 -2028.609 QUADTO 
+1109.188 -2046.188 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1423.141 -2026.266 M
+1435.781 -2026.266 lineto
+1435.781 -2022.422 lineto
+1423.141 -2022.422 lineto
+1423.141 -2026.266 lineto
+closepath
+1443.75 -2015.172 M
+1451.484 -2015.172 lineto
+1451.484 -2041.875 lineto
+1443.078 -2040.188 lineto
+1443.078 -2044.5 lineto
+1451.438 -2046.188 lineto
+1456.172 -2046.188 lineto
+1456.172 -2015.172 lineto
+1463.906 -2015.172 lineto
+1463.906 -2011.188 lineto
+1443.75 -2011.188 lineto
+1443.75 -2015.172 lineto
+closepath
+1484.062 -2043.062 M
+1480.406 -2043.062 1478.562 -2039.469 QUADTO 
+1476.719 -2035.875 1476.719 -2028.656 QUADTO 
+1476.719 -2021.453 1478.562 -2017.859 QUADTO 
+1480.406 -2014.266 1484.062 -2014.266 QUADTO 
+1487.734 -2014.266 1489.578 -2017.859 QUADTO 
+1491.422 -2021.453 1491.422 -2028.656 QUADTO 
+1491.422 -2035.875 1489.578 -2039.469 QUADTO 
+1487.734 -2043.062 1484.062 -2043.062 QUADTO 
+closepath
+1484.062 -2046.812 M
+1489.938 -2046.812 1493.047 -2042.164 QUADTO 
+1496.156 -2037.516 1496.156 -2028.656 QUADTO 
+1496.156 -2019.812 1493.047 -2015.156 QUADTO 
+1489.938 -2010.5 1484.062 -2010.5 QUADTO 
+1478.172 -2010.5 1475.07 -2015.156 QUADTO 
+1471.969 -2019.812 1471.969 -2028.656 QUADTO 
+1471.969 -2037.516 1475.07 -2042.164 QUADTO 
+1478.172 -2046.812 1484.062 -2046.812 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1807.141 -2026.266 M
+1819.781 -2026.266 lineto
+1819.781 -2022.422 lineto
+1807.141 -2022.422 lineto
+1807.141 -2026.266 lineto
+closepath
+1826.984 -2046.188 M
+1845.562 -2046.188 lineto
+1845.562 -2042.203 lineto
+1831.312 -2042.203 lineto
+1831.312 -2033.625 lineto
+1832.344 -2033.969 1833.375 -2034.148 QUADTO 
+1834.406 -2034.328 1835.438 -2034.328 QUADTO 
+1841.297 -2034.328 1844.719 -2031.117 QUADTO 
+1848.141 -2027.906 1848.141 -2022.422 QUADTO 
+1848.141 -2016.766 1844.625 -2013.633 QUADTO 
+1841.109 -2010.5 1834.719 -2010.5 QUADTO 
+1832.516 -2010.5 1830.227 -2010.883 QUADTO 
+1827.938 -2011.266 1825.5 -2012.016 QUADTO 
+1825.5 -2016.766 lineto
+1827.609 -2015.625 1829.859 -2015.062 QUADTO 
+1832.109 -2014.5 1834.625 -2014.5 QUADTO 
+1838.672 -2014.5 1841.039 -2016.633 QUADTO 
+1843.406 -2018.766 1843.406 -2022.422 QUADTO 
+1843.406 -2026.078 1841.039 -2028.211 QUADTO 
+1838.672 -2030.344 1834.625 -2030.344 QUADTO 
+1832.719 -2030.344 1830.836 -2029.922 QUADTO 
+1828.953 -2029.5 1826.984 -2028.609 QUADTO 
+1826.984 -2046.188 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+2194.453 -2043.062 M
+2190.797 -2043.062 2188.953 -2039.469 QUADTO 
+2187.109 -2035.875 2187.109 -2028.656 QUADTO 
+2187.109 -2021.453 2188.953 -2017.859 QUADTO 
+2190.797 -2014.266 2194.453 -2014.266 QUADTO 
+2198.125 -2014.266 2199.969 -2017.859 QUADTO 
+2201.812 -2021.453 2201.812 -2028.656 QUADTO 
+2201.812 -2035.875 2199.969 -2039.469 QUADTO 
+2198.125 -2043.062 2194.453 -2043.062 QUADTO 
+closepath
+2194.453 -2046.812 M
+2200.328 -2046.812 2203.438 -2042.164 QUADTO 
+2206.547 -2037.516 2206.547 -2028.656 QUADTO 
+2206.547 -2019.812 2203.438 -2015.156 QUADTO 
+2200.328 -2010.5 2194.453 -2010.5 QUADTO 
+2188.562 -2010.5 2185.461 -2015.156 QUADTO 
+2182.359 -2019.812 2182.359 -2028.656 QUADTO 
+2182.359 -2037.516 2185.461 -2042.164 QUADTO 
+2188.562 -2046.812 2194.453 -2046.812 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+2549.188 -2046.188 M
+2567.766 -2046.188 lineto
+2567.766 -2042.203 lineto
+2553.516 -2042.203 lineto
+2553.516 -2033.625 lineto
+2554.547 -2033.969 2555.578 -2034.148 QUADTO 
+2556.609 -2034.328 2557.641 -2034.328 QUADTO 
+2563.5 -2034.328 2566.922 -2031.117 QUADTO 
+2570.344 -2027.906 2570.344 -2022.422 QUADTO 
+2570.344 -2016.766 2566.828 -2013.633 QUADTO 
+2563.312 -2010.5 2556.922 -2010.5 QUADTO 
+2554.719 -2010.5 2552.43 -2010.883 QUADTO 
+2550.141 -2011.266 2547.703 -2012.016 QUADTO 
+2547.703 -2016.766 lineto
+2549.812 -2015.625 2552.062 -2015.062 QUADTO 
+2554.312 -2014.5 2556.828 -2014.5 QUADTO 
+2560.875 -2014.5 2563.242 -2016.633 QUADTO 
+2565.609 -2018.766 2565.609 -2022.422 QUADTO 
+2565.609 -2026.078 2563.242 -2028.211 QUADTO 
+2560.875 -2030.344 2556.828 -2030.344 QUADTO 
+2554.922 -2030.344 2553.039 -2029.922 QUADTO 
+2551.156 -2029.5 2549.188 -2028.609 QUADTO 
+2549.188 -2046.188 lineto
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1204.719 -270.188 M
+1209.453 -270.188 lineto
+1209.453 -239.172 lineto
+1226.484 -239.172 lineto
+1226.484 -235.188 lineto
+1204.719 -235.188 lineto
+1204.719 -270.188 lineto
+closepath
+1241.703 -258.422 M
+1238.234 -258.422 1236.219 -255.711 QUADTO 
+1234.203 -253 1234.203 -248.297 QUADTO 
+1234.203 -243.578 1236.203 -240.875 QUADTO 
+1238.203 -238.172 1241.703 -238.172 QUADTO 
+1245.141 -238.172 1247.156 -240.891 QUADTO 
+1249.172 -243.609 1249.172 -248.297 QUADTO 
+1249.172 -252.953 1247.156 -255.688 QUADTO 
+1245.141 -258.422 1241.703 -258.422 QUADTO 
+closepath
+1241.703 -262.078 M
+1247.328 -262.078 1250.539 -258.422 QUADTO 
+1253.75 -254.766 1253.75 -248.297 QUADTO 
+1253.75 -241.844 1250.539 -238.172 QUADTO 
+1247.328 -234.5 1241.703 -234.5 QUADTO 
+1236.047 -234.5 1232.852 -238.172 QUADTO 
+1229.656 -241.844 1229.656 -248.297 QUADTO 
+1229.656 -254.766 1232.852 -258.422 QUADTO 
+1236.047 -262.078 1241.703 -262.078 QUADTO 
+closepath
+1279.422 -260.438 M
+1279.422 -256.406 lineto
+1277.594 -257.406 1275.75 -257.914 QUADTO 
+1273.906 -258.422 1272.031 -258.422 QUADTO 
+1267.844 -258.422 1265.523 -255.758 QUADTO 
+1263.203 -253.094 1263.203 -248.297 QUADTO 
+1263.203 -243.484 1265.523 -240.828 QUADTO 
+1267.844 -238.172 1272.031 -238.172 QUADTO 
+1273.906 -238.172 1275.75 -238.672 QUADTO 
+1277.594 -239.172 1279.422 -240.188 QUADTO 
+1279.422 -236.203 lineto
+1277.609 -235.359 1275.68 -234.93 QUADTO 
+1273.75 -234.5 1271.562 -234.5 QUADTO 
+1265.641 -234.5 1262.148 -238.234 QUADTO 
+1258.656 -241.969 1258.656 -248.297 QUADTO 
+1258.656 -254.719 1262.18 -258.398 QUADTO 
+1265.703 -262.078 1271.844 -262.078 QUADTO 
+1273.844 -262.078 1275.742 -261.664 QUADTO 
+1277.641 -261.25 1279.422 -260.438 QUADTO 
+closepath
+1286.078 -245.547 M
+1286.078 -261.438 lineto
+1290.391 -261.438 lineto
+1290.391 -245.719 lineto
+1290.391 -241.984 1291.844 -240.125 QUADTO 
+1293.297 -238.266 1296.203 -238.266 QUADTO 
+1299.703 -238.266 1301.727 -240.492 QUADTO 
+1303.75 -242.719 1303.75 -246.562 QUADTO 
+1303.75 -261.438 lineto
+1308.062 -261.438 lineto
+1308.062 -235.188 lineto
+1303.75 -235.188 lineto
+1303.75 -239.219 lineto
+1302.188 -236.828 1300.109 -235.664 QUADTO 
+1298.031 -234.5 1295.297 -234.5 QUADTO 
+1290.766 -234.5 1288.422 -237.32 QUADTO 
+1286.078 -240.141 1286.078 -245.547 QUADTO 
+closepath
+1296.938 -262.078 M
+1296.938 -262.078 lineto
+closepath
+1333.266 -260.672 M
+1333.266 -256.594 lineto
+1331.438 -257.531 1329.469 -258 QUADTO 
+1327.5 -258.469 1325.391 -258.469 QUADTO 
+1322.172 -258.469 1320.57 -257.484 QUADTO 
+1318.969 -256.5 1318.969 -254.531 QUADTO 
+1318.969 -253.031 1320.117 -252.172 QUADTO 
+1321.266 -251.312 1324.734 -250.547 QUADTO 
+1326.203 -250.219 lineto
+1330.797 -249.234 1332.734 -247.438 QUADTO 
+1334.672 -245.641 1334.672 -242.438 QUADTO 
+1334.672 -238.781 1331.773 -236.641 QUADTO 
+1328.875 -234.5 1323.812 -234.5 QUADTO 
+1321.703 -234.5 1319.422 -234.914 QUADTO 
+1317.141 -235.328 1314.609 -236.156 QUADTO 
+1314.609 -240.609 lineto
+1317 -239.359 1319.32 -238.742 QUADTO 
+1321.641 -238.125 1323.906 -238.125 QUADTO 
+1326.953 -238.125 1328.594 -239.164 QUADTO 
+1330.234 -240.203 1330.234 -242.109 QUADTO 
+1330.234 -243.859 1329.055 -244.797 QUADTO 
+1327.875 -245.734 1323.859 -246.609 QUADTO 
+1322.359 -246.953 lineto
+1318.359 -247.797 1316.578 -249.547 QUADTO 
+1314.797 -251.297 1314.797 -254.344 QUADTO 
+1314.797 -258.047 1317.422 -260.062 QUADTO 
+1320.047 -262.078 1324.875 -262.078 QUADTO 
+1327.266 -262.078 1329.375 -261.727 QUADTO 
+1331.484 -261.375 1333.266 -260.672 QUADTO 
+closepath
+1373.797 -257.453 M
+1373.797 -271.656 lineto
+1378.109 -271.656 lineto
+1378.109 -235.188 lineto
+1373.797 -235.188 lineto
+1373.797 -239.125 lineto
+1372.438 -236.781 1370.367 -235.641 QUADTO 
+1368.297 -234.5 1365.391 -234.5 QUADTO 
+1360.625 -234.5 1357.641 -238.305 QUADTO 
+1354.656 -242.109 1354.656 -248.297 QUADTO 
+1354.656 -254.484 1357.641 -258.281 QUADTO 
+1360.625 -262.078 1365.391 -262.078 QUADTO 
+1368.297 -262.078 1370.367 -260.938 QUADTO 
+1372.438 -259.797 1373.797 -257.453 QUADTO 
+closepath
+1359.109 -248.297 M
+1359.109 -243.531 1361.062 -240.828 QUADTO 
+1363.016 -238.125 1366.438 -238.125 QUADTO 
+1369.859 -238.125 1371.828 -240.828 QUADTO 
+1373.797 -243.531 1373.797 -248.297 QUADTO 
+1373.797 -253.047 1371.828 -255.758 QUADTO 
+1369.859 -258.469 1366.438 -258.469 QUADTO 
+1363.016 -258.469 1361.062 -255.758 QUADTO 
+1359.109 -253.047 1359.109 -248.297 QUADTO 
+closepath
+1398.453 -248.391 M
+1393.234 -248.391 1391.219 -247.195 QUADTO 
+1389.203 -246 1389.203 -243.109 QUADTO 
+1389.203 -240.812 1390.711 -239.469 QUADTO 
+1392.219 -238.125 1394.828 -238.125 QUADTO 
+1398.406 -238.125 1400.578 -240.664 QUADTO 
+1402.75 -243.203 1402.75 -247.422 QUADTO 
+1402.75 -248.391 lineto
+1398.453 -248.391 lineto
+closepath
+1407.062 -250.172 M
+1407.062 -235.188 lineto
+1402.75 -235.188 lineto
+1402.75 -239.172 lineto
+1401.266 -236.781 1399.062 -235.641 QUADTO 
+1396.859 -234.5 1393.672 -234.5 QUADTO 
+1389.641 -234.5 1387.266 -236.766 QUADTO 
+1384.891 -239.031 1384.891 -242.828 QUADTO 
+1384.891 -247.266 1387.852 -249.516 QUADTO 
+1390.812 -251.766 1396.703 -251.766 QUADTO 
+1402.75 -251.766 lineto
+1402.75 -252.188 lineto
+1402.75 -255.156 1400.789 -256.789 QUADTO 
+1398.828 -258.422 1395.297 -258.422 QUADTO 
+1393.047 -258.422 1390.914 -257.883 QUADTO 
+1388.781 -257.344 1386.812 -256.266 QUADTO 
+1386.812 -260.25 lineto
+1389.172 -261.156 1391.398 -261.617 QUADTO 
+1393.625 -262.078 1395.734 -262.078 QUADTO 
+1401.438 -262.078 1404.25 -259.125 QUADTO 
+1407.062 -256.172 1407.062 -250.172 QUADTO 
+closepath
+1445.734 -257.406 M
+1445.016 -257.828 1444.156 -258.031 QUADTO 
+1443.297 -258.234 1442.266 -258.234 QUADTO 
+1438.609 -258.234 1436.656 -255.852 QUADTO 
+1434.703 -253.469 1434.703 -249.016 QUADTO 
+1434.703 -235.188 lineto
+1430.359 -235.188 lineto
+1430.359 -261.438 lineto
+1434.703 -261.438 lineto
+1434.703 -257.359 lineto
+1436.062 -259.75 1438.242 -260.914 QUADTO 
+1440.422 -262.078 1443.531 -262.078 QUADTO 
+1443.984 -262.078 1444.523 -262.016 QUADTO 
+1445.062 -261.953 1445.719 -261.844 QUADTO 
+1445.734 -257.406 lineto
+closepath
+1462.453 -248.391 M
+1457.234 -248.391 1455.219 -247.195 QUADTO 
+1453.203 -246 1453.203 -243.109 QUADTO 
+1453.203 -240.812 1454.711 -239.469 QUADTO 
+1456.219 -238.125 1458.828 -238.125 QUADTO 
+1462.406 -238.125 1464.578 -240.664 QUADTO 
+1466.75 -243.203 1466.75 -247.422 QUADTO 
+1466.75 -248.391 lineto
+1462.453 -248.391 lineto
+closepath
+1471.062 -250.172 M
+1471.062 -235.188 lineto
+1466.75 -235.188 lineto
+1466.75 -239.172 lineto
+1465.266 -236.781 1463.062 -235.641 QUADTO 
+1460.859 -234.5 1457.672 -234.5 QUADTO 
+1453.641 -234.5 1451.266 -236.766 QUADTO 
+1448.891 -239.031 1448.891 -242.828 QUADTO 
+1448.891 -247.266 1451.852 -249.516 QUADTO 
+1454.812 -251.766 1460.703 -251.766 QUADTO 
+1466.75 -251.766 lineto
+1466.75 -252.188 lineto
+1466.75 -255.156 1464.789 -256.789 QUADTO 
+1462.828 -258.422 1459.297 -258.422 QUADTO 
+1457.047 -258.422 1454.914 -257.883 QUADTO 
+1452.781 -257.344 1450.812 -256.266 QUADTO 
+1450.812 -260.25 lineto
+1453.172 -261.156 1455.398 -261.617 QUADTO 
+1457.625 -262.078 1459.734 -262.078 QUADTO 
+1465.438 -262.078 1468.25 -259.125 QUADTO 
+1471.062 -256.172 1471.062 -250.172 QUADTO 
+closepath
+1479.531 -261.438 M
+1483.844 -261.438 lineto
+1483.844 -235.188 lineto
+1479.531 -235.188 lineto
+1479.531 -261.438 lineto
+closepath
+1479.531 -271.656 M
+1483.844 -271.656 lineto
+1483.844 -266.203 lineto
+1479.531 -266.203 lineto
+1479.531 -271.656 lineto
+closepath
+1490.656 -261.438 M
+1511.141 -261.438 lineto
+1511.141 -257.5 lineto
+1494.922 -238.641 lineto
+1511.141 -238.641 lineto
+1511.141 -235.188 lineto
+1490.062 -235.188 lineto
+1490.062 -239.125 lineto
+1506.281 -258 lineto
+1490.656 -258 lineto
+1490.656 -261.438 lineto
+closepath
+1549.797 -257.453 M
+1549.797 -271.656 lineto
+1554.109 -271.656 lineto
+1554.109 -235.188 lineto
+1549.797 -235.188 lineto
+1549.797 -239.125 lineto
+1548.438 -236.781 1546.367 -235.641 QUADTO 
+1544.297 -234.5 1541.391 -234.5 QUADTO 
+1536.625 -234.5 1533.641 -238.305 QUADTO 
+1530.656 -242.109 1530.656 -248.297 QUADTO 
+1530.656 -254.484 1533.641 -258.281 QUADTO 
+1536.625 -262.078 1541.391 -262.078 QUADTO 
+1544.297 -262.078 1546.367 -260.938 QUADTO 
+1548.438 -259.797 1549.797 -257.453 QUADTO 
+closepath
+1535.109 -248.297 M
+1535.109 -243.531 1537.062 -240.828 QUADTO 
+1539.016 -238.125 1542.438 -238.125 QUADTO 
+1545.859 -238.125 1547.828 -240.828 QUADTO 
+1549.797 -243.531 1549.797 -248.297 QUADTO 
+1549.797 -253.047 1547.828 -255.758 QUADTO 
+1545.859 -258.469 1542.438 -258.469 QUADTO 
+1539.016 -258.469 1537.062 -255.758 QUADTO 
+1535.109 -253.047 1535.109 -248.297 QUADTO 
+closepath
+1584.984 -249.391 M
+1584.984 -247.281 lineto
+1565.156 -247.281 lineto
+1565.438 -242.828 1567.836 -240.5 QUADTO 
+1570.234 -238.172 1574.531 -238.172 QUADTO 
+1577.016 -238.172 1579.344 -238.781 QUADTO 
+1581.672 -239.391 1583.969 -240.609 QUADTO 
+1583.969 -236.531 lineto
+1581.656 -235.547 1579.219 -235.023 QUADTO 
+1576.781 -234.5 1574.266 -234.5 QUADTO 
+1567.984 -234.5 1564.32 -238.164 QUADTO 
+1560.656 -241.828 1560.656 -248.062 QUADTO 
+1560.656 -254.5 1564.133 -258.289 QUADTO 
+1567.609 -262.078 1573.516 -262.078 QUADTO 
+1578.812 -262.078 1581.898 -258.664 QUADTO 
+1584.984 -255.25 1584.984 -249.391 QUADTO 
+closepath
+1580.672 -250.656 M
+1580.625 -254.203 1578.688 -256.312 QUADTO 
+1576.75 -258.422 1573.562 -258.422 QUADTO 
+1569.953 -258.422 1567.789 -256.383 QUADTO 
+1565.625 -254.344 1565.297 -250.641 QUADTO 
+1580.672 -250.656 lineto
+closepath
+1607.719 -270.188 M
+1629.844 -270.188 lineto
+1629.844 -266.203 lineto
+1612.453 -266.203 lineto
+1612.453 -255.844 lineto
+1629.109 -255.844 lineto
+1629.109 -251.859 lineto
+1612.453 -251.859 lineto
+1612.453 -239.172 lineto
+1630.266 -239.172 lineto
+1630.266 -235.188 lineto
+1607.719 -235.188 lineto
+1607.719 -270.188 lineto
+closepath
+1634.438 -261.438 M
+1639 -261.438 lineto
+1647.203 -239.406 lineto
+1655.406 -261.438 lineto
+1659.984 -261.438 lineto
+1650.141 -235.188 lineto
+1644.281 -235.188 lineto
+1634.438 -261.438 lineto
+closepath
+1677.453 -248.391 M
+1672.234 -248.391 1670.219 -247.195 QUADTO 
+1668.203 -246 1668.203 -243.109 QUADTO 
+1668.203 -240.812 1669.711 -239.469 QUADTO 
+1671.219 -238.125 1673.828 -238.125 QUADTO 
+1677.406 -238.125 1679.578 -240.664 QUADTO 
+1681.75 -243.203 1681.75 -247.422 QUADTO 
+1681.75 -248.391 lineto
+1677.453 -248.391 lineto
+closepath
+1686.062 -250.172 M
+1686.062 -235.188 lineto
+1681.75 -235.188 lineto
+1681.75 -239.172 lineto
+1680.266 -236.781 1678.062 -235.641 QUADTO 
+1675.859 -234.5 1672.672 -234.5 QUADTO 
+1668.641 -234.5 1666.266 -236.766 QUADTO 
+1663.891 -239.031 1663.891 -242.828 QUADTO 
+1663.891 -247.266 1666.852 -249.516 QUADTO 
+1669.812 -251.766 1675.703 -251.766 QUADTO 
+1681.75 -251.766 lineto
+1681.75 -252.188 lineto
+1681.75 -255.156 1679.789 -256.789 QUADTO 
+1677.828 -258.422 1674.297 -258.422 QUADTO 
+1672.047 -258.422 1669.914 -257.883 QUADTO 
+1667.781 -257.344 1665.812 -256.266 QUADTO 
+1665.812 -260.25 lineto
+1668.172 -261.156 1670.398 -261.617 QUADTO 
+1672.625 -262.078 1674.734 -262.078 QUADTO 
+1680.438 -262.078 1683.25 -259.125 QUADTO 
+1686.062 -256.172 1686.062 -250.172 QUADTO 
+closepath
+1716.344 -251.031 M
+1716.344 -235.188 lineto
+1712.031 -235.188 lineto
+1712.031 -250.891 lineto
+1712.031 -254.625 1710.578 -256.477 QUADTO 
+1709.125 -258.328 1706.219 -258.328 QUADTO 
+1702.734 -258.328 1700.719 -256.102 QUADTO 
+1698.703 -253.875 1698.703 -250.031 QUADTO 
+1698.703 -235.188 lineto
+1694.359 -235.188 lineto
+1694.359 -261.438 lineto
+1698.703 -261.438 lineto
+1698.703 -257.359 lineto
+1700.25 -259.734 1702.344 -260.906 QUADTO 
+1704.438 -262.078 1707.188 -262.078 QUADTO 
+1711.703 -262.078 1714.023 -259.273 QUADTO 
+1716.344 -256.469 1716.344 -251.031 QUADTO 
+closepath
+1741.266 -260.672 M
+1741.266 -256.594 lineto
+1739.438 -257.531 1737.469 -258 QUADTO 
+1735.5 -258.469 1733.391 -258.469 QUADTO 
+1730.172 -258.469 1728.57 -257.484 QUADTO 
+1726.969 -256.5 1726.969 -254.531 QUADTO 
+1726.969 -253.031 1728.117 -252.172 QUADTO 
+1729.266 -251.312 1732.734 -250.547 QUADTO 
+1734.203 -250.219 lineto
+1738.797 -249.234 1740.734 -247.438 QUADTO 
+1742.672 -245.641 1742.672 -242.438 QUADTO 
+1742.672 -238.781 1739.773 -236.641 QUADTO 
+1736.875 -234.5 1731.812 -234.5 QUADTO 
+1729.703 -234.5 1727.422 -234.914 QUADTO 
+1725.141 -235.328 1722.609 -236.156 QUADTO 
+1722.609 -240.609 lineto
+1725 -239.359 1727.32 -238.742 QUADTO 
+1729.641 -238.125 1731.906 -238.125 QUADTO 
+1734.953 -238.125 1736.594 -239.164 QUADTO 
+1738.234 -240.203 1738.234 -242.109 QUADTO 
+1738.234 -243.859 1737.055 -244.797 QUADTO 
+1735.875 -245.734 1731.859 -246.609 QUADTO 
+1730.359 -246.953 lineto
+1726.359 -247.797 1724.578 -249.547 QUADTO 
+1722.797 -251.297 1722.797 -254.344 QUADTO 
+1722.797 -258.047 1725.422 -260.062 QUADTO 
+1728.047 -262.078 1732.875 -262.078 QUADTO 
+1735.266 -262.078 1737.375 -261.727 QUADTO 
+1739.484 -261.375 1741.266 -260.672 QUADTO 
+closepath
+fill
+grestore
+gsave
+[0.20833 0 0 0.20833 0 0] concat
+newpath
+0 0 M
+2928 0 lineto
+2928 2208 lineto
+0 2208 lineto
+0 0 lineto
+closepath
+clip
+newpath
+1367.906 -2108.594 M
+1390.031 -2108.594 lineto
+1390.031 -2104.609 lineto
+1372.641 -2104.609 lineto
+1372.641 -2094.25 lineto
+1389.297 -2094.25 lineto
+1389.297 -2090.266 lineto
+1372.641 -2090.266 lineto
+1372.641 -2077.578 lineto
+1390.453 -2077.578 lineto
+1390.453 -2073.594 lineto
+1367.906 -2073.594 lineto
+1367.906 -2108.594 lineto
+closepath
+1397.719 -2099.844 M
+1402.031 -2099.844 lineto
+1402.031 -2073.594 lineto
+1397.719 -2073.594 lineto
+1397.719 -2099.844 lineto
+closepath
+1397.719 -2110.062 M
+1402.031 -2110.062 lineto
+1402.031 -2104.609 lineto
+1397.719 -2104.609 lineto
+1397.719 -2110.062 lineto
+closepath
+1432.531 -2099.844 M
+1423.047 -2087.078 lineto
+1433.031 -2073.594 lineto
+1427.938 -2073.594 lineto
+1420.297 -2083.906 lineto
+1412.656 -2073.594 lineto
+1407.578 -2073.594 lineto
+1417.766 -2087.328 lineto
+1408.438 -2099.844 lineto
+1413.531 -2099.844 lineto
+1420.484 -2090.5 lineto
+1427.453 -2099.844 lineto
+1432.531 -2099.844 lineto
+closepath
+1448.891 -2096.828 M
+1445.422 -2096.828 1443.406 -2094.117 QUADTO 
+1441.391 -2091.406 1441.391 -2086.703 QUADTO 
+1441.391 -2081.984 1443.391 -2079.281 QUADTO 
+1445.391 -2076.578 1448.891 -2076.578 QUADTO 
+1452.328 -2076.578 1454.344 -2079.297 QUADTO 
+1456.359 -2082.016 1456.359 -2086.703 QUADTO 
+1456.359 -2091.359 1454.344 -2094.094 QUADTO 
+1452.328 -2096.828 1448.891 -2096.828 QUADTO 
+closepath
+1448.891 -2100.484 M
+1454.516 -2100.484 1457.727 -2096.828 QUADTO 
+1460.938 -2093.172 1460.938 -2086.703 QUADTO 
+1460.938 -2080.25 1457.727 -2076.578 QUADTO 
+1454.516 -2072.906 1448.891 -2072.906 QUADTO 
+1443.234 -2072.906 1440.039 -2076.578 QUADTO 
+1436.844 -2080.25 1436.844 -2086.703 QUADTO 
+1436.844 -2093.172 1440.039 -2096.828 QUADTO 
+1443.234 -2100.484 1448.891 -2100.484 QUADTO 
+closepath
+1497.922 -2095.812 M
+1497.203 -2096.234 1496.344 -2096.438 QUADTO 
+1495.484 -2096.641 1494.453 -2096.641 QUADTO 
+1490.797 -2096.641 1488.844 -2094.258 QUADTO 
+1486.891 -2091.875 1486.891 -2087.422 QUADTO 
+1486.891 -2073.594 lineto
+1482.547 -2073.594 lineto
+1482.547 -2099.844 lineto
+1486.891 -2099.844 lineto
+1486.891 -2095.766 lineto
+1488.25 -2098.156 1490.43 -2099.32 QUADTO 
+1492.609 -2100.484 1495.719 -2100.484 QUADTO 
+1496.172 -2100.484 1496.711 -2100.422 QUADTO 
+1497.25 -2100.359 1497.906 -2100.25 QUADTO 
+1497.922 -2095.812 lineto
+closepath
+1525.172 -2087.797 M
+1525.172 -2085.688 lineto
+1505.344 -2085.688 lineto
+1505.625 -2081.234 1508.023 -2078.906 QUADTO 
+1510.422 -2076.578 1514.719 -2076.578 QUADTO 
+1517.203 -2076.578 1519.531 -2077.188 QUADTO 
+1521.859 -2077.797 1524.156 -2079.016 QUADTO 
+1524.156 -2074.938 lineto
+1521.844 -2073.953 1519.406 -2073.43 QUADTO 
+1516.969 -2072.906 1514.453 -2072.906 QUADTO 
+1508.172 -2072.906 1504.508 -2076.57 QUADTO 
+1500.844 -2080.234 1500.844 -2086.469 QUADTO 
+1500.844 -2092.906 1504.32 -2096.695 QUADTO 
+1507.797 -2100.484 1513.703 -2100.484 QUADTO 
+1519 -2100.484 1522.086 -2097.07 QUADTO 
+1525.172 -2093.656 1525.172 -2087.797 QUADTO 
+closepath
+1520.859 -2089.062 M
+1520.812 -2092.609 1518.875 -2094.719 QUADTO 
+1516.938 -2096.828 1513.75 -2096.828 QUADTO 
+1510.141 -2096.828 1507.977 -2094.789 QUADTO 
+1505.812 -2092.75 1505.484 -2089.047 QUADTO 
+1520.859 -2089.062 lineto
+closepath
+1544.641 -2086.797 M
+1539.422 -2086.797 1537.406 -2085.602 QUADTO 
+1535.391 -2084.406 1535.391 -2081.516 QUADTO 
+1535.391 -2079.219 1536.898 -2077.875 QUADTO 
+1538.406 -2076.531 1541.016 -2076.531 QUADTO 
+1544.594 -2076.531 1546.766 -2079.07 QUADTO 
+1548.938 -2081.609 1548.938 -2085.828 QUADTO 
+1548.938 -2086.797 lineto
+1544.641 -2086.797 lineto
+closepath
+1553.25 -2088.578 M
+1553.25 -2073.594 lineto
+1548.938 -2073.594 lineto
+1548.938 -2077.578 lineto
+1547.453 -2075.188 1545.25 -2074.047 QUADTO 
+1543.047 -2072.906 1539.859 -2072.906 QUADTO 
+1535.828 -2072.906 1533.453 -2075.172 QUADTO 
+1531.078 -2077.438 1531.078 -2081.234 QUADTO 
+1531.078 -2085.672 1534.039 -2087.922 QUADTO 
+1537 -2090.172 1542.891 -2090.172 QUADTO 
+1548.938 -2090.172 lineto
+1548.938 -2090.594 lineto
+1548.938 -2093.562 1546.977 -2095.195 QUADTO 
+1545.016 -2096.828 1541.484 -2096.828 QUADTO 
+1539.234 -2096.828 1537.102 -2096.289 QUADTO 
+1534.969 -2095.75 1533 -2094.672 QUADTO 
+1533 -2098.656 lineto
+1535.359 -2099.562 1537.586 -2100.023 QUADTO 
+1539.812 -2100.484 1541.922 -2100.484 QUADTO 
+1547.625 -2100.484 1550.438 -2097.531 QUADTO 
+1553.25 -2094.578 1553.25 -2088.578 QUADTO 
+closepath
+1561.719 -2110.062 M
+1566.031 -2110.062 lineto
+1566.031 -2073.594 lineto
+1561.719 -2073.594 lineto
+1561.719 -2110.062 lineto
+closepath
+fill
+grestore
+gsave
+[0 -0.20833 0.20833 0 -242 290] concat
+newpath
+1392 1161.6 M
+1392 4089.6 lineto
+-816 4089.6 lineto
+-816 1161.6 lineto
+1392 1161.6 lineto
+closepath
+clip
+newpath
+119.906 -1311.797 M
+142.031 -1311.797 lineto
+142.031 -1307.812 lineto
+124.641 -1307.812 lineto
+124.641 -1297.453 lineto
+141.297 -1297.453 lineto
+141.297 -1293.469 lineto
+124.641 -1293.469 lineto
+124.641 -1280.781 lineto
+142.453 -1280.781 lineto
+142.453 -1276.797 lineto
+119.906 -1276.797 lineto
+119.906 -1311.797 lineto
+closepath
+149.719 -1303.047 M
+154.031 -1303.047 lineto
+154.031 -1276.797 lineto
+149.719 -1276.797 lineto
+149.719 -1303.047 lineto
+closepath
+149.719 -1313.266 M
+154.031 -1313.266 lineto
+154.031 -1307.812 lineto
+149.719 -1307.812 lineto
+149.719 -1313.266 lineto
+closepath
+184.531 -1303.047 M
+175.047 -1290.281 lineto
+185.031 -1276.797 lineto
+179.938 -1276.797 lineto
+172.297 -1287.109 lineto
+164.656 -1276.797 lineto
+159.578 -1276.797 lineto
+169.766 -1290.531 lineto
+160.438 -1303.047 lineto
+165.531 -1303.047 lineto
+172.484 -1293.703 lineto
+179.453 -1303.047 lineto
+184.531 -1303.047 lineto
+closepath
+200.891 -1300.031 M
+197.422 -1300.031 195.406 -1297.32 QUADTO 
+193.391 -1294.609 193.391 -1289.906 QUADTO 
+193.391 -1285.188 195.391 -1282.484 QUADTO 
+197.391 -1279.781 200.891 -1279.781 QUADTO 
+204.328 -1279.781 206.344 -1282.5 QUADTO 
+208.359 -1285.219 208.359 -1289.906 QUADTO 
+208.359 -1294.562 206.344 -1297.297 QUADTO 
+204.328 -1300.031 200.891 -1300.031 QUADTO 
+closepath
+200.891 -1303.688 M
+206.516 -1303.688 209.727 -1300.031 QUADTO 
+212.938 -1296.375 212.938 -1289.906 QUADTO 
+212.938 -1283.453 209.727 -1279.781 QUADTO 
+206.516 -1276.109 200.891 -1276.109 QUADTO 
+195.234 -1276.109 192.039 -1279.781 QUADTO 
+188.844 -1283.453 188.844 -1289.906 QUADTO 
+188.844 -1296.375 192.039 -1300.031 QUADTO 
+195.234 -1303.688 200.891 -1303.688 QUADTO 
+closepath
+234.719 -1303.047 M
+239.031 -1303.047 lineto
+239.031 -1276.797 lineto
+234.719 -1276.797 lineto
+234.719 -1303.047 lineto
+closepath
+234.719 -1313.266 M
+239.031 -1313.266 lineto
+239.031 -1307.812 lineto
+234.719 -1307.812 lineto
+234.719 -1313.266 lineto
+closepath
+268.156 -1298.016 M
+269.766 -1300.922 272.016 -1302.305 QUADTO 
+274.266 -1303.688 277.312 -1303.688 QUADTO 
+281.422 -1303.688 283.648 -1300.812 QUADTO 
+285.875 -1297.938 285.875 -1292.641 QUADTO 
+285.875 -1276.797 lineto
+281.531 -1276.797 lineto
+281.531 -1292.5 lineto
+281.531 -1296.281 280.195 -1298.109 QUADTO 
+278.859 -1299.938 276.125 -1299.938 QUADTO 
+272.766 -1299.938 270.82 -1297.711 QUADTO 
+268.875 -1295.484 268.875 -1291.641 QUADTO 
+268.875 -1276.797 lineto
+264.547 -1276.797 lineto
+264.547 -1292.5 lineto
+264.547 -1296.297 263.211 -1298.117 QUADTO 
+261.875 -1299.938 259.078 -1299.938 QUADTO 
+255.781 -1299.938 253.836 -1297.695 QUADTO 
+251.891 -1295.453 251.891 -1291.641 QUADTO 
+251.891 -1276.797 lineto
+247.547 -1276.797 lineto
+247.547 -1303.047 lineto
+251.891 -1303.047 lineto
+251.891 -1298.969 lineto
+253.359 -1301.391 255.422 -1302.539 QUADTO 
+257.484 -1303.688 260.328 -1303.688 QUADTO 
+263.188 -1303.688 265.188 -1302.234 QUADTO 
+267.188 -1300.781 268.156 -1298.016 QUADTO 
+closepath
+306.641 -1290 M
+301.422 -1290 299.406 -1288.805 QUADTO 
+297.391 -1287.609 297.391 -1284.719 QUADTO 
+297.391 -1282.422 298.898 -1281.078 QUADTO 
+300.406 -1279.734 303.016 -1279.734 QUADTO 
+306.594 -1279.734 308.766 -1282.273 QUADTO 
+310.938 -1284.812 310.938 -1289.031 QUADTO 
+310.938 -1290 lineto
+306.641 -1290 lineto
+closepath
+315.25 -1291.781 M
+315.25 -1276.797 lineto
+310.938 -1276.797 lineto
+310.938 -1280.781 lineto
+309.453 -1278.391 307.25 -1277.25 QUADTO 
+305.047 -1276.109 301.859 -1276.109 QUADTO 
+297.828 -1276.109 295.453 -1278.375 QUADTO 
+293.078 -1280.641 293.078 -1284.438 QUADTO 
+293.078 -1288.875 296.039 -1291.125 QUADTO 
+299 -1293.375 304.891 -1293.375 QUADTO 
+310.938 -1293.375 lineto
+310.938 -1293.797 lineto
+310.938 -1296.766 308.977 -1298.398 QUADTO 
+307.016 -1300.031 303.484 -1300.031 QUADTO 
+301.234 -1300.031 299.102 -1299.492 QUADTO 
+296.969 -1298.953 295 -1297.875 QUADTO 
+295 -1301.859 lineto
+297.359 -1302.766 299.586 -1303.227 QUADTO 
+301.812 -1303.688 303.922 -1303.688 QUADTO 
+309.625 -1303.688 312.438 -1300.734 QUADTO 
+315.25 -1297.781 315.25 -1291.781 QUADTO 
+closepath
+340.984 -1290.234 M
+340.984 -1294.922 339.055 -1297.5 QUADTO 
+337.125 -1300.078 333.625 -1300.078 QUADTO 
+330.156 -1300.078 328.227 -1297.5 QUADTO 
+326.297 -1294.922 326.297 -1290.234 QUADTO 
+326.297 -1285.562 328.227 -1282.984 QUADTO 
+330.156 -1280.406 333.625 -1280.406 QUADTO 
+337.125 -1280.406 339.055 -1282.984 QUADTO 
+340.984 -1285.562 340.984 -1290.234 QUADTO 
+closepath
+345.297 -1280.062 M
+345.297 -1273.344 342.32 -1270.078 QUADTO 
+339.344 -1266.812 333.203 -1266.812 QUADTO 
+330.938 -1266.812 328.922 -1267.148 QUADTO 
+326.906 -1267.484 325 -1268.188 QUADTO 
+325 -1272.391 lineto
+326.906 -1271.359 328.758 -1270.867 QUADTO 
+330.609 -1270.375 332.531 -1270.375 QUADTO 
+336.766 -1270.375 338.875 -1272.586 QUADTO 
+340.984 -1274.797 340.984 -1279.281 QUADTO 
+340.984 -1281.422 lineto
+339.656 -1279.094 337.57 -1277.945 QUADTO 
+335.484 -1276.797 332.578 -1276.797 QUADTO 
+327.75 -1276.797 324.797 -1280.477 QUADTO 
+321.844 -1284.156 321.844 -1290.234 QUADTO 
+321.844 -1296.328 324.797 -1300.008 QUADTO 
+327.75 -1303.688 332.578 -1303.688 QUADTO 
+335.484 -1303.688 337.57 -1302.539 QUADTO 
+339.656 -1301.391 340.984 -1299.062 QUADTO 
+340.984 -1303.047 lineto
+345.297 -1303.047 lineto
+345.297 -1280.062 lineto
+closepath
+353.719 -1303.047 M
+358.031 -1303.047 lineto
+358.031 -1276.797 lineto
+353.719 -1276.797 lineto
+353.719 -1303.047 lineto
+closepath
+353.719 -1313.266 M
+358.031 -1313.266 lineto
+358.031 -1307.812 lineto
+353.719 -1307.812 lineto
+353.719 -1313.266 lineto
+closepath
+388.531 -1292.641 M
+388.531 -1276.797 lineto
+384.219 -1276.797 lineto
+384.219 -1292.5 lineto
+384.219 -1296.234 382.766 -1298.086 QUADTO 
+381.312 -1299.938 378.406 -1299.938 QUADTO 
+374.922 -1299.938 372.906 -1297.711 QUADTO 
+370.891 -1295.484 370.891 -1291.641 QUADTO 
+370.891 -1276.797 lineto
+366.547 -1276.797 lineto
+366.547 -1303.047 lineto
+370.891 -1303.047 lineto
+370.891 -1298.969 lineto
+372.438 -1301.344 374.531 -1302.516 QUADTO 
+376.625 -1303.688 379.375 -1303.688 QUADTO 
+383.891 -1303.688 386.211 -1300.883 QUADTO 
+388.531 -1298.078 388.531 -1292.641 QUADTO 
+closepath
+408.641 -1290 M
+403.422 -1290 401.406 -1288.805 QUADTO 
+399.391 -1287.609 399.391 -1284.719 QUADTO 
+399.391 -1282.422 400.898 -1281.078 QUADTO 
+402.406 -1279.734 405.016 -1279.734 QUADTO 
+408.594 -1279.734 410.766 -1282.273 QUADTO 
+412.938 -1284.812 412.938 -1289.031 QUADTO 
+412.938 -1290 lineto
+408.641 -1290 lineto
+closepath
+417.25 -1291.781 M
+417.25 -1276.797 lineto
+412.938 -1276.797 lineto
+412.938 -1280.781 lineto
+411.453 -1278.391 409.25 -1277.25 QUADTO 
+407.047 -1276.109 403.859 -1276.109 QUADTO 
+399.828 -1276.109 397.453 -1278.375 QUADTO 
+395.078 -1280.641 395.078 -1284.438 QUADTO 
+395.078 -1288.875 398.039 -1291.125 QUADTO 
+401 -1293.375 406.891 -1293.375 QUADTO 
+412.938 -1293.375 lineto
+412.938 -1293.797 lineto
+412.938 -1296.766 410.977 -1298.398 QUADTO 
+409.016 -1300.031 405.484 -1300.031 QUADTO 
+403.234 -1300.031 401.102 -1299.492 QUADTO 
+398.969 -1298.953 397 -1297.875 QUADTO 
+397 -1301.859 lineto
+399.359 -1302.766 401.586 -1303.227 QUADTO 
+403.812 -1303.688 405.922 -1303.688 QUADTO 
+411.625 -1303.688 414.438 -1300.734 QUADTO 
+417.25 -1297.781 417.25 -1291.781 QUADTO 
+closepath
+409.453 -1315.188 M
+414.109 -1315.188 lineto
+406.469 -1306.375 lineto
+402.891 -1306.375 lineto
+409.453 -1315.188 lineto
+closepath
+440.922 -1299.016 M
+440.203 -1299.438 439.344 -1299.641 QUADTO 
+438.484 -1299.844 437.453 -1299.844 QUADTO 
+433.797 -1299.844 431.844 -1297.461 QUADTO 
+429.891 -1295.078 429.891 -1290.625 QUADTO 
+429.891 -1276.797 lineto
+425.547 -1276.797 lineto
+425.547 -1303.047 lineto
+429.891 -1303.047 lineto
+429.891 -1298.969 lineto
+431.25 -1301.359 433.43 -1302.523 QUADTO 
+435.609 -1303.688 438.719 -1303.688 QUADTO 
+439.172 -1303.688 439.711 -1303.625 QUADTO 
+440.25 -1303.562 440.906 -1303.453 QUADTO 
+440.922 -1299.016 lineto
+closepath
+445.719 -1303.047 M
+450.031 -1303.047 lineto
+450.031 -1276.797 lineto
+445.719 -1276.797 lineto
+445.719 -1303.047 lineto
+closepath
+445.719 -1313.266 M
+450.031 -1313.266 lineto
+450.031 -1307.812 lineto
+445.719 -1307.812 lineto
+445.719 -1313.266 lineto
+closepath
+468.891 -1300.031 M
+465.422 -1300.031 463.406 -1297.32 QUADTO 
+461.391 -1294.609 461.391 -1289.906 QUADTO 
+461.391 -1285.188 463.391 -1282.484 QUADTO 
+465.391 -1279.781 468.891 -1279.781 QUADTO 
+472.328 -1279.781 474.344 -1282.5 QUADTO 
+476.359 -1285.219 476.359 -1289.906 QUADTO 
+476.359 -1294.562 474.344 -1297.297 QUADTO 
+472.328 -1300.031 468.891 -1300.031 QUADTO 
+closepath
+468.891 -1303.688 M
+474.516 -1303.688 477.727 -1300.031 QUADTO 
+480.938 -1296.375 480.938 -1289.906 QUADTO 
+480.938 -1283.453 477.727 -1279.781 QUADTO 
+474.516 -1276.109 468.891 -1276.109 QUADTO 
+463.234 -1276.109 460.039 -1279.781 QUADTO 
+456.844 -1283.453 456.844 -1289.906 QUADTO 
+456.844 -1296.375 460.039 -1300.031 QUADTO 
+463.234 -1303.688 468.891 -1303.688 QUADTO 
+closepath
+fill
+grestore
+%%Trailer
+%%Pages: 1
+%%EOF

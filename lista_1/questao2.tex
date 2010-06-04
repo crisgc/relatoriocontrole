@@ -36,7 +36,7 @@ $\vmedio{q} = 0,5$ e a função de transferência de malha aberta é escrita com
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=0.8\textwidth]{imgs/questao2/rlocus_g_ma}
+\includegraphics[width=0.8\textwidth]{imgs/questao2/rlocus_gma}
 \caption{Lugar das raízes para os valores médios ($\vmedio{G}(s)$).}
 \label{fig:q2:rlocus_gma}
 \end{figure}
@@ -91,11 +91,12 @@ Y(s) & = R(s)\vmedio{G_{\text{MF}}}(s) = \frac{1}{s}\frac{1,5+s}{3,5+5,5s+s^{2}}
 \end{flalign*}
 
 \noindent o que condiz com o valor obtido por simulação (ver figura
-\ref{fig:q2:resposta_gma}).
+\ref{fig:q2:resposta_gmf}).
 
 \begin{figure}[htb]
-\includegraphics[width=0.8\textwidth]{imgs/questao2/resposta_gma}
-\caption{Resposta do sistema ao degrau unitário para um tempo de $20$s.}
+\centering
+\includegraphics[width=0.8\textwidth]{imgs/questao2/resposta_gmf}
+\caption{Resposta do sistema em malha fechada ao degrau unitário para um tempo de $20$s.}
 \label{fig:q2:resposta_gma}
 \end{figure}
 
@@ -134,19 +135,106 @@ redução do diagrama de blocos e é mostrada a seguir:
 
 \begin{figure}[htb]
 \centering
-\scalebox{0.7}{\input{imgs/questao2/compensagor_malha.pstex_t}}
+\scalebox{0.7}{\input{imgs/questao2/compensador_malha.pstex_t}}
 \caption{Diagrama de blocos para o sistema com o compensador.}
 \label{fig:q2:malha_comp}
 \end{figure}
 
-\begin{flalign*}
+\begin{flalign}
 G_\text{cMF}(s) & = \frac{G_c(s)G(s)}{1 + G_c(s)G(s)} =
-\frac{k_c(s+z_c)(s+r)}{k_c(s+z_c)(s+r) + (s+p)(s+q)(s+p_c)} \\
+\frac{k_c(s+z_c)(s+r)}{k_c(s+z_c)(s+r) + (s+p)(s+q)(s+p_c)} \nonumber \\
 & = \frac{k_cs^{2} + k_c(z_c + r)s + k_crz_c}{s^{3} + \underbrace{[k_c + p_c +
 (p+q)]}_{a_2}s^{2} +
-\underbrace{[k_c(r+z_c) + p_c(p+q)+pq]}_{a_1}s + \underbrace{rz_c + pqp_c}_{a_0} }
+\underbrace{[k_c(r+z_c) + p_c(p+q)+pq]}_{a_1}s + \underbrace{rz_c + pqp_c}_{a_0}
+} \label{eq:q2:testeKharitonov}
+\end{flalign}
+
+Testamos a estabilidade do sistema segundo o \textit{teorema de Kharitonov}
+utilizando o o script mostrado no apêndice \ref{ap:q2:testeKharitonov}.
+Os quatro polinômio para os valores calculador do controlador, a saber $z_c = 0,3$, $k_c 
+= 1$ e $p_c = 0,0022$, são os seguintes:
+
+\begin{flalign*}
+q_1 & = 0,3+1,3066s+7,0022s^{2}+s^{3} \\
+q_2 & = 0,3+7,3132s+7,0022s^{2}+s^{3} \\
+q_3 & = 0,611+1,3066s+5,0022s^{2}+s^{3} \\
+q_4 & = 0,611+7,3132s+5,0022s^{2}+s^{3}
 \end{flalign*}
 
-Testamos a estabilidade do sistema segundo o \textit{teorema de
-Kharitonov} utilizando o o script mostrado em \ref{code:q2:testeKha}
+\noindent e os polos de cada um desses polinômios podem ser visualizados na
+seguinte matriz, onde cada coluna é referente a um polinômio. 
 
+\begin{flalign*}
+\begin{pmatrix}-0,093+0,188i&-0,043&-0,124+0,336i&-0,089\cr
+-0,093-0,188i&-1,223&-0,124-0,336i&-2,457+0,917i\cr
+-6,817&-5,736&-4,754&-2,457-0,917i\cr \end{pmatrix}
+\end{flalign*}
+
+\noindent logo podemos ver que o controlador desenvolvido é robusto para a faixa
+estabelecida de variação dos parâmetros. E o resultado da resposta ao degrau com
+o controlador pode ser visualizada na figura \ref{fig:q2:resposta_gcomp1}.
+Através da análise da figura podemos ver que embora o desempenho do regime
+permanente tende para o valor desejado (próximo a 1), a demora do sistema na
+subida pode ser um problema que precisa ser evitado.
+ 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{imgs/questao2/resposta_gcomp1}
+\caption{Resposta ao degrau para o controlador $G_c(s) = \frac{s+0,3}{s+0,0022}$}
+\label{fig:q2:resposta_gcomp1}
+\end{figure}
+
+Então, para evitar esse problema, analisamos mais o lugar das raízes do sistema
+em malha aberta com o controlador (ver figura \ref{fig:q2:rlocus_gcomp1}), e,
+para melhorar o desempenho do tempo de subida decidimos por aumentar o ganho do
+sistema, distanciando, dessa forma, os polos do eixo imaginário, dessa forma
+tornando o sistema mais rápido. Testamos com um ganho para o controlador $k_c =
+20$ e obtivemos, a resposta para o sistema em malha fechada mostrada na figura
+\ref{fig:q2:resposta_gcomp2}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{imgs/questao2/rlocus_gcma}
+\caption{Lugar das raízes para o sistema com o controlador $G_c(s)$}
+\label{fig:q2:rlocus_gcomp1}
+\end{figure}
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{imgs/questao2/resposta_gcomp2}
+\caption{Reposta do sistema com o controlador $G_c(s) = 20\frac{s+0,3}{s+0,0022}$ }
+\label{fig:q2:resposta_gcomp2}
+\end{figure}
+
+Podemos visualizar a melhora substancial no tempo de subida do sistema. Testamos
+então a estabilidade do sistema para a faixa de variação de parâmetros mais uma
+vez através dos polinômios de Kharitonov (ver equação
+\ref{eq:q2:testeKharitonov} e o apêndice \label{ap:q2:testeKharitonov}) e
+obtivemos os seguintes polinômios:
+
+\begin{flalign*}
+q_1 & = 0.3+26.0066s+26.0022s^{2}+s^{3} \\
+q_2 & = 0.3+51.0132s+26.0022s^{2}+s^{3} \\
+q_3 & = 0.611+26.0066s+24.0022s^{2}+s^{3} \\
+q_4 & = 0.611+51.0132s+24.0022s^{2}+s^{3}
+\end{flalign*}
+
+\noindent e as suas raízes:
+
+\begin{flalign*}
+\begin{pmatrix}-0.012&-0.006&-0.024&-0.012\cr -1.03&-2.131&-1.112&-2.343\cr
+-24.961&-23.865&-22.866&-21.647\cr \end{pmatrix}
+\end{flalign*}
+
+O sistema é estável na faixa de variação dada dos parâmetros de $G(s)$. Logo o
+controle é robusto. Como a resposta em regime permanente como em
+regime transitório é satisfatória, o controlador em atraso de fase foi
+suficiente para o projeto do sistema, e a parte em avanço de fase não foi
+projetada. O controlador projetado é portanto:
+
+\begin{flalign*}
+G_c(s) = 20\frac{s+0,3}{s+0,0022}
+\end{flalign*}
+
+% TODO(crisgc): Colocar o desempenho do controlador para alguns valores
+% "randômicos" da função de transferência
