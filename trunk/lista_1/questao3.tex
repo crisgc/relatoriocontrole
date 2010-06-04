@@ -1,14 +1,14 @@
 \section*{Questão 3}
 % Enunciado
-\noindent {\it Considere o sistema descrito pelo modelo 
+\noindent {\it Considere o sistema descrito pelo modelo}
 
-\begin{equation}\nonumber
+\begin{equation}\label{eq:enunc_1}
 \ddot{y} = -\dot{y} - y  + u 
 \end{equation}
 
-\noindent com o modelo de referência
+\noindent {\it com o modelo de referência}
 
-\begin{equation}\nonumber
+\begin{equation}\label{eq:enunc_2}
 \ddot{y}_m = -2\dot{y}_m - y_m  + u
 \end{equation}
 
@@ -21,4 +21,119 @@ quadrada para avaliar o comportamento do sistema.}
 
 \vspace{0.25cm}
 
-\noindent Bla bla bla
+Dadas as Eqs. \ref{eq:enunc_1} e \ref{eq:enunc_2}, pode-se generalizá-las de
+modo a obter as Eqs. \ref{eq:modelo} e \ref{eq:ref}.
+
+\begin{eqnarray}
+\ddot{y}(t) & = &-a\dot{y}(t) - by(t) + cu(t) \label{eq:modelo}\\
+\ddot{y}_m(t) & = &-a_m\dot{y}(t) - b_my(t) + c_mr(t) \label{eq:ref}
+\end{eqnarray}
+
+A partir das Eqs. \ref{eq:modelo} e \ref{eq:ref}, deriva-se a Eq.
+\ref{eq:lei_cont} referente a lei de controle:
+
+\begin{equation}\label{eq:lei_cont}
+u(t) = \theta_1r(t) - \theta_2\dot{y}(t) - \theta_3y(t)
+\end{equation}
+
+Essa equação mostra três parâmetros $\theta_1$, $\theta_2$ e $\theta_3$, que
+foram escolhidos de maneira a satisfazer as seguintes condições:
+
+\begin{equation}
+\theta_1 = \frac{c_m}{c}
+\qquad
+\theta_2 = \frac{a_m - a}{c}
+\qquad
+\theta_3 = \frac{b_m - b}{c}
+\end{equation}
+
+A partir dessas condições, para a aplicação da regra {\it MIT} faz-se necessário
+introduzir a variável erro $\epsilon = y - y_m$, na qual $y$ representa a saída
+do sistema em malha fechada. Segundo tal regra, o mecanismo para ajuste de
+parâmetros é dado por:
+
+\begin{equation}
+J(\theta) = \frac{\epsilon^2}{2}
+\end{equation}
+
+Minimizar o erro implica em minimizar $J(\theta)$. Por sua vez, para minimizar o
+valor de $J$, troca-se os parâmetros na direção do gradiente negativo de $J$, de
+tal maneira que:
+
+\begin{equation}\label{eq:J}
+\frac{d\theta}{dt} = -\gamma\ \frac{\partial J}{\partial \theta} = 
+                     -\gamma\ \epsilon\ \frac{\partial \epsilon}
+                                             {\partial \theta}
+\end{equation}
+
+Aplicando a Eq. \ref{eq:lei_cont} na Eq. \ref{eq:modelo}, tem-se:
+
+\begin{eqnarray}
+\ddot{y} & = & -a\dot{y} - by + c \left( \theta_1r - 
+                                         \theta_2\dot{y} - 
+                                         \theta_3y\right)\nonumber\\
+\ddot{y} & = & -a\dot{y} - by + c\theta_1r - 
+                                c\theta_2\dot{y} -
+                                c\theta_3y\nonumber\\
+\ddot{y} & = & -(a + c\theta_2)\dot{y} - (b + c\theta_3)y + c\theta_1r\nonumber
+\end{eqnarray}
+
+Considerando um operador $p = \D\frac{d}{dt}$, tem-se que:
+
+\begin{eqnarray}
+p^2y & = & - (a + c\theta_2)py - 
+             (b + c\theta_3)y + 
+             c\theta_1r\nonumber\\
+y & = & \frac{c\theta_1}{p^2 + 
+                         (a + c\theta_2)p + 
+                         (b + c\theta_3)}r\label{eq:y}
+\end{eqnarray}
+
+Isolando $\theta_1$, tem-se:
+
+\begin{equation}\label{eq:theta_1}
+\theta_1 = \frac{y}{cr}\left[ p^2 + (a + c\theta_2)p + (b + c\theta_3) \right]
+\end{equation}
+
+A partir das Eqs. \ref{eq:y} e \ref{eq:theta_1}, obtém-se as Eqs.
+\ref{eq:dtheta_1} a \ref{eq:dtheta_3}, referentes as derivadas com relação aos
+parâmetros $\theta_1$, $\theta_2$ e $\theta_3$:
+
+\begin{eqnarray}
+\frac{\partial \epsilon}{\partial \theta_1} & = &
+    \frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ r 
+    \label{eq:dtheta_1}\\
+\frac{\partial \epsilon}{\partial \theta_2} & = &
+    -\frac{cp}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
+    \label{eq:dtheta_2}\\
+\frac{\partial \epsilon}{\partial \theta_3} & = &
+    -\frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
+    \label{eq:dtheta_3}
+\end{eqnarray}
+
+Uma vez que os parâmetros $a$, $b$ e $c$ podem não ser conhecidos, as Eqs.
+\ref{eq:dtheta_1} a \ref{eq:dtheta_3} não podem ser utilizadas de maneira
+direta. Entretanto, sabe-se que:
+
+\begin{eqnarray}
+p^2 + (a + c\theta_2)p + (b + c\theta_3) & \approx & 
+p^2 + 
+\left[a + c\left( \frac{a_m - a}{c} \right)\right]p + 
+\left[b + c\left( \frac{b_m - b}{c} \right)\right] \nonumber\\ 
+ & \approx & p^2 + a_mp + b_m \nonumber
+\end{eqnarray}
+
+Assim, pela Eq. \ref{eq:J}, obtém-se as Eqs. \ref{eq:dtheta_1dt} a
+\ref{eq:dtheta_3dt}, em que o fator $\D\frac{c}{b_m}$ está incluso em $\gamma$:
+
+\begin{eqnarray}
+\frac{d\theta_1}{dt} & = & -\gamma\ \left(\frac{b_m}
+                                             {p^2 + a_mp + b_m}\ r
+                                  \right)\epsilon \label{eq:dtheta_1dt}\\
+\frac{d\theta_2}{dt} & = & \gamma\ \left(\frac{b_m}
+                                            {p^2 + a_mp + b_m}\ y
+                                 \right)\epsilon \label{eq:dtheta_2dt}\\
+\frac{d\theta_3}{dt} & = & \gamma\ \left(\frac{b_m}
+                                          {p^2 + a_mp + b_m}\ y
+                               \right)\epsilon \label{eq:dtheta_3dt}
+\end{eqnarray}
