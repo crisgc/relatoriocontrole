@@ -56,9 +56,15 @@ x1=dsimul(gk_mf,u);
 x2=dsimul(gk_comp1,u);
 x3=dsimul(gk_comp2,u);
 
-figure("BackgroundColor", [1 1 1]);plot(t,x0);xs2eps(gcf(),"imgs/questao2/resposta_gma.eps");close();
-figure("BackgroundColor", [1 1 1]);plot(t,x1);xs2eps(gcf(),"imgs/questao2/resposta_gmf.eps");close();
-figure("BackgroundColor", [1 1 1]);plot(t,x2);xs2eps(gcf(),"imgs/questao2/resposta_gcomp1.eps");close();
-figure("BackgroundColor", [1 1 1]);plot(t,x3);xs2eps(gcf(),"imgs/questao2/resposta_gcomp2.eps");close();
-figure("BackgroundColor", [1 1 1]);evans(g_ma, 20);xs2eps(gcf(),"imgs/questao2/rlocus_gma.eps");close();
-figure("BackgroundColor", [1 1 1]);evans(g_comp1_ma, 3);xs2eps(gcf(),"imgs/questao2/rlocus_gcma.eps");close();
+figure("BackgroundColor", [1 1 1]);plot(t,x0);
+xs2eps(gcf(),"imgs/questao2/resposta_gma.eps");close();
+figure("BackgroundColor", [1 1 1]);plot(t,x1);
+xs2eps(gcf(),"imgs/questao2/resposta_gmf.eps");close();
+figure("BackgroundColor", [1 1 1]);plot(t,x2);
+xs2eps(gcf(),"imgs/questao2/resposta_gcomp1.eps");close();
+figure("BackgroundColor", [1 1 1]);plot(t,x3)
+;xs2eps(gcf(),"imgs/questao2/resposta_gcomp2.eps");close();
+figure("BackgroundColor", [1 1 1]);evans(g_ma, 20);
+xs2eps(gcf(),"imgs/questao2/rlocus_gma.eps");close();
+figure("BackgroundColor", [1 1 1]);evans(g_comp1_ma, 3);
+xs2eps(gcf(),"imgs/questao2/rlocus_gcma.eps");close();
