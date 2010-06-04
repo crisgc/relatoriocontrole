@@ -18,9 +18,9 @@ Analise os resultados.}
 
 \vspace{0.25cm}
 
-\noindent Antes de realizar a análise da sensibilidade em malha fechada, deve-se
-verificar a estabilidade relativa do sistema em malha aberta quanto à variação
-do parâmetro $p$. 
+Antes de realizar a análise da sensibilidade em malha fechada, deve-se verificar
+a estabilidade relativa do sistema em malha aberta quanto à variação do
+parâmetro $p$. 
 
 Sabe-se que essa estabilidade relativa pode ser observada a partir de duas
 medidas dos diagramas de Bode, denominadas {\it margem de ganho} e {\it margem
@@ -32,7 +32,10 @@ unitária que resultará em um sistema marginalmente estável.
 
 Assim sendo, ao se observar a Fig. \ref{fig:bode_ma}, verifica-se que essas duas
 medidas variam conforme Tab. \ref{tab:margem_ganho_fase_ma} para o sistema em
-malha aberta.
+malha aberta\footnote{Apesar dos diagramas de Bode exibidos ao longo de toda a
+resolução estarem sendo referenciados às equações no domínio de {\it Laplace}
+com a variável complexa $s$, obter equações no domínio da frequência resume-se a
+substituir a variável $s$ por $j\omega$.}.
 
 \begin{figure}[htb]
 \centering
@@ -145,8 +148,8 @@ S_p^G(s) & = & \frac{\partial G}{\partial p} \cdotp \frac{p}{G}\nonumber \\
          & = & - \frac{ps}{s^2 + ps + 9}\label{eq:sensib}
 \end{eqnarray}
 
-Com $p = 1\text{,}\ 2\text{,}\ \ldots\text{,}\ 5$, obtém-se os diagramas de Bode
-ilustrados pela Fig. \ref{fig:diag_bode_sensib}.
+Considerando $p = 1\text{,}\ 2\text{,}\ \ldots\text{,}\ 5$, obtém-se os
+diagramas de Bode ilustrados pela Fig. \ref{fig:diag_bode_sensib}.
 
 \begin{figure}[H]
 \centering
@@ -160,17 +163,16 @@ sensibilidade à variação dos parâmetros, pode-se dizer que, para os sistemas
 mais robustos, a sensibilidade ideal é tão baixa quanto possível.
 
 Analisando então as curvas de módulo da Fig. \ref{fig:diag_bode_sensib},
-verifica-se que todas as curvas apresentam uma baixa sensibilidade para
-frequências baixas e altas. Entretanto, observa-se uma equivalência quanto a
-sensibilidade para frequências em torno de 3 rad/s. Pode-se dizer ainda que o
-sistema apresenta maior robustez para $p = 1$, pois apresenta menores valores
-nas curvas de módulo do diagrama de Bode.
+verifica-se que todas elas apresentam baixa sensibilidade para frequências
+baixas e altas. Entretanto, observa-se uma equivalência quanto a sensibilidade
+para frequências em torno de 3 rad/s.
 
 Fazendo uma análise comparativa, pode-se dizer que o sistema é estável para a
 faixa de variação do parâmetro $p$ e que apresenta maior robustez quando $p =
-1$. Contudo, observa-se que o sistema se torna bastante oscilatório para esse
-valor de $p$, o que era esperado, uma vez que a relação desempenho/robustez é
-inversa.
+1$, pois é a curva que apresenta os menores valores dentre as curvas de módulo
+do diagrama de Bode. Contudo, observa-se que o sistema se torna bastante
+oscilatório para esse valor de $p$, o que era esperado, uma vez que a relação
+desempenho/robustez é inversa.
 
 O {\it script} do Matlab\textsuperscript{\textregistered} desenvolvido para a
 resolução dessa questão pode ser encontrado no Apêndice \ref{ap:cod_q1}.
