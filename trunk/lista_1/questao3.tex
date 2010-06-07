@@ -78,7 +78,7 @@ Aplicando a Eq. \ref{eq:lei_cont} na Eq. \ref{eq:modelo}, tem-se:
 \ddot{y} & = & -(a + c\theta_2)\dot{y} - (b + c\theta_3)y + c\theta_1r\nonumber
 \end{eqnarray}
 
-Considerando um operador $p = \D\frac{d}{dt}$, tem-se que:
+Considerando um operador $p = \frac{d}{dt}$, tem-se que:
 
 \begin{eqnarray}
 p^2y & = & - (a + c\theta_2)py - 
@@ -124,16 +124,91 @@ p^2 +
 \end{eqnarray}
 
 Assim, pela Eq. \ref{eq:J}, obtém-se as Eqs. \ref{eq:dtheta_1dt} a
-\ref{eq:dtheta_3dt}, em que o fator $\D\frac{c}{b_m}$ está incluso em $\gamma$:
+\ref{eq:dtheta_3dt}, em que o fator $\frac{c}{b_m}$ está incluso em $\gamma$:
 
 \begin{eqnarray}
 \frac{d\theta_1}{dt} & = & -\gamma\ \left(\frac{b_m}
                                              {p^2 + a_mp + b_m}\ r
                                   \right)\epsilon \label{eq:dtheta_1dt}\\
-\frac{d\theta_2}{dt} & = & \gamma\ \left(\frac{b_m}
+\frac{d\theta_2}{dt} & = & \gamma\ \left(\frac{b_m p}
                                             {p^2 + a_mp + b_m}\ y
                                  \right)\epsilon \label{eq:dtheta_2dt}\\
 \frac{d\theta_3}{dt} & = & \gamma\ \left(\frac{b_m}
                                           {p^2 + a_mp + b_m}\ y
                                \right)\epsilon \label{eq:dtheta_3dt}
 \end{eqnarray}
+
+Para realizar a simulação do sistema, foram utilizados os parâmetros dados na
+questão:
+
+\begin{eqnarray}
+a = 1 \qquad a_m = 2\\
+b = 1 \qquad b_m = 1\\
+c = 1 \qquad c_m = 1
+\end{eqnarray}
+
+Os diagramas de blocos do ambiente de simulação ({\it Simulink}) e resultado
+obtido podem ser vistos nas Figs. \ref{fig:q3_sistema} a \ref{fig:q3_sinal_cont}
+e Figs \ref{fig:q3_saida_gamma_0.1} a \ref{fig:q3_saida_gamma_1.0},
+respectivamente.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/sistema}
+    \caption{Diagrama de blocos do sistema simulado.}
+    \label{fig:q3_sistema}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imgs/questao3/theta}
+    \caption{Diagrama de blocos do subsistema de atualização de $\theta$}
+    \label{fig:q3_theta}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imgs/questao3/sinal_controle}
+    \caption{Diagrama de blocos do subsistema de composição do sinal de
+             controle.}
+    \label{fig:q3_sinal_cont}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.1.eps}
+    \caption{Saída do sistema para $\gamma = 0.1$.}
+    \label{fig:q3_saida_gamma_0.1}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.2.eps}
+    \caption{Saída do sistema para $\gamma = 0.2$.}
+    \label{fig:q3_saida_gamma_0.2}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.5.eps}
+    \caption{Saída do sistema para $\gamma = 0.5$.}
+    \label{fig:q3_saida_gamma_0.5}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.7.eps}
+    \caption{Saída do sistema para $\gamma = 0.7$.}
+    \label{fig:q3_saida_gamma_0.7}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_1.0.eps}
+    \caption{Saída do sistema para $\gamma = 1.0$.}
+    \label{fig:q3_sistema}
+    \label{fig:q3_saida_gamma_1.0}
+\end{figure}
+
+O {\it script} do Matlab\textsuperscript{\textregistered} desenvolvido para a
+resolução dessa questão pode ser encontrado no Apêndice \ref{ap:cod_q3}.
