@@ -1,2628 +1,680 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Creator: (Apache XML Graphics Commons: EPS Generator for Java2D)
-%%CreationDate: 2010-06-04T15:34:33
-%%Pages: (atend)
-%%BoundingBox: 0 0 458 345
-%%LanguageLevel: 3
-%%EndComments
-%%BeginProlog
-%%BeginResource: procset (Apache XML Graphics Std ProcSet) 1.0 0
-%%Version: 1.0 0
-%%Copyright: (Copyright 2001-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
-%%Title: (Basic set of procedures used by the XML Graphics project \(Batik and FOP\))
-/bd{bind def}bind def
-/ld{load def}bd
-/M/moveto ld
-/RM/rmoveto ld
-/t/show ld
-/A/ashow ld
-/cp/closepath ld
-/re {4 2 roll M
-1 index 0 rlineto
-0 exch rlineto
-neg 0 rlineto
-cp } bd
-/_ctm matrix def
-/_tm matrix def
-/BT { _ctm currentmatrix pop matrix _tm copy pop 0 0 moveto } bd
-/ET { _ctm setmatrix } bd
-/iTm { _ctm setmatrix _tm concat } bd
-/Tm { _tm astore pop iTm 0 0 moveto } bd
-/ux 0.0 def
-/uy 0.0 def
-/F {
-  /Tp exch def
-  /Tf exch def
-  Tf findfont Tp scalefont setfont
-  /cf Tf def  /cs Tp def  /cw ( ) stringwidth pop def
-} bd
-/ULS {currentpoint /uy exch def /ux exch def} bd
-/ULE {
-  /Tcx currentpoint pop def
-  gsave
-  newpath
-  cf findfont cs scalefont dup
-  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
-  /UnderlinePosition get Ts mul /To exch def
-  /UnderlineThickness get Ts mul /Tt exch def
-  ux uy To add moveto  Tcx uy To add lineto
-  Tt setlinewidth stroke
-  grestore
-} bd
-/OLE {
-  /Tcx currentpoint pop def
-  gsave
-  newpath
-  cf findfont cs scalefont dup
-  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
-  /UnderlinePosition get Ts mul /To exch def
-  /UnderlineThickness get Ts mul /Tt exch def
-  ux uy To add cs add moveto Tcx uy To add cs add lineto
-  Tt setlinewidth stroke
-  grestore
-} bd
-/SOE {
-  /Tcx currentpoint pop def
-  gsave
-  newpath
-  cf findfont cs scalefont dup
-  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
-  /UnderlinePosition get Ts mul /To exch def
-  /UnderlineThickness get Ts mul /Tt exch def
-  ux uy To add cs 10 mul 26 idiv add moveto Tcx uy To add cs 10 mul 26 idiv add lineto
-  Tt setlinewidth stroke
-  grestore
-} bd
-/QUADTO {
-/Y22 exch store
-/X22 exch store
-/Y21 exch store
-/X21 exch store
-currentpoint
-/Y21 load 2 mul add 3 div exch
-/X21 load 2 mul add 3 div exch
-/X21 load 2 mul /X22 load add 3 div
-/Y21 load 2 mul /Y22 load add 3 div
-/X22 load /Y22 load curveto
-} bd
-/SSPD {
-dup length /d exch dict def
-{
-/v exch def
-/k exch def
-currentpagedevice k known {
-/cpdv currentpagedevice k get def
-v cpdv ne {
-/upd false def
-/nullv v type /nulltype eq def
-/nullcpdv cpdv type /nulltype eq def
-nullv nullcpdv or
-{
-/upd true def
-} {
-/sametype v type cpdv type eq def
-sametype {
-v type /arraytype eq {
-/vlen v length def
-/cpdvlen cpdv length def
-vlen cpdvlen eq {
-0 1 vlen 1 sub {
-/i exch def
-/obj v i get def
-/cpdobj cpdv i get def
-obj cpdobj ne {
-/upd true def
-exit
-} if
-} for
-} {
-/upd true def
-} ifelse
-} {
-v type /dicttype eq {
-v {
-/dv exch def
-/dk exch def
-/cpddv cpdv dk get def
-dv cpddv ne {
-/upd true def
-exit
-} if
-} forall
-} {
-/upd true def
-} ifelse
-} ifelse
-} if
-} ifelse
-upd true eq {
-d k v put
-} if
-} if
-} if
-} forall
-d length 0 gt {
-d setpagedevice
-} if
-} bd
-%%EndResource
-%%BeginResource: procset (Apache XML Graphics EPS ProcSet) 1.0 0
-%%Version: 1.0 0
-%%Copyright: (Copyright 2002-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
-%%Title: (EPS procedures used by the Apache XML Graphics project \(Batik and FOP\))
-/BeginEPSF { %def
-/b4_Inc_state save def         % Save state for cleanup
-/dict_count countdictstack def % Count objects on dict stack
-/op_count count 1 sub def      % Count objects on operand stack
-userdict begin                 % Push userdict on dict stack
-/showpage { } def              % Redefine showpage, { } = null proc
-0 setgray 0 setlinecap         % Prepare graphics state
-1 setlinewidth 0 setlinejoin
-10 setmiterlimit [ ] 0 setdash newpath
-/languagelevel where           % If level not equal to 1 then
-{pop languagelevel             % set strokeadjust and
-1 ne                           % overprint to their defaults.
-{false setstrokeadjust false setoverprint
-} if
-} if
-} bd
-/EndEPSF { %def
-count op_count sub {pop} repeat            % Clean up stacks
-countdictstack dict_count sub {end} repeat
-b4_Inc_state restore
-} bd
-%%EndResource
-%FOPBeginFontDict
-%%IncludeResource: font Courier-Bold
-%%IncludeResource: font Courier-BoldOblique
-%%IncludeResource: font Courier-Oblique
-%%IncludeResource: font Times-BoldItalic
-%%IncludeResource: font Courier
-%%IncludeResource: font Times-Italic
-%%IncludeResource: font Times-Bold
-%%IncludeResource: font Symbol
-%%IncludeResource: font ZapfDingbats
-%%IncludeResource: font Helvetica
-%%IncludeResource: font Times-Roman
-%%IncludeResource: font Helvetica-BoldOblique
-%%IncludeResource: font Helvetica-Bold
-%%IncludeResource: font Helvetica-Oblique
-%FOPEndFontDict
-%FOPBeginFontReencode
-%%BeginResource: encoding WinAnsiEncoding
-/WinAnsiEncoding [
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /space /exclam /quotedbl
-/numbersign /dollar /percent /ampersand /quotesingle
-/parenleft /parenright /asterisk /plus /comma
-/hyphen /period /slash /zero /one
-/two /three /four /five /six
-/seven /eight /nine /colon /semicolon
-/less /equal /greater /question /at
-/A /B /C /D /E
-/F /G /H /I /J
-/K /L /M /N /O
-/P /Q /R /S /T
-/U /V /W /X /Y
-/Z /bracketleft /backslash /bracketright /asciicircum
-/underscore /quoteleft /a /b /c
-/d /e /f /g /h
-/i /j /k /l /m
-/n /o /p /q /r
-/s /t /u /v /w
-/x /y /z /braceleft /bar
-/braceright /asciitilde /bullet /Euro /bullet
-/quotesinglbase /florin /quotedblbase /ellipsis /dagger
-/daggerdbl /circumflex /perthousand /Scaron /guilsinglleft
-/OE /bullet /Zcaron /bullet /bullet
-/quoteleft /quoteright /quotedblleft /quotedblright /bullet
-/endash /emdash /asciitilde /trademark /scaron
-/guilsinglright /oe /bullet /zcaron /Ydieresis
-/space /exclamdown /cent /sterling /currency
-/yen /brokenbar /section /dieresis /copyright
-/ordfeminine /guillemotleft /logicalnot /sfthyphen /registered
-/macron /degree /plusminus /twosuperior /threesuperior
-/acute /mu /paragraph /middot /cedilla
-/onesuperior /ordmasculine /guillemotright /onequarter /onehalf
-/threequarters /questiondown /Agrave /Aacute /Acircumflex
-/Atilde /Adieresis /Aring /AE /Ccedilla
-/Egrave /Eacute /Ecircumflex /Edieresis /Igrave
-/Iacute /Icircumflex /Idieresis /Eth /Ntilde
-/Ograve /Oacute /Ocircumflex /Otilde /Odieresis
-/multiply /Oslash /Ugrave /Uacute /Ucircumflex
-/Udieresis /Yacute /Thorn /germandbls /agrave
-/aacute /acircumflex /atilde /adieresis /aring
-/ae /ccedilla /egrave /eacute /ecircumflex
-/edieresis /igrave /iacute /icircumflex /idieresis
-/eth /ntilde /ograve /oacute /ocircumflex
-/otilde /odieresis /divide /oslash /ugrave
-/uacute /ucircumflex /udieresis /yacute /thorn
-/ydieresis
-] def
-%%EndResource
-/Courier-Bold findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-Bold exch definefont pop
-/Courier-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-BoldOblique exch definefont pop
-/Courier-Oblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-Oblique exch definefont pop
-/Times-BoldItalic findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Times-BoldItalic exch definefont pop
-/Courier findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier exch definefont pop
-/Times-Italic findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Times-Italic exch definefont pop
-/Times-Bold findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Times-Bold exch definefont pop
-/Helvetica findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica exch definefont pop
-/Times-Roman findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Times-Roman exch definefont pop
-/Helvetica-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-BoldOblique exch definefont pop
-/Helvetica-Bold findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-Bold exch definefont pop
-/Helvetica-Oblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-Oblique exch definefont pop
-%FOPEndFontReencode
-%%EndProlog
-%%Page: 1 1
-%%PageBoundingBox: 0 0 458 345
-%%BeginPageSetup
-[0.75082 0 0 -0.75 0 345] concat
-%%EndPageSetup
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-1 setgray
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-closepath
-fill
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-76.25 57.5 lineto
-76.25 57.5 lineto
-533.75 57.5 lineto
-533.75 402.5 lineto
-533.75 402.5 lineto
-76.25 402.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-533.75 57.5 M
-76.25 57.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-533.75 57.5 M
-533.75 402.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-533.75 57.5 M
-533.75 57.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 0 1 setrgbcolor
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-78.537 128.629 lineto
-80.825 97.17 lineto
-83.113 90.796 lineto
-85.4 87.349 lineto
-87.688 84.529 lineto
-89.975 82.061 lineto
-92.262 79.881 lineto
-94.55 77.952 lineto
-96.838 76.242 lineto
-99.125 74.723 lineto
-101.412 73.373 lineto
-103.7 72.172 lineto
-105.988 71.099 lineto
-108.275 70.141 lineto
-110.562 69.283 lineto
-112.85 68.513 lineto
-115.137 67.82 lineto
-117.425 67.196 lineto
-119.712 66.631 lineto
-122 66.12 lineto
-124.288 65.656 lineto
-126.575 65.233 lineto
-128.863 64.847 lineto
-131.15 64.493 lineto
-133.438 64.169 lineto
-135.725 63.869 lineto
-138.012 63.593 lineto
-140.3 63.338 lineto
-142.588 63.1 lineto
-144.875 62.879 lineto
-147.163 62.672 lineto
-149.45 62.479 lineto
-151.738 62.297 lineto
-154.025 62.126 lineto
-156.312 61.965 lineto
-158.6 61.813 lineto
-160.887 61.669 lineto
-163.175 61.532 lineto
-165.463 61.402 lineto
-167.75 61.278 lineto
-170.038 61.16 lineto
-172.325 61.047 lineto
-174.613 60.939 lineto
-176.9 60.835 lineto
-179.188 60.736 lineto
-181.475 60.641 lineto
-183.762 60.549 lineto
-186.05 60.461 lineto
-188.337 60.376 lineto
-190.625 60.294 lineto
-192.913 60.215 lineto
-195.2 60.138 lineto
-197.488 60.065 lineto
-199.775 59.993 lineto
-202.062 59.925 lineto
-204.35 59.858 lineto
-206.638 59.794 lineto
-208.925 59.731 lineto
-211.213 59.671 lineto
-213.5 59.612 lineto
-215.788 59.556 lineto
-218.075 59.501 lineto
-220.363 59.447 lineto
-222.65 59.396 lineto
-224.938 59.346 lineto
-227.225 59.297 lineto
-229.512 59.25 lineto
-231.8 59.204 lineto
-234.088 59.16 lineto
-236.375 59.117 lineto
-238.663 59.075 lineto
-240.95 59.035 lineto
-243.238 58.995 lineto
-245.525 58.957 lineto
-247.812 58.92 lineto
-250.1 58.884 lineto
-252.387 58.849 lineto
-254.675 58.815 lineto
-256.963 58.782 lineto
-259.25 58.75 lineto
-261.538 58.719 lineto
-263.825 58.689 lineto
-266.113 58.66 lineto
-268.4 58.631 lineto
-270.688 58.604 lineto
-272.975 58.577 lineto
-275.263 58.551 lineto
-277.55 58.526 lineto
-279.837 58.501 lineto
-282.125 58.477 lineto
-284.413 58.454 lineto
-286.7 58.431 lineto
-288.988 58.41 lineto
-291.275 58.388 lineto
-293.562 58.368 lineto
-295.85 58.348 lineto
-298.138 58.328 lineto
-300.425 58.309 lineto
-302.712 58.291 lineto
-305 58.273 lineto
-307.288 58.256 lineto
-309.575 58.239 lineto
-311.863 58.222 lineto
-314.15 58.207 lineto
-316.438 58.191 lineto
-318.725 58.176 lineto
-321.013 58.162 lineto
-323.3 58.148 lineto
-325.587 58.134 lineto
-327.875 58.12 lineto
-330.163 58.108 lineto
-332.45 58.095 lineto
-334.738 58.083 lineto
-337.025 58.071 lineto
-339.312 58.059 lineto
-341.6 58.048 lineto
-343.888 58.037 lineto
-346.175 58.027 lineto
-348.462 58.016 lineto
-350.75 58.007 lineto
-353.038 57.997 lineto
-355.325 57.987 lineto
-357.613 57.978 lineto
-359.9 57.969 lineto
-362.188 57.961 lineto
-364.475 57.952 lineto
-366.763 57.944 lineto
-369.05 57.936 lineto
-371.338 57.929 lineto
-373.625 57.921 lineto
-375.913 57.914 lineto
-378.2 57.907 lineto
-380.488 57.9 lineto
-382.775 57.894 lineto
-385.062 57.887 lineto
-387.35 57.881 lineto
-389.638 57.875 lineto
-391.925 57.869 lineto
-394.213 57.863 lineto
-396.5 57.857 lineto
-398.788 57.852 lineto
-401.075 57.847 lineto
-403.363 57.842 lineto
-405.65 57.837 lineto
-407.938 57.832 lineto
-410.225 57.827 lineto
-412.513 57.823 lineto
-414.8 57.818 lineto
-417.088 57.814 lineto
-419.375 57.81 lineto
-421.663 57.806 lineto
-423.95 57.802 lineto
-426.238 57.798 lineto
-428.525 57.794 lineto
-430.812 57.791 lineto
-433.1 57.787 lineto
-435.388 57.784 lineto
-437.675 57.78 lineto
-439.962 57.777 lineto
-442.25 57.774 lineto
-444.538 57.771 lineto
-446.825 57.768 lineto
-449.112 57.765 lineto
-451.4 57.763 lineto
-453.688 57.76 lineto
-455.975 57.757 lineto
-458.263 57.755 lineto
-460.55 57.752 lineto
-462.838 57.75 lineto
-465.125 57.748 lineto
-467.413 57.745 lineto
-469.7 57.743 lineto
-471.987 57.741 lineto
-474.275 57.739 lineto
-476.562 57.737 lineto
-478.85 57.735 lineto
-481.138 57.733 lineto
-483.425 57.731 lineto
-485.712 57.729 lineto
-488 57.728 lineto
-490.288 57.726 lineto
-492.575 57.724 lineto
-494.862 57.723 lineto
-497.15 57.721 lineto
-499.438 57.72 lineto
-501.725 57.718 lineto
-504.013 57.717 lineto
-506.3 57.715 lineto
-508.588 57.714 lineto
-510.875 57.713 lineto
-513.163 57.711 lineto
-515.45 57.71 lineto
-517.737 57.709 lineto
-520.025 57.708 lineto
-522.312 57.707 lineto
-524.6 57.706 lineto
-526.888 57.705 lineto
-529.175 57.704 lineto
-531.463 57.703 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-76.25 57.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-69.395 402.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 368 M
-69.395 368 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 333.5 M
-69.395 333.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 299 M
-69.395 299 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 264.5 M
-69.395 264.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 230 M
-69.395 230 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 195.5 M
-69.395 195.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 161 M
-69.395 161 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 126.5 M
-69.395 126.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 92 M
-69.395 92 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 57.5 M
-69.395 57.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 385.25 M
-72.137 385.25 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 350.75 M
-72.137 350.75 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 316.25 M
-72.137 316.25 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 281.75 M
-72.137 281.75 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 247.25 M
-72.137 247.25 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 212.75 M
-72.137 212.75 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 178.25 M
-72.137 178.25 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 143.75 M
-72.137 143.75 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 109.25 M
-72.137 109.25 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 74.75 M
-72.137 74.75 lineto
-stroke
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-260.062 -1985.469 M
-256.406 -1985.469 254.562 -1981.875 QUADTO 
-252.719 -1978.281 252.719 -1971.062 QUADTO 
-252.719 -1963.859 254.562 -1960.266 QUADTO 
-256.406 -1956.672 260.062 -1956.672 QUADTO 
-263.734 -1956.672 265.578 -1960.266 QUADTO 
-267.422 -1963.859 267.422 -1971.062 QUADTO 
-267.422 -1978.281 265.578 -1981.875 QUADTO 
-263.734 -1985.469 260.062 -1985.469 QUADTO 
-closepath
-260.062 -1989.219 M
-265.938 -1989.219 269.047 -1984.57 QUADTO 
-272.156 -1979.922 272.156 -1971.062 QUADTO 
-272.156 -1962.219 269.047 -1957.562 QUADTO 
-265.938 -1952.906 260.062 -1952.906 QUADTO 
-254.172 -1952.906 251.07 -1957.562 QUADTO 
-247.969 -1962.219 247.969 -1971.062 QUADTO 
-247.969 -1979.922 251.07 -1984.57 QUADTO 
-254.172 -1989.219 260.062 -1989.219 QUADTO 
-closepath
-280.938 -1959.547 M
-285.875 -1959.547 lineto
-285.875 -1953.594 lineto
-280.938 -1953.594 lineto
-280.938 -1959.547 lineto
-closepath
-306.062 -1985.469 M
-302.406 -1985.469 300.562 -1981.875 QUADTO 
-298.719 -1978.281 298.719 -1971.062 QUADTO 
-298.719 -1963.859 300.562 -1960.266 QUADTO 
-302.406 -1956.672 306.062 -1956.672 QUADTO 
-309.734 -1956.672 311.578 -1960.266 QUADTO 
-313.422 -1963.859 313.422 -1971.062 QUADTO 
-313.422 -1978.281 311.578 -1981.875 QUADTO 
-309.734 -1985.469 306.062 -1985.469 QUADTO 
-closepath
-306.062 -1989.219 M
-311.938 -1989.219 315.047 -1984.57 QUADTO 
-318.156 -1979.922 318.156 -1971.062 QUADTO 
-318.156 -1962.219 315.047 -1957.562 QUADTO 
-311.938 -1952.906 306.062 -1952.906 QUADTO 
-300.172 -1952.906 297.07 -1957.562 QUADTO 
-293.969 -1962.219 293.969 -1971.062 QUADTO 
-293.969 -1979.922 297.07 -1984.57 QUADTO 
-300.172 -1989.219 306.062 -1989.219 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -1822.266 M
-261.203 -1822.266 259.359 -1818.672 QUADTO 
-257.516 -1815.078 257.516 -1807.859 QUADTO 
-257.516 -1800.656 259.359 -1797.062 QUADTO 
-261.203 -1793.469 264.859 -1793.469 QUADTO 
-268.531 -1793.469 270.375 -1797.062 QUADTO 
-272.219 -1800.656 272.219 -1807.859 QUADTO 
-272.219 -1815.078 270.375 -1818.672 QUADTO 
-268.531 -1822.266 264.859 -1822.266 QUADTO 
-closepath
-264.859 -1826.016 M
-270.734 -1826.016 273.844 -1821.367 QUADTO 
-276.953 -1816.719 276.953 -1807.859 QUADTO 
-276.953 -1799.016 273.844 -1794.359 QUADTO 
-270.734 -1789.703 264.859 -1789.703 QUADTO 
-258.969 -1789.703 255.867 -1794.359 QUADTO 
-252.766 -1799.016 252.766 -1807.859 QUADTO 
-252.766 -1816.719 255.867 -1821.367 QUADTO 
-258.969 -1826.016 264.859 -1826.016 QUADTO 
-closepath
-285.734 -1796.344 M
-290.672 -1796.344 lineto
-290.672 -1790.391 lineto
-285.734 -1790.391 lineto
-285.734 -1796.344 lineto
-closepath
-301.547 -1794.375 M
-309.281 -1794.375 lineto
-309.281 -1821.078 lineto
-300.875 -1819.391 lineto
-300.875 -1823.703 lineto
-309.234 -1825.391 lineto
-313.969 -1825.391 lineto
-313.969 -1794.375 lineto
-321.703 -1794.375 lineto
-321.703 -1790.391 lineto
-301.547 -1790.391 lineto
-301.547 -1794.375 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -1654.266 M
-261.203 -1654.266 259.359 -1650.672 QUADTO 
-257.516 -1647.078 257.516 -1639.859 QUADTO 
-257.516 -1632.656 259.359 -1629.062 QUADTO 
-261.203 -1625.469 264.859 -1625.469 QUADTO 
-268.531 -1625.469 270.375 -1629.062 QUADTO 
-272.219 -1632.656 272.219 -1639.859 QUADTO 
-272.219 -1647.078 270.375 -1650.672 QUADTO 
-268.531 -1654.266 264.859 -1654.266 QUADTO 
-closepath
-264.859 -1658.016 M
-270.734 -1658.016 273.844 -1653.367 QUADTO 
-276.953 -1648.719 276.953 -1639.859 QUADTO 
-276.953 -1631.016 273.844 -1626.359 QUADTO 
-270.734 -1621.703 264.859 -1621.703 QUADTO 
-258.969 -1621.703 255.867 -1626.359 QUADTO 
-252.766 -1631.016 252.766 -1639.859 QUADTO 
-252.766 -1648.719 255.867 -1653.367 QUADTO 
-258.969 -1658.016 264.859 -1658.016 QUADTO 
-closepath
-285.734 -1628.344 M
-290.672 -1628.344 lineto
-290.672 -1622.391 lineto
-285.734 -1622.391 lineto
-285.734 -1628.344 lineto
-closepath
-304.812 -1626.375 M
-321.328 -1626.375 lineto
-321.328 -1622.391 lineto
-299.109 -1622.391 lineto
-299.109 -1626.375 lineto
-301.812 -1629.172 306.461 -1633.867 QUADTO 
-311.109 -1638.562 312.312 -1639.922 QUADTO 
-314.578 -1642.484 315.484 -1644.25 QUADTO 
-316.391 -1646.016 316.391 -1647.734 QUADTO 
-316.391 -1650.516 314.43 -1652.273 QUADTO 
-312.469 -1654.031 309.328 -1654.031 QUADTO 
-307.109 -1654.031 304.633 -1653.258 QUADTO 
-302.156 -1652.484 299.344 -1650.922 QUADTO 
-299.344 -1655.703 lineto
-302.203 -1656.844 304.688 -1657.43 QUADTO 
-307.172 -1658.016 309.234 -1658.016 QUADTO 
-314.672 -1658.016 317.906 -1655.297 QUADTO 
-321.141 -1652.578 321.141 -1648.031 QUADTO 
-321.141 -1645.875 320.336 -1643.945 QUADTO 
-319.531 -1642.016 317.391 -1639.391 QUADTO 
-316.812 -1638.703 313.672 -1635.461 QUADTO 
-310.531 -1632.219 304.812 -1626.375 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -1491.062 M
-261.203 -1491.062 259.359 -1487.469 QUADTO 
-257.516 -1483.875 257.516 -1476.656 QUADTO 
-257.516 -1469.453 259.359 -1465.859 QUADTO 
-261.203 -1462.266 264.859 -1462.266 QUADTO 
-268.531 -1462.266 270.375 -1465.859 QUADTO 
-272.219 -1469.453 272.219 -1476.656 QUADTO 
-272.219 -1483.875 270.375 -1487.469 QUADTO 
-268.531 -1491.062 264.859 -1491.062 QUADTO 
-closepath
-264.859 -1494.812 M
-270.734 -1494.812 273.844 -1490.164 QUADTO 
-276.953 -1485.516 276.953 -1476.656 QUADTO 
-276.953 -1467.812 273.844 -1463.156 QUADTO 
-270.734 -1458.5 264.859 -1458.5 QUADTO 
-258.969 -1458.5 255.867 -1463.156 QUADTO 
-252.766 -1467.812 252.766 -1476.656 QUADTO 
-252.766 -1485.516 255.867 -1490.164 QUADTO 
-258.969 -1494.812 264.859 -1494.812 QUADTO 
-closepath
-285.734 -1465.141 M
-290.672 -1465.141 lineto
-290.672 -1459.188 lineto
-285.734 -1459.188 lineto
-285.734 -1465.141 lineto
-closepath
-315.078 -1478.062 M
-318.469 -1477.328 320.383 -1475.031 QUADTO 
-322.297 -1472.734 322.297 -1469.359 QUADTO 
-322.297 -1464.188 318.734 -1461.344 QUADTO 
-315.172 -1458.5 308.609 -1458.5 QUADTO 
-306.406 -1458.5 304.07 -1458.938 QUADTO 
-301.734 -1459.375 299.25 -1460.25 QUADTO 
-299.25 -1464.812 lineto
-301.219 -1463.672 303.562 -1463.086 QUADTO 
-305.906 -1462.5 308.469 -1462.5 QUADTO 
-312.922 -1462.5 315.25 -1464.258 QUADTO 
-317.578 -1466.016 317.578 -1469.359 QUADTO 
-317.578 -1472.453 315.414 -1474.203 QUADTO 
-313.25 -1475.953 309.375 -1475.953 QUADTO 
-305.297 -1475.953 lineto
-305.297 -1479.844 lineto
-309.562 -1479.844 lineto
-313.062 -1479.844 314.914 -1481.234 QUADTO 
-316.766 -1482.625 316.766 -1485.25 QUADTO 
-316.766 -1487.953 314.852 -1489.391 QUADTO 
-312.938 -1490.828 309.375 -1490.828 QUADTO 
-307.438 -1490.828 305.211 -1490.406 QUADTO 
-302.984 -1489.984 300.312 -1489.094 QUADTO 
-300.312 -1493.312 lineto
-303 -1494.062 305.359 -1494.438 QUADTO 
-307.719 -1494.812 309.797 -1494.812 QUADTO 
-315.188 -1494.812 318.328 -1492.367 QUADTO 
-321.469 -1489.922 321.469 -1485.75 QUADTO 
-321.469 -1482.844 319.805 -1480.836 QUADTO 
-318.141 -1478.828 315.078 -1478.062 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-260.062 -1323.062 M
-256.406 -1323.062 254.562 -1319.469 QUADTO 
-252.719 -1315.875 252.719 -1308.656 QUADTO 
-252.719 -1301.453 254.562 -1297.859 QUADTO 
-256.406 -1294.266 260.062 -1294.266 QUADTO 
-263.734 -1294.266 265.578 -1297.859 QUADTO 
-267.422 -1301.453 267.422 -1308.656 QUADTO 
-267.422 -1315.875 265.578 -1319.469 QUADTO 
-263.734 -1323.062 260.062 -1323.062 QUADTO 
-closepath
-260.062 -1326.812 M
-265.938 -1326.812 269.047 -1322.164 QUADTO 
-272.156 -1317.516 272.156 -1308.656 QUADTO 
-272.156 -1299.812 269.047 -1295.156 QUADTO 
-265.938 -1290.5 260.062 -1290.5 QUADTO 
-254.172 -1290.5 251.07 -1295.156 QUADTO 
-247.969 -1299.812 247.969 -1308.656 QUADTO 
-247.969 -1317.516 251.07 -1322.164 QUADTO 
-254.172 -1326.812 260.062 -1326.812 QUADTO 
-closepath
-280.938 -1297.141 M
-285.875 -1297.141 lineto
-285.875 -1291.188 lineto
-280.938 -1291.188 lineto
-280.938 -1297.141 lineto
-closepath
-308.938 -1322.062 M
-296.984 -1303.375 lineto
-308.938 -1303.375 lineto
-308.938 -1322.062 lineto
-closepath
-307.703 -1326.188 M
-313.656 -1326.188 lineto
-313.656 -1303.375 lineto
-318.641 -1303.375 lineto
-318.641 -1299.438 lineto
-313.656 -1299.438 lineto
-313.656 -1291.188 lineto
-308.938 -1291.188 lineto
-308.938 -1299.438 lineto
-293.141 -1299.438 lineto
-293.141 -1304.016 lineto
-307.703 -1326.188 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -1159.875 M
-261.203 -1159.875 259.359 -1156.281 QUADTO 
-257.516 -1152.688 257.516 -1145.469 QUADTO 
-257.516 -1138.266 259.359 -1134.672 QUADTO 
-261.203 -1131.078 264.859 -1131.078 QUADTO 
-268.531 -1131.078 270.375 -1134.672 QUADTO 
-272.219 -1138.266 272.219 -1145.469 QUADTO 
-272.219 -1152.688 270.375 -1156.281 QUADTO 
-268.531 -1159.875 264.859 -1159.875 QUADTO 
-closepath
-264.859 -1163.625 M
-270.734 -1163.625 273.844 -1158.977 QUADTO 
-276.953 -1154.328 276.953 -1145.469 QUADTO 
-276.953 -1136.625 273.844 -1131.969 QUADTO 
-270.734 -1127.312 264.859 -1127.312 QUADTO 
-258.969 -1127.312 255.867 -1131.969 QUADTO 
-252.766 -1136.625 252.766 -1145.469 QUADTO 
-252.766 -1154.328 255.867 -1158.977 QUADTO 
-258.969 -1163.625 264.859 -1163.625 QUADTO 
-closepath
-285.734 -1133.953 M
-290.672 -1133.953 lineto
-290.672 -1128 lineto
-285.734 -1128 lineto
-285.734 -1133.953 lineto
-closepath
-300.781 -1163 M
-319.359 -1163 lineto
-319.359 -1159.016 lineto
-305.109 -1159.016 lineto
-305.109 -1150.438 lineto
-306.141 -1150.781 307.172 -1150.961 QUADTO 
-308.203 -1151.141 309.234 -1151.141 QUADTO 
-315.094 -1151.141 318.516 -1147.93 QUADTO 
-321.938 -1144.719 321.938 -1139.234 QUADTO 
-321.938 -1133.578 318.422 -1130.445 QUADTO 
-314.906 -1127.312 308.516 -1127.312 QUADTO 
-306.312 -1127.312 304.023 -1127.695 QUADTO 
-301.734 -1128.078 299.297 -1128.828 QUADTO 
-299.297 -1133.578 lineto
-301.406 -1132.438 303.656 -1131.875 QUADTO 
-305.906 -1131.312 308.422 -1131.312 QUADTO 
-312.469 -1131.312 314.836 -1133.445 QUADTO 
-317.203 -1135.578 317.203 -1139.234 QUADTO 
-317.203 -1142.891 314.836 -1145.023 QUADTO 
-312.469 -1147.156 308.422 -1147.156 QUADTO 
-306.516 -1147.156 304.633 -1146.734 QUADTO 
-302.75 -1146.312 300.781 -1145.422 QUADTO 
-300.781 -1163 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-260.062 -991.875 M
-256.406 -991.875 254.562 -988.281 QUADTO 
-252.719 -984.688 252.719 -977.469 QUADTO 
-252.719 -970.266 254.562 -966.672 QUADTO 
-256.406 -963.078 260.062 -963.078 QUADTO 
-263.734 -963.078 265.578 -966.672 QUADTO 
-267.422 -970.266 267.422 -977.469 QUADTO 
-267.422 -984.688 265.578 -988.281 QUADTO 
-263.734 -991.875 260.062 -991.875 QUADTO 
-closepath
-260.062 -995.625 M
-265.938 -995.625 269.047 -990.977 QUADTO 
-272.156 -986.328 272.156 -977.469 QUADTO 
-272.156 -968.625 269.047 -963.969 QUADTO 
-265.938 -959.312 260.062 -959.312 QUADTO 
-254.172 -959.312 251.07 -963.969 QUADTO 
-247.969 -968.625 247.969 -977.469 QUADTO 
-247.969 -986.328 251.07 -990.977 QUADTO 
-254.172 -995.625 260.062 -995.625 QUADTO 
-closepath
-280.938 -965.953 M
-285.875 -965.953 lineto
-285.875 -960 lineto
-280.938 -960 lineto
-280.938 -965.953 lineto
-closepath
-306.641 -979.391 M
-303.453 -979.391 301.594 -977.211 QUADTO 
-299.734 -975.031 299.734 -971.234 QUADTO 
-299.734 -967.453 301.594 -965.266 QUADTO 
-303.453 -963.078 306.641 -963.078 QUADTO 
-309.828 -963.078 311.695 -965.266 QUADTO 
-313.562 -967.453 313.562 -971.234 QUADTO 
-313.562 -975.031 311.695 -977.211 QUADTO 
-309.828 -979.391 306.641 -979.391 QUADTO 
-closepath
-316.047 -994.219 M
-316.047 -989.906 lineto
-314.266 -990.75 312.445 -991.195 QUADTO 
-310.625 -991.641 308.844 -991.641 QUADTO 
-304.156 -991.641 301.688 -988.477 QUADTO 
-299.219 -985.312 298.859 -978.922 QUADTO 
-300.25 -980.953 302.336 -982.047 QUADTO 
-304.422 -983.141 306.922 -983.141 QUADTO 
-312.203 -983.141 315.258 -979.938 QUADTO 
-318.312 -976.734 318.312 -971.234 QUADTO 
-318.312 -965.844 315.125 -962.578 QUADTO 
-311.938 -959.312 306.641 -959.312 QUADTO 
-300.578 -959.312 297.367 -963.969 QUADTO 
-294.156 -968.625 294.156 -977.469 QUADTO 
-294.156 -985.766 298.094 -990.695 QUADTO 
-302.031 -995.625 308.656 -995.625 QUADTO 
-310.438 -995.625 312.258 -995.273 QUADTO 
-314.078 -994.922 316.047 -994.219 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -828.672 M
-261.203 -828.672 259.359 -825.078 QUADTO 
-257.516 -821.484 257.516 -814.266 QUADTO 
-257.516 -807.062 259.359 -803.469 QUADTO 
-261.203 -799.875 264.859 -799.875 QUADTO 
-268.531 -799.875 270.375 -803.469 QUADTO 
-272.219 -807.062 272.219 -814.266 QUADTO 
-272.219 -821.484 270.375 -825.078 QUADTO 
-268.531 -828.672 264.859 -828.672 QUADTO 
-closepath
-264.859 -832.422 M
-270.734 -832.422 273.844 -827.773 QUADTO 
-276.953 -823.125 276.953 -814.266 QUADTO 
-276.953 -805.422 273.844 -800.766 QUADTO 
-270.734 -796.109 264.859 -796.109 QUADTO 
-258.969 -796.109 255.867 -800.766 QUADTO 
-252.766 -805.422 252.766 -814.266 QUADTO 
-252.766 -823.125 255.867 -827.773 QUADTO 
-258.969 -832.422 264.859 -832.422 QUADTO 
-closepath
-285.734 -802.75 M
-290.672 -802.75 lineto
-290.672 -796.797 lineto
-285.734 -796.797 lineto
-285.734 -802.75 lineto
-closepath
-299.531 -831.797 M
-322.031 -831.797 lineto
-322.031 -829.781 lineto
-309.328 -796.797 lineto
-304.391 -796.797 lineto
-316.344 -827.812 lineto
-299.531 -827.812 lineto
-299.531 -831.797 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-260.062 -660.672 M
-256.406 -660.672 254.562 -657.078 QUADTO 
-252.719 -653.484 252.719 -646.266 QUADTO 
-252.719 -639.062 254.562 -635.469 QUADTO 
-256.406 -631.875 260.062 -631.875 QUADTO 
-263.734 -631.875 265.578 -635.469 QUADTO 
-267.422 -639.062 267.422 -646.266 QUADTO 
-267.422 -653.484 265.578 -657.078 QUADTO 
-263.734 -660.672 260.062 -660.672 QUADTO 
-closepath
-260.062 -664.422 M
-265.938 -664.422 269.047 -659.773 QUADTO 
-272.156 -655.125 272.156 -646.266 QUADTO 
-272.156 -637.422 269.047 -632.766 QUADTO 
-265.938 -628.109 260.062 -628.109 QUADTO 
-254.172 -628.109 251.07 -632.766 QUADTO 
-247.969 -637.422 247.969 -646.266 QUADTO 
-247.969 -655.125 251.07 -659.773 QUADTO 
-254.172 -664.422 260.062 -664.422 QUADTO 
-closepath
-280.938 -634.75 M
-285.875 -634.75 lineto
-285.875 -628.797 lineto
-280.938 -628.797 lineto
-280.938 -634.75 lineto
-closepath
-306.062 -645.422 M
-302.688 -645.422 300.75 -643.617 QUADTO 
-298.812 -641.812 298.812 -638.641 QUADTO 
-298.812 -635.484 300.75 -633.68 QUADTO 
-302.688 -631.875 306.062 -631.875 QUADTO 
-309.438 -631.875 311.383 -633.688 QUADTO 
-313.328 -635.5 313.328 -638.641 QUADTO 
-313.328 -641.812 311.391 -643.617 QUADTO 
-309.453 -645.422 306.062 -645.422 QUADTO 
-closepath
-301.328 -647.438 M
-298.281 -648.188 296.578 -650.273 QUADTO 
-294.875 -652.359 294.875 -655.359 QUADTO 
-294.875 -659.547 297.867 -661.984 QUADTO 
-300.859 -664.422 306.062 -664.422 QUADTO 
-311.281 -664.422 314.258 -661.984 QUADTO 
-317.234 -659.547 317.234 -655.359 QUADTO 
-317.234 -652.359 315.539 -650.273 QUADTO 
-313.844 -648.188 310.812 -647.438 QUADTO 
-314.234 -646.641 316.148 -644.32 QUADTO 
-318.062 -642 318.062 -638.641 QUADTO 
-318.062 -633.562 314.953 -630.836 QUADTO 
-311.844 -628.109 306.062 -628.109 QUADTO 
-300.266 -628.109 297.164 -630.836 QUADTO 
-294.062 -633.562 294.062 -638.641 QUADTO 
-294.062 -642 295.984 -644.32 QUADTO 
-297.906 -646.641 301.328 -647.438 QUADTO 
-closepath
-299.594 -654.906 M
-299.594 -652.188 301.289 -650.664 QUADTO 
-302.984 -649.141 306.062 -649.141 QUADTO 
-309.109 -649.141 310.828 -650.664 QUADTO 
-312.547 -652.188 312.547 -654.906 QUADTO 
-312.547 -657.625 310.828 -659.148 QUADTO 
-309.109 -660.672 306.062 -660.672 QUADTO 
-302.984 -660.672 301.289 -659.148 QUADTO 
-299.594 -657.625 299.594 -654.906 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-264.859 -497.469 M
-261.203 -497.469 259.359 -493.875 QUADTO 
-257.516 -490.281 257.516 -483.062 QUADTO 
-257.516 -475.859 259.359 -472.266 QUADTO 
-261.203 -468.672 264.859 -468.672 QUADTO 
-268.531 -468.672 270.375 -472.266 QUADTO 
-272.219 -475.859 272.219 -483.062 QUADTO 
-272.219 -490.281 270.375 -493.875 QUADTO 
-268.531 -497.469 264.859 -497.469 QUADTO 
-closepath
-264.859 -501.219 M
-270.734 -501.219 273.844 -496.57 QUADTO 
-276.953 -491.922 276.953 -483.062 QUADTO 
-276.953 -474.219 273.844 -469.562 QUADTO 
-270.734 -464.906 264.859 -464.906 QUADTO 
-258.969 -464.906 255.867 -469.562 QUADTO 
-252.766 -474.219 252.766 -483.062 QUADTO 
-252.766 -491.922 255.867 -496.57 QUADTO 
-258.969 -501.219 264.859 -501.219 QUADTO 
-closepath
-285.734 -471.547 M
-290.672 -471.547 lineto
-290.672 -465.594 lineto
-285.734 -465.594 lineto
-285.734 -471.547 lineto
-closepath
-300.875 -466.328 M
-300.875 -470.641 lineto
-302.656 -469.797 304.484 -469.352 QUADTO 
-306.312 -468.906 308.062 -468.906 QUADTO 
-312.75 -468.906 315.227 -472.055 QUADTO 
-317.703 -475.203 318.047 -481.625 QUADTO 
-316.688 -479.609 314.602 -478.531 QUADTO 
-312.516 -477.453 309.984 -477.453 QUADTO 
-304.734 -477.453 301.68 -480.633 QUADTO 
-298.625 -483.812 298.625 -489.312 QUADTO 
-298.625 -494.703 301.812 -497.961 QUADTO 
-305 -501.219 310.297 -501.219 QUADTO 
-316.359 -501.219 319.562 -496.57 QUADTO 
-322.766 -491.922 322.766 -483.062 QUADTO 
-322.766 -474.781 318.836 -469.844 QUADTO 
-314.906 -464.906 308.281 -464.906 QUADTO 
-306.5 -464.906 304.672 -465.266 QUADTO 
-302.844 -465.625 300.875 -466.328 QUADTO 
-closepath
-310.297 -481.156 M
-313.484 -481.156 315.344 -483.336 QUADTO 
-317.203 -485.516 317.203 -489.312 QUADTO 
-317.203 -493.094 315.344 -495.281 QUADTO 
-313.484 -497.469 310.297 -497.469 QUADTO 
-307.109 -497.469 305.242 -495.281 QUADTO 
-303.375 -493.094 303.375 -489.312 QUADTO 
-303.375 -485.516 305.242 -483.336 QUADTO 
-307.109 -481.156 310.297 -481.156 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-255.547 -301.578 M
-263.281 -301.578 lineto
-263.281 -328.281 lineto
-254.875 -326.594 lineto
-254.875 -330.906 lineto
-263.234 -332.594 lineto
-267.969 -332.594 lineto
-267.969 -301.578 lineto
-275.703 -301.578 lineto
-275.703 -297.594 lineto
-255.547 -297.594 lineto
-255.547 -301.578 lineto
-closepath
-285.734 -303.547 M
-290.672 -303.547 lineto
-290.672 -297.594 lineto
-285.734 -297.594 lineto
-285.734 -303.547 lineto
-closepath
-310.859 -329.469 M
-307.203 -329.469 305.359 -325.875 QUADTO 
-303.516 -322.281 303.516 -315.062 QUADTO 
-303.516 -307.859 305.359 -304.266 QUADTO 
-307.203 -300.672 310.859 -300.672 QUADTO 
-314.531 -300.672 316.375 -304.266 QUADTO 
-318.219 -307.859 318.219 -315.062 QUADTO 
-318.219 -322.281 316.375 -325.875 QUADTO 
-314.531 -329.469 310.859 -329.469 QUADTO 
-closepath
-310.859 -333.219 M
-316.734 -333.219 319.844 -328.57 QUADTO 
-322.953 -323.922 322.953 -315.062 QUADTO 
-322.953 -306.219 319.844 -301.562 QUADTO 
-316.734 -296.906 310.859 -296.906 QUADTO 
-304.969 -296.906 301.867 -301.562 QUADTO 
-298.766 -306.219 298.766 -315.062 QUADTO 
-298.766 -323.922 301.867 -328.57 QUADTO 
-304.969 -333.219 310.859 -333.219 QUADTO 
-closepath
-fill
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-533.75 402.5 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-76.25 402.5 M
-76.25 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-122 402.5 M
-122 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-167.75 402.5 M
-167.75 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-213.5 402.5 M
-213.5 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-259.25 402.5 M
-259.25 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-305 402.5 M
-305 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-350.75 402.5 M
-350.75 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-396.5 402.5 M
-396.5 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-442.25 402.5 M
-442.25 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-488 402.5 M
-488 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-533.75 402.5 M
-533.75 407.675 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-99.125 402.5 M
-99.125 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-144.875 402.5 M
-144.875 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-190.625 402.5 M
-190.625 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-236.375 402.5 M
-236.375 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-282.125 402.5 M
-282.125 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-327.875 402.5 M
-327.875 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-373.625 402.5 M
-373.625 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-419.375 402.5 M
-419.375 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-465.125 402.5 M
-465.125 405.605 lineto
-stroke
-grestore
-gsave
-newpath
-0 0 M
-610 0 lineto
-610 460 lineto
-0 460 lineto
-0 0 lineto
-closepath
-clip
-0 setlinecap
-0 setlinejoin
-4 setmiterlimit
-0.5 setlinewidth
-newpath
-510.875 402.5 M
-510.875 405.605 lineto
-stroke
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-360.859 -2043.062 M
-357.203 -2043.062 355.359 -2039.469 QUADTO 
-353.516 -2035.875 353.516 -2028.656 QUADTO 
-353.516 -2021.453 355.359 -2017.859 QUADTO 
-357.203 -2014.266 360.859 -2014.266 QUADTO 
-364.531 -2014.266 366.375 -2017.859 QUADTO 
-368.219 -2021.453 368.219 -2028.656 QUADTO 
-368.219 -2035.875 366.375 -2039.469 QUADTO 
-364.531 -2043.062 360.859 -2043.062 QUADTO 
-closepath
-360.859 -2046.812 M
-366.734 -2046.812 369.844 -2042.164 QUADTO 
-372.953 -2037.516 372.953 -2028.656 QUADTO 
-372.953 -2019.812 369.844 -2015.156 QUADTO 
-366.734 -2010.5 360.859 -2010.5 QUADTO 
-354.969 -2010.5 351.867 -2015.156 QUADTO 
-348.766 -2019.812 348.766 -2028.656 QUADTO 
-348.766 -2037.516 351.867 -2042.164 QUADTO 
-354.969 -2046.812 360.859 -2046.812 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-575.609 -2015.172 M
-592.125 -2015.172 lineto
-592.125 -2011.188 lineto
-569.906 -2011.188 lineto
-569.906 -2015.172 lineto
-572.609 -2017.969 577.258 -2022.664 QUADTO 
-581.906 -2027.359 583.109 -2028.719 QUADTO 
-585.375 -2031.281 586.281 -2033.047 QUADTO 
-587.188 -2034.812 587.188 -2036.531 QUADTO 
-587.188 -2039.312 585.227 -2041.07 QUADTO 
-583.266 -2042.828 580.125 -2042.828 QUADTO 
-577.906 -2042.828 575.43 -2042.055 QUADTO 
-572.953 -2041.281 570.141 -2039.719 QUADTO 
-570.141 -2044.5 lineto
-573 -2045.641 575.484 -2046.227 QUADTO 
-577.969 -2046.812 580.031 -2046.812 QUADTO 
-585.469 -2046.812 588.703 -2044.094 QUADTO 
-591.938 -2041.375 591.938 -2036.828 QUADTO 
-591.938 -2034.672 591.133 -2032.742 QUADTO 
-590.328 -2030.812 588.188 -2028.188 QUADTO 
-587.609 -2027.5 584.469 -2024.258 QUADTO 
-581.328 -2021.016 575.609 -2015.172 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-805.328 -2042.062 M
-793.375 -2023.375 lineto
-805.328 -2023.375 lineto
-805.328 -2042.062 lineto
-closepath
-804.094 -2046.188 M
-810.047 -2046.188 lineto
-810.047 -2023.375 lineto
-815.031 -2023.375 lineto
-815.031 -2019.438 lineto
-810.047 -2019.438 lineto
-810.047 -2011.188 lineto
-805.328 -2011.188 lineto
-805.328 -2019.438 lineto
-789.531 -2019.438 lineto
-789.531 -2024.016 lineto
-804.094 -2046.188 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-1019.031 -2030.578 M
-1015.844 -2030.578 1013.984 -2028.398 QUADTO 
-1012.125 -2026.219 1012.125 -2022.422 QUADTO 
-1012.125 -2018.641 1013.984 -2016.453 QUADTO 
-1015.844 -2014.266 1019.031 -2014.266 QUADTO 
-1022.219 -2014.266 1024.086 -2016.453 QUADTO 
-1025.953 -2018.641 1025.953 -2022.422 QUADTO 
-1025.953 -2026.219 1024.086 -2028.398 QUADTO 
-1022.219 -2030.578 1019.031 -2030.578 QUADTO 
-closepath
-1028.438 -2045.406 M
-1028.438 -2041.094 lineto
-1026.656 -2041.938 1024.836 -2042.383 QUADTO 
-1023.016 -2042.828 1021.234 -2042.828 QUADTO 
-1016.547 -2042.828 1014.078 -2039.664 QUADTO 
-1011.609 -2036.5 1011.25 -2030.109 QUADTO 
-1012.641 -2032.141 1014.727 -2033.234 QUADTO 
-1016.812 -2034.328 1019.312 -2034.328 QUADTO 
-1024.594 -2034.328 1027.648 -2031.125 QUADTO 
-1030.703 -2027.922 1030.703 -2022.422 QUADTO 
-1030.703 -2017.031 1027.516 -2013.766 QUADTO 
-1024.328 -2010.5 1019.031 -2010.5 QUADTO 
-1012.969 -2010.5 1009.758 -2015.156 QUADTO 
-1006.547 -2019.812 1006.547 -2028.656 QUADTO 
-1006.547 -2036.953 1010.484 -2041.883 QUADTO 
-1014.422 -2046.812 1021.047 -2046.812 QUADTO 
-1022.828 -2046.812 1024.648 -2046.461 QUADTO 
-1026.469 -2046.109 1028.438 -2045.406 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-1244.062 -2027.812 M
-1240.688 -2027.812 1238.75 -2026.008 QUADTO 
-1236.812 -2024.203 1236.812 -2021.031 QUADTO 
-1236.812 -2017.875 1238.75 -2016.07 QUADTO 
-1240.688 -2014.266 1244.062 -2014.266 QUADTO 
-1247.438 -2014.266 1249.383 -2016.078 QUADTO 
-1251.328 -2017.891 1251.328 -2021.031 QUADTO 
-1251.328 -2024.203 1249.391 -2026.008 QUADTO 
-1247.453 -2027.812 1244.062 -2027.812 QUADTO 
-closepath
-1239.328 -2029.828 M
-1236.281 -2030.578 1234.578 -2032.664 QUADTO 
-1232.875 -2034.75 1232.875 -2037.75 QUADTO 
-1232.875 -2041.938 1235.867 -2044.375 QUADTO 
-1238.859 -2046.812 1244.062 -2046.812 QUADTO 
-1249.281 -2046.812 1252.258 -2044.375 QUADTO 
-1255.234 -2041.938 1255.234 -2037.75 QUADTO 
-1255.234 -2034.75 1253.539 -2032.664 QUADTO 
-1251.844 -2030.578 1248.812 -2029.828 QUADTO 
-1252.234 -2029.031 1254.148 -2026.711 QUADTO 
-1256.062 -2024.391 1256.062 -2021.031 QUADTO 
-1256.062 -2015.953 1252.953 -2013.227 QUADTO 
-1249.844 -2010.5 1244.062 -2010.5 QUADTO 
-1238.266 -2010.5 1235.164 -2013.227 QUADTO 
-1232.062 -2015.953 1232.062 -2021.031 QUADTO 
-1232.062 -2024.391 1233.984 -2026.711 QUADTO 
-1235.906 -2029.031 1239.328 -2029.828 QUADTO 
-closepath
-1237.594 -2037.297 M
-1237.594 -2034.578 1239.289 -2033.055 QUADTO 
-1240.984 -2031.531 1244.062 -2031.531 QUADTO 
-1247.109 -2031.531 1248.828 -2033.055 QUADTO 
-1250.547 -2034.578 1250.547 -2037.297 QUADTO 
-1250.547 -2040.016 1248.828 -2041.539 QUADTO 
-1247.109 -2043.062 1244.062 -2043.062 QUADTO 
-1240.984 -2043.062 1239.289 -2041.539 QUADTO 
-1237.594 -2040.016 1237.594 -2037.297 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-1441.141 -2015.172 M
-1448.875 -2015.172 lineto
-1448.875 -2041.875 lineto
-1440.469 -2040.188 lineto
-1440.469 -2044.5 lineto
-1448.828 -2046.188 lineto
-1453.562 -2046.188 lineto
-1453.562 -2015.172 lineto
-1461.297 -2015.172 lineto
-1461.297 -2011.188 lineto
-1441.141 -2011.188 lineto
-1441.141 -2015.172 lineto
-closepath
-1481.453 -2043.062 M
-1477.797 -2043.062 1475.953 -2039.469 QUADTO 
-1474.109 -2035.875 1474.109 -2028.656 QUADTO 
-1474.109 -2021.453 1475.953 -2017.859 QUADTO 
-1477.797 -2014.266 1481.453 -2014.266 QUADTO 
-1485.125 -2014.266 1486.969 -2017.859 QUADTO 
-1488.812 -2021.453 1488.812 -2028.656 QUADTO 
-1488.812 -2035.875 1486.969 -2039.469 QUADTO 
-1485.125 -2043.062 1481.453 -2043.062 QUADTO 
-closepath
-1481.453 -2046.812 M
-1487.328 -2046.812 1490.438 -2042.164 QUADTO 
-1493.547 -2037.516 1493.547 -2028.656 QUADTO 
-1493.547 -2019.812 1490.438 -2015.156 QUADTO 
-1487.328 -2010.5 1481.453 -2010.5 QUADTO 
-1475.562 -2010.5 1472.461 -2015.156 QUADTO 
-1469.359 -2019.812 1469.359 -2028.656 QUADTO 
-1469.359 -2037.516 1472.461 -2042.164 QUADTO 
-1475.562 -2046.812 1481.453 -2046.812 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-1657.141 -2015.172 M
-1664.875 -2015.172 lineto
-1664.875 -2041.875 lineto
-1656.469 -2040.188 lineto
-1656.469 -2044.5 lineto
-1664.828 -2046.188 lineto
-1669.562 -2046.188 lineto
-1669.562 -2015.172 lineto
-1677.297 -2015.172 lineto
-1677.297 -2011.188 lineto
-1657.141 -2011.188 lineto
-1657.141 -2015.172 lineto
-closepath
-1691.406 -2015.172 M
-1707.922 -2015.172 lineto
-1707.922 -2011.188 lineto
-1685.703 -2011.188 lineto
-1685.703 -2015.172 lineto
-1688.406 -2017.969 1693.055 -2022.664 QUADTO 
-1697.703 -2027.359 1698.906 -2028.719 QUADTO 
-1701.172 -2031.281 1702.078 -2033.047 QUADTO 
-1702.984 -2034.812 1702.984 -2036.531 QUADTO 
-1702.984 -2039.312 1701.023 -2041.07 QUADTO 
-1699.062 -2042.828 1695.922 -2042.828 QUADTO 
-1693.703 -2042.828 1691.227 -2042.055 QUADTO 
-1688.75 -2041.281 1685.938 -2039.719 QUADTO 
-1685.938 -2044.5 lineto
-1688.797 -2045.641 1691.281 -2046.227 QUADTO 
-1693.766 -2046.812 1695.828 -2046.812 QUADTO 
-1701.266 -2046.812 1704.5 -2044.094 QUADTO 
-1707.734 -2041.375 1707.734 -2036.828 QUADTO 
-1707.734 -2034.672 1706.93 -2032.742 QUADTO 
-1706.125 -2030.812 1703.984 -2028.188 QUADTO 
-1703.406 -2027.5 1700.266 -2024.258 QUADTO 
-1697.125 -2021.016 1691.406 -2015.172 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-1877.953 -2015.172 M
-1885.688 -2015.172 lineto
-1885.688 -2041.875 lineto
-1877.281 -2040.188 lineto
-1877.281 -2044.5 lineto
-1885.641 -2046.188 lineto
-1890.375 -2046.188 lineto
-1890.375 -2015.172 lineto
-1898.109 -2015.172 lineto
-1898.109 -2011.188 lineto
-1877.953 -2011.188 lineto
-1877.953 -2015.172 lineto
-closepath
-1921.141 -2042.062 M
-1909.188 -2023.375 lineto
-1921.141 -2023.375 lineto
-1921.141 -2042.062 lineto
-closepath
-1919.906 -2046.188 M
-1925.859 -2046.188 lineto
-1925.859 -2023.375 lineto
-1930.844 -2023.375 lineto
-1930.844 -2019.438 lineto
-1925.859 -2019.438 lineto
-1925.859 -2011.188 lineto
-1921.141 -2011.188 lineto
-1921.141 -2019.438 lineto
-1905.344 -2019.438 lineto
-1905.344 -2024.016 lineto
-1919.906 -2046.188 lineto
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-2098.75 -2015.172 M
-2106.484 -2015.172 lineto
-2106.484 -2041.875 lineto
-2098.078 -2040.188 lineto
-2098.078 -2044.5 lineto
-2106.438 -2046.188 lineto
-2111.172 -2046.188 lineto
-2111.172 -2015.172 lineto
-2118.906 -2015.172 lineto
-2118.906 -2011.188 lineto
-2098.75 -2011.188 lineto
-2098.75 -2015.172 lineto
-closepath
-2139.641 -2030.578 M
-2136.453 -2030.578 2134.594 -2028.398 QUADTO 
-2132.734 -2026.219 2132.734 -2022.422 QUADTO 
-2132.734 -2018.641 2134.594 -2016.453 QUADTO 
-2136.453 -2014.266 2139.641 -2014.266 QUADTO 
-2142.828 -2014.266 2144.695 -2016.453 QUADTO 
-2146.562 -2018.641 2146.562 -2022.422 QUADTO 
-2146.562 -2026.219 2144.695 -2028.398 QUADTO 
-2142.828 -2030.578 2139.641 -2030.578 QUADTO 
-closepath
-2149.047 -2045.406 M
-2149.047 -2041.094 lineto
-2147.266 -2041.938 2145.445 -2042.383 QUADTO 
-2143.625 -2042.828 2141.844 -2042.828 QUADTO 
-2137.156 -2042.828 2134.688 -2039.664 QUADTO 
-2132.219 -2036.5 2131.859 -2030.109 QUADTO 
-2133.25 -2032.141 2135.336 -2033.234 QUADTO 
-2137.422 -2034.328 2139.922 -2034.328 QUADTO 
-2145.203 -2034.328 2148.258 -2031.125 QUADTO 
-2151.312 -2027.922 2151.312 -2022.422 QUADTO 
-2151.312 -2017.031 2148.125 -2013.766 QUADTO 
-2144.938 -2010.5 2139.641 -2010.5 QUADTO 
-2133.578 -2010.5 2130.367 -2015.156 QUADTO 
-2127.156 -2019.812 2127.156 -2028.656 QUADTO 
-2127.156 -2036.953 2131.094 -2041.883 QUADTO 
-2135.031 -2046.812 2141.656 -2046.812 QUADTO 
-2143.438 -2046.812 2145.258 -2046.461 QUADTO 
-2147.078 -2046.109 2149.047 -2045.406 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-2319.547 -2015.172 M
-2327.281 -2015.172 lineto
-2327.281 -2041.875 lineto
-2318.875 -2040.188 lineto
-2318.875 -2044.5 lineto
-2327.234 -2046.188 lineto
-2331.969 -2046.188 lineto
-2331.969 -2015.172 lineto
-2339.703 -2015.172 lineto
-2339.703 -2011.188 lineto
-2319.547 -2011.188 lineto
-2319.547 -2015.172 lineto
-closepath
-2359.859 -2027.812 M
-2356.484 -2027.812 2354.547 -2026.008 QUADTO 
-2352.609 -2024.203 2352.609 -2021.031 QUADTO 
-2352.609 -2017.875 2354.547 -2016.07 QUADTO 
-2356.484 -2014.266 2359.859 -2014.266 QUADTO 
-2363.234 -2014.266 2365.18 -2016.078 QUADTO 
-2367.125 -2017.891 2367.125 -2021.031 QUADTO 
-2367.125 -2024.203 2365.188 -2026.008 QUADTO 
-2363.25 -2027.812 2359.859 -2027.812 QUADTO 
-closepath
-2355.125 -2029.828 M
-2352.078 -2030.578 2350.375 -2032.664 QUADTO 
-2348.672 -2034.75 2348.672 -2037.75 QUADTO 
-2348.672 -2041.938 2351.664 -2044.375 QUADTO 
-2354.656 -2046.812 2359.859 -2046.812 QUADTO 
-2365.078 -2046.812 2368.055 -2044.375 QUADTO 
-2371.031 -2041.938 2371.031 -2037.75 QUADTO 
-2371.031 -2034.75 2369.336 -2032.664 QUADTO 
-2367.641 -2030.578 2364.609 -2029.828 QUADTO 
-2368.031 -2029.031 2369.945 -2026.711 QUADTO 
-2371.859 -2024.391 2371.859 -2021.031 QUADTO 
-2371.859 -2015.953 2368.75 -2013.227 QUADTO 
-2365.641 -2010.5 2359.859 -2010.5 QUADTO 
-2354.062 -2010.5 2350.961 -2013.227 QUADTO 
-2347.859 -2015.953 2347.859 -2021.031 QUADTO 
-2347.859 -2024.391 2349.781 -2026.711 QUADTO 
-2351.703 -2029.031 2355.125 -2029.828 QUADTO 
-closepath
-2353.391 -2037.297 M
-2353.391 -2034.578 2355.086 -2033.055 QUADTO 
-2356.781 -2031.531 2359.859 -2031.531 QUADTO 
-2362.906 -2031.531 2364.625 -2033.055 QUADTO 
-2366.344 -2034.578 2366.344 -2037.297 QUADTO 
-2366.344 -2040.016 2364.625 -2041.539 QUADTO 
-2362.906 -2043.062 2359.859 -2043.062 QUADTO 
-2356.781 -2043.062 2355.086 -2041.539 QUADTO 
-2353.391 -2040.016 2353.391 -2037.297 QUADTO 
-closepath
-fill
-grestore
-gsave
-[0.20833 0 0 0.20833 0 0] concat
-newpath
-0 0 M
-2928 0 lineto
-2928 2208 lineto
-0 2208 lineto
-0 0 lineto
-closepath
-clip
-newpath
-2538.812 -2015.172 M
-2555.328 -2015.172 lineto
-2555.328 -2011.188 lineto
-2533.109 -2011.188 lineto
-2533.109 -2015.172 lineto
-2535.812 -2017.969 2540.461 -2022.664 QUADTO 
-2545.109 -2027.359 2546.312 -2028.719 QUADTO 
-2548.578 -2031.281 2549.484 -2033.047 QUADTO 
-2550.391 -2034.812 2550.391 -2036.531 QUADTO 
-2550.391 -2039.312 2548.43 -2041.07 QUADTO 
-2546.469 -2042.828 2543.328 -2042.828 QUADTO 
-2541.109 -2042.828 2538.633 -2042.055 QUADTO 
-2536.156 -2041.281 2533.344 -2039.719 QUADTO 
-2533.344 -2044.5 lineto
-2536.203 -2045.641 2538.688 -2046.227 QUADTO 
-2541.172 -2046.812 2543.234 -2046.812 QUADTO 
-2548.672 -2046.812 2551.906 -2044.094 QUADTO 
-2555.141 -2041.375 2555.141 -2036.828 QUADTO 
-2555.141 -2034.672 2554.336 -2032.742 QUADTO 
-2553.531 -2030.812 2551.391 -2028.188 QUADTO 
-2550.812 -2027.5 2547.672 -2024.258 QUADTO 
-2544.531 -2021.016 2538.812 -2015.172 QUADTO 
-closepath
-2575.859 -2043.062 M
-2572.203 -2043.062 2570.359 -2039.469 QUADTO 
-2568.516 -2035.875 2568.516 -2028.656 QUADTO 
-2568.516 -2021.453 2570.359 -2017.859 QUADTO 
-2572.203 -2014.266 2575.859 -2014.266 QUADTO 
-2579.531 -2014.266 2581.375 -2017.859 QUADTO 
-2583.219 -2021.453 2583.219 -2028.656 QUADTO 
-2583.219 -2035.875 2581.375 -2039.469 QUADTO 
-2579.531 -2043.062 2575.859 -2043.062 QUADTO 
-closepath
-2575.859 -2046.812 M
-2581.734 -2046.812 2584.844 -2042.164 QUADTO 
-2587.953 -2037.516 2587.953 -2028.656 QUADTO 
-2587.953 -2019.812 2584.844 -2015.156 QUADTO 
-2581.734 -2010.5 2575.859 -2010.5 QUADTO 
-2569.969 -2010.5 2566.867 -2015.156 QUADTO 
-2563.766 -2019.812 2563.766 -2028.656 QUADTO 
-2563.766 -2037.516 2566.867 -2042.164 QUADTO 
-2569.969 -2046.812 2575.859 -2046.812 QUADTO 
-closepath
-fill
-grestore
-%%Trailer
+%%Creator: MATLAB, The Mathworks, Inc. Version 7.10.0.499 (R2010a). Operating System: Linux 2.6.32-22-generic #36-Ubuntu SMP Thu Jun 3 19:31:57 UTC 2010 x86_64.
+%%Title: /home/diogo/ufrn/mestrado/disciplinas/controle_avancado/relatorios@ggc/lista_1/imgs/questao2/resposta_gcomp2.eps
+%%CreationDate: 06/08/2010  16:27:00
+%%DocumentNeededFonts: Helvetica
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%LanguageLevel: 2
 %%Pages: 1
+%%BoundingBox:  -205    38   818   752
+%%EndComments
+
+%%BeginProlog
+% MathWorks dictionary
+/MathWorks 160 dict begin
+% definition operators
+/bdef {bind def} bind def
+/ldef {load def} bind def
+/xdef {exch def} bdef
+/xstore {exch store} bdef
+% operator abbreviations
+/c  /clip ldef
+/cc /concat ldef
+/cp /closepath ldef
+/gr /grestore ldef
+/gs /gsave ldef
+/mt /moveto ldef
+/np /newpath ldef
+/cm /currentmatrix ldef
+/sm /setmatrix ldef
+/rm /rmoveto ldef
+/rl /rlineto ldef
+/s {show newpath} bdef
+/sc {setcmykcolor} bdef
+/sr /setrgbcolor ldef
+/sg /setgray ldef
+/w /setlinewidth ldef
+/j /setlinejoin ldef
+/cap /setlinecap ldef
+/rc {rectclip} bdef
+/rf {rectfill} bdef
+% page state control
+/pgsv () def
+/bpage {/pgsv save def} bdef
+/epage {pgsv restore} bdef
+/bplot /gsave ldef
+/eplot {stroke grestore} bdef
+% orientation switch
+/portraitMode 0 def /landscapeMode 1 def /rotateMode 2 def
+% coordinate system mappings
+/dpi2point 0 def
+% font control
+/FontSize 0 def
+/FMS {/FontSize xstore findfont [FontSize 0 0 FontSize neg 0 0]
+  makefont setfont} bdef
+/reencode {exch dup where {pop load} {pop StandardEncoding} ifelse
+  exch dup 3 1 roll findfont dup length dict begin
+  { 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding exch def currentdict end definefont pop} bdef
+/isroman {findfont /CharStrings get /Agrave known} bdef
+/FMSR {3 1 roll 1 index dup isroman {reencode} {pop pop} ifelse
+  exch FMS} bdef
+/csm {1 dpi2point div -1 dpi2point div scale neg translate
+ dup landscapeMode eq {pop -90 rotate}
+  {rotateMode eq {90 rotate} if} ifelse} bdef
+% line types: solid, dotted, dashed, dotdash
+/SO { [] 0 setdash } bdef
+/DO { [.5 dpi2point mul 4 dpi2point mul] 0 setdash } bdef
+/DA { [6 dpi2point mul] 0 setdash } bdef
+/DD { [.5 dpi2point mul 4 dpi2point mul 6 dpi2point mul 4
+  dpi2point mul] 0 setdash } bdef
+% macros for lines and objects
+/L {lineto stroke} bdef
+/MP {3 1 roll moveto 1 sub {rlineto} repeat} bdef
+/AP {{rlineto} repeat} bdef
+/PDlw -1 def
+/W {/PDlw currentlinewidth def setlinewidth} def
+/PP {closepath eofill} bdef
+/DP {closepath stroke} bdef
+/MR {4 -2 roll moveto dup  0 exch rlineto exch 0 rlineto
+  neg 0 exch rlineto closepath} bdef
+/FR {MR stroke} bdef
+/PR {MR fill} bdef
+/L1i {{currentfile picstr readhexstring pop} image} bdef
+/tMatrix matrix def
+/MakeOval {newpath tMatrix currentmatrix pop translate scale
+0 0 1 0 360 arc tMatrix setmatrix} bdef
+/FO {MakeOval stroke} bdef
+/PO {MakeOval fill} bdef
+/PD {currentlinewidth 2 div 0 360 arc fill
+   PDlw -1 eq not {PDlw w /PDlw -1 def} if} def
+/FA {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arc tMatrix setmatrix stroke} bdef
+/PA {newpath tMatrix currentmatrix pop	translate 0 0 moveto scale
+  0 0 1 5 -2 roll arc closepath tMatrix setmatrix fill} bdef
+/FAn {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arcn tMatrix setmatrix stroke} bdef
+/PAn {newpath tMatrix currentmatrix pop translate 0 0 moveto scale
+  0 0 1 5 -2 roll arcn closepath tMatrix setmatrix fill} bdef
+/vradius 0 def /hradius 0 def /lry 0 def
+/lrx 0 def /uly 0 def /ulx 0 def /rad 0 def
+/MRR {/vradius xdef /hradius xdef /lry xdef /lrx xdef /uly xdef
+  /ulx xdef newpath tMatrix currentmatrix pop ulx hradius add uly
+  vradius add translate hradius vradius scale 0 0 1 180 270 arc 
+  tMatrix setmatrix lrx hradius sub uly vradius add translate
+  hradius vradius scale 0 0 1 270 360 arc tMatrix setmatrix
+  lrx hradius sub lry vradius sub translate hradius vradius scale
+  0 0 1 0 90 arc tMatrix setmatrix ulx hradius add lry vradius sub
+  translate hradius vradius scale 0 0 1 90 180 arc tMatrix setmatrix
+  closepath} bdef
+/FRR {MRR stroke } bdef
+/PRR {MRR fill } bdef
+/MlrRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lry uly sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 90 270 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 270 90 arc tMatrix setmatrix
+  closepath} bdef
+/FlrRR {MlrRR stroke } bdef
+/PlrRR {MlrRR fill } bdef
+/MtbRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lrx ulx sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 180 360 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 0 180 arc tMatrix setmatrix
+  closepath} bdef
+/FtbRR {MtbRR stroke } bdef
+/PtbRR {MtbRR fill } bdef
+/stri 6 array def /dtri 6 array def
+/smat 6 array def /dmat 6 array def
+/tmat1 6 array def /tmat2 6 array def /dif 3 array def
+/asub {/ind2 exch def /ind1 exch def dup dup
+  ind1 get exch ind2 get sub exch } bdef
+/tri_to_matrix {
+  2 0 asub 3 1 asub 4 0 asub 5 1 asub
+  dup 0 get exch 1 get 7 -1 roll astore } bdef
+/compute_transform {
+  dmat dtri tri_to_matrix tmat1 invertmatrix 
+  smat stri tri_to_matrix tmat2 concatmatrix } bdef
+/ds {stri astore pop} bdef
+/dt {dtri astore pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile 
+  3 index 0 eq {/ASCIIHexDecode filter}
+  {/ASCII85Decode filter 3 index 2 eq {/RunLengthDecode filter} if }
+  ifelse exch readstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
+/it {gs np dtri aload pop moveto lineto lineto cp c
+  cols rows 8 compute_transform 
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
+/il {newpath moveto lineto stroke}bdef
+currentdict end def
+%%EndProlog
+
+%%BeginSetup
+MathWorks begin
+
+0 cap
+
+end
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox:  -205    38   818   752
+MathWorks begin
+bpage
+%%EndPageSetup
+
+%%BeginObject: obj1
+bplot
+
+/dpi2point 12 def
+portraitMode -2460 9024 csm
+
+    0     0 12287  8563 rc
+86 dict begin %Colortable dictionary
+/c0 { 0.000000 0.000000 0.000000 sr} bdef
+/c1 { 1.000000 1.000000 1.000000 sr} bdef
+/c2 { 0.900000 0.000000 0.000000 sr} bdef
+/c3 { 0.000000 0.820000 0.000000 sr} bdef
+/c4 { 0.000000 0.000000 0.800000 sr} bdef
+/c5 { 0.910000 0.820000 0.320000 sr} bdef
+/c6 { 1.000000 0.260000 0.820000 sr} bdef
+/c7 { 0.000000 0.820000 0.820000 sr} bdef
+c0
+1 j
+1 sg
+   0    0 12288 8564 rf
+6 w
+0 6787 9407 0 0 -6787 1713 7621 4 MP
+PP
+-9407 0 0 6787 9407 0 0 -6787 1713 7621 5 MP stroke
+4 w
+DO
+0.4 sg
+1713 7621 mt 1713  834 L
+1713  834 mt 1713  834 L
+3280 7621 mt 3280  834 L
+3280  834 mt 3280  834 L
+4848 7621 mt 4848  834 L
+4848  834 mt 4848  834 L
+6416 7621 mt 6416  834 L
+6416  834 mt 6416  834 L
+7984 7621 mt 7984  834 L
+7984  834 mt 7984  834 L
+9552 7621 mt 9552  834 L
+9552  834 mt 9552  834 L
+11120 7621 mt 11120  834 L
+11120  834 mt 11120  834 L
+1713 7621 mt 11120 7621 L
+11120 7621 mt 11120 7621 L
+1713 6942 mt 11120 6942 L
+11120 6942 mt 11120 6942 L
+1713 6263 mt 11120 6263 L
+11120 6263 mt 11120 6263 L
+1713 5584 mt 11120 5584 L
+11120 5584 mt 11120 5584 L
+1713 4906 mt 11120 4906 L
+11120 4906 mt 11120 4906 L
+1713 4227 mt 11120 4227 L
+11120 4227 mt 11120 4227 L
+1713 3548 mt 11120 3548 L
+11120 3548 mt 11120 3548 L
+1713 2870 mt 11120 2870 L
+11120 2870 mt 11120 2870 L
+1713 2191 mt 11120 2191 L
+11120 2191 mt 11120 2191 L
+1713 1512 mt 11120 1512 L
+11120 1512 mt 11120 1512 L
+1713  834 mt 11120  834 L
+11120  834 mt 11120  834 L
+SO
+6 w
+1713 7621 mt 11120 7621 L
+1713  834 mt 11120  834 L
+1713 7621 mt 1713  834 L
+11120 7621 mt 11120  834 L
+1713 7621 mt 11120 7621 L
+1713 7621 mt 1713  834 L
+1713 7621 mt 1713 7526 L
+1713  834 mt 1713  928 L
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+1680 7766 mt 
+(0) s
+3280 7621 mt 3280 7526 L
+3280  834 mt 3280  928 L
+3247 7766 mt 
+(1) s
+4848 7621 mt 4848 7526 L
+4848  834 mt 4848  928 L
+4815 7766 mt 
+(2) s
+6416 7621 mt 6416 7526 L
+6416  834 mt 6416  928 L
+6383 7766 mt 
+(3) s
+7984 7621 mt 7984 7526 L
+7984  834 mt 7984  928 L
+7951 7766 mt 
+(4) s
+9552 7621 mt 9552 7526 L
+9552  834 mt 9552  928 L
+9519 7766 mt 
+(5) s
+11120 7621 mt 11120 7526 L
+11120  834 mt 11120  928 L
+11087 7766 mt 
+(6) s
+1713 7621 mt 1807 7621 L
+11120 7621 mt 11025 7621 L
+1612 7665 mt 
+(0) s
+1713 6942 mt 1807 6942 L
+11120 6942 mt 11025 6942 L
+1512 6986 mt 
+(0.1) s
+1713 6263 mt 1807 6263 L
+11120 6263 mt 11025 6263 L
+1512 6307 mt 
+(0.2) s
+1713 5584 mt 1807 5584 L
+11120 5584 mt 11025 5584 L
+1512 5628 mt 
+(0.3) s
+1713 4906 mt 1807 4906 L
+11120 4906 mt 11025 4906 L
+1512 4950 mt 
+(0.4) s
+1713 4227 mt 1807 4227 L
+11120 4227 mt 11025 4227 L
+1512 4271 mt 
+(0.5) s
+1713 3548 mt 1807 3548 L
+11120 3548 mt 11025 3548 L
+1512 3592 mt 
+(0.6) s
+1713 2870 mt 1807 2870 L
+11120 2870 mt 11025 2870 L
+1512 2914 mt 
+(0.7) s
+1713 2191 mt 1807 2191 L
+11120 2191 mt 11025 2191 L
+1512 2235 mt 
+(0.8) s
+1713 1512 mt 1807 1512 L
+11120 1512 mt 11025 1512 L
+1512 1556 mt 
+(0.9) s
+1713  834 mt 1807  834 L
+11120  834 mt 11025  834 L
+1612  878 mt 
+(1) s
+1713 7621 mt 11120 7621 L
+1713  834 mt 11120  834 L
+1713 7621 mt 1713  834 L
+11120 7621 mt 11120  834 L
+gs 1713 834 9408 6788 rc
+/c8 { 0.000000 0.000000 1.000000 sr} bdef
+c8
+2 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 -1 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 -1 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 -1 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 -1 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 -1 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 -1 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 -1 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 10046 884 300 MP stroke
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 -1 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 -1 4 0 4 0 3 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 -1 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 -1 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 -1 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 -1 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 -1 3 0 4 0 
+3 0 4 0 4 0 8970 895 300 MP stroke
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 3 0 
+4 0 4 -1 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 -1 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 -1 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 -1 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 -1 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 -1 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 -1 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 -1 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 7895 909 300 MP stroke
+4 0 4 0 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 -1 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 -1 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 -1 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 -1 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 -1 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 -1 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 0 4 -1 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 0 3 -1 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 -1 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 -1 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 6819 929 300 MP stroke
+4 0 4 -1 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 0 4 -1 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 -1 4 0 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 -1 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 -1 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 -1 4 0 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 -1 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 -1 
+3 0 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 -1 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 -1 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 0 4 0 
+3 -1 4 0 3 0 4 0 4 0 3 0 4 0 3 0 
+4 0 4 -1 3 0 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 0 4 -1 4 0 3 0 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 0 3 0 4 0 4 0 3 -1 
+4 0 3 0 4 0 4 0 3 0 4 0 3 0 4 0 
+4 -1 3 0 4 0 3 0 4 0 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 0 4 0 4 0 
+3 0 4 0 3 -1 4 0 4 0 3 0 4 0 3 0 
+4 0 4 0 3 -1 4 0 3 0 4 0 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 0 4 0 3 -1 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 -1 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 4 0 4 -1 3 0 4 0 3 0 
+4 0 4 0 3 0 4 0 3 -1 4 0 4 0 3 0 
+4 0 3 0 4 0 4 0 3 -1 4 0 3 0 4 0 
+4 0 3 0 4 0 3 -1 4 0 4 0 3 0 4 0 
+3 0 4 0 4 0 3 -1 4 0 3 0 4 0 4 0 
+3 0 4 0 3 0 5743 960 300 MP stroke
+4 -1 4 0 3 0 4 0 3 0 4 0 3 0 4 -1 
+4 0 3 0 4 0 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 0 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 0 4 0 4 0 3 -1 4 0 3 0 
+4 0 4 0 3 0 4 0 3 -1 4 0 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 0 4 -1 3 0 4 0 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 0 4 0 4 -1 
+3 0 4 0 3 0 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 0 3 -1 4 0 3 0 4 0 4 0 3 0 4 0 
+3 -1 4 0 4 0 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 0 4 0 4 -1 3 0 4 0 3 0 
+4 0 4 0 3 -1 4 0 3 0 4 0 4 0 3 0 
+4 -1 3 0 4 0 4 0 3 0 4 0 3 -1 4 0 
+4 0 3 0 4 0 3 0 4 -1 3 0 4 0 4 0 
+3 0 4 0 3 -1 4 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 0 4 0 4 -1 3 0 4 0 3 0 4 0 
+4 -1 3 0 4 0 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 0 3 -1 4 0 3 0 4 0 4 0 
+3 -1 4 0 3 0 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 -1 3 0 4 0 4 0 3 0 
+4 -1 3 0 4 0 4 0 3 0 4 -1 3 0 4 0 
+4 0 3 0 4 -1 3 0 4 0 4 0 3 0 4 -1 
+3 0 4 0 4 0 3 0 4 -1 3 0 4 0 4 0 
+3 0 4 -1 3 0 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 0 3 0 4 -1 3 0 4 0 4 0 3 0 
+4 -1 3 0 4 0 4 0 3 -1 4 0 3 0 4 0 
+4 0 3 -1 4 0 3 0 4 0 4 -1 3 0 4 0 
+3 0 4 0 4 -1 3 0 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 0 4 -1 3 0 4 0 4 0 3 -1 
+4 0 3 0 4 0 4 0 3 -1 4 0 3 0 4 0 
+4 -1 3 0 4 0 3 0 4 -1 4 0 3 0 4 0 
+3 0 4 -1 4 0 3 0 4 0 3 -1 4 0 4 0 
+3 0 4 -1 3 0 4 0 4 0 3 -1 4 0 3 0 
+4 0 4 -1 3 0 4667 1015 300 MP stroke
+4 0 3 0 4 -1 4 0 3 0 4 0 3 -1 4 0 
+4 0 3 0 4 -1 3 0 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 -1 3 0 4 0 3 0 4 -1 4 0 
+3 0 4 0 3 -1 4 0 4 0 3 0 4 -1 3 0 
+4 0 4 -1 3 0 4 0 3 0 4 -1 4 0 3 0 
+4 0 3 -1 4 0 4 0 3 0 4 -1 3 0 4 0 
+4 -1 3 0 4 0 3 0 4 -1 4 0 3 0 4 -1 
+3 0 4 0 4 0 3 -1 4 0 3 0 4 0 4 -1 
+3 0 4 0 3 -1 4 0 4 0 3 -1 4 0 3 0 
+4 0 4 -1 3 0 4 0 3 -1 4 0 3 0 4 0 
+4 -1 3 0 4 0 3 -1 4 0 4 0 3 -1 4 0 
+3 0 4 0 4 -1 3 0 4 0 3 -1 4 0 4 0 
+3 -1 4 0 3 0 4 -1 4 0 3 0 4 0 3 -1 
+4 0 4 0 3 -1 4 0 3 0 4 -1 4 0 3 0 
+4 -1 3 0 4 0 4 -1 3 0 4 0 3 -1 4 0 
+4 0 3 -1 4 0 3 0 4 -1 4 0 3 0 4 -1 
+3 0 4 0 4 -1 3 0 4 0 3 -1 4 0 4 0 
+3 -1 4 0 3 0 4 -1 4 0 3 0 4 -1 3 0 
+4 0 4 -1 3 0 4 0 3 -1 4 0 4 0 3 -1 
+4 0 3 0 4 -1 4 0 3 -1 4 0 3 0 4 -1 
+4 0 3 0 4 -1 3 0 4 0 4 -1 3 0 4 -1 
+3 0 4 0 4 -1 3 0 4 0 3 -1 4 0 4 0 
+3 -1 4 0 3 -1 4 0 4 0 3 -1 4 0 3 0 
+4 -1 4 0 3 -1 4 0 3 0 4 -1 4 0 3 -1 
+4 0 3 0 4 -1 4 0 3 -1 4 0 3 0 4 -1 
+4 0 3 -1 4 0 3 0 4 -1 3 0 4 -1 4 0 
+3 0 4 -1 3 0 4 -1 4 0 3 0 4 -1 3 0 
+4 -1 4 0 3 0 4 -1 3 0 4 -1 4 0 3 -1 
+4 0 3 0 4 -1 4 0 3 -1 4 0 3 -1 4 0 
+4 0 3 -1 4 0 3 -1 4 0 4 -1 3 0 4 0 
+3 -1 4 0 4 -1 3 0 4 -1 3 0 4 -1 4 0 
+3 0 4 -1 3 0 4 -1 4 0 3 -1 4 0 3 -1 
+4 0 4 -1 3 0 4 -1 3 0 4 0 4 -1 3 0 
+4 -1 3 0 4 -1 4 0 3 -1 4 0 3 -1 4 0 
+4 -1 3 0 4 -1 3 0 4 -1 4 0 3 -1 4 0 
+3 -1 4 0 4 -1 3 0 4 -1 3 0 4 0 4 -1 
+3 0 4 -1 3 0 4 -1 4 -1 3 0 4 -1 3 0 
+4 -1 4 0 3 -1 3591 1123 300 MP stroke
+4 0 3 -1 4 0 4 -1 3 0 4 -1 3 0 4 -1 
+4 0 3 -1 4 0 3 -1 4 0 4 -1 3 0 4 -1 
+3 0 4 -1 4 -1 3 0 4 -1 3 0 4 -1 4 0 
+3 -1 4 0 3 -1 4 0 3 -1 4 -1 4 0 3 -1 
+4 0 3 -1 4 0 4 -1 3 -1 4 0 3 -1 4 0 
+4 -1 3 0 4 -1 3 -1 4 0 4 -1 3 0 4 -1 
+3 0 4 -1 4 -1 3 0 4 -1 3 0 4 -1 4 -1 
+3 0 4 -1 3 0 4 -1 4 -1 3 0 4 -1 3 0 
+4 -1 4 -1 3 0 4 -1 3 0 4 -1 4 -1 3 0 
+4 -1 3 -1 4 0 4 -1 3 0 4 -1 3 -1 4 0 
+4 -1 3 -1 4 0 3 -1 4 0 4 -1 3 -1 4 0 
+3 -1 4 -1 4 0 3 -1 4 -1 3 0 4 -1 4 -1 
+3 0 4 -1 3 -1 4 0 4 -1 3 -1 4 0 3 -1 
+4 -1 4 0 3 -1 4 -1 3 0 4 -1 4 -1 3 -1 
+4 0 3 -1 4 -1 4 0 3 -1 4 -1 3 0 4 -1 
+4 -1 3 -1 4 0 3 -1 4 -1 4 0 3 -1 4 -1 
+3 -1 4 0 4 -1 3 -1 4 0 3 -1 4 -1 4 -1 
+3 0 4 -1 3 -1 4 -1 4 0 3 -1 4 -1 3 -1 
+4 0 4 -1 3 -1 4 -1 3 0 4 -1 3 -1 4 -1 
+4 -1 3 0 4 -1 3 -1 4 -1 4 0 3 -1 4 -1 
+3 -1 4 -1 4 0 3 -1 4 -1 3 -1 4 -1 4 0 
+3 -1 4 -1 3 -1 4 -1 4 0 3 -1 4 -1 3 -1 
+4 -1 4 -1 3 0 4 -1 3 -1 4 -1 4 -1 3 -1 
+4 0 3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 4 0 
+4 -1 3 -1 4 -1 3 -1 4 -1 4 -1 3 -1 4 0 
+3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 4 -1 4 -1 
+3 0 4 -1 3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 
+4 -1 4 -1 3 -1 4 -1 3 -1 4 0 4 -1 3 -1 
+4 -1 3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 4 -1 
+4 -1 3 -1 4 -1 3 -1 4 -1 4 -1 3 -1 4 -1 
+3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 4 -1 4 -1 
+3 -1 4 -1 3 -1 4 -1 4 -1 3 -1 4 -1 3 -1 
+4 -1 4 -1 3 -1 4 -1 3 -1 4 -1 4 -1 3 -1 
+4 -1 3 -1 4 -1 4 -2 3 -1 4 -1 3 -1 4 -1 
+4 -1 3 -1 4 -1 3 -1 4 -1 3 -1 4 -1 4 -2 
+3 -1 4 -1 3 -1 4 -1 4 -1 3 -1 4 -1 3 -2 
+4 -1 4 -1 3 -1 4 -1 3 -1 4 -1 4 -2 3 -1 
+4 -1 3 -1 4 -1 2515 1359 300 MP stroke
+4 -1 3 -2 4 -1 3 -1 4 -1 4 -1 3 -1 4 -2 
+3 -1 4 -1 4 -1 3 -1 4 -2 3 -1 4 -1 4 -1 
+3 -2 4 -1 3 -1 4 -1 4 -2 3 -1 4 -1 3 -1 
+4 -2 4 -1 3 -1 4 -1 3 -2 4 -1 4 -1 3 -1 
+4 -2 3 -1 4 -1 4 -2 3 -1 4 -1 3 -2 4 -1 
+4 -1 3 -2 4 -1 3 -1 4 -2 4 -1 3 -1 4 -2 
+3 -1 4 -1 4 -2 3 -1 4 -2 3 -1 4 -1 4 -2 
+3 -1 4 -2 3 -1 4 -2 4 -1 3 -1 4 -2 3 -1 
+4 -2 4 -1 3 -2 4 -1 3 -2 4 -1 4 -2 3 -1 
+4 -2 3 -2 4 -1 4 -2 3 -1 4 -2 3 -2 4 -1 
+4 -2 3 -2 4 -1 3 -2 4 -2 4 -1 3 -2 4 -2 
+3 -2 4 -1 4 -2 3 -2 4 -2 3 -2 4 -2 4 -2 
+3 -1 4 -2 3 -2 4 -2 3 -3 4 -2 4 -2 3 -2 
+4 -2 3 -2 4 -3 4 -2 3 -2 4 -3 3 -2 4 -3 
+4 -2 3 -3 4 -2 3 -3 4 -3 4 -3 3 -3 4 -3 
+3 -3 4 -3 4 -3 3 -4 4 -3 3 -3 4 -4 4 -4 
+3 -4 4 -4 3 -4 4 -4 4 -4 3 -5 4 -5 3 -5 
+4 -5 4 -5 3 -5 4 -6 3 -6 4 -6 4 -6 3 -7 
+4 -6 3 -7 4 -8 4 -8 3 -8 4 -8 3 -9 4 -9 
+4 -9 3 -10 4 -10 3 -11 4 -11 4 -12 3 -13 4 -12 
+3 -14 4 -14 4 -15 3 -15 4 -17 3 -17 4 -18 4 -18 
+3 -20 4 -21 3 -21 4 -23 4 -24 3 -25 4 -26 3 -27 
+4 -29 4 -31 3 -32 4 -33 3 -35 4 -37 4 -39 3 -41 
+4 -43 3 -46 4 -47 4 -50 3 -53 4 -55 3 -59 4 -61 
+4 -64 3 -68 4 -72 3 -75 4 -79 4 -83 3 -88 4 -92 
+3 -97 4 -102 4 -108 3 -113 4 -120 3 -125 4 -133 4 -139 
+3 -147 4 -154 3 -163 4 -171 4 -181 3 -190 4 -200 3 -211 
+4 -222 4 -234 3 -247 4 -259 3 -274 4 -288 3 -304 1713 7621 224 MP stroke
+DO
+0 sg
+7841 0 1567 0 1713 837 3 MP stroke
+SO
+gr
+
+0 sg
+5953  629 mt 
+(Step Response) s
+6080 7912 mt 
+(Time \(sec\)) s
+1325 4411 mt  -90 rotate
+(Amplitude) s
+90 rotate
+
+end %%Color Dict
+
+eplot
+%%EndObject
+
+epage
+end
+
+showpage
+
+%%Trailer
 %%EOF
