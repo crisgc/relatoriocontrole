@@ -1,0 +1,44 @@
+% Universidade Federal do Rio Grande do Norte
+% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
+% Controle Avancado
+% Projeto do controlador PI para a questao 4 da lista 1
+% Autores:
+%        Anna Giselle Camara Dantas Ribeiro
+%        Cristiano Gurgel de Castro
+%        Diogo Leite Reboucas
+%        Thiago Medeiros Barros
+
+%% Limpando o workspace
+clear;
+clc;
+
+%% PI controlando sistema com atraso
+%open('sist_cont_dt.mdl');
+sim('sist_cont_dt.mdl');
+plot(tout, [ref y_c_delay]);
+print -depsc ../../imgs/questao4/saida_cont_dt.eps
+set_param('sist_cont_dt', 'PaperOrientation', 'portrait');
+print -ssist_cont_dt -depsc ../../imgs/questao4/sist_cont_dt.eps
+
+%% PI com preditor de Smith
+%open('sist_cont_dt_smith.mdl');
+sim('sist_cont_dt_smith.mdl');
+plot(tout, [ref y_smith]);
+print -depsc ../../imgs/questao4/saida_smith.eps
+set_param('sist_cont_dt_smith', 'PaperOrientation', 'portrait');
+print -ssist_cont_dt_smith -depsc ../../imgs/questao4/sist_smith.eps
+
+%% PI com preditor de Smith com função de transferência nao-exata
+%open('sist_cont_dt_smith_diff.mdl');
+sim('sist_cont_dt_smith_diff.mdl');
+plot(tout, [ref y_smith_diff]);
+print -depsc ../../imgs/questao4/saida_smith_diff.eps
+set_param('sist_cont_dt_smith_diff', 'PaperOrientation', 'portrait');
+print -ssist_cont_dt_smith -depsc ../../imgs/questao4/sist_smith_diff.eps
+
+%% Ruído sem o controle FF
+%open('sist_cont_dt_smith_diff.mdl');
+sim('sist_noise.mdl');
+plot(tout, [ref y_noise]);
+print -depsc ../../imgs/questao4/saida_ruido.eps
+print -ssist_cont_dt_smith -depsc ../../imgs/questao4/sist_ruido.eps
