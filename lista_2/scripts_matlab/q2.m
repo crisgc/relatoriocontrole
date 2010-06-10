@@ -10,7 +10,7 @@ clear;
 clc;
 
 % Numero de amostras
-N = 100;
+N = 1000;
 
 % Definindo os vetores de entrada/saida
 y = zeros( N, 1 );
@@ -60,7 +60,7 @@ end
 
 % Numero de vezes em que os parametros irao variar (Ate 5% do numero de
 % amostras)
-num_variacoes = fix( random( 1, N * 0.05 ) );
+num_variacoes = fix( random( 1, N * 0.01 ) );
 amostras_por_variacao = fix( N / num_variacoes );
 
 % Valores de saida
@@ -101,6 +101,11 @@ xlabel( 'Amostra' );
 title( 'Saida do sistema' )
 legend( 'Parametros reais', 'Parametros variaveis', 'Sinal de controle' );
 
+disp( 'Numero de variacoes:' )
+disp( num_variacoes - 1 ); % Da primeira amostra ate a primeira variacao 
+                           % nao deve ser contabilizado
+disp( 'Numero de amostras por variacao:' )
+disp( amostras_por_variacao );
 disp( 'Theta estimado com parametros reais' );
 disp( theta_est_real );
 disp( 'Theta estimado com parametros reais' );

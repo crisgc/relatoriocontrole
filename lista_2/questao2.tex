@@ -219,19 +219,170 @@ Algumas observações podem ser feitas acerca da Eq. \ref{eq:theta_est}:
 \end{itemize}
 
 O algoritmo desenvolvido leva em consideração uma variação dos parâmetros
-aleatória segundo uma distribuição uniforme para $\pm 10\%$ do valor do
-parâmetro a ser modificado. O número de variações também é aleatório,
-correspondendo a, no máximo, 10\% do número de amostras. Ou seja, se forem
-consideradas 100 amostras, haverão, no máximo, 10 variações de parâmetros
-equiespaçadas. A variação dos parâmetros é mantida até que um novo valor seja
-sorteado. 
+aleatória para $\pm 10\%$ do valor do parâmetro a ser modificado. O número de
+variações também é aleatório, correspondendo a, no máximo, 5\% do número de
+amostras. Ou seja, se forem consideradas 100 amostras, haverão, no máximo, $5-1
+= 4$ variações de parâmetros equiespaçadas, uma vez que da primeira amostra até
+a primeira variação não deve ser contabilizada. A variação dos parâmetros é
+mantida até que um novo valor seja sorteado.
 
-% TODO
-% O sinal de entrada do sistema máximo 50\% de vezes com relação ao número de
-% amostras
+O sinal de entrada do sistema varia de maneira análoga à variação dos parâmetros
+da função, ou seja, a cada $K$ iterações o sinal muda e se mantém naquele valor
+até o próximo instante de variação. Para compor esse sinal, o número máximo de
+variações correspondia a 50\% do número de amostras. O valor da entrada $u(k)$
+variava entre $\pm 50\%\ u(k-1)$ nos instantes de variação e era repetido para as
+demais amostras.
 
 No primeiro teste, foram consideradas 100 amostras. O número de variações
-sorteado foi de 3 variações. Portanto, cada variação era mantida por 33
-amostras. A saída do sistema com os parâmetros reais e com os parâmetros
-variáveis pode ser observada na Fig. \ref{fig:saida_sist_100}. A estimativa
-realizada é vista na Tab. \ref{tab:estimativa_100}.
+sorteado foi de 2 variações. Portanto, cada variação era mantida por 33
+amostras. A saída do sistema com os parâmetros reais, bem como com os parâmetros
+variáveis e o sinal de controle pode ser observada na Fig.
+\ref{fig:saida_sist_100}. A estimativa realizada é vista na Tab.
+\ref{tab:estimativa_100}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao2/saida_100}
+    \caption{Saída do sistema para $N = 100$.}
+    \label{fig:saida_sist_100}
+\end{figure}
+
+\begin{table}
+\centering
+    \caption{Estimativa realizada para $N = 100$.}
+    \label{tab:estimativa_100}
+    \vspace{0.25cm}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Parâmetros & 
+        $\mb{\theta}_{\text{ideal}}$&
+        $\mb{\theta}_{\text{sem variação}}$&
+        $\mb{\theta}_{\text{com variação}}$\\
+        \hline
+        \hline
+        $a_1$ & $-1,724$   & $-1,7240$ & $-1,8617$ \\
+        \hline
+        $a_2$ & $0,7408$   & $0,7408$  & $0,8807$ \\
+        \hline
+        $b_1$ & $0,009056$ & $0,0096$  & $0,0103$ \\
+        \hline
+        $b_2$ & $0,008194$ & $0,0082$  & $0,0032$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Devido a aleatoriedade envolvida no algoritmo, percebeu-se que quando há um
+grande número de variações dos parâmetros ou quando a variação corresponde a um
+valor elevado, o sistema se torna instável e sua saída passa a divergir, o que
+leva a estimativas erradas dos parâmetros, como pode ser verificado na Fig.
+\ref{fig:saida_sist_100_div} e na Tab. \ref{tab:estimativa_100_div}. Esses
+resultados foram obtidos para 100 amostras e, coincidentemente, para 2
+variações.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao2/saida_100_div}
+    \caption{Saída do sistema para $N = 100$ -- Divergente.}
+    \label{fig:saida_sist_100_div}
+\end{figure}
+
+\begin{table}
+\centering
+    \caption{Estimativa realizada para $N = 100$ -- Divergente.}
+    \label{tab:estimativa_100_div}
+    \vspace{0.25cm}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Parâmetros & 
+        $\mb{\theta}_{\text{ideal}}$&
+        $\mb{\theta}_{\text{sem variação}}$&
+        $\mb{\theta}_{\text{com variação}}$\\
+        \hline
+        \hline
+        $a_1$ & $-1,724$   & $-1,7240$ & $-2,1177$ \\
+        \hline
+        $a_2$ & $0,7408$   & $0,7408$  & $1,1105$ \\
+        \hline
+        $b_1$ & $0,009056$ & $0,0096$  & $0,0400$ \\
+        \hline
+        $b_2$ & $0,008194$ & $0,0082$  & $-0,0463$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+O algoritmo também foi executado para 1000 amostras. Entranto, devido a
+dificuldade de se encontrar valores de saída que não divergissem para o valor
+máximo de 5\% do número de amostras de variações, ou seja, $50 - 1 = 49$
+variações, essa porcentagem foi reduzida à 1\%. Os resultados obtidos para a
+primeira execução podem ser observados na Fig. \ref{fig:saida_sist_1000} e na
+Tab. \ref{tab:estimativa_1000}. Para esse resultado, houve apenas 1 variação dos
+parâmetros.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao2/saida_1000}
+    \caption{Saída do sistema para $N = 1000$}
+    \label{fig:saida_sist_1000}
+\end{figure}
+
+\begin{table}
+\centering
+    \caption{Estimativa realizada para $N = 1000$.}
+    \label{tab:estimativa_1000}
+    \vspace{0.25cm}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Parâmetros & 
+        $\mb{\theta}_{\text{ideal}}$&
+        $\mb{\theta}_{\text{sem variação}}$&
+        $\mb{\theta}_{\text{com variação}}$\\
+        \hline
+        \hline
+        $a_1$ & $-1,724$   & $-1,7240$ & $-1,9613$ \\
+        \hline
+        $a_2$ & $0,7408$   & $0,7408$  & $0,9641$ \\
+        \hline
+        $b_1$ & $0,009056$ & $0,0096$  & $0,0100$ \\
+        \hline
+        $b_2$ & $0,008194$ & $0,0082$  & $-0,0073$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Outra execução resultou em resultados semelhantes, como pode ser observado na
+Fig. \ref{fig:saida_sist_1000_2} e na Tab. \ref{tab:estimativa_1000_2}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao2/saida_1000_2}
+    \caption{Saída do sistema para $N = 1000$}
+    \label{fig:saida_sist_1000_2}
+\end{figure}
+
+\begin{table}
+\centering
+    \caption{Estimativa realizada para $N = 1000$.}
+    \label{tab:estimativa_1000_2}
+    \vspace{0.25cm}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Parâmetros & 
+        $\mb{\theta}_{\text{ideal}}$&
+        $\mb{\theta}_{\text{sem variação}}$&
+        $\mb{\theta}_{\text{com variação}}$\\
+        \hline
+        \hline
+        $a_1$ & $-1,724$   & $-1,7240$ & $-1,9661$ \\
+        \hline
+        $a_2$ & $0,7408$   & $0,7408$  & $0,9680$ \\
+        \hline
+        $b_1$ & $0,009056$ & $0,0096$  & $0,0093$ \\
+        \hline
+        $b_2$ & $0,008194$ & $0,0082$  & $-0,0076$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Todos os valores aleatórios obtidos nas simulações seguiam uma distribuição
+uniforme. O {\it script} do Matlab\textsuperscript{\textregistered} desenvolvido
+para a resolução dessa questão pode ser encontrado no Apêndice \ref{ap:cod_q2}.
