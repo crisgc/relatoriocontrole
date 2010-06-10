@@ -31,7 +31,7 @@ print -depsc ../../imgs/questao4/saida_smith.eps
 set_param('sist_cont_dt_smith', 'PaperOrientation', 'portrait');
 print -ssist_cont_dt_smith -depsc ../../imgs/questao4/sist_smith.eps
 
-%% PI com preditor de Smith com função de transferencia nao-exata
+%% PI com preditor de Smith com funcao de transferencia nao-exata
 sim('sist_cont_dt_smith_diff.mdl', Tf);
 plot(tout, [ref y_smith_diff]);
 xlabel('tempo');
@@ -40,7 +40,7 @@ print -depsc ../../imgs/questao4/saida_smith_diff.eps
 set_param('sist_cont_dt_smith_diff', 'PaperOrientation', 'portrait');
 print -ssist_cont_dt_smith_diff -depsc ../../imgs/questao4/sist_smith_diff.eps
 
-%% Ruído sem o controle FF
+%% Ruido sem o controle FF
 sim('sist_noise.mdl', Tf);
 plot(tout, [ref y_noise]);
 xlabel('tempo');
