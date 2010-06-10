@@ -10,7 +10,7 @@
 
 
 
-%% Definições
+%% Definicoes
 clear;
 clc;
 Kc = 1;
@@ -27,7 +27,7 @@ g_c_mf = feedback(g_c_ma, 1);
 % g_ma_delay = series(g_ma, exp(-s));
 % g_c_ma_delay = series(g_c, g_ma_delay);
 % g_c_mf_delay = feedback(ss(g_c_ma_delay), 1);
-%% Análise da função de transferência
+%% Analise da funcao de transferencia
 [num, den] = tfdata(g_c_mf, 'v');
 Wn = sqrt(den(3));
 Xi = den(2)/(2*Wn);
