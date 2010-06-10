@@ -90,7 +90,7 @@ vetor $\mb{\theta}$ a partir de $N$ experimentos, de tal forma que:
 \mb{Y}_1 & = & \mb{X}_1\mb{\theta}_1 + \mb{e}_1\nonumber\\
 \mb{Y}_2 & = & \mb{X}_2\mb{\theta}_2 + \mb{e}_2\nonumber\\
 & & \vdots\nonumber\\ 
-\mb{Y}_N & = & \mb{X}_N\mb{\theta}_N + \mb{e}_N\nonumber\\
+\mb{Y}_N & = & \mb{X}_N\mb{\theta}_N + \mb{e}_N\nonumber
 \end{eqnarray}
 
 \noindent considerando:
@@ -217,3 +217,21 @@ Algumas observações podem ser feitas acerca da Eq. \ref{eq:theta_est}:
           encontrado em $n+m$ passos
     \item A matriz $\mb{X}$ cresce na medida em que $N$ cresce
 \end{itemize}
+
+O algoritmo desenvolvido leva em consideração uma variação dos parâmetros
+aleatória segundo uma distribuição uniforme para $\pm 10\%$ do valor do
+parâmetro a ser modificado. O número de variações também é aleatório,
+correspondendo a, no máximo, 10\% do número de amostras. Ou seja, se forem
+consideradas 100 amostras, haverão, no máximo, 10 variações de parâmetros
+equiespaçadas. A variação dos parâmetros é mantida até que um novo valor seja
+sorteado. 
+
+% TODO
+% O sinal de entrada do sistema máximo 50\% de vezes com relação ao número de
+% amostras
+
+No primeiro teste, foram consideradas 100 amostras. O número de variações
+sorteado foi de 3 variações. Portanto, cada variação era mantida por 33
+amostras. A saída do sistema com os parâmetros reais e com os parâmetros
+variáveis pode ser observada na Fig. \ref{fig:saida_sist_100}. A estimativa
+realizada é vista na Tab. \ref{tab:estimativa_100}.
