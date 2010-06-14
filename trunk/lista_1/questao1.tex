@@ -1,3 +1,19 @@
+% Universidade Federal do Rio Grande do Norte
+% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
+% Lista 1 - Questao 1
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
+
+% Revisado em 14/06/2010 16:29 por crisgc
+% Questão 1
+% - O sistema em MA é instável, o diagrama de Bode irá fazer a verificação da
+%   malha fechada
+% - Comentar que o pico do Bode de MF ocorre na frequência característica Wn = 3
+% - Acho que somente precisava o diagrama de bode para o sistema de malha
+%   fechada e é nele que devemos indicar a margem de ganho e de fase
+
 \chapter*{Questão 1}
 % Enunciado
 \noindent {\it Um sistema com realimentação unitária tem a seguinte função de
@@ -94,11 +110,10 @@ para o sistema do enunciado com realimentação unitária é dada pela Eq.
 \end{figure}
 
 \begin{eqnarray}
-G_{MF}(s) & = & \frac{G(s)}{1+G(s)H(s)}\nonumber\\
-          & = & \frac{G(s)}{1+G(s)}\nonumber\\
-          & = & \frac{\D\frac{9}{s(s+p)}}{1+\D\frac{9}{s(s+p)}}\nonumber\\
-          & = & \frac{\D\frac{9}{s(s+p)}}{\D\frac{s(s+p)+9}{s(s+p)}}\nonumber\\
-          & = & \frac{9}{s(s+p)+9}\nonumber\\
+G_{MF}(s) & = & \frac{G(s)}{1+G(s)H(s)} = \frac{G(s)}{1+G(s)} =
+\frac{\D\frac{9}{s(s+p)}}{1+\D\frac{9}{s(s+p)}} =
+\frac{\D\frac{9}{\cancel{s(s+p)}}}{\D\frac{s(s+p)+9}{\cancel{s(s+p)}}} =
+\frac{9}{s(s+p)+9}\nonumber\\ 
           & = & \frac{9}{s^2 + ps + 9}\label{eq:G_MF_q1}
 \end{eqnarray}
 
@@ -141,7 +156,8 @@ Assim, para o parâmetro $p$ da função de transferência de malha fechada
 obtida pela Eq. \ref{eq:G_MF_q1}, tem-se:
 
 \begin{eqnarray}
-S_p^G(s) & = & \frac{\partial G}{\partial p} \cdotp \frac{p}{G}\nonumber \\
+S_p^{G_{\text{MF}}(s)} & = & \frac{\partial G_{\text{MF}}}{\partial p} \cdotp
+\frac{p}{G_{\text{MF}}}\nonumber \\
          & = & \frac{0(s^2 + ps + 9) - 9(s)}{(s^2 + ps + 9)^2} \cdotp
                \frac{p}{\D\frac{9}{s^2 + ps + 9}}\nonumber\\
          & = & - \frac{9ps}{9(s^2 + ps + 9)}\nonumber\\

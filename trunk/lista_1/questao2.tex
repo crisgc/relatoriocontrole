@@ -1,3 +1,13 @@
+% Universidade Federal do Rio Grande do Norte
+% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
+% Lista 1 - Questao 1
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
+
+% Revisado em 14/06/2010 16:29 por crisgc
+
 \chapter*{Questão 2}
 
 \textit{Um sistema com realimentação unitária tem a seguinte função de
@@ -7,10 +17,10 @@ transferência de malha aberta:}
 G(s) = \frac{s+r}{(s+p)(s+q)}
 \end{flalign*}
 
-\noindent \textit{em que $0 \leq p \leq 5$, $0 \leq q \leq 1$ e $1 \leq r \leq
+\noindent \textit{em que $3 \leq p \leq 5$, $0 \leq q \leq 1$ e $1 \leq r \leq
 2$.  Selecione os parâmetros (todos reais) de um controlador atraso-avanço de
 fase, de forma que o sistema em malha fechada tenha um desempenho robusto. Faça
-simulações no \emph{Matlab} para comprovar o desempenho do sistema.}
+simulações no \emph{\Matlab} para comprovar o desempenho do sistema.}
 
 \vspace{0.5cm}
 
@@ -19,13 +29,13 @@ simulações no \emph{Matlab} para comprovar o desempenho do sistema.}
 \vspace{0.25cm}
 
 Para efeitos de análise e projeto dos controladores, foram utilizados os valores
-médio de cada um dos parâmetros, a saber $\vmedio{r} = 1,5$, $\vmedio{p} = 4$ e
-$\vmedio{q} = 0,5$, sendo a função de transferência de malha aberta escrita
+médio de cada um dos parâmetros, a saber $\vmedio{r} = 1.5$, $\vmedio{p} = 4$ e
+$\vmedio{q} = 0.5$, sendo a função de transferência de malha aberta escrita
 conforme Eq. \ref{eq:q2:gma}.
 
 \begin{flalign}
 \vmedio{G}(s) & = \frac{s+\vmedio{r}}{(s+\vmedio{p})(s+\vmedio{q})}  =
-\frac{s+1,5}{(s+4)(s+0,5)} = {\frac{1,5+s}{2+4,5s+s^{2}}} \label{eq:q2:gma}
+\frac{s+1.5}{(s+4)(s+0.5)} = {\frac{1.5+s}{2+4.5s+s^{2}}} \label{eq:q2:gma}
 \end{flalign}
 
 O lugar geométrico das raízes para esse sistema é mostrado na Fig.
@@ -47,8 +57,8 @@ abaixo:
 G_{\text{MF}}(s) & = \frac{s+r}{(s+p)(s+q) + s+r} =
 \frac{s+r}{s^{2}+\underbrace{(p+q+1)}_{a_1}s +
 \underbrace{pq+r}_{a_0}} \nonumber \\
-\vmedio{G_{\text{MF}}}(s) & = {\frac{1,5+s}{3,5+5,5s+s^{2}}} =
-\frac{1,5+s}{(s+4,7656)(s+0,7344)} \quad
+\vmedio{G_{\text{MF}}}(s) & = {\frac{1.5+s}{3,5+5.5s+s^{2}}} =
+\frac{1.5+s}{(s+4.7656)(s+0.7344)} \quad
 \bigtriangleup
 \quad \text{Para os valores médios} \label{eq:q2:gmf}
 \end{flalign}
@@ -82,13 +92,13 @@ valor final aproximado a partir do {\it teorema do valor final}:
 
 \begin{flalign*}
 \lim_{t \tende \infty}{y(t)} & = \lim_{s \tende 0}sY(s) \\
-Y(s) & = R(s)\vmedio{G_{\text{MF}}}(s) = \frac{1}{s}\frac{1,5+s}{3,5+5,5s+s^{2}} \\
+Y(s) & = R(s)\vmedio{G_{\text{MF}}}(s) = \frac{1}{s}\frac{1.5+s}{3.5+5.5s+s^{2}} \\
 \lim_{t \tende \infty}{y(t)} & =  \lim_{s \tende
-0}s\frac{1}{s}\frac{1,5+s}{3,5+5,5s+s^{2}} = \frac{1,5}{3,5} = \frac{3}{7}
-\approx 0,429
+0}s\frac{1}{s}\frac{1.5+s}{3.5+5.5s+s^{2}} = \frac{1.5}{3.5} = \frac{3}{7}
+\approx 0.429
 \end{flalign*}
 
-Observa-se que o valor obtido está condizente com a simulação, conforme Fig.
+\noindent observa-se que esse valor obtido está condizente com a simulação, conforme Fig.
 \ref{fig:q2:resposta_gmf}.
 
 \begin{figure}[htb]
@@ -102,7 +112,7 @@ Sob o ponto de vista do projeto do controlador, o primeiro passo foi o de se
 projetar um controlador em atraso de fase que, segundo \citeasnoun{dorf:2009} e
 \citeasnoun{maitelli2002}, tem por objetivo melhorar o erro de regime a uma
 entrada em degrau. A constante de erro de posição do sistema que foi obtida é
-dada por $K_{p} = G(0) = 0,75$, o que resulta no erro de regime previamente
+dada por $K_{p} = G(0) = 0.75$, o que resulta no erro de regime previamente
 calculado. 
 
 Adotando uma tolerância do erro de regime de aproximadamente $1\%$, foi
@@ -119,17 +129,17 @@ G_c(s) & = k_c \frac{s+z_c}{s+p_c} \quad \text{onde} \quad |z_c| > |p_c|
 
 \begin{flalign}
 \underbrace{K'_{p}}_{100} & = G_c(0)G(0) = G_c(0)K_{p} = k_c \frac{z_c}{p_c}
-\underbrace{K_{p}}_{0,75} \nonumber \\
-k_c \frac{z_c}{p_c}& = \frac{100}{0,75} = \frac{400}{3} \approx 133,333
+\underbrace{K_{p}}_{0.75} \nonumber \\
+k_c \frac{z_c}{p_c}& = \frac{100}{0.75} = \frac{400}{3} \approx 133.333
 \label{eq:q2:comp_atraso}
 \end{flalign}
 
-Como o polo dominante do sistema de malha aberta está localizado em $-0,5$ (Eq.
+Como o polo dominante do sistema de malha aberta está localizado em $-0.5$ (Eq.
 \ref{eq:q2:gma}) o zero do controlador foi alocado à sua direita, para que a
 interferência no regime transitório não seja muito significante. Fez-se então
-$z_c = 0,3$, optando em um primeiro momento por não adicionar o ganho no
-controlador, de tal maneira que $k_c = 1$. O polo, calculado a partir de
-\ref{eq:q2:comp_atraso} foi então $p_c = 0,0022$. 
+$z_c = 0.3$, e, optando em um primeiro momento por não adicionar o ganho no
+controlador de tal maneira que $k_c = 1$, o polo, calculado a partir de
+\ref{eq:q2:comp_atraso} foi então $p_c = 0.0022$. 
 
 A função de transferência em malha fechada do sistema mostrado na Fig.
 \ref{fig:q2:malha_comp} pode ser obtida através da redução do diagrama de
@@ -155,22 +165,26 @@ G_\text{cMF}(s) & = \frac{G_c(s)G(s)}{1 + G_c(s)G(s)} =
 
 A estabilidade do sistema foi testada segundo o \textit{teorema de Kharitonov}.
 Os quatro polinômios obtidos para os valores calculados do controlador, a saber
-$z_c = 0,3$, $k_c = 1$ e $p_c = 0,0022$, foram:
+$z_c = 0.3$, $k_c = 1$ e $p_c = 0.0022$, foram:
 
 \begin{flalign*}
-q_1 & = 0,3+1,3066s+7,0022s^{2}+s^{3} \\
-q_2 & = 0,3+7,3132s+7,0022s^{2}+s^{3} \\
-q_3 & = 0,611+1,3066s+5,0022s^{2}+s^{3} \\
-q_4 & = 0,611+7,3132s+5,0022s^{2}+s^{3}
+q_1(s) & = 0.3+1.3066s+7.0022s^{2}+s^{3} \\
+q_2(s) & = 0.3+7.3132s+7.0022s^{2}+s^{3} \\
+q_3(s) & = 0.611+1.3066s+5.0022s^{2}+s^{3} \\
+q_4(s) & = 0.611+7.3132s+5.0022s^{2}+s^{3}
 \end{flalign*}
 
 \noindent cujas raízes podem ser observadas na matriz abaixo, em que cada coluna
-se refere a um polinômio:
+se refere a um polinômio e cada linha corresponde a uma raiz do respectivo
+polinômio:
 
 \begin{flalign*}
-\begin{pmatrix}-0,093+0,188i&-0,043&-0,124+0,336i&-0,089\cr
--0,093-0,188i&-1,223&-0,124-0,336i&-2,457+0,917i\cr
--6,817&-5,736&-4,754&-2,457-0,917i\cr \end{pmatrix}
+\begin{matrix}
+q_1(s) & q_2(s) & q_3(s) & q_4(s) \cr
+-0.093+0.188i&-0.043&-0.124+0.336i&-0.089\cr
+-0.093-0.188i&-1.223&-0.124-0.336i&-2.457+0.917i\cr
+-6.817&-5.736&-4.754&-2.457-0.917i\cr 
+\end{matrix}
 \end{flalign*}
 
 Logo, pode-se perceber que o controlador desenvolvido é robusto para a faixa
@@ -186,13 +200,13 @@ controlador pode ser visualizada na Fig. \ref{fig:q2:resposta_gcomp1}.
 
 Analisando a figura observa-se que o desempenho do regime permanente tende para
 o valor desejado (próximo a 1). Contudo, o tempo de subida do sistema pode vir a
-ser um problema.
-
-Assim sendo, observando o lugar geométrico das raízes do sistema com
-compensador, mostrado na Fig. \ref{fig:q2:rlocus_gcomp1}, com o intuito de
-melhorar o desempenho do tempo de subida, aumentou-se o ganho do sistema,
-distanciando os polos do eixo imaginário. Para um ganho $k_c = 20$ foi obtida a
-resposta dada pela Fig. \ref{fig:q2:resposta_gcomp2}.
+ser um problema, repare a escala do tempo em comparação ao sistema em malha
+fechada sem o controlador analisado na Fig. \ref{fig:q2:resposta_gmf}. Assim
+sendo, observando o lugar geométrico das raízes do sistema com compensador,
+mostrado na Fig. \ref{fig:q2:rlocus_gcomp1}, com o intuito de melhorar o
+desempenho do tempo de subida, aumentou-se o ganho do sistema, distanciando os
+polos do eixo imaginário. Para um ganho $k_c = 20$ foi obtida a resposta dada
+pela Fig. \ref{fig:q2:resposta_gcomp2}.
 
 \begin{figure}[H]
 \centering
@@ -216,14 +230,17 @@ uma vez através dos polinômios de Kharitonov, obtendo os seguintes valores:
 q_1 & = 0.3+26.0066s+26.0022s^{2}+s^{3} \\
 q_2 & = 0.3+51.0132s+26.0022s^{2}+s^{3} \\
 q_3 & = 0.611+26.0066s+24.0022s^{2}+s^{3} \\
-q_4 & = 0.611+51.0132s+24.0022s^{2}+s^{3}
+  q_4 & = 0.611+51.0132s+24.0022s^{2}+s^{3}
 \end{flalign*}
 
 \noindent e as suas raízes:
 
 \begin{flalign*}
-\begin{pmatrix}-0.012&-0.006&-0.024&-0.012\cr -1.03&-2.131&-1.112&-2.343\cr
--24.961&-23.865&-22.866&-21.647\cr \end{pmatrix}
+\begin{matrix}
+q_1(s) & q_2(s) & q_3(s) & q_4(s) \cr
+-0.012&-0.006&-0.024&-0.012\cr -1.03&-2.131&-1.112&-2.343\cr
+-24.961&-23.865&-22.866&-21.647\cr 
+\end{matrix}
 \end{flalign*}
 
 Uma vez que o sistema é estável na faixa de variação dos parâmetros de $G(s)$, o
@@ -233,7 +250,7 @@ sistema. Assim sendo a parte em avanço de fase não foi projetada. O controlado
 projetado é, portanto:
 
 \begin{flalign*}
-G_c(s) = 20\frac{s+0,3}{s+0,0022}
+G_c(s) = 20\frac{s+0.3}{s+0.0022}
 \end{flalign*}
 
 O {\it scripts} do Matlab\textsuperscript{\textregistered} desenvolvidos para a

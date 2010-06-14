@@ -8,7 +8,7 @@ showpdf: arquivo.pdf
 arquivo.pdf: arquivo.dvi
 	dvipdf $^
 
-arquivo.dvi: arquivo.tex comandos.tex pacotes.tex \
+arquivo.dvi: arquivo.tex capa.tex comandos.tex pacotes.tex \
 		     questao1.tex questao2.tex \
 		     apendice_q1.tex apendice_q2.tex \
 			 bibliografia.bib

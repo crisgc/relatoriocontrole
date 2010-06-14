@@ -8,8 +8,6 @@
 %        Diogo Leite Reboucas
 %        Thiago Medeiros Barros
 
-
-
 %% Definicoes
 clear;
 clc;
