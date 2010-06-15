@@ -1,4 +1,12 @@
-\chapter*{Questão 4}
+% Universidade Federal do Rio Grande do Norte
+% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
+% Lista 1 - Questao 1
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
+
+  \chapter*{Questão 4}
 % Enunciado
 \noindent {\it Seja o sistema da Fig. \ref{fig:q4:sist}. Considerando $G(s) =
 \frac{2e^{-s}}{s+0.25}$, pede-se: }
@@ -6,11 +14,11 @@
 \begin{itemize}
     \item[a)] {\it projetar um controlador PI de forma que o desempenho do
               sistema em malha fechada não apresente sobre-sinal. Simule a 
-              resposta no Matlab.}
+              resposta no \Matlab.}
     \item[b)] {\it Considerando o sistema com o controlador projetado no item a
               e considerando $G_d(s) = 1$, projetar um controlador feedforward 
               (realizável) e avaliar o desempenho do sistema completo utilizando
-              o Matlab.}
+              o \Matlab.}
 \end{itemize}
 
 \begin{figure}[H]
@@ -28,11 +36,11 @@
 \vspace{0.25cm}
 
 % Parte a
-O controlador PI foi projetado utilizando o método tradicional, ou seja,
-desconsiderando o atraso do sistema, ou seja, separando o termo $e^{-s}$ do
-restante da função de transferência, como pode ser visto na figura
-\ref{fig:q4:projetoPI}. Definimos então $G'(s)$, como sendo a função de
-transferência sem o atraso de transporte, ou seja:
+O controlador PI foi projetado utilizando o método tradicional, desconsiderando
+o atraso do sistema, ou seja, separando o termo $e^{-s}$ do restante da função
+de transferência, como pode ser visto na Fig. \ref{fig:q4:projetoPI}.
+Definimos então $G'(s)$, como sendo a função de transferência sem o atraso de
+transporte, ou seja:
 
 \begin{flalign}
 G'(s) = \frac{2}{s+0.25} \label{eq:q4:glinha}
@@ -48,9 +56,9 @@ G'(s) = \frac{2}{s+0.25} \label{eq:q4:glinha}
 Primeiramente, analisou-se o sistema em malha fechada do sistema dado o
 comportamento sem nenhum controlador ou seja $G'_c(s) = 1$. O
 comportamento pode ser tomando como aceitável já que se aproxima do erro de
-regime nulo e tem um tempo de subida razoável (menos de $1$s) (ver figura
-\ref{fig:q4:saida_mf}). Com o controlador PI está adequadamente empregado já
-que tem o objetivo de melhorar o erro de regime.
+regime nulo e tem uma constante de tempo razoável (menos de $1$s) (ver Fig.
+\ref{fig:q4:saida_mf}). O controlador PI está, então,  adequadamente empregado já
+que tem por objetivo na sua definição a melhora do erro de regime.
 
 \begin{figure}[htb]
 \centering
@@ -60,9 +68,9 @@ que tem o objetivo de melhorar o erro de regime.
 \end{figure}
 
 O requisito do sistema projetado foi a não-presença do sobre-sinal
-(\emph{overshoot}). Dessa forma os polos de $G'_c(s)G'(s)$ não deviam se afastar
-do eixo real, o que significaria oscilações no sinal de saída. O controlador PI
-\cite{Araujo} tem a seguinte função de transferência:
+(\emph{overshoot}). Dessa forma os polos de $G'_c(s)G'(s)$ não devem possuir
+parte imaginária, o que significaria oscilações no sinal de saída. O controlador
+PI \cite{Araujo} tem a seguinte função de transferência:
 
 \begin{flalign*}
 G'_c(s) = k_p + \frac{k_i}{s} = \frac{k_c(s+z)}{s} 
@@ -70,17 +78,16 @@ G'_c(s) = k_p + \frac{k_i}{s} = \frac{k_c(s+z)}{s}
 
 Logo o controlador adiciona um polo na origem e um zero. Para não afetar
 demasiadamente as características do transitório, decidimos posicionar o zero do
-controlador antes do polo do sistema $G'(s) = \frac{2}{s + 0.25}$, ou seja $|z|
-< 0.25$. Foi simulador então a resposta do sistema com o seguinte controlador
-desenvolvido
+controlador antes do polo do sistema $G'(s)$ (Eq. \ref{eq:q4:glinha}), ou seja $|z|
+< 0.25$. Foi simulado, então, o sistema com o seguinte controlador desenvolvido
 
 \begin{flalign}
 G'_c(s) = \frac{s+0.2}{s} \label{eq:q4:glinha_c}
 \end{flalign}
 
-\noindent e os resultados obtidos na simulação podem ser visualizados na figura
+\noindent e os resultados obtidos na simulação podem ser visualizados na Fig.
 \ref{fig:q4:saida_comp_mf}. O diagrama do lugar das raízes para o sistema com o
-controlador pode também ser visualizado na figura \ref{fig:q4:rlocus_cmf}.
+controlador pode também ser visualizado na Fig. \ref{fig:q4:rlocus_cmf}.
 
 \begin{figure}[htb]
 \centering
@@ -112,7 +119,8 @@ Percebe-se que o sistema é sobreamortecido, já que $\zeta > 1$ \cite{Medeiros}
 portanto a resposta não apresenta o sobressinal. Simulou-se então através de
 \Simulink\ o desempenho do compensador PI projetado no controle do sistema
 $G(s)$ original, ou seja, com o atraso de transporte. O desempenho foi
-completamente insatisfatório: o sistema tornou-se instável (ver figura . 
+completamente insatisfatório: o sistema tornou-se instável (ver Fig.
+\ref{fig:q4:saida_cont_dt}. 
 
 \begin{figure}[htb]
 \centering
@@ -120,18 +128,18 @@ completamente insatisfatório: o sistema tornou-se instável (ver figura .
 \caption{Sistema com atraso controlado pelo PI}
 \label{fig:q4:sist_cont_dt}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_cont_dt}
-\caption{Resposta do sistema da figura \ref{fig:q4:sist_cont_dt}}
+\caption{Resposta do sistema da Fig. \ref{fig:q4:sist_cont_dt}}
 \label{fig:q4:saida_cont_dt}
 \end{figure}
 
 Foi adotado então o preditor de Smith, esse tipo de arquitetura implementa um tipo
 de predição baseado no modelo e possibilita ao controlador projetado agir
-baseado na predição $y'(t + L)$, onde $L$ é o tempo morto, ou em outras
+baseado na predição $y'(t + L)$, onde $L$ é o tempo morto, ou, em outras
 palavras, o preditor de Smith permite ao controlador agir no sistema como se não
 houvesse tempo morto \cite{Haegglund1996}. \citeasnoun{Haegglund1996}
 também justifica porque o tipo de controlador normalmente usado com preditor de
 Smith é o PI. O sistema utilizado para a implementação do preditor bem como o
-resultado obtido são mostrados nas figuras \ref{fig:q4:sist_smith} e
+resultado obtido são mostrados nas Figs. \ref{fig:q4:sist_smith} e
 \ref{fig:q4:saida_smith}. É importante ressaltar que nesse preditor utilizamos
 uma função de transferência para predição $\hat{G}'(s) = \frac{2}{s+0.25}$ igual,
 portanto, ao sistema sem o atraso.
@@ -142,22 +150,22 @@ portanto, ao sistema sem o atraso.
 \caption{Preditor de Smith}
 \label{fig:q4:sist_smith}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_smith}
-\caption{Resposta ao controlador com preditor da figura \ref{fig:q4:sist_smith}}
+\caption{Resposta ao controlador com preditor da Fig. \ref{fig:q4:sist_smith}}
 \label{fig:q4:saida_smith}
 \end{figure}
 
 Foi analisado também o comportamento do preditor quando o sistema utilizado para
 predição não corresponde exatamente ao processo simulado ou seja $\hat{G}(s)
-\neq G'(s)$ (ver figura \ref{fig:q4:sist_smith_diff}). Apesar de ter apresentado um
-baixo e indesejável sobressinal, o resultado foi razoável (ver figura
-\ref{fig:q4:saida_smith_diff}, o que mostra a boa adequação do preditor mesmo
-com estimativas da função de transferência do sistema original. Escolhemos para
-a continuação da questão o sistema tal que $\hat{G}(s) = G'(s)$, a função de
+\neq G'(s)$ (ver Fig. \ref{fig:q4:sist_smith_diff}). Apesar de ter apresentado um
+baixo e indesejável sobressinal, o resultado foi razoável (ver Fig.
+\ref{fig:q4:saida_smith_diff}), o que mostra a boa adequação do preditor mesmo
+com estimativas grosseiras da função de transferência do sistema original. Escolhemos para
+a continuação da questão o sistema tal que $\hat{G}(s) = G'(s)$. A função de
 transferência final do controlador é, portanto: 
 
 \begin{flalign}
 G_c(s) = \frac{G'_c(s)}{1 + G'_c(s)(1 - e^{-s})\hat{G}(s)} =
-\frac{G'_c(s)}{1 + G'_c(s)(1 - e^{-s})G(s)} \label{eq:q4:g_c}
+\frac{G'_c(s)}{1 + G'_c(s)(1 - e^{-s})G'(s)} \label{eq:q4:g_c}
 \end{flalign}
 
 \begin{figure}[htb]
@@ -166,7 +174,7 @@ G_c(s) = \frac{G'_c(s)}{1 + G'_c(s)(1 - e^{-s})\hat{G}(s)} =
 \caption{Preditor de Smith com $G'(s) = \frac{6}{3s + 1}$}
 \label{fig:q4:sist_smith_diff}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_smith_diff}
-\caption{Resposta ao controlador com preditor da figura
+\caption{Resposta ao controlador com preditor da Fig.
 \ref{fig:q4:sist_smith_diff}}
 \label{fig:q4:saida_smith_diff}
 \end{figure}
@@ -175,17 +183,17 @@ G_c(s) = \frac{G'_c(s)}{1 + G'_c(s)(1 - e^{-s})\hat{G}(s)} =
 
 % Considerações sobre Gff(s)
 Projetado o controlador PI, analisamos então o acréscimo do controle feedfoward
-($G_ff(s)$) ao processo (ver figura \ref{fig:q4:sist_ff}). Através da análise da
+($G_\text{ff}(s)$) ao processo (ver Fig. \ref{fig:q4:sist_ff}). Através da análise da
 figura temos que de modo a cancelar o efeito do ruído ao sistema deveríamos ter:
 
 \begin{flalign*}
-G'_{ff}(s) & = \frac{G_d(s)}{\underbrace{G_c(s)}_{\text{equação
+G'_\text{ff}(s) & = \frac{G_d(s)}{\underbrace{G_c(s)}_{\text{Eq.
 \ref{eq:q4:g_c}}}G(s)} = \frac{1 + G'(s)G'_c(s) -
 e^{-s}G'(s)G'_c(s)}{G'(s)G'_c(s)e^{-s}} \\
 & = \frac{1 + G'(s)G'_c(s)}{G'(s)G'_c(s)}e^{s} - 1
 \end{flalign*}
 
-A partir de $G'_{ff}(s)$, pode-se notar que o compensador ideal é irrealizável,
+A partir de $G'_\text{ff}(s)$, pode-se notar que o compensador ideal é irrealizável,
 já que envolve tanto um retorno no tempo $e^{s}$, quanto um impulso unitário $1$. Isso
 poderia ser previamente notado, sem nenhum cálculo de função de transferência,
 através da análise de duas características do sistema:
@@ -206,43 +214,43 @@ através da análise de duas características do sistema:
 
 Com isso, qualquer ruído detectado em um determinado momento, somente poderá a ser
 compensado após o tempo morto do sistema, portanto o cancelamento de ruído
-perfeito não é possível, o que se reflete em um $G'_{ff}(s)$ irrealizável. 
+perfeito não é possível, o que se reflete em um $G'_\text{ff}(s)$ irrealizável. 
 
 % Realizando G_ff
-A partir do modelo ideal $G'_{ff}(s)$, $G_{ff}(s)$ foi projetado eliminando-se o
+A partir do modelo ideal $G'_\text{ff}(s)$, $G_\text{ff}(s)$ foi projetado eliminando-se o
 termo $e^{s}$, assim sendo:
 
 \begin{flalign*}
-G_{ff}(s) & = \frac{1 + G'(s)G'_c(s)}{G'(s)G'_c(s)}\cancel{e^{s}} - 1 =
-\frac{1}{\underbrace{G'(s)}_{\text{equação
-\ref{eq:q4:glinha}}}\underbrace{G'_c(s)}_{\text{equação \ref{eq:q4:glinha_c}}}}
+G_\text{ff}(s) & = \frac{1 + G'(s)G'_c(s)}{G'(s)G'_c(s)}\cancel{e^{s}} - 1 =
+\frac{1}{\underbrace{G'(s)}_{\text{Eq.
+\ref{eq:q4:glinha}}}\underbrace{G'_c(s)}_{\text{Eq. \ref{eq:q4:glinha_c}}}}
 \cancel{+ 1 - 1} = \frac{s(s+0.25)}{2(s+0.2)} \\
 & = \frac{1}{2}\frac{s^2 + 0.25s}{s + 0.2}
 \end{flalign*}
 
 \noindent observa-se que o número de zeros supera o de polo no sistema. Para
 contornar o problema adicionou-se em série dois filtros (passa-baixa) na equação
-de transferência $G_{ff}(s)$, foram testados dois tipos de filtros $F_1(s) =
+de transferência $G_\text{ff}(s)$, foram testados dois tipos de filtros $F_1(s) =
 \frac{1}{s+1}$ e $F_{10}(s) = \frac{10}{s+10}$, esses filtros possuem ganho
-estático $1$ portanto não influenciam o regime do sistema. Analisou-se o
+estático $1$ e não influenciam o regime do sistema. Analisou-se o
 comportamento da resposta de três sistemas o primeiro sem o controle feedfoward
-(ver figura \ref{fig:q4:sist_ruido}), o segundo com a função de transferência
-$G_{ff1}(s)$ apresentada na equação \ref{eq:q4:g_ff1} (ver figura
+(ver Fig. \ref{fig:q4:sist_ruido}), o segundo com a função de transferência
+$G_{\text{ff}_1}(s)$ apresentada na Eq. \ref{eq:q4:g_ff1} (ver Fig.
 \ref{fig:q4:sist_ruido_ff1}) e o terceiro com a função de transferência
-$G_{ff10}(s)$ apresentada na equação \ref{eq:q4:g_ff10} (ver figura
+$G_{\text{ff}_{10}}(s)$ apresentada na Eq. \ref{eq:q4:g_ff10} (ver Fig.
 \ref{fig:q4:sist_ruido_ff10}). O tipo de ruído utilizado foi um sinal tipo
 degrau unitário que começar a agir no tempo $t_r = 5$. Os resultados para os três
-sistemas estão apresentados nas figuras \ref{fig:q4:saida_ruido},
+sistemas estão apresentados nas Figs. \ref{fig:q4:saida_ruido},
 \ref{fig:q4:saida_ruido_ff1} e \ref{fig:q4:saida_ruido_ff10} respectivamente.
 
 \begin{flalign}
 F_1(s) & = \frac{1}{s+1} \nonumber \\
-G_{ff1} & = G_{ff}(s)F_1(s)F_1(s) = \frac{1}{2}\frac{s^2 + 0.25s}{s +
+G_{\text{ff}_1} & = G_\text{ff}(s)F_1(s)F_1(s) = \frac{1}{2}\frac{s^2 + 0.25s}{s +
 0.2}\frac{1}{s+1}\frac{1}{s+1} = 0.5\frac{0.25s+s^{2}}{0.2+1.4s+2.2s^{2}+s^{3}}
 \label{eq:q4:g_ff1}
 \\
 F_{10}(s) & = \frac{10}{s+10} \nonumber \\
-G_{ff10} & = G_{ff}(s)F_{10}(s)F_{10}(s) = \frac{1}{2}\frac{s^2 + 0.25s}{s +
+G_{\text{ff}_{10}} & = G_\text{ff}(s)F_{10}(s)F_{10}(s) = \frac{1}{2}\frac{s^2 + 0.25s}{s +
 0.2}\frac{10}{s+10}\frac{10}{s+10} = 50\frac{s^{2}+0.25s}
                                             {s^{3}+20.2s^{2}+104s+20}
 \label{eq:q4:g_ff10}
@@ -254,27 +262,27 @@ G_{ff10} & = G_{ff}(s)F_{10}(s)F_{10}(s) = \frac{1}{2}\frac{s^2 + 0.25s}{s +
 \caption{Sistema com ruido na saída sem compensação feedfoward}
 \label{fig:q4:sist_ruido}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_ruido}
-\caption{Resposta do sistema da figura \ref{fig:q4:sist_ruido}}
+\caption{Resposta do sistema da Fig. \ref{fig:q4:sist_ruido}}
 \label{fig:q4:saida_ruido}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.9\textwidth]{imgs/questao4/sist_ruido_ff1}
-\caption{Sistema com ruido na saída com compensação feedfoward $G_{ff1}$}
+\caption{Sistema com ruido na saída com compensação feedfoward $G_{\text{ff}_1}$}
 \label{fig:q4:sist_ruido_ff1}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_ruido_ff1}
-\caption{Resposta do sistema da figura \ref{fig:q4:sist_ruido_ff1}}
+\caption{Resposta do sistema da Fig. \ref{fig:q4:sist_ruido_ff1}}
 \label{fig:q4:saida_ruido_ff1}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.9\textwidth]{imgs/questao4/sist_ruido_ff2}
-\caption{Sistema com ruido na saída com compensação feedfoward $G_{ff10}$}
+\caption{Sistema com ruido na saída com compensação feedfoward $G_{\text{ff}_{10}}$}
 \label{fig:q4:sist_ruido_ff10}
 \includegraphics[width=0.65\textwidth]{imgs/questao4/saida_ruido_ff2}
-\caption{Resposta do sistema da figura \ref{fig:q4:sist_ruido_ff10}}
+\caption{Resposta do sistema da Fig. \ref{fig:q4:sist_ruido_ff10}}
 \label{fig:q4:saida_ruido_ff10}
 \end{figure}
 
@@ -283,14 +291,15 @@ que o próprio nome sugere, o controle feedfoward, não irá atuar antecipadamen
 em relação ao controle PI já instalado, pois, já que o distúrbio atua
 instantaneamente na saída, o sinal de erro por ele gerado é detectado (também
 instantaneamente) pelo controlador PI (com preditor) já instalado. Por essa
-razão o sinal de saída do sistema \ref{fig:q4:sist_ruido} não se diferencia
-muito em termos de desempenho dos sistemas com controle feedfoward. No entanto a
-adição da compensação FF, possui uma diferença básica, a rapidez da reação ao ruído
+razão o sinal de saída do sistema sem o controle FF não se diferencia muito em
+termos de desempenho dos sistemas com controle feedfoward. No entanto a adição
+da compensação FF, possui uma diferença básica, a rapidez da reação ao ruído
 após o tempo $t_r + \tau$, ou seja, passado o intervalo do tempo morto após a
-aplicação do ruído, como pode ser visto na figura \ref{fig:q4:saida_ruido_ff10},
-na qual. Esse comportamento é devido à excitação do controlador $G_c(s)$ não somente pelo
-erro gerado pelo ruído mas também sinal proveniente de $G_ff(s)$ e possui a
-característica de causar um sobressinal no restabelecimento da referência. A
-reação ao ruído \ref{fig:q4:sist_ruido_ff1} é bastante lenta, devido aos filtros
-utilizador ($F_1(s)$), possuírem uma constante de tempo elevada ($1$s), é o
-sistema que apresenta o pior desempenho entre os três.
+aplicação do ruído, como pode ser visto na Fig. \ref{fig:q4:saida_ruido_ff10},
+na qual há um sobressinal na compensação do ruído. Esse comportamento é devido à
+excitação do controlador $G_c(s)$ não somente pelo erro gerado pelo ruído mas
+também sinal proveniente de $G_\text{ff}(s)$ e possui a característica de causar um
+sobressinal no restabelecimento da referência. A reação ao ruído na Fig.
+\ref{fig:q4:sist_ruido_ff1}, no entanto, é bastante lenta, devido aos filtros utilizados
+($F_1(s)$) possuírem uma constante de tempo elevada ($1$s), é o sistema que
+apresenta o pior desempenho entre os três.
