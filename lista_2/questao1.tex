@@ -3,13 +3,13 @@
 \noindent {\it Considere o sistema:}
 
 \begin{equation}\nonumber
-G(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s+0,5)(s+1)}
+G(s) = \frac{Y(s)}{U(s)} = \frac{0.5}{(s+0.5)(s+1)}
 \end{equation}
 
 {\it Pede-se:}
 
 \begin{itemize}
-    \item[a)] {\it Discretize o sistema com um período de amostragem de 0,2 s}
+    \item[a)] {\it Discretize o sistema com um período de amostragem de 0.2 s}
     \item[b)] {\it Obtenha o modelo FSR (resposta ao degrau Truncada) do sistema
               considerando $N = 10$}
     \item[c)] {\it Calcule a resposta do sistema a uma entrada qualquer
@@ -27,7 +27,7 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s+0,5)(s+1)}
 
 \vspace{0.25cm}
 
-\section*{Letra a}
+\section*{Item A}
 Uma maneira simples de realizar a discretização de funções de transferência é
 utilizar o método da invariância ao degrau, no qual a idéia é a de se utilizar
 um Segurador de Ordem Zero ({\it Zero Order Holder} -- ZOH) para aproximar a
@@ -41,80 +41,81 @@ G(z) = (1 - z^{-1})
 \end{equation}
 
 \noindent em que $\zadeh$ corresponde à {\it Transformada Z}, $\ilaplace$ à {\it
-Transformada Inversa de Laplace} em $t = nT$, sendo $T$ o período de amostragem
-e $z = e^{-sT}$.
+Transformada Inversa de Laplace} e, para $t = nT$, $T$ corresponde ao período de
+amostragem e $z = e^{-sT}$.
 
 Então, para a função de transferência $G(s)$ dada no enunciado:
 
 \begin{equation}\label{eq:Gs_s}
-\frac{G(s)}{s} = \frac{0,5}{s(s+0,5)(s+1)}
+\frac{G(s)}{s} = \frac{0.5}{s(s+0.5)(s+1)}
 \end{equation}
 
 Expandindo a Eq. \ref{eq:Gs_s} em frações parciais, tem-se que:
 
 \begin{eqnarray}\label{eq:frac_parc}
-\frac{G(s)}{s} & = & \colchete{\frac{0,5}{s(s+0,5)(s+1)}}\nonumber\\
-& = & \frac{A}{s} + \frac{B}{s+0,5} + \frac{C}{s+1}\nonumber\\
+\frac{G(s)}{s} & = & \colchete{\frac{0.5}{s(s+0.5)(s+1)}}\nonumber\\
+& = & \frac{A}{s} + \frac{B}{s+0.5} + \frac{C}{s+1}\nonumber\\
 \end{eqnarray}
 
 Mas,
 
-\begin{equation*}
-A = \left.\frac{0,5}{(s+0,5)(s+1)}\right|_{s = 0} = \frac{0,5}{0,5} = 1
-\qquad
-B = \left.\frac{0,5}{s(s+1)}\right|_{s = -0,5} = \frac{0,5}{-0,25} = -2
-\qquad
-C = \left.\frac{0,5}{s(s+0,5)}\right|_{s = -1} = \frac{0,5}{0,5} = 1
-\end{equation*}
+\begin{eqnarray}
+A & = & \left.\frac{0.5}{(s+0.5)(s+1)}\right|_{s = 0} = \frac{0.5}{0.5} = 
+                                                    1\nonumber\\
+B & = & \left.\frac{0.5}{s(s+1)}\right|_{s = -0.5} = \frac{0.5}{-0.25} = 
+                                                 -2\nonumber\\
+C & = & \left.\frac{0.5}{s(s+0.5)}\right|_{s = -1} = \frac{0.5}{0.5} = 
+                                                     1\nonumber
+\end{eqnarray}
 
-Aplicando então a transformada inversa de Laplace, tem-se que:
+Então, aplicando então a transformada inversa de Laplace, tem-se que:
 
-\begin{eqnarray}\label
+\begin{eqnarray}
 \ilaplace\colchete{\frac{G(s)}{s}}
 & = & \ilaplace\colchete{\frac{1}{s} - 
-                         2\frac{1}{s+0,5} + 
+                         2\frac{1}{s+0.5} + 
                          \frac{1}{s+1}}\nonumber\\
 & = & \ilaplace\colchete{\frac{1}{s}} - 
-      2\ilaplace\colchete{\frac{1}{s+0,5}} + 
+      2\ilaplace\colchete{\frac{1}{s+0.5}} + 
       \ilaplace\colchete{\frac{1}{s+1}}\nonumber\\
-& = & 1 - 2e^{-0,5t} + e^{-t}\label{eq:ilaplace}
+& = & 1 - 2e^{-0.5t} + e^{-t}\label{eq:ilaplace}
 \end{eqnarray}
 
 Substituindo a Eq. \ref{eq:ilaplace} na Eq. \ref{eq:Gzoh} quando $t = nT$,
 tem-se:
 
 \begin{eqnarray}
-G(z) = (1 - z^{-1})
-       \zadeh\chave{\ilaplace\left.\colchete{\frac{G(s)}{s}}
-                             \right|_{t = nT}}\nonumber\\
+G(z) & = & (1 - z^{-1})
+           \zadeh\chave{\ilaplace\left.\colchete{\frac{G(s)}{s}}
+                                  \right|_{t = nT}}\nonumber\\
 & = & \parent{\frac{z-1}{z}}
-      \zadeh\colchete{1 - 2e^{-0,5nT} + e^{-nT}}\nonumber\\
+      \zadeh\colchete{1 - 2e^{-0.5nT} + e^{-nT}}\nonumber\\
 & = & \frac{z-1}{z}\chave{\zadeh\colchete{1} - 
-                          2\zadeh\colchete{e^{-0,5nT}} + 
+                          2\zadeh\colchete{e^{-0.5nT}} + 
                           \zadeh\colchete{e^{-nT}}}\nonumber\\
 & = & \frac{z-1}{z}\parent{\frac{z}{z-1} - 
-                           2\frac{z}{z-e^{-0,5nT}} + 
+                           2\frac{z}{z-e^{-0.5nT}} + 
                            \frac{z}{z - e^{-nT}} }\nonumber\\
 & = & \frac{z-1}{z-1} - 
-      2\frac{z-1}{z-e^{-0,5nT}} + 
+      2\frac{z-1}{z-e^{-0.5nT}} + 
       \frac{z-1}{z - e^{-nT}}\nonumber\\
 \end{eqnarray}
 
 Desconsideranto o termo $n$, referente a $n$-ésima amostra em $nT$ e
-substituindo $T = 0,2$, tem-se:
+substituindo $T = 0.2$, tem-se:
 
 \begin{eqnarray}
 G(z) & = & \frac{z-1}{z-1} - 
-           2\frac{z-1}{z-e^{-0,5 \cdotp 0,2}} + 
-           \frac{z-1}{z-e^{-0,2}}\nonumber\\
+           2\frac{z-1}{z-e^{-0.5 \cdotp 0.2}} + 
+           \frac{z-1}{z-e^{-0.2}}\nonumber\\
 & = & 1 - 
-      2\frac{z-1}{z-\underbrace{0,9048}_{\alpha}} + 
-      \frac{z-1}{z-\underbrace{0,8187}_{\beta}}\nonumber\\
+      2\frac{z-1}{z-\underbrace{0.9048}_{\alpha}} + 
+      \frac{z-1}{z-\underbrace{0.8187}_{\beta}}\nonumber\\
 & = & \frac{1(z-\alpha)(z-\beta)-2(z-1)(z-\beta)+(z-1)(z-\alpha)}
            {(z-\alpha)(z-\beta)}\nonumber\\
 & = & \frac{(-2\alpha + \beta + 1)z + (\alpha\beta - 2\beta + \alpha)}
            {z^2 - (\alpha+\beta)z + \alpha\beta}\nonumber\\
-& = & \frac{0,0091z + 0,0082}{z^2 - 1,7235z + 0,7408}
+& = & \frac{0.0091z + 0.0082}{z^2 - 1.7235z + 0.7408}
 \end{eqnarray}
 
 Sabendo que a função de transferência de um sistema é definida como sendo a {\it
@@ -122,29 +123,105 @@ Transformada de Laplace} da resposta ao impulso com condições iniciais nulas, 
 que seu equivalente em $\zadeh$ possui as mesmas características, então:
 
 \begin{eqnarray}
-G(z) = \frac{Y(z)}{U(z)} & = & \frac{0,0091z + 0,0082}
-                                    {z^2 - 1,7235z + 0,7408}\nonumber\\
-Y(z)(z^2 - 1,7235z + 0,7408) & = & U(z)(0,0091z + 0,0082)\nonumber\\
-z^2Y(z) - 1,7235zY(z) + 0,7408Y(z) & = & 0,0091zU(z) +
-                                        0,0082U(z)\label{eq:sist_z}
+G(z) = \frac{Y(z)}{U(z)} & = & \frac{0.0091z + 0.0082}
+                                    {z^2 - 1.7235z + 0.7408}\nonumber\\
+Y(z)(z^2 - 1.7235z + 0.7408) & = & U(z)(0.0091z + 0.0082)\nonumber\\
+z^2Y(z) - 1.7235zY(z) + 0.7408Y(z) & = & 0.0091zU(z) +
+                                        0.0082U(z)\label{eq:sist_z}
 \end{eqnarray}
 
 Aplicando a transformada $\zadeh$ inversa na Eq. \ref{eq:sist_z}, tem-se:
 
 \begin{eqnarray}
-z^2Y(z) - 1,7235zY(z) + 0,7408Y(z) & = & 0,0091zU(z) + 0,0082U(z)
+z^2Y(z) - 1.7235zY(z) + 0.7408Y(z) & = & 0.0091zU(z) + 0.0082U(z)
 \quad\stackrel{\izadeh}{\Longrightarrow}\quad\nonumber\\
 \stackrel{\izadeh}{\Longrightarrow}\quad
-y(k+2) - 1,7235y(k+1) + 0,7408k(k) & = & 
-0,0091u(k+1) + 0,0082u(k)\nonumber
-y(k) - 1,7235y(k-1) + 0,7408k(k-2) & = & 0,0091u(k-1) + 0,0082u(k-2)\nonumber
+y(k+2) - 1.7235y(k+1) + 0.7408k(k) & = & 
+0.0091u(k+1) + 0.0082u(k)\nonumber\\
+y(k) - 1.7235y(k-1) + 0.7408k(k-2) & = & 
+0.0091u(k-1) + 0.0082u(k-2)\label{eq:yk}
 \end{eqnarray}
 
 O resultado obtido na Eq. \ref{eq:sist_z} pode ser confirmado fazendo uso da
 função {\tt c2d} do MATLAB\textsuperscript{\textregistered}, conforme {\it
 script} desenvolvido, mostrado no Apêndice \ref{ap:q1_a}.
 
-\section*{Letra b}
-\section*{Letra c}
-\section*{Letra d}
-\section*{Letra e}
+\section*{Item B}
+Para \citeasnoun{santos:2007}, a modelagem de um processo dinâmico consiste em
+obter um modelo matemático capaz de representar adequadamente suas
+características de interesse. Tal recurso se torna muitas vezes fundamental
+quando o processo real apresenta restrições de ordem operacional,
+econômico-financeira ou de segurança.
+
+O modelo de um sistema pode ser obtido, basicamente, de duas formas: a partir
+das equações que descrevem sua dinâmica ({\it modelagem fenomenológica}) ou a
+partir da medição de dados de entrada e saída. Dentre os modelos que levam em
+consideração essa relação entrada/saída do sistema, existem os modelos {\bf
+paramétricos} e os modelos {\bf não paramétricos}.
+
+Os modelos paramétricos correspondem àqueles que apresentam parâmetros
+característicos. Tais parâmetros são os coeficientes de uma equação a diferenças
+ou de uma função de transferência discreta do sistema. Já os modelos não
+paramétricos representam a dinâmica do processo através dos coeficientes da
+resposta ao impulso ({\it modelos} FIR -- {\it Finite Impulse Response}) ou da
+resposta ao degrau ({\it modelos} ISR -- {\it Infinite Step Response} {\it e}
+FSR -- {\it Finite Step Response}). \cite{santos:2007}
+
+O modelo matemático baseado na resposta ao degrau representa o processo com um
+número infinito de termos que correspondem aos coeficientes da resposta ao
+degrau do sistema (ISR). Para sistemas estáveis, esses coeficientes tendem,
+assintoticamente, para um valor constante $h_s$, conforme Fig. \ref{fig:isr}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.35\textwidth]{imgs/questao1/isr}
+    \caption{Exemplo de saída do sistema para o modelo ISR.}
+    \label{fig:isr}
+\end{figure}
+
+O modelo FSR corresponde ao modelo de resposta ao degrau limitando o número de
+coeficientes a um valor $N$. Tal modelo, também conhecido como modelo de
+resposta ao degrau truncada, tem fundamentação convolutiva para relacionar a
+entrada com a saída do sistema. Vale observar que nesse modelo o ruído não é
+levado em consideração. A saída do processo no modelo FSR é dada pela Eq.
+\ref{eq:saida_fsr}
+
+\begin{equation}\label{eq:saida_fsr}
+y(k) = \sum_{i=1}^N h_i\Delta u(k-i)
+\end{equation}
+
+Para o valor de $N = 10$ dado no enunciado da questão, tem-se
+
+\begin{eqnarray}
+y(10) & = & h_1\Delta u(9) + h_2\Delta u(8) + h_3\Delta u(7) + h_4\Delta u(6) +
+            h_5\Delta u(5) + \nonumber\\ 
+      & + & h_6\Delta u(4) + h_7\Delta u(3) + h_8\Delta u(2) + h_9\Delta u(1) + 
+            h_{10}\Delta u(0)\nonumber
+\end{eqnarray}
+
+Considerando $\hat{y}(k)$ como a saída dada pela Eq. \ref{eq:yk}, então:
+
+\begin{eqnarray}
+y(10) & = & \hat{y}(1)[u(9)-u(8)] + 
+            \hat{y}(2)[u(8)-u(7)] + 
+            \hat{y}(3)[u(7)-u(6)] + \nonumber\\
+      & + & \hat{y}(4)[u(6)-u(5)] +
+            \hat{y}(5)[u(5)-u(4)] +
+            \hat{y}(6)[u(4)-u(3)] + \nonumber\\
+      & + & \hat{y}(7)[u(3)-u(2)] +
+            \hat{y}(8)[u(2)-u(1)] +
+            \hat{y}(9)[u(1)-u(0)] + \nonumber\\
+      & + & \hat{y}(10)[u(0)-\cancel{u(-1)}] \nonumber
+\end{eqnarray}
+
+Para uma entrada degrau, $u(k) - u(k-1) = 0$, portanto:
+
+\begin{equation}
+y(10) = \hat{y}(10)u(0) = 
+        [1.7235y(9) - 0.7408k(8) + 0.0091u(9) + 0.0082u(8)]u(0)
+\end{equation}
+
+
+\section*{Item C}
+\section*{Item D}
+\section*{Item E}

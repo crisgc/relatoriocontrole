@@ -1,7 +1,7 @@
 \chapter*{Questão 2}
 
 {\it Implemente o método dos mínimos quadrados offline e teste o programa com o
-processo da questão 1, simulando variações lentas em seus parâmetros ($\pm
+processo da questão 1. simulando variações lentas em seus parâmetros ($\pm
 10\%$) e avaliando o comportamento das estimativas.}
 
 {\it Apresente gráficos mostrando as estimativas, os valores reais dos
@@ -14,31 +14,30 @@ utilizado.}
 
 \vspace{0.25cm}
 
-O sistema da questão 1, consiste na função de transferência dada pela Eq.
+O sistema da questão 1. consiste na função de transferência dada pela Eq.
 \ref{eq:sist}:
 
 \begin{equation}\label{eq:sist}
-G(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s + 0,5)(s + 1)}
+G(s) = \frac{Y(s)}{U(s)} = \frac{0.5}{(s + 0.5)(s + 1)}
 \end{equation}
 
-A discretização obtida na questão 1 é novamente exibida na Eq.
+A discretização obtida nessa mesma questão é repetida pela Eq.
 \ref{eq:sist_disc},
 
 \begin{equation}\label{eq:sist_disc}
-y(k) - 1,7235y(k-1) + 0,7408k(k-2) = 0,0091u(k-1) + 0,0082u(k-2)
+y(k) - 1.7235y(k-1) + 0.7408k(k-2) = 0.0091u(k-1) + 0.0082u(k-2)
 \end{equation}
 
-Generalizando o modelo obtido na Eq. \ref{eq:eq_a_dif_sist}, tem-se que:
+Generalizando o modelo obtido na Eq. \ref{eq:sist_disc} e isolando o termo
+$y(k)$, tem-se que:
 
-\begin{equation*}
-y(k) + a_1 y(k-1) + a_2 y(k-2) & = & b_1 u(k-1) + b_2 u(k-2)
-\end{equation*}
-
-Isolando $y(k)$, tem-se:
-
-\begin{equation}\label{eq:eq_a_dif_geral}
-y(k) = - a_1 y(k-1) - a_2 y(k-2) + b_1 u(k-1) + b_2u(k-2)
-\end{equation}
+\begin{eqnarray}
+y(k) + a_1 y(k-1) + a_2 y(k-2) = b_1 u(k-1) + b_2 u(k-2)\nonumber\\
+y(k) = - a_1 y(k-1) - 
+         a_2 y(k-2) + 
+         b_1 u(k-1) + 
+         b_2u(k-2)\label{eq:eq_a_dif_geral}
+\end{eqnarray}
 
 O estimador de mínimos quadrados não-recursivo considera um sistema representado
 por uma equação a diferenças semelhante a Eq. \ref{eq:eq_a_dif_geral}. Segundo
@@ -240,13 +239,13 @@ MATLAB\textsuperscript{\textregistered} mostrado no Apêndice \ref{ap:q1_a}.}
         $\mb{\theta}_{\text{com variação}}$\\
         \hline
         \hline
-        $a_1$ & $-1,724$   & $-1,7240$ & $-1,8617$ \\
+        $a_1$ & $-1.724$   & $-1.7240$ & $-1.8617$ \\
         \hline
-        $a_2$ & $0,7408$   & $0,7408$  & $0,8807$ \\
+        $a_2$ & $0.7408$   & $0.7408$  & $0.8807$ \\
         \hline
-        $b_1$ & $0,009056$ & $0,0096$  & $0,0103$ \\
+        $b_1$ & $0.009056$ & $0.0096$  & $0.0103$ \\
         \hline
-        $b_2$ & $0,008194$ & $0,0082$  & $0,0032$ \\
+        $b_2$ & $0.008194$ & $0.0082$  & $0.0032$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -279,13 +278,13 @@ variações.
         $\mb{\theta}_{\text{com variação}}$\\
         \hline
         \hline
-        $a_1$ & $-1,724$   & $-1,7240$ & $-2,1177$ \\
+        $a_1$ & $-1.724$   & $-1.7240$ & $-2,1177$ \\
         \hline
-        $a_2$ & $0,7408$   & $0,7408$  & $1,1105$ \\
+        $a_2$ & $0.7408$   & $0.7408$  & $1.1105$ \\
         \hline
-        $b_1$ & $0,009056$ & $0,0096$  & $0,0400$ \\
+        $b_1$ & $0.009056$ & $0.0096$  & $0.0400$ \\
         \hline
-        $b_2$ & $0,008194$ & $0,0082$  & $-0,0463$ \\
+        $b_2$ & $0.008194$ & $0.0082$  & $-0.0463$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -318,13 +317,13 @@ parâmetros.
         $\mb{\theta}_{\text{com variação}}$\\
         \hline
         \hline
-        $a_1$ & $-1,724$   & $-1,7240$ & $-1,9613$ \\
+        $a_1$ & $-1.724$   & $-1.7240$ & $-1.9613$ \\
         \hline
-        $a_2$ & $0,7408$   & $0,7408$  & $0,9641$ \\
+        $a_2$ & $0.7408$   & $0.7408$  & $0.9641$ \\
         \hline
-        $b_1$ & $0,009056$ & $0,0096$  & $0,0100$ \\
+        $b_1$ & $0.009056$ & $0.0096$  & $0.0100$ \\
         \hline
-        $b_2$ & $0,008194$ & $0,0082$  & $-0,0073$ \\
+        $b_2$ & $0.008194$ & $0.0082$  & $-0.0073$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -352,13 +351,13 @@ Fig. \ref{fig:saida_sist_1000_2} e na Tab. \ref{tab:estimativa_1000_2}
         $\mb{\theta}_{\text{com variação}}$\\
         \hline
         \hline
-        $a_1$ & $-1,724$   & $-1,7240$ & $-1,9661$ \\
+        $a_1$ & $-1.724$   & $-1.7240$ & $-1.9661$ \\
         \hline
-        $a_2$ & $0,7408$   & $0,7408$  & $0,9680$ \\
+        $a_2$ & $0.7408$   & $0.7408$  & $0.9680$ \\
         \hline
-        $b_1$ & $0,009056$ & $0,0096$  & $0,0093$ \\
+        $b_1$ & $0.009056$ & $0.0096$  & $0.0093$ \\
         \hline
-        $b_2$ & $0,008194$ & $0,0082$  & $-0,0076$ \\
+        $b_2$ & $0.008194$ & $0.0082$  & $-0.0076$ \\
         \hline
     \end{tabular}
 \end{table}
