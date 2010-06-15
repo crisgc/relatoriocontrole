@@ -86,7 +86,7 @@ Aplicando a Eq. \ref{eq:lei_cont} na Eq. \ref{eq:modelo}, tem-se:
 \ddot{y} & = & -(a + c\theta_2)\dot{y} - (b + c\theta_3)y + c\theta_1r\nonumber
 \end{eqnarray}
 
-Considerando um operador $p = \frac{d}{dt}$, tem-se que:
+Considerando o operador diferencial $p = \frac{d}{dt}$, tem-se que:
 
 \begin{eqnarray}
 p^2y & = & - (a + c\theta_2)py - 
@@ -108,13 +108,13 @@ A partir das Eqs. \ref{eq:y} e \ref{eq:theta_1}, obtém-se as Eqs.
 parâmetros $\theta_1$, $\theta_2$ e $\theta_3$:
 
 \begin{eqnarray}
-\frac{\partial \epsilon}{\partial \theta_1} & = &
+\frac{\partial \epsilon}{\partial \theta_1} = \frac{\partial y}{\partial \theta_1} & = &
     \frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ r 
     \label{eq:dtheta_1}\\
-\frac{\partial \epsilon}{\partial \theta_2} & = &
+\frac{\partial \epsilon}{\partial \theta_2} = \frac{\partial y}{\partial \theta_2}  & = &
     -\frac{cp}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
     \label{eq:dtheta_2}\\
-\frac{\partial \epsilon}{\partial \theta_3} & = &
+\frac{\partial \epsilon}{\partial \theta_3} = \frac{\partial y}{\partial \theta_3}  & = &
     -\frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
     \label{eq:dtheta_3}
 \end{eqnarray}
@@ -180,42 +180,42 @@ vistos nas Figs. \ref{fig:q3_sistema} a \ref{fig:q3_sinal_cont}.
     \label{fig:q3_sinal_cont}
 \end{figure}
 
-A simulação foi realizada para valores de $\gamma = 0,1\text{, } 0,2\text{, }
-0,5\text{, } 0,7 \text{ e } 1.0$. Os resultados obtidos podem ser vistos nas
+A simulação foi realizada para valores de $\gamma = 0.1\text{, } 0.2\text{, }
+0.5\text{, } 0.7 \text{ e } 1.0$. Os resultados obtidos podem ser vistos nas
 Figs. \ref{fig:q3_saida_gamma_0.1} a \ref{fig:q3_saida_gamma_1.0}
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.1.eps}
-    \caption{Saída do sistema para $\gamma = 0,1$.}
+    \caption{Saída do sistema para $\gamma = 0.1$.}
     \label{fig:q3_saida_gamma_0.1}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.2.eps}
-    \caption{Saída do sistema para $\gamma = 0,2$.}
+    \caption{Saída do sistema para $\gamma = 0.2$.}
     \label{fig:q3_saida_gamma_0.2}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.5.eps}
-    \caption{Saída do sistema para $\gamma = 0,5$.}
+    \caption{Saída do sistema para $\gamma = 0.5$.}
     \label{fig:q3_saida_gamma_0.5}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_0.7.eps}
-    \caption{Saída do sistema para $\gamma = 0,7$.}
+    \caption{Saída do sistema para $\gamma = 0.7$.}
     \label{fig:q3_saida_gamma_0.7}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{imgs/questao3/saida_gamma_1.0.eps}
-    \caption{Saída do sistema para $\gamma = 1,0$.}
+    \caption{Saída do sistema para $\gamma = 1.0$.}
     \label{fig:q3_saida_gamma_1.0}
 \end{figure}
 
@@ -224,9 +224,9 @@ percebe-se que para valores mais altos o sistema possui um sinal de controle
 mais agressivo, fazendo com que apareçam oscilações subamortecidas em sua
 saída, principalmente com as mudanças de {\it set point}. Por outro lado,
 valores pequenos fazem com que a resposta do sistema evolua de maneira suave,
-como pode ser comprovado pelos gráficos de $\gamma = 0,1$ e $\gamma = 0,2$.
+como pode ser comprovado pelos gráficos de $\gamma = 0.1$ e $\gamma = 0.2$.
 Entretanto, percebe-se ainda que o erro de seguimento de trajetória é menor para
-$\gamma = 0,5$, $\gamma = 0,7$ e $\gamma = 1,0$.
+$\gamma = 0.5$, $\gamma = 0.7$ e $\gamma = 1.0$.
 
 O {\it script} do Matlab\textsuperscript{\textregistered} desenvolvido para a
 resolução dessa questão pode ser encontrado no Apêndice \ref{ap:cod_q3}.
