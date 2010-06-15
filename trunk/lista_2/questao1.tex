@@ -27,4 +27,124 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s+0,5)(s+1)}
 
 \vspace{0.25cm}
 
-\cite{dorf:2009}
+\section*{Letra a}
+Uma maneira simples de realizar a discretização de funções de transferência é
+utilizar o método da invariância ao degrau, no qual a idéia é a de se utilizar
+um Segurador de Ordem Zero ({\it Zero Order Holder} -- ZOH) para aproximar a
+função de transferência $G(s)$ de $G(z)$. Matematicamente, a discretização de
+uma função de transferência analógica $G(s)$ por tal método é dada por:
+
+\begin{equation}\label{eq:Gzoh}
+G_{\text{ZOH}}(z) = 
+G(z) = (1 - z^{-1})
+       \zadeh\chave{\ilaplace\left.\colchete{\frac{G(s)}{s}}\right|_{t = nT}}
+\end{equation}
+
+\noindent em que $\zadeh$ corresponde à {\it Transformada Z}, $\ilaplace$ à {\it
+Transformada Inversa de Laplace} em $t = nT$, sendo $T$ o período de amostragem
+e $z = e^{-sT}$.
+
+Então, para a função de transferência $G(s)$ dada no enunciado:
+
+\begin{equation}\label{eq:Gs_s}
+\frac{G(s)}{s} = \frac{0,5}{s(s+0,5)(s+1)}
+\end{equation}
+
+Expandindo a Eq. \ref{eq:Gs_s} em frações parciais, tem-se que:
+
+\begin{eqnarray}\label{eq:frac_parc}
+\frac{G(s)}{s} & = & \colchete{\frac{0,5}{s(s+0,5)(s+1)}}\nonumber\\
+& = & \frac{A}{s} + \frac{B}{s+0,5} + \frac{C}{s+1}\nonumber\\
+\end{eqnarray}
+
+Mas,
+
+\begin{equation*}
+A = \left.\frac{0,5}{(s+0,5)(s+1)}\right|_{s = 0} = \frac{0,5}{0,5} = 1
+\qquad
+B = \left.\frac{0,5}{s(s+1)}\right|_{s = -0,5} = \frac{0,5}{-0,25} = -2
+\qquad
+C = \left.\frac{0,5}{s(s+0,5)}\right|_{s = -1} = \frac{0,5}{0,5} = 1
+\end{equation*}
+
+Aplicando então a transformada inversa de Laplace, tem-se que:
+
+\begin{eqnarray}\label
+\ilaplace\colchete{\frac{G(s)}{s}}
+& = & \ilaplace\colchete{\frac{1}{s} - 
+                         2\frac{1}{s+0,5} + 
+                         \frac{1}{s+1}}\nonumber\\
+& = & \ilaplace\colchete{\frac{1}{s}} - 
+      2\ilaplace\colchete{\frac{1}{s+0,5}} + 
+      \ilaplace\colchete{\frac{1}{s+1}}\nonumber\\
+& = & 1 - 2e^{-0,5t} + e^{-t}\label{eq:ilaplace}
+\end{eqnarray}
+
+Substituindo a Eq. \ref{eq:ilaplace} na Eq. \ref{eq:Gzoh} quando $t = nT$,
+tem-se:
+
+\begin{eqnarray}
+G(z) = (1 - z^{-1})
+       \zadeh\chave{\ilaplace\left.\colchete{\frac{G(s)}{s}}
+                             \right|_{t = nT}}\nonumber\\
+& = & \parent{\frac{z-1}{z}}
+      \zadeh\colchete{1 - 2e^{-0,5nT} + e^{-nT}}\nonumber\\
+& = & \frac{z-1}{z}\chave{\zadeh\colchete{1} - 
+                          2\zadeh\colchete{e^{-0,5nT}} + 
+                          \zadeh\colchete{e^{-nT}}}\nonumber\\
+& = & \frac{z-1}{z}\parent{\frac{z}{z-1} - 
+                           2\frac{z}{z-e^{-0,5nT}} + 
+                           \frac{z}{z - e^{-nT}} }\nonumber\\
+& = & \frac{z-1}{z-1} - 
+      2\frac{z-1}{z-e^{-0,5nT}} + 
+      \frac{z-1}{z - e^{-nT}}\nonumber\\
+\end{eqnarray}
+
+Desconsideranto o termo $n$, referente a $n$-ésima amostra em $nT$ e
+substituindo $T = 0,2$, tem-se:
+
+\begin{eqnarray}
+G(z) & = & \frac{z-1}{z-1} - 
+           2\frac{z-1}{z-e^{-0,5 \cdotp 0,2}} + 
+           \frac{z-1}{z-e^{-0,2}}\nonumber\\
+& = & 1 - 
+      2\frac{z-1}{z-\underbrace{0,9048}_{\alpha}} + 
+      \frac{z-1}{z-\underbrace{0,8187}_{\beta}}\nonumber\\
+& = & \frac{1(z-\alpha)(z-\beta)-2(z-1)(z-\beta)+(z-1)(z-\alpha)}
+           {(z-\alpha)(z-\beta)}\nonumber\\
+& = & \frac{(-2\alpha + \beta + 1)z + (\alpha\beta - 2\beta + \alpha)}
+           {z^2 - (\alpha+\beta)z + \alpha\beta}\nonumber\\
+& = & \frac{0,0091z + 0,0082}{z^2 - 1,7235z + 0,7408}
+\end{eqnarray}
+
+Sabendo que a função de transferência de um sistema é definida como sendo a {\it
+Transformada de Laplace} da resposta ao impulso com condições iniciais nulas, e
+que seu equivalente em $\zadeh$ possui as mesmas características, então:
+
+\begin{eqnarray}
+G(z) = \frac{Y(z)}{U(z)} & = & \frac{0,0091z + 0,0082}
+                                    {z^2 - 1,7235z + 0,7408}\nonumber\\
+Y(z)(z^2 - 1,7235z + 0,7408) & = & U(z)(0,0091z + 0,0082)\nonumber\\
+z^2Y(z) - 1,7235zY(z) + 0,7408Y(z) & = & 0,0091zU(z) +
+                                        0,0082U(z)\label{eq:sist_z}
+\end{eqnarray}
+
+Aplicando a transformada $\zadeh$ inversa na Eq. \ref{eq:sist_z}, tem-se:
+
+\begin{eqnarray}
+z^2Y(z) - 1,7235zY(z) + 0,7408Y(z) & = & 0,0091zU(z) + 0,0082U(z)
+\quad\stackrel{\izadeh}{\Longrightarrow}\quad\nonumber\\
+\stackrel{\izadeh}{\Longrightarrow}\quad
+y(k+2) - 1,7235y(k+1) + 0,7408k(k) & = & 
+0,0091u(k+1) + 0,0082u(k)\nonumber
+y(k) - 1,7235y(k-1) + 0,7408k(k-2) & = & 0,0091u(k-1) + 0,0082u(k-2)\nonumber
+\end{eqnarray}
+
+O resultado obtido na Eq. \ref{eq:sist_z} pode ser confirmado fazendo uso da
+função {\tt c2d} do MATLAB\textsuperscript{\textregistered}, conforme {\it
+script} desenvolvido, mostrado no Apêndice \ref{ap:q1_a}.
+
+\section*{Letra b}
+\section*{Letra c}
+\section*{Letra d}
+\section*{Letra e}
