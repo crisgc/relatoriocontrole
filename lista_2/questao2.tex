@@ -18,43 +18,21 @@ O sistema da questão 1, consiste na função de transferência dada pela Eq.
 \ref{eq:sist}:
 
 \begin{equation}\label{eq:sist}
-H(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s + 0,5)(s + 1)}
+G(s) = \frac{Y(s)}{U(s)} = \frac{0,5}{(s + 0,5)(s + 1)}
 \end{equation}
 
 A discretização obtida na questão 1 é novamente exibida na Eq.
 \ref{eq:sist_disc},
 
 \begin{equation}\label{eq:sist_disc}
-H(z) = \frac{Y(z)}{U(z)} = \frac{0,009056 z + 0,008194}{z^2 - 1,724 z + 0,7408}
+y(k) - 1,7235y(k-1) + 0,7408k(k-2) = 0,0091u(k-1) + 0,0082u(k-2)
 \end{equation}
-
-Sabendo que a função de transferência de um sistema é definida como sendo a {\it
-Transformada de Laplace} da resposta ao impulso com condições iniciais nulas, e
-que seu equivalente em $\mathcal{Z}$ possui as mesmas características, então:
-
-\begin{eqnarray}
-\frac{Y(z)}{U(z)} & = & \frac{0,009056 z + 0,008194}
-                             {z^2 - 1,724 z + 0,7408}\nonumber\\
-Y(z)(z^2 - 1,724 z + 0,7408) & = & U(z)(0,009056 z + 0,008194)\nonumber\\
-z^2Y(z) - 1,724zY(z) + 0,7408Y(z) & = & 0,009056zU(z) +
-                                        0,008194U(z)\label{eq:sist_z}
-\end{eqnarray}
-
-Aplicando a transformada $\mathcal{Z}$ inversa na Eq. \ref{eq:sist_z}, tem-se:
-
-\begin{eqnarray}
-z^2Y(z) - 1,724zY(z) + 0,7408Y(z) & = & 0,009056zU(z) + 0,008194U(z)
-\quad\stackrel{\mathcal{Z}^{-1}}{\Longrightarrow}\quad\nonumber\\
-\stackrel{\mathcal{Z}^{-1}}{\Longrightarrow}\quad
-y(k+2) - 1,724y(k+1) + 0,7408k(k) & = & 0,009056u(k+1) + 0,008194u(k)\label{eq:eq_a_dif_sist}
-\end{eqnarray}
 
 Generalizando o modelo obtido na Eq. \ref{eq:eq_a_dif_sist}, tem-se que:
 
-\begin{eqnarray}
-y(k+2) + a_1 y(k+1) + a_2 y(k) & = & b_1 u(k+1) + b_2 u(k)\nonumber\\
-y(k) + a_1 y(k-1) + a_2 y(k-2) & = & b_1 u(k-1) + b_2u(k-2)\nonumber
-\end{eqnarray}
+\begin{equation*}
+y(k) + a_1 y(k-1) + a_2 y(k-2) & = & b_1 u(k-1) + b_2 u(k-2)
+\end{equation*}
 
 Isolando $y(k)$, tem-se:
 
@@ -238,7 +216,9 @@ sorteado foi de 2 variações. Portanto, cada variação era mantida por 33
 amostras. A saída do sistema com os parâmetros reais, bem como com os parâmetros
 variáveis e o sinal de controle pode ser observada na Fig.
 \ref{fig:saida_sist_100}. A estimativa realizada é vista na Tab.
-\ref{tab:estimativa_100}.
+\ref{tab:estimativa_100}.\footnote{Por questões de precisão, os valores
+utilizados em todos os testes foram aqueles obtidos através do {\it script} do
+MATLAB\textsuperscript{\textregistered} mostrado no Apêndice \ref{ap:q1_a}.}
 
 \begin{figure}[htb]
 \centering
