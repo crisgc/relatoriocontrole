@@ -1,7 +1,15 @@
+% Universidade Federal do Rio Grande do Norte
+% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
+% Lista 1 - Questao 1
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
+
 \chapter*{Questão 2}
 
 {\it Implemente o método dos mínimos quadrados offline e teste o programa com o
-processo da questão 1. simulando variações lentas em seus parâmetros ($\pm
+processo da questão 1, simulando variações lentas em seus parâmetros ($\pm
 10\%$) e avaliando o comportamento das estimativas.}
 
 {\it Apresente gráficos mostrando as estimativas, os valores reais dos
@@ -14,7 +22,7 @@ utilizado.}
 
 \vspace{0.25cm}
 
-O sistema da questão 1. consiste na função de transferência dada pela Eq.
+O sistema da questão 1 consiste na função de transferência dada pela Eq.
 \ref{eq:sist}:
 
 \begin{equation}\label{eq:sist}
@@ -25,7 +33,7 @@ A discretização obtida nessa mesma questão é repetida pela Eq.
 \ref{eq:sist_disc},
 
 \begin{equation}\label{eq:sist_disc}
-y(k) - 1.7235y(k-1) + 0.7408k(k-2) = 0.0091u(k-1) + 0.0082u(k-2)
+y(k) - 1.7235y(k-1) + 0.7408y(k-2) = 0.0091u(k-1) + 0.0082u(k-2)
 \end{equation}
 
 Generalizando o modelo obtido na Eq. \ref{eq:sist_disc} e isolando o termo
