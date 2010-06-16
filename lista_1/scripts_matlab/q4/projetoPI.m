@@ -38,6 +38,6 @@ print -depsc ../../imgs/questao4/saida_mf.eps
 step(g_c_mf);
 print -depsc ../../imgs/questao4/saida_comp_mf.eps
 rlocus(g_ma);
-print -depsc ../../imgs/questao4/rlocus_ma.jpg.eps
+print -depsc ../../imgs/questao4/rlocus_ma.eps
 rlocus(g_c_ma);
-print -depsc ../../imgs/questao4/rlocus_cma.jpg.eps
+print -depsc ../../imgs/questao4/rlocus_cma.eps

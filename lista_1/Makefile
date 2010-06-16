@@ -9,7 +9,8 @@ FIGSQ4 = imgs/questao4/projetoPI.tex imgs/questao4/saida_mf.eps \
 				 imgs/questao4/sist_ruido.eps	imgs/questao4/saida_ruido.eps \
 				 imgs/questao4/sist_ruido_ff1.eps imgs/questao4/saida_ruido_ff1.eps \
 				 imgs/questao4/sist_ruido_ff2.eps imgs/questao4/saida_ruido_ff2.eps \
-				 imgs/questao4/sist_ff.tex
+				 imgs/questao4/sist_ff.tex imgs/questao4/rlocus_cma.eps
+
 SCRIPTS = scripts_matlab/q2_kharitonov_a.m scripts_matlab/q2_kharitonov_b.m \
 					scripts_matlab/q2_simulacoes.m
 SCRIPTSQ4 = scripts_matlab/q4/projetoPI.m scripts_matlab/q4/simulacoes.m
