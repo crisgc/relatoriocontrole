@@ -229,10 +229,50 @@ Para uma entrada degrau, $u(k) - u(k-1) = 0$, portanto:
 
 \begin{equation}
 y(10) = \hat{y}(10)u(0) = 
-        [1.7235y(9) - 0.7408k(8) + 0.0091u(9) + 0.0082u(8)]u(0)
+        [1.7235y(9) - 0.7408y(8) + 0.0091u(9) + 0.0082u(8)]u(0)
 \end{equation}
 
-
 \section*{Item C}
+Para efeitos comparativos foi utilizada uma entrada degrau, cujos resultados
+podem ser observados nas Figs. \ref{fig:item_c} para valores de $N = 10\text{,}\
+25\text{,}\ 50\ \text{e}\ 100$.
+
+\begin{figure}[htb]
+\centering
+\subfigure[$N = 10$]
+{
+    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_10}
+    \label{fig:item_c_10}
+}
+\quad
+\subfigure[$N = 25$]
+{
+    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_25}
+    \label{fig:item_c_25}
+}
+\quad
+\subfigure[$N = 50$]
+{
+    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_50}
+    \label{fig:item_c_50}
+}
+\quad
+\subfigure[$N = 100$]
+{
+    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_100}
+    \label{fig:item_c_100}
+}
+\caption{Comparação realizada para valores de $N = 10\text{,}\ 25\text{,}\ 50\
+         \text{e}\ 100$.}
+\label{fig:item_c}
+\end{figure}
+
+Observando-se as curvas de erro absoluto, percebe-se que para valores mais
+elevados de $N$, ou seja, para um número maior de coeficientes o sistema
+tende a convergir mais rapidamente.
+
+O {\it script} do \Matlab desenvolvidos para a resolução dessa questão pode
+ser encontrado no Apêndice \ref{ap:q1_c}.
+
 \section*{Item D}
 \section*{Item E}
