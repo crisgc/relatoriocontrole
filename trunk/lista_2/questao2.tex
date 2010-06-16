@@ -1,10 +1,18 @@
 % Universidade Federal do Rio Grande do Norte
-% Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
-% Lista 1 - Questao 1
+% Programa de Pós-Graduação em Engenharia Elétrica e de Computação
+% Lista 1 - Questão 1
 % Autores: Anna Giselle Camara Dantas Ribeiro
 %          Cristiano Gurgel de Castro
 %          Diogo Leite Reboucas
 %          Thiago Medeiros Barros
+
+% Revisão de 16/06/2010 por crisgc
+% - A dimensão do matriz X não bate para multiplicação com vetor theta,
+%   corrigir!
+% - A derivada de J não dá um escalar
+% - Na legenda das figuras os "parâmetros reais" correspondem ao sistema e
+%   "parâmetros variáveis" correspondem ao sistema estimado?
+% - A variação dos valores é relacionada ao valor original 
 
 \chapter*{Questão 2}
 
@@ -150,6 +158,7 @@ J = (\mb{Y} - \mb{X\theta})^T(\mb{Y} - \mb{X\theta})
 
 Considerando que:
 
+% TODO: colocar de onde tirou essa equação
 \begin{equation*}
 \frac{\partial (\mb{Ax} + \mb{b})^T\mb{C}(\mb{Dx} + \mb{e})}{\partial \mb{x}} =
 (\mb{Dx} + \mb{e})^T\mb{C}^T\mb{A} + (\mb{Ax} + \mb{b})^T\mb{CD}
@@ -218,6 +227,8 @@ variações correspondia a 50\% do número de amostras. O valor da entrada $u(k)
 variava entre $\pm 50\%\ u(k-1)$ nos instantes de variação e era repetido para as
 demais amostras.
 
+% TODO: Explicar o número de variações do sinal de controle não devia ser de
+% 100x50% = 50 
 No primeiro teste, foram consideradas 100 amostras. O número de variações
 sorteado foi de 2 variações. Portanto, cada variação era mantida por 33
 amostras. A saída do sistema com os parâmetros reais, bem como com os parâmetros
