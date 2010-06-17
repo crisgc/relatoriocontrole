@@ -234,7 +234,7 @@ y(10) = \hat{y}(10)u(0) =
 
 \section*{Item C}
 Para efeitos comparativos foi utilizada uma entrada degrau, cujos resultados
-podem ser observados nas Figs. \ref{fig:item_c} para valores de $N = 10\text{,}\
+podem ser observados na Fig. \ref{fig:item_c} para valores de $N = 10\text{,}\
 25\text{,}\ 50\ \text{e}\ 100$.
 
 \begin{figure}[htb]
@@ -268,11 +268,219 @@ podem ser observados nas Figs. \ref{fig:item_c} para valores de $N = 10\text{,}\
 \end{figure}
 
 Observando-se as curvas de erro absoluto, percebe-se que para valores mais
-elevados de $N$, ou seja, para um número maior de coeficientes o sistema
+elevados de $N$, ou seja, para um número maior de coeficientes, o sistema
 tende a convergir mais rapidamente.
 
-O {\it script} do \Matlab desenvolvidos para a resolução dessa questão pode
+O {\it script} do \Matlab desenvolvido para a resolução dessa questão pode
 ser encontrado no Apêndice \ref{ap:q1_c}.
 
 \section*{Item D}
+O controlador DMC ({\it Dynamic Matrix Controller}) foi desenvolvido no final da
+década de 70 por dois engenheiros da {\it Shell Oil Corporation}. O algoritmo,
+desenvolvido em 1979 de maneira não adaptativa e sem restrições, foi modificado
+em 1980 de maneira que permitisse a manipulação de restrições.
+
+Anos depois foram propostas diversas modificações para esse algoritmo ao longo
+dos anos de maneira a melhorar suas características. Dentre elas, pode-se citar
+as implementações com tratamento de restrições e através de espaço de estados.
+O sucesso do algoritmo hoje se deve também aos produtos comerciais desenvolvidos
+que possuem funcionalidades como a identificação de modelos e a otimização
+global de plantas.
+
+Esse controlador utiliza o modelo de {\it resposta ao degrau truncada} (FSR),
+fazendo uso de diversos parâmetros com o intuito de garantir uma boa qualidade
+de predição. O erro de predição do controlador é considerado como sendo um
+distúrbio atuante na saída.
+
+Para o caso monovariável sem restrições, considera-se uma planta, estável em
+malha aberta, cuja resposta ao degrau pode ser descrita através de infinitos
+coeficientes:
+
+\begin{equation}\label{eq:fsr_inf}
+y(k) = \sum_{i=1}^\infty h_i\Delta u(k-i)
+\end{equation}
+
+Na prática, utiliza-se um modelo de resposta truncada, conforme Eq.
+\ref{eq:saida_fsr}, introduzindo-se a variável erro (usualmente inferior a 5\%):
+
+\begin{equation}\label{eq:fsr_erro}
+y(k) = \sum_{i=1}^N h_i\Delta u(k-i) + e(k)
+\end{equation}
+
+Baseado no modelo descrito pela Eq. \ref{eq:fsr_erro}, calcula-se um valor
+aproximado para $y(k)$ que será diferente da saída real devido ao erro de
+modelagem e a um possível ruído a ser inserido no processo de medição: 
+
+\begin{equation}\label{eq:y_til}
+\tilde{y}(k) \approx \sum_{i=1}^N h_i\Delta u(k-i)
+\end{equation}
+
+O erro inerente ao truncamento e ao ruído de medição pode ser calculado da
+seguinte forma:
+
+\begin{equation}\label{eq:erro}
+e(k) = y_m(k) - \tilde{y}(k) = y_m(k) - \sum_{i=1}^N h_i\Delta u(k-i)
+\end{equation}
+
+\noindent em que $y_m(k)$ corresponde ao valor que deveria ser medido na saída
+no instante $k$. Assim sendo, para o instante $k+j$, tem-se:
+
+\begin{eqnarray}
+\tilde{y}(k+j) = sum_{i=1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber\\
+\tilde{y}(k+j) = sum_{i=1}^j h_i\Delta u(k+j-i) +
+                 sum_{i=j+1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber
+\end{eqnarray}
+
+Uma vez que não é possível estimar o valor futuro do erro de predição a partir
+do modelo, intrinsecamente determinístico, o algoritmo supõe que os erros das
+$j$-ésimas predições à frente serão iguais ao erro calculado no instante atual:
+
+\begin{equation}\label{eq:y_pred}
+\tilde{y}(k+j) = sum_{i=1}^j h_i\Delta u(k+j-i) +
+                 sum_{i=j+1}^N h_i\Delta u(k+j-i) + e(k)
+\end{equation}
+
+Substituindo a Eq. \ref{eq:erro} na Eq. \ref{eq:y_pred}, tem-se:
+
+\begin{equation}\label{eq:dmc}
+\tilde{y}(k+j) = \underbrace{sum_{i=1}^j h_i\Delta u(k+j-i)}_
+                 {\text{parcela forçada}} +
+                 \underbrace{sum_{i=j+1}^N h_i\Delta u(k+j-i) +
+                             y_m(k) - \sum_{i=1}^N h_i\Delta u(k-i)}_
+                 {\text{parcela livre}}
+\end{equation}
+
+O primeiro termo, que corresponde a {\it parcela forçada} ($\tilde{y}_f$), pode
+ser obtido considerando-se condições iniciais nulas (em $k$) e a sequência das
+ações de controle futuras. Os dois outros termos, correspondentes a {\it parcela
+livre} ($\tilde{y}_l$), são obtidos a partir da resposta natural do sistema, com
+as condições atuais, consideranto a sequência de ações de controle futuras
+iguais a zero.
+
+Para a resposta livre, tem-se que:
+
+\begin{equation*}
+\tilde{y}_l(k+j) = \sum_{i=j+1}^N h_i\Delta u(k+j-i) + y_m(k) - 
+                   \sum_{i=1}^N h_i\Delta u(k-i)
+\end{equation*}
+
+Rearranjando os termos quando $N \rightarrow \infty$, tem-se:
+
+\begin{equation}\label{eq:resp_livre}
+\tilde{y}_l(k+j) = y_m(k) + \sum_{i=1}^\infty (h_{j+i}-h_i)\Delta u(k-i)
+\end{equation}
+
+Se o sistema for assintoticamente estável, após $N$ períodos de amostragem,
+tem-se:
+
+\begin{equation*}
+h_{j+i} - h_i \approx 0
+\end{equation*}
+
+Expandindo então a Eq. \ref{eq:dmc}, tem-se:
+
+\begin{eqnarray}
+\tilde{y}(k+1)  & = & h_1\Delta u(k) + h_2\Delta u(k-1) + \ldots + h_N\Delta
+                      u(k-N+1) + e(k)\nonumber\\
+\tilde{y}(k+2)  & = & h_1\Delta u(k+1) + h_2\Delta u(k) + \ldots + h_N\Delta
+                      u(k-N+2) + e(k)\nonumber\\
+\vdots\nonumber\\
+\tilde{y}(k+NY) & = & h_1\Delta u(k+NY-1) + h_2\Delta u(k+NY-2) + \ldots + 
+                      h_N\Delta u(k-N+NY) + e(k)\nonumber
+\end{eqnarray}
+
+Na qual a resposta livre corresponde as parcelas:
+
+\begin{eqnarray}
+\tilde{y}_l(k+1)  & = & h_2\Delta u(k-1) + h_3\Delta u(k-2) + \ldots +
+                        h_N\Delta u(k-N+1) + e(k)\nonumber\\
+\tilde{y}_l(k+1)  & = & h_3\Delta u(k-1) + h_4\Delta u(k-2) + \ldots +
+                        h_N\Delta u(k-N+2) + e(k)\nonumber\\
+\vdots\nonumber\\
+\tilde{y}_l(k+NY) & = & h_{NY+1}\Delta u(k-1) + h_{NY+2}\Delta u(k-2) + 
+                        \ldots + h_N\Delta u(k-N+NY) + e(k)\nonumber\\
+\end{eqnarray}
+
+Assim, matricialmente, tem-se:
+
+\begin{equation}\label{eq:resp_livre_mat}
+\mb{\tilde{Y}}_l = 
+\colchete
+{
+    \begin{array}{cccc}
+        h_N & h_{N-1} & \ldots & h_2\\
+        0 & h_N & \ldots & h_3\\
+        \vdots & \vdots & \ddots & \vdots\\
+        0 & 0 & \ldots & h_N
+    \end{array}
+}
+\colchete
+{
+    \begin{array}{c}
+        \Delta u(k-N+1)\\
+        \vdots\\
+        \Delta u(k-2)\\
+        \Delta u(k-1)
+    \end{array}
+}
++
+\colchete
+{
+    \begin{array}{c}
+        e(k)\\
+        e(k)\\
+        \vdots
+        e(k)
+    \end{array}
+}
+\end{equation}
+
+Para a resposta forçada, obsreva-se que, por definição, $\Delta u(k+i) = 0
+\forall NU < i < 0$, tal que $NU$ se refere ao horizonte de controle, ou seja,
+ao número de incrementos futuros a serem fornecidos à ação de controle atual.
+Assim, verifica-se que:
+
+\begin{eqnarray}
+\tilde{y}_f(k+1) = h_1\Delta u(k)\nonumber\\
+\tilde{y}_f(k+2) = h_1\Delta u(k+1) + h_2\Delta u(k)\nonumber\\
+\vdots\\
+\tilde{y}_f(k+NU) = h_1\Delta u(k+NU-1) + \ldots + 
+                    h_{NU-1}\Delta u(k)\nonumber\\
+\tilde{y}_f(k+NY) = h_{NY-NU}\Delta u(k+NU) + \ldots + 
+                    h_{NY}\Delta u(k)\nonumber
+\end{eqnarray}
+
+Matricialmente, tem-se:
+
+\begin{equation}\label{eq:resp_forc_mat}
+\mb{\tilde{Y}}_f = 
+\colchete
+{
+    \begin{array}{cccc}
+        h_1 & 0 & \ldots & 0\\
+        h_2 & h_1 & \ldots & 0\\
+        \vdots & \vdots & \ddots & \vdots\\
+        h_{NY} & h_{NY-1} & \ldots & h_1
+    \end{array}
+}
+\colchete
+{
+    \begin{array}{c}
+        \Delta u(k)\\
+        \Delta u(k+1)\\
+        \vdots
+        \Delta u(k+NU)\\
+    \end{array}
+}
+\Rightarrow \mb{\tilde{Y}}_f = \mb{H\Delta U}
+\end{equation}
+
+A matriz $\mb{H}$ é conhecida como matriz dinâmica, a qual dá origem ao nome do
+algoritmo. O valor pretido é então dado por:
+
+\begin{equation}\label{eq:y_pred_mat}
+\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{\tilde{Y}}_f
+\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{H\Delta U}
+\end{equation}
+
 \section*{Item E}
