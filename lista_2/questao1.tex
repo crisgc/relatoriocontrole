@@ -234,37 +234,35 @@ y(10) = \hat{y}(10)u(0) =
 
 \section*{Item C}
 Para efeitos comparativos foi utilizada uma entrada degrau, cujos resultados
-podem ser observados na Fig. \ref{fig:item_c} para valores de $N = 10\text{,}\
-25\text{,}\ 50\ \text{e}\ 100$.
+podem ser observados nas Figs. \ref{fig:item_c_10} a \ref{fig:item_c_100} para
+valores de $N = 10\text{,}\ 25\text{,}\ 50\ \text{e}\ 100$.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/item_c_N_10}
+    \caption{Comparação realizada com $N = 10$.}
+    \label{fig:item_c_10}
+\end{figure}
+    
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/item_c_N_25}
+    \caption{Comparação realizada com $N = 25$.}
+    \label{fig:item_c_25}
+\end{figure}
 
 \begin{figure}[htb]
 \centering
-\subfigure[$N = 10$]
-{
-    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_10}
-    \label{fig:item_c_10}
-}
-\quad
-\subfigure[$N = 25$]
-{
-    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_25}
-    \label{fig:item_c_25}
-}
-\quad
-\subfigure[$N = 50$]
-{
-    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_50}
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/item_c_N_50}
+    \caption{Comparação realizada com $N = 50$.}
     \label{fig:item_c_50}
-}
-\quad
-\subfigure[$N = 100$]
-{
-    \includegraphics[width=0.45\textwidth]{imgs/questao1/item_c_N_100}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/item_c_N_100}
+    \caption{Comparação realizada com $N = 100$.}
     \label{fig:item_c_100}
-}
-\caption{Comparação realizada para valores de $N = 10\text{,}\ 25\text{,}\ 50\
-         \text{e}\ 100$.}
-\label{fig:item_c}
 \end{figure}
 
 Observando-se as curvas de erro absoluto, percebe-se que para valores mais
@@ -326,9 +324,9 @@ e(k) = y_m(k) - \tilde{y}(k) = y_m(k) - \sum_{i=1}^N h_i\Delta u(k-i)
 no instante $k$. Assim sendo, para o instante $k+j$, tem-se:
 
 \begin{eqnarray}
-\tilde{y}(k+j) = sum_{i=1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber\\
-\tilde{y}(k+j) = sum_{i=1}^j h_i\Delta u(k+j-i) +
-                 sum_{i=j+1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber
+\tilde{y}(k+j) & = & \sum_{i=1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber\\
+\tilde{y}(k+j) & = & \sum_{i=1}^j h_i\Delta u(k+j-i) +
+                     \sum_{i=j+1}^N h_i\Delta u(k+j-i) + \tilde{e}(k+j)\nonumber
 \end{eqnarray}
 
 Uma vez que não é possível estimar o valor futuro do erro de predição a partir
@@ -336,16 +334,16 @@ do modelo, intrinsecamente determinístico, o algoritmo supõe que os erros das
 $j$-ésimas predições à frente serão iguais ao erro calculado no instante atual:
 
 \begin{equation}\label{eq:y_pred}
-\tilde{y}(k+j) = sum_{i=1}^j h_i\Delta u(k+j-i) +
-                 sum_{i=j+1}^N h_i\Delta u(k+j-i) + e(k)
+\tilde{y}(k+j) = \sum_{i=1}^j h_i\Delta u(k+j-i) +
+                 \sum_{i=j+1}^N h_i\Delta u(k+j-i) + e(k)
 \end{equation}
 
 Substituindo a Eq. \ref{eq:erro} na Eq. \ref{eq:y_pred}, tem-se:
 
 \begin{equation}\label{eq:dmc}
-\tilde{y}(k+j) = \underbrace{sum_{i=1}^j h_i\Delta u(k+j-i)}_
+\tilde{y}(k+j) = \underbrace{\sum_{i=1}^j h_i\Delta u(k+j-i)}_
                  {\text{parcela forçada}} +
-                 \underbrace{sum_{i=j+1}^N h_i\Delta u(k+j-i) +
+                 \underbrace{\sum_{i=j+1}^N h_i\Delta u(k+j-i) +
                              y_m(k) - \sum_{i=1}^N h_i\Delta u(k-i)}_
                  {\text{parcela livre}}
 \end{equation}
@@ -354,7 +352,7 @@ O primeiro termo, que corresponde a {\it parcela forçada} ($\tilde{y}_f$), pode
 ser obtido considerando-se condições iniciais nulas (em $k$) e a sequência das
 ações de controle futuras. Os dois outros termos, correspondentes a {\it parcela
 livre} ($\tilde{y}_l$), são obtidos a partir da resposta natural do sistema, com
-as condições atuais, consideranto a sequência de ações de controle futuras
+as condições atuais, considerando a sequência de ações de controle futuras
 iguais a zero.
 
 Para a resposta livre, tem-se que:
@@ -384,7 +382,7 @@ Expandindo então a Eq. \ref{eq:dmc}, tem-se:
                       u(k-N+1) + e(k)\nonumber\\
 \tilde{y}(k+2)  & = & h_1\Delta u(k+1) + h_2\Delta u(k) + \ldots + h_N\Delta
                       u(k-N+2) + e(k)\nonumber\\
-\vdots\nonumber\\
+& \vdots & \nonumber\\
 \tilde{y}(k+NY) & = & h_1\Delta u(k+NY-1) + h_2\Delta u(k+NY-2) + \ldots + 
                       h_N\Delta u(k-N+NY) + e(k)\nonumber
 \end{eqnarray}
@@ -396,9 +394,9 @@ Na qual a resposta livre corresponde as parcelas:
                         h_N\Delta u(k-N+1) + e(k)\nonumber\\
 \tilde{y}_l(k+1)  & = & h_3\Delta u(k-1) + h_4\Delta u(k-2) + \ldots +
                         h_N\Delta u(k-N+2) + e(k)\nonumber\\
-\vdots\nonumber\\
+& \vdots & \nonumber\\
 \tilde{y}_l(k+NY) & = & h_{NY+1}\Delta u(k-1) + h_{NY+2}\Delta u(k-2) + 
-                        \ldots + h_N\Delta u(k-N+NY) + e(k)\nonumber\\
+                        \ldots + h_N\Delta u(k-N+NY) + e(k)\nonumber
 \end{eqnarray}
 
 Assim, matricialmente, tem-se:
@@ -429,25 +427,26 @@ Assim, matricialmente, tem-se:
     \begin{array}{c}
         e(k)\\
         e(k)\\
-        \vdots
+        \vdots\\
         e(k)
     \end{array}
 }
 \end{equation}
 
-Para a resposta forçada, obsreva-se que, por definição, $\Delta u(k+i) = 0
-\forall NU < i < 0$, tal que $NU$ se refere ao horizonte de controle, ou seja,
-ao número de incrementos futuros a serem fornecidos à ação de controle atual.
+Para a resposta forçada, observa-se que, por definição, $\Delta u(k+i) = 0$,
+para $i \geq NU$ ou $i < 0$, sendo $NU$ o horizonte de controle, ou seja, ao
+número de incrementos futuros a serem fornecidos à ação de controle atual.
 Assim, verifica-se que:
 
 \begin{eqnarray}
-\tilde{y}_f(k+1) = h_1\Delta u(k)\nonumber\\
-\tilde{y}_f(k+2) = h_1\Delta u(k+1) + h_2\Delta u(k)\nonumber\\
-\vdots\\
-\tilde{y}_f(k+NU) = h_1\Delta u(k+NU-1) + \ldots + 
-                    h_{NU-1}\Delta u(k)\nonumber\\
-\tilde{y}_f(k+NY) = h_{NY-NU}\Delta u(k+NU) + \ldots + 
-                    h_{NY}\Delta u(k)\nonumber
+\tilde{y}_f(k+1)  & = & h_1\Delta u(k)\nonumber\\
+\tilde{y}_f(k+2)  & = & h_1\Delta u(k+1) + h_2\Delta u(k)\nonumber\\
+& \vdots & \nonumber\\
+\tilde{y}_f(k+NU) & = & h_1\Delta u(k+NU-1) + \ldots + 
+                        h_{NU-1}\Delta u(k)\nonumber\\
+& \vdots & \nonumber\\
+\tilde{y}_f(k+NY) & = & h_{NY-NU}\Delta u(k+NU) + \ldots + 
+                        h_{NY}\Delta u(k)\nonumber
 \end{eqnarray}
 
 Matricialmente, tem-se:
@@ -468,11 +467,11 @@ Matricialmente, tem-se:
     \begin{array}{c}
         \Delta u(k)\\
         \Delta u(k+1)\\
-        \vdots
+        \vdots\\
         \Delta u(k+NU)\\
     \end{array}
 }
-\Rightarrow \mb{\tilde{Y}}_f = \mb{H\Delta U}
+\Rightarrow \mb{\tilde{Y}}_f = \mb{H}\Delta\mb{U}
 \end{equation}
 
 A matriz $\mb{H}$ é conhecida como matriz dinâmica, a qual dá origem ao nome do
@@ -480,7 +479,47 @@ algoritmo. O valor pretido é então dado por:
 
 \begin{equation}\label{eq:y_pred_mat}
 \mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{\tilde{Y}}_f
-\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{H\Delta U}
+\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{H}\Delta\mb{U}
+\end{equation}
+
+Vale observar que a matriz $\mb{H}$ é constituída de $NU$ colunas obtidas a
+partir da resposta ao degrau do sistema, apropriadamente escolhidas em ordem
+decrescente.
+
+Os próximos incrementos da ação de controle são obtidos através do seguinte
+critério de minimização:
+
+\begin{equation*}
+J = \sum_{j=1}^{NY}\colchete{\hat{y}(k+j)-r(k-j)}^2 + 
+    \sum_{j=1}^{NU}\colchete{\lambda\Delta u(k+j)}^2
+\end{equation*}
+
+Uma das vantagens da utilização desse critério é que a variação de controle é
+considerada, evitando $J$ cresça indefinidamente. Fazendo uso da notação
+matricial, tem-se:
+
+\begin{eqnarray}
+J & = & \parent{\mb{\tilde{Y}}-\mb{R}}^T\parent{\mb{\tilde{Y}}-\mb{R}} + 
+        \lambda\Delta\mb{U}^T\Delta\mb{U}\nonumber\\
+& = & \parent{\mb{\tilde{Y}}_l+\mb{H}\Delta\mb{U}-\mb{R}}^T
+      \parent{\mb{\tilde{Y}}_l+\mb{H}\Delta\mb{U}-\mb{R}} + 
+      \lambda\Delta\mb{U}^T\Delta\mb{U}\nonumber
+\end{eqnarray}
+
+Fazendo $\D\frac{\partial J}{\partial\Delta\mb{U}} = 0$, tem-se:
+
+\begin{equation*}
+\frac{\partial J}{\partial\Delta\mb{U}} = 
+2\mb{H}^T\mb{H}\Delta\mb{U} + 
+2\mb{H}^T\parent{\mb{\tilde{Y}}_l-\mb{R}} +
+2\lambda\Delta\mb{U} = 0
+\end{equation*}
+
+O que leva a:
+
+\begin{equation}\label{eq:delta_u}
+\Delta\mb{U} = \parent{\mb{H}^T\mb{H}+\lambda\mb{I}}^{-1}\mb{H}^T
+               \parent{\mb{R}-\mb{\tilde{Y}}_l}
 \end{equation}
 
 \section*{Item E}
