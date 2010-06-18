@@ -1,12 +1,10 @@
 % Universidade Federal do Rio Grande do Norte
 % Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
-% Controle Avancado
-% Projeto do controlador PI para a questao 4 da lista 1
-% Autores:
-%        Anna Giselle Camara Dantas Ribeiro
-%        Cristiano Gurgel de Castro
-%        Diogo Leite Reboucas
-%        Thiago Medeiros Barros
+% Lista 1 - Questao 4 - Projeto PI
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
 
 %% Definicoes
 clear;
@@ -22,9 +20,6 @@ g_c_ma = series(g_c, g_ma);
 g_mf = feedback(g_ma,1);
 g_c_mf = feedback(g_c_ma, 1);
 
-% g_ma_delay = series(g_ma, exp(-s));
-% g_c_ma_delay = series(g_c, g_ma_delay);
-% g_c_mf_delay = feedback(ss(g_c_ma_delay), 1);
 %% Analise da funcao de transferencia
 [num, den] = tfdata(g_c_mf, 'v');
 Wn = sqrt(den(3));

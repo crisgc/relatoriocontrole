@@ -156,10 +156,10 @@ Assim, para o parâmetro $p$ da função de transferência de malha fechada
 obtida pela Eq. \ref{eq:G_MF_q1}, tem-se:
 
 \begin{eqnarray}
-S_p^{G_{\text{MF}}(s)} & = & \frac{\partial G_{\text{MF}}}{\partial p} \cdotp
+S_p^{G_{\text{MF}}}(s) & = & \frac{\partial G_{\text{MF}}}{\partial p} \cdotp
 \frac{p}{G_{\text{MF}}}\nonumber \\
-         & = & \frac{0(s^2 + ps + 9) - 9(s)}{(s^2 + ps + 9)^2} \cdotp
-               \frac{p}{\D\frac{9}{s^2 + ps + 9}}\nonumber\\
+         & = & \frac{0(s^2 + ps + 9) - 9(s)}{(s^2 + ps + 9)^{\cancel{2}}} \cdotp
+               \frac{p}{\D\frac{9}{\cancel{s^2 + ps + 9}}}\nonumber\\
          & = & - \frac{9ps}{9(s^2 + ps + 9)}\nonumber\\
          & = & - \frac{ps}{s^2 + ps + 9}\label{eq:sensib}
 \end{eqnarray}

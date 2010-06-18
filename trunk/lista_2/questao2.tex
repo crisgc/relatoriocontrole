@@ -1,6 +1,6 @@
 % Universidade Federal do Rio Grande do Norte
 % Programa de Pós-Graduação em Engenharia Elétrica e de Computação
-% Lista 1 - Questão 1
+% Lista 2 - Questão 2
 % Autores: Anna Giselle Camara Dantas Ribeiro
 %          Cristiano Gurgel de Castro
 %          Diogo Leite Reboucas
@@ -58,8 +58,8 @@ y(k) = - a_1 y(k-1) -
 O estimador de mínimos quadrados não-recursivo considera um sistema representado
 por uma equação a diferenças semelhante a Eq. \ref{eq:eq_a_dif_geral}. Segundo
 \citeasnoun{coelho:2004}, haverão $n_a + n_b + 1$ parâmetros a serem estimados
-pelo algoritmo e para determinar os valores de $a_i$, deve-se utilizar as
-medidas de entrada e saída do processo.
+pelo algoritmo e para determinar os valores de $a_i$ e $b_i$, deve-se utilizar
+as medidas de entrada e saída do processo.
 
 Assim sendo, de posse da equação generalizada dos parâmetros do sistema,
 utilizar o método dos mínimos quadrados {\it offline} consiste em excitar a
@@ -103,11 +103,11 @@ b_m
 \end{array}
 \right] \qquad
 \mb{X} = \left[
-\begin{array}{cccc}
--Y(1) & -Y(0) & u(1) & u(0)\\
--Y(2) & -Y(1) & u(2) & u(1)\\
-\vdots & \vdots & \vdots & \vdots\\
--Y(N-1) & -Y(N-n) & u(N-1) & u(N-m)
+\begin{array}{cccccc}
+-Y(0) & \ldots & -Y(1-n) & u(0) & \ldots & u(1-m)\\
+-Y(1) & \ldots & -Y(2-n) & u(1) & \ldots & u(2-m)\\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+-Y(N-1) & \ldots & -Y(N-n) & u(N-1) & \ldots & u(N-m)
 \end{array}
 \right]
 \end{equation*}
@@ -156,7 +156,7 @@ J = (\mb{Y} - \mb{X\theta})^T(\mb{Y} - \mb{X\theta})
 \left.\frac{\partial J}{\partial \theta}\right|_{\theta = \hat{\mb{\theta}}} = 0
 \end{equation*}
 
-Considerando que:
+\citeasnoun{brooks:2005} afirma que:
 
 % TODO: colocar de onde tirou essa equação
 \begin{equation*}
@@ -184,14 +184,16 @@ Considerando que:
 & = & 2 \mb{\theta}^T\mb{X}^T\mb{X} -2 \mb{Y}^T\mb{X}\label{eq:deduc}
 \end{eqnarray}
 
-Como $\D\frac{\partial J}{\partial \mb{\theta}} = 0$ (escalar), então,
-pode-se transpor a Eq. \ref{eq:deduc}, de tal forma que:
+Como $\left.\D\frac{\partial J}{\partial \mb{\theta}}\right|_{\theta =
+\hat{\theta}} = \mb{0}$:
 
 \begin{eqnarray}
-\frac{\partial J}{\partial \mb{\theta}} & = & 
-2\mb{X}^T(\mb{\theta}^T\mb{X}^T)^T - 2\mb{X}^T\mb{Y}\nonumber\\
-0 & = & 2\mb{X}^T(\mb{X\theta}) - 2\mb{X}^T\mb{Y}\nonumber\\
-0 & = & 2\mb{X}^T\mb{X\theta} - 2\mb{X}^T\mb{Y}
+\cancel{2}\mb{Y}^T\mb{X} & = & \cancel{2}\mb{\theta}^T\mb{X}^T\mb{X}\nonumber\\
+\parent{\mb{Y}^T\mb{X}}^T & = & 
+\parent{\mb{\theta}^T\mb{X}^T\mb{X}}^T\nonumber\\
+\mb{Y}^T\mb{X} & = & \mb{\theta}^T\mb{X}^T\mb{X}\nonumber\\
+\mb{X}^T\mb{Y} & = & \mb{X}^T\parent{\mb{\theta}^T\mb{X}^T}^T\nonumber\\
+\mb{X}^T\mb{Y} & = & \mb{X}^T\mb{X\theta}\nonumber
 \end{eqnarray}
 
 Substituindo $\mb{\theta}$ por $\hat{\mb{\theta}}$ e isolando
@@ -204,12 +206,12 @@ $\hat{\mb{\theta}}$, tem-se que:
 Algumas observações podem ser feitas acerca da Eq. \ref{eq:theta_est}:
 
 \begin{itemize}
-    \item A solução existirá quando $(\mb{X}^T\mb{X})^{-1}$ for não singular
-    \item A sequência escolhida das entradas $u(k)$ deverá garantir essa
-          não singularidade
-    \item Quando não há a presença de ruídos $\hat{\mb{\theta}}$ pode ser
-          encontrado em $n+m$ passos
-    \item A matriz $\mb{X}$ cresce na medida em que $N$ cresce
+    \item a solução existirá quando $(\mb{X}^T\mb{X})^{-1}$ for não singular;
+    \item a sequência escolhida das entradas $u(k)$ deverá garantir essa
+          não singularidade;
+    \item quando não há a presença de ruídos $\hat{\mb{\theta}}$ pode ser
+          encontrado em $n+m$ passos;
+    \item a matriz $\mb{X}$ cresce na medida em que $N$ cresce.
 \end{itemize}
 
 O algoritmo desenvolvido leva em consideração uma variação dos parâmetros
