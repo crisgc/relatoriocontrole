@@ -53,9 +53,8 @@ G(z) = (1 - z^{-1})
 
 \noindent em que $\zadeh$ corresponde à {\it Transformada Z}, $\ilaplace$ à {\it
 Transformada Inversa de Laplace} e, para $t = nT$, $T$ corresponde ao período de
-amostragem e $z = e^{-sT}$.
-
-Então, para a função de transferência $G(s)$ dada no enunciado:
+amostragem e $z = e^{-sT}$. Então, para a função de transferência $G(s)$ dada no
+enunciado:
 
 \begin{equation}\label{eq:Gs_s}
 \frac{G(s)}{s} = \frac{0.5}{s(s+0.5)(s+1)}
@@ -516,6 +515,11 @@ Fazendo $\D\frac{\partial J}{\partial\Delta\mb{U}} = 0$, tem-se:
 \end{equation*}
 
 O que leva a:
+
+\begin{equation*}
+\parent{2\mb{H}^T\mb{H} + 2\lambda \mb{I}}\Delta\mb{U} = -
+2\mb{H}^T\parent{\mb{\tilde{Y}}_l-\mb{R}} \\
+\end{equation*}
 
 \begin{equation}\label{eq:delta_u}
 \Delta\mb{U} = \parent{\mb{H}^T\mb{H}+\lambda\mb{I}}^{-1}\mb{H}^T
