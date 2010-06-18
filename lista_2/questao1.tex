@@ -78,7 +78,7 @@ C & = & \left.\frac{0.5}{s(s+0.5)}\right|_{s = -1} = \frac{0.5}{0.5} =
                                                      1\nonumber
 \end{eqnarray}
 
-Então, aplicando então a transformada inversa de Laplace, tem-se que:
+Portanto, aplicando então a transformada inversa de Laplace, tem-se que:
 
 \begin{eqnarray}
 \ilaplace\colchete{\frac{G(s)}{s}}
@@ -130,7 +130,7 @@ G(z) & = & \frac{z-1}{z-1} -
 
 Sabendo que a função de transferência de um sistema é definida como sendo a {\it
 Transformada de Laplace} da resposta ao impulso com condições iniciais nulas, e
-que seu equivalente em $\zadeh$ possui as mesmas características, então:
+que seu equivalente em $\zadeh$ possui características semelhantes, então:
 
 \begin{eqnarray}
 G(z) = \frac{Y(z)}{U(z)} & = & \frac{0.0091z + 0.0082}
@@ -194,19 +194,30 @@ coeficientes a um valor $N$. Tal modelo, também conhecido como modelo de
 resposta ao degrau truncada, tem fundamentação convolutiva para relacionar a
 entrada com a saída do sistema. Vale observar que nesse modelo o ruído não é
 levado em consideração. A saída do processo no modelo FSR é dada pela Eq.
-\ref{eq:saida_fsr}
+\ref{eq:saida_fsr}:
 
 \begin{equation}\label{eq:saida_fsr}
 y(k) = \sum_{i=1}^N h_i\Delta u(k-i)
 \end{equation}
 
-Para o valor de $N = 10$ dado no enunciado da questão, tem-se
+Para o valor de $N = 10$ dado no enunciado da questão, tem-se:
 
 \begin{eqnarray}
 y(10) & = & h_1\Delta u(9) + h_2\Delta u(8) + h_3\Delta u(7) + h_4\Delta u(6) +
             h_5\Delta u(5) + \nonumber\\ 
       & + & h_6\Delta u(4) + h_7\Delta u(3) + h_8\Delta u(2) + h_9\Delta u(1) + 
             h_{10}\Delta u(0)\nonumber
+\end{eqnarray}
+
+\noindent no qual os valores de $h_i$ foram obtidos a partir da simulação de
+$G(s)$ utilizando a função {\tt step} em conjunto com o {\it toolbox}
+de ajuste de curvas, denominado {\tt cftool}, ambos do \Matlab:
+
+\begin{eqnarray}
+h_1  = 0.0091 \quad h_2  = 0.0329 \quad h_3  = 0.0672 \quad h_4  = 0.1087 \quad
+h_5  = 0.1548\nonumber\\
+h_6  = 0.2036 \quad h_7  = 0.2534 \quad h_8  = 0.3032 \quad h_9  = 0.3522 \quad
+h_{10} = 0.3996\nonumber
 \end{eqnarray}
 
 Considerando $\hat{y}(k)$ como a saída dada pela Eq. \ref{eq:yk}, então:
@@ -234,7 +245,9 @@ y(10) = \hat{y}(10)u(0) =
 \section*{Item C}
 Para efeitos comparativos foi utilizada uma entrada degrau, cujos resultados
 podem ser observados nas Figs. \ref{fig:item_c_10} a \ref{fig:item_c_100} para
-valores de $N = 10\text{,}\ 25\text{,}\ 50\ \text{e}\ 100$.
+valores de $N = 10\text{,}\ 25\text{,}\ 50\ \text{e}\ 100$. É importante
+salientar que o valor de saída utilizado para efeito de comparação foi obtido a
+partir da planta discretizada (e não da planta contínua), conforme Item A.
 
 \begin{figure}[H]
 \centering
@@ -275,14 +288,13 @@ ser encontrado no Apêndice \ref{ap:q1_c}.
 O controlador DMC ({\it Dynamic Matrix Controller}) foi desenvolvido no final da
 década de 70 por dois engenheiros da {\it Shell Oil Corporation}. O algoritmo,
 desenvolvido em 1979 de maneira não adaptativa e sem restrições, foi modificado
-em 1980 de maneira que permitisse a manipulação de restrições.
-
-Anos depois foram propostas diversas modificações para esse algoritmo ao longo
-dos anos de maneira a melhorar suas características. Dentre elas, pode-se citar
-as implementações com tratamento de restrições e através de espaço de estados.
-O sucesso do algoritmo hoje se deve também aos produtos comerciais desenvolvidos
-que possuem funcionalidades como a identificação de modelos e a otimização
-global de plantas.
+em 1980 de maneira que permitisse a manipulação de restrições. Anos depois foram
+propostas diversas modificações para esse algoritmo ao longo dos anos de maneira
+a melhorar suas características. Dentre elas, pode-se citar as implementações
+com tratamento de restrições e através de espaço de estados.  O sucesso do
+algoritmo hoje se deve também aos produtos comerciais desenvolvidos que possuem
+funcionalidades como a identificação de modelos e a otimização global de
+plantas.
 
 Esse controlador utiliza o modelo de {\it resposta ao degrau truncada} (FSR),
 fazendo uso de diversos parâmetros com o intuito de garantir uma boa qualidade
@@ -305,11 +317,12 @@ y(k) = \sum_{i=1}^N h_i\Delta u(k-i) + e(k)
 \end{equation}
 
 Baseado no modelo descrito pela Eq. \ref{eq:fsr_erro}, calcula-se um valor
-aproximado para $y(k)$ que será diferente da saída real devido ao erro de
-modelagem e a um possível ruído a ser inserido no processo de medição: 
+aproximado para $y(k)$, denominado $\tilde{y}(k)$ que será diferente da saída
+real devido ao erro de modelagem e a um possível ruído a ser inserido no
+processo de medição: 
 
 \begin{equation}\label{eq:y_til}
-\tilde{y}(k) \approx \sum_{i=1}^N h_i\Delta u(k-i)
+y(k) \approx \tilde{y}(k) = \sum_{i=1}^N h_i\Delta u(k-i)
 \end{equation}
 
 O erro inerente ao truncamento e ao ruído de medição pode ser calculado da
@@ -330,7 +343,8 @@ no instante $k$. Assim sendo, para o instante $k+j$, tem-se:
 
 Uma vez que não é possível estimar o valor futuro do erro de predição a partir
 do modelo, intrinsecamente determinístico, o algoritmo supõe que os erros das
-$j$-ésimas predições à frente serão iguais ao erro calculado no instante atual:
+$j$-ésimas predições à frente serão iguais ao erro calculado no instante atual,
+ou seja, $\tilde{e}(k+j) = e(k)$:
 
 \begin{equation}\label{eq:y_pred}
 \tilde{y}(k+j) = \sum_{i=1}^j h_i\Delta u(k+j-i) +
@@ -391,7 +405,7 @@ Na qual a resposta livre corresponde as parcelas:
 \begin{eqnarray}
 \tilde{y}_l(k+1)  & = & h_2\Delta u(k-1) + h_3\Delta u(k-2) + \ldots +
                         h_N\Delta u(k-N+1) + e(k)\nonumber\\
-\tilde{y}_l(k+1)  & = & h_3\Delta u(k-1) + h_4\Delta u(k-2) + \ldots +
+\tilde{y}_l(k+2)  & = & h_3\Delta u(k-1) + h_4\Delta u(k-2) + \ldots +
                         h_N\Delta u(k-N+2) + e(k)\nonumber\\
 & \vdots & \nonumber\\
 \tilde{y}_l(k+NY) & = & h_{NY+1}\Delta u(k-1) + h_{NY+2}\Delta u(k-2) + 
@@ -430,6 +444,7 @@ Assim, matricialmente, tem-se:
         e(k)
     \end{array}
 }
+\Rightarrow\mb{\tilde{Y}}_l = \mb{H}_l\Delta\mb{U}_l + \mb{e}
 \end{equation}
 
 Para a resposta forçada, observa-se que, por definição, $\Delta u(k+i) = 0$,
@@ -458,7 +473,7 @@ Matricialmente, tem-se:
         h_1 & 0 & \ldots & 0\\
         h_2 & h_1 & \ldots & 0\\
         \vdots & \vdots & \ddots & \vdots\\
-        h_{NY} & h_{NY-1} & \ldots & h_1
+        h_{NY} & h_{NY-1} & \ldots & h_{NY-NU}
     \end{array}
 }
 \colchete
@@ -477,11 +492,11 @@ A matriz $\mb{H}$ é conhecida como matriz dinâmica, a qual dá origem ao nome 
 algoritmo. O valor pretido é então dado por:
 
 \begin{equation}\label{eq:y_pred_mat}
-\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{\tilde{Y}}_f
+\mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{\tilde{Y}}_f\quad\Rightarrow\quad
 \mb{\tilde{Y}} = \mb{\tilde{Y}}_l + \mb{H}\Delta\mb{U}
 \end{equation}
 
-Vale observar que a matriz $\mb{H}$ é constituída de $NU$ colunas obtidas a
+Vale observar que a matriz $\mb{H}$ é constituída de $NU+1$ colunas obtidas a
 partir da resposta ao degrau do sistema, apropriadamente escolhidas em ordem
 decrescente.
 
@@ -523,7 +538,138 @@ O que leva a:
 
 \begin{equation}\label{eq:delta_u}
 \Delta\mb{U} = \parent{\mb{H}^T\mb{H}+\lambda\mb{I}}^{-1}\mb{H}^T
-               \parent{\mb{R}-\mb{\tilde{Y}}_l}
+               \parent{\mb{R}-\mb{\tilde{Y}}_l} = 
+               \parent{\mb{H}^T\mb{H}+\lambda\mb{I}}^{-1}\mb{H}^T
+               \parent{\mb{R}-\mb{H}_l\Delta\mb{U}_l+\mb{e}}
 \end{equation}
 
+Em que:
+
+\begin{equation*}
+N = 10 \qquad NU = 5 \qquad NY = 5 \qquad \lambda = 0.8
+\end{equation*}
+
+\begin{equation*}
+\mb{H} = 
+\colchete
+{
+\begin{array}{ccccc}
+0.0091 &      0 &      0 &      0 &      0\\
+0.0329 & 0.0091 &      0 &      0 &      0\\
+0.0672 & 0.0329 & 0.0091 &      0 &      0\\
+0.1087 & 0.0672 & 0.0329 & 0.0091 &      0\\
+0.1548 & 0.1087 & 0.0672 & 0.0329 & 0.0091
+\end{array}
+}
+\end{equation*}
+
+\begin{equation*}
+\mb{\tilde{H}}_l = 
+\colchete
+{
+\begin{array}{ccccccccc}
+0.0238 & 0.0343 & 0.0415 & 0.0461 & 0.0488 & 0.0499 & 0.0498 & 0.0489 & 0.0474\\
+0.0581 & 0.0758 & 0.0876 & 0.0949 & 0.0986 & 0.0997 & 0.0987 & 0.0963 & 0.0474\\
+0.0996 & 0.1220 & 0.1364 & 0.1447 & 0.1484 & 0.1486 & 0.1462 & 0.0963 & 0.0474\\
+0.1458 & 0.1707 & 0.1863 & 0.1945 & 0.1973 & 0.1960 & 0.1462 & 0.0963 & 0.0474\\
+0.1945 & 0.2206 & 0.2361 & 0.2435 & 0.2448 & 0.1960 & 0.1462 & 0.0963 & 0.0474
+\end{array}
+}
+\end{equation*}
+
 \section*{Item E}
+Os resultados obtidos a partir da simulação podem ser observados nas Figs.
+\ref{fig:N10NY5NU5L08} a \ref{fig:N50NY10NU10L1}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N10NY5NU5L08}
+    \caption{Resultado para $N = 10$, $NY = 5$, $NU = 5$ e $\lambda = 0.8$.}
+    \label{fig:N10NY5NU5L08}
+\end{figure}
+
+Observa-se na Fig. \ref{fig:N10NY5NU5L08} que o controle do sistema não obteve
+um resultado satisfatório, já que apresenta um comportamento excessivamente
+oscilatório. Esse comportamento deve-se ao fato de que, para $N=10$, a saída
+degrau truncada chegava ao valor máximo de 0.3996, muito aquém do valor 1 do
+degrau de entrada, fazendo com que boa parte da dinâmica do sistema não fosse
+bem representada pelo modelo FSR.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY5NU5L08}
+    \caption{Resultado para $N = 50$, $NY = 5$, $NU = 5$ e $\lambda = 0.8$.}
+    \label{fig:N50NY5NU5L08}
+\end{figure}
+
+Na Fig. \ref{fig:N50NY5NU5L08}, ao aumentar o valor de $N$ para 50, é possível
+observar que a dinâmica do sistema à resposta ao degrau atingia o valor máximo
+de 0.9866, o que corresponde a uma melhora considerável uma vez que a dinâmica
+do sistema agora está bem representada. Logo, a predição utilizada para gerar o
+sinal de controle é melhor o que consequentemente gera um melhor sinal de
+controle.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY10NU5L08}
+    \caption{Resultado para $N = 50$, $NY = 10$, $NU = 5$ e $\lambda = 0.8$.}
+    \label{fig:N50NY10NU5L08}
+\end{figure}
+
+Ao configurar $NY=10$, observa-se que haverá uma maior quantidade de predições
+da saída utilizada na geração do sinal de controle. Sendo assim, o sinal de
+controle gerado é mais consistente e torna o sistema menos oscilatório, como
+pode ser observado na Fig. \ref{fig:N50NY10NU5L08}, apresentando apenas um
+pequeno {\it overshoot}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY50NU5L08}
+    \caption{Resultado para $N = 50$, $NY = 50$, $NU = 5$ e $\lambda = 0.8$.}
+    \label{fig:N50NY50NU5L08}
+\end{figure}
+
+Ao se aumentar muito o valor de $NY$, por exemplo para 50, as respostas futuras
+utilizadas para gerar o sinal de controle se tornam inadequadas, pois estamos
+utilizando como referência uma onda quadrada. Assim, a mudança que acontecerá na
+amplitude no sinal num futuro muito distante já é levada em consideração,
+gerando um sinal inadequado de controle, como pode ser observado na Fig.
+\ref{fig:N50NY50NU5L08}.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY10NU1L07}
+    \caption{Resultado para $N = 50$, $NY = 10$, $NU = 1$ e $\lambda = 0.8$.}
+    \label{fig:N50NY10NU1L07}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY10NU10L08}
+    \caption{Resultado para $N = 50$, $NY = 10$, $NU = 10$ e $\lambda = 0.8$.}
+    \label{fig:N50NY10NU10L08}
+\end{figure}
+
+As Figs. \ref{fig:N50NY10NU1L07} e \ref{fig:N50NY10NU10L08} representam como o
+sistema responde ao alterar o $NU$.  Percebe-se que ao aumentar o $NU$ o {\it
+overshoot} também aumenta.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY10NU10L0}
+    \caption{Resultado para $N = 50$, $NY = 10$, $NU = 10$ e $\lambda = 0$.}
+    \label{fig:N50NY10NU10L0}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=0.95\textwidth]{imgs/questao1/N50NY10NU10L1}
+    \caption{Resultado para $N = 50$, $NY = 10$, $NU = 10$ e $\lambda = 1$.}
+    \label{fig:N50NY10NU10L1}
+\end{figure}
+
+Nas Figs. \ref{fig:N50NY10NU10L0} e \ref{fig:N50NY10NU10L1} nota-se que ao
+diminuir a penalidade da variação do sinal de controle, tal sinal se torna mais
+agressivo, chegando inclusive a desestabilizar a planta. Quando aumenta-se a
+penalidade, o sinal de controle se torna mais suave, entretanto a resposta do
+sistema fica mais lenta.

@@ -110,13 +110,16 @@ A partir das Eqs. \ref{eq:y} e \ref{eq:theta_1}, obtém-se as Eqs.
 parâmetros $\theta_1$, $\theta_2$ e $\theta_3$:
 
 \begin{eqnarray}
-\frac{\partial \epsilon}{\partial \theta_1} = \frac{\partial y}{\partial \theta_1} & = &
+\frac{\partial \epsilon}{\partial \theta_1} = \frac{\partial y}
+                                                   {\partial \theta_1} & = &
     \frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ r 
     \label{eq:dtheta_1}\\
-\frac{\partial \epsilon}{\partial \theta_2} = \frac{\partial y}{\partial \theta_2}  & = &
+\frac{\partial \epsilon}{\partial \theta_2} = \frac{\partial y}
+                                                   {\partial \theta_2}  & = &
     -\frac{cp}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
     \label{eq:dtheta_2}\\
-\frac{\partial \epsilon}{\partial \theta_3} = \frac{\partial y}{\partial \theta_3}  & = &
+\frac{\partial \epsilon}{\partial \theta_3} = \frac{\partial y}
+                                                   {\partial \theta_3}  & = &
     -\frac{c}{p^2 + (a + c\theta_2)p + (b + c\theta_3)}\ y 
     \label{eq:dtheta_3}
 \end{eqnarray}
@@ -134,14 +137,14 @@ p^2 +
 \end{eqnarray}
 
 Assim, pela Eq. \ref{eq:J}, obtém-se as Eqs. \ref{eq:dtheta_1dt} a
-\ref{eq:dtheta_3dt}, em que o fator $\frac{c}{b_m}$ está incluso em $\gamma$:
+\ref{eq:dtheta_3dt}, nas quais o fator $\frac{c}{b_m}$ está incluso em $\gamma$:
 
 \begin{eqnarray}
 \frac{d\theta_1}{dt} & = & -\gamma\ \left(\frac{b_m}
                                              {p^2 + a_mp + b_m}\ r
                                   \right)\epsilon \label{eq:dtheta_1dt}\\
-\frac{d\theta_2}{dt} & = & \gamma\ \left(\frac{b_m p}
-                                            {p^2 + a_mp + b_m}\ y
+\frac{d\theta_2}{dt} & = & \gamma\ \left(\frac{b_m}
+                                            {p^2 + a_mp + b_m}\ py
                                  \right)\epsilon \label{eq:dtheta_2dt}\\
 \frac{d\theta_3}{dt} & = & \gamma\ \left(\frac{b_m}
                                           {p^2 + a_mp + b_m}\ y

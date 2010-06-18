@@ -1,6 +1,6 @@
 % Universidade Federal do Rio Grande do Norte
 % Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
-% Lista 1 - Questao 1
+% Lista 1 - Questao 2
 % Autores: Anna Giselle Camara Dantas Ribeiro
 %          Cristiano Gurgel de Castro
 %          Diogo Leite Reboucas
@@ -49,19 +49,22 @@ O lugar geométrico das raízes para esse sistema é mostrado na Fig.
 \end{figure}
 
 % TODO(crisgc): colocar diagrama de bloco com a malha fechada
-Inicialmente a malha foi fechada e sua robustez foi testada segundo os
-polinômios de Kharitonov. A função de transferência em malha fechada é mostrada
-abaixo:
+Inicialmente a malha foi fechada, conforme Eq. \ref{eq:G_MF}, e sua robustez foi
+testada segundo os polinômios de Kharitonov. A função de transferência em malha
+fechada é mostrada abaixo:
 
-\begin{flalign}
-G_{\text{MF}}(s) & = \frac{s+r}{(s+p)(s+q) + s+r} =
+\begin{equation*}
+G_{\text{MF}}(s) = \frac{s+r}{(s+p)(s+q) + s+r} =
 \frac{s+r}{s^{2}+\underbrace{(p+q+1)}_{a_1}s +
-\underbrace{pq+r}_{a_0}} \nonumber \\
-\vmedio{G_{\text{MF}}}(s) & = {\frac{1.5+s}{3,5+5.5s+s^{2}}} =
-\frac{1.5+s}{(s+4.7656)(s+0.7344)} \quad
-\bigtriangleup
-\quad \text{Para os valores médios} \label{eq:q2:gmf}
-\end{flalign}
+\underbrace{pq+r}_{a_0}}
+\end{equation*}
+
+Para os valores médios:
+
+\begin{equation}
+\vmedio{G_{\text{MF}}}(s) = {\frac{1.5+s}{3,5+5.5s+s^{2}}} =
+\frac{1.5+s}{(s+4.7656)(s+0.7344)}
+\end{equation}
 
 Analisando a função de transferência de malha fechada, tem-se que:
 
@@ -115,35 +118,39 @@ entrada em degrau. A constante de erro de posição do sistema que foi obtida é
 dada por $K_{p} = G(0) = 0.75$, o que resulta no erro de regime previamente
 calculado. 
 
-Adotando uma tolerância do erro de regime de aproximadamente $1\%$, foi
-projetado um compensador de modo que $K'_p = 100$. Uma vez que o controlador em
-atraso de fase possui função de transferência dada pela Eq. \ref{eq:comp_atras},
+Adotando uma tolerância do erro de $1\%$, foi projetado um compensador de modo
+que $K'_p = 100$. Uma vez que o controlador em atraso de fase possui função de
+transferência dada pela Eq. \ref{eq:comp_atras},
 
 % TODO(crisgc): Colocar a figura da resposta em malha fechada simples
 \begin{flalign}
-G_c(s) & = k_c \frac{s+z_c}{s+p_c} \quad \text{onde} \quad |z_c| > |p_c|
+G_c(s) & = k_c \frac{s+z_c}{s+p_c} \quad \text{em que} \quad |z_c| > |p_c|
 \label{eq:comp_atras}
 \end{flalign}
 
 \noindent para obter a constante de erro desejada tem-se então que:
 
-\begin{flalign}
-\underbrace{K'_{p}}_{100} & = G_c(0)G(0) = G_c(0)K_{p} = k_c \frac{z_c}{p_c}
-\underbrace{K_{p}}_{0.75} \nonumber \\
-k_c \frac{z_c}{p_c}& = \frac{100}{0.75} = \frac{400}{3} \approx 133.333
-\label{eq:q2:comp_atraso}
-\end{flalign}
+\begin{equation*}
+K'_{p} = G_c(0)G(0) = G_c(0)K_{p} = k_c \frac{z_c}{p_c}K_p
+\end{equation*}
 
-Como o polo dominante do sistema de malha aberta está localizado em $-0.5$ (Eq.
-\ref{eq:q2:gma}) o zero do controlador foi alocado à sua direita, para que a
-interferência no regime transitório não seja muito significante. Fez-se então
-$z_c = 0.3$, e, optando em um primeiro momento por não adicionar o ganho no
-controlador de tal maneira que $k_c = 1$, o polo, calculado a partir de
-\ref{eq:q2:comp_atraso} foi então $p_c = 0.0022$. 
+Assim sendo, como $K'_{p} = 100$ e $K_p = 0.75$, então:
+
+\begin{equation}
+k_c \frac{z_c}{p_c} = \frac{100}{0.75} = \frac{400}{3} \approx 133.333
+\label{eq:q2:comp_atraso}
+\end{equation}
+
+Como o polo dominante do sistema de malha aberta está localizado em $-0.5$,
+conforme Eq. \ref{eq:q2:gma}, o zero do controlador foi alocado à sua direita,
+para que a interferência no regime transitório não seja muito significante.
+Fez-se então $z_c = 0.3$, e, optando em um primeiro momento por não adicionar o
+ganho no controlador de tal maneira que $k_c = 1$, o polo, calculado a partir da
+Eq. \ref{eq:q2:comp_atraso} foi $p_c = 0.0022$. 
 
 A função de transferência em malha fechada do sistema mostrado na Fig.
 \ref{fig:q2:malha_comp} pode ser obtida através da redução do diagrama de
-blocos.
+blocos. Assim sendo:
 
 \begin{figure}[htb]
 \centering
@@ -151,8 +158,6 @@ blocos.
 \caption{Diagrama de blocos para o sistema com o compensador.}
 \label{fig:q2:malha_comp}
 \end{figure}
-
-Assim sendo:
 
 \begin{flalign}
 G_\text{cMF}(s) & = \frac{G_c(s)G(s)}{1 + G_c(s)G(s)} =
@@ -168,9 +173,9 @@ Os quatro polinômios obtidos para os valores calculados do controlador, a saber
 $z_c = 0.3$, $k_c = 1$ e $p_c = 0.0022$, foram:
 
 \begin{flalign*}
-q_1(s) & = 0.3+1.3066s+7.0022s^{2}+s^{3} \\
-q_2(s) & = 0.3+7.3132s+7.0022s^{2}+s^{3} \\
-q_3(s) & = 0.611+1.3066s+5.0022s^{2}+s^{3} \\
+q_1(s) & = 0.3+1.3066s+7.0022s^{2}+s^{3}\\
+q_2(s) & = 0.3+7.3132s+7.0022s^{2}+s^{3}\\
+q_3(s) & = 0.611+1.3066s+5.0022s^{2}+s^{3}\\
 q_4(s) & = 0.611+7.3132s+5.0022s^{2}+s^{3}
 \end{flalign*}
 
@@ -178,23 +183,34 @@ q_4(s) & = 0.611+7.3132s+5.0022s^{2}+s^{3}
 se refere a um polinômio e cada linha corresponde a uma raiz do respectivo
 polinômio:
 
-\begin{flalign*}
-\begin{matrix}
-q_1(s) & q_2(s) & q_3(s) & q_4(s) \cr
--0.093+0.188i&-0.043&-0.124+0.336i&-0.089\cr
--0.093-0.188i&-1.223&-0.124-0.336i&-2.457+0.917i\cr
--6.817&-5.736&-4.754&-2.457-0.917i\cr 
-\end{matrix}
-\end{flalign*}
+\begin{table}[htb]
+\centering
+\caption{Raízes obtidas para os polinômios de Kharitonov.}
+\vspace{0.25cm}
+\label{tab:raizes_kharitonov_1}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Raízes & $q_1(s)$      & $q_2(s)$ & $q_3(s)$      & $q_4(s)$\\
+\hline
+\hline
+$s_1$  & -0.093+0.188i &-0.043    & -0.124+0.336i & -0.089\\
+\hline
+$s_2$  & -0.093-0.188i & -1.223   & -0.124-0.336i & -2.457+0.917i\\
+\hline
+$s_3$  & -6.817        & -5.736   & -4.754        & -2.457-0.917i\\
+\hline
+\end{tabular}
+\end{table}
 
-Logo, pode-se perceber que o controlador desenvolvido é robusto para a faixa
+Logo, percebe-se que o controlador desenvolvido é robusto para a faixa
 estabelecida de variação dos parâmetros. O resultado da resposta ao degrau com o
-controlador pode ser visualizada na Fig. \ref{fig:q2:resposta_gcomp1}.
+controlador pode ser visualizado na Fig. \ref{fig:q2:resposta_gcomp1}.
  
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.95\textwidth]{imgs/questao2/resposta_gcomp1}
-\caption{Resposta ao degrau para o controlador $G_c(s) = \frac{s+0,3}{s+0,0022}$}
+\caption{Resposta ao degrau para o controlador $G_c(s) = \frac{0.3+s}
+                                                         {0.0022+s}$}
 \label{fig:q2:resposta_gcomp1}
 \end{figure}
 
@@ -218,7 +234,8 @@ pela Fig. \ref{fig:q2:resposta_gcomp2}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{imgs/questao2/resposta_gcomp2}
-\caption{Reposta do sistema com o controlador $G_c(s) = 20\frac{s+0,3}{s+0,0022}$ }
+\caption{Reposta do sistema com o controlador $G_c(s) = 20\frac{0.3+s}
+                                                               {0.0022+s}$}
 \label{fig:q2:resposta_gcomp2}
 \end{figure}
 
@@ -233,15 +250,27 @@ q_3 & = 0.611+26.0066s+24.0022s^{2}+s^{3} \\
   q_4 & = 0.611+51.0132s+24.0022s^{2}+s^{3}
 \end{flalign*}
 
-\noindent e as suas raízes:
+\noindent cujas raízes são dadas pela Tab. \ref{tab:raizes_kharitonov_2}.
 
-\begin{flalign*}
-\begin{matrix}
-q_1(s) & q_2(s) & q_3(s) & q_4(s) \cr
--0.012&-0.006&-0.024&-0.012\cr -1.03&-2.131&-1.112&-2.343\cr
--24.961&-23.865&-22.866&-21.647\cr 
-\end{matrix}
-\end{flalign*}
+\begin{table}[htb]
+\centering
+\caption{Raízes obtidas para os polinômios de Kharitonov para o novo valor de
+$k_c$.}
+\vspace{0.25cm}
+\label{tab:raizes_kharitonov_2}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Raízes & $q_1(s)$ & $q_2(s)$ & $q_3(s)$ & $q_4(s)$\\
+\hline
+\hline
+$s_1$  & -0.012   &-0.006    &-0.024    & -0.012\\
+\hline
+$s_2$  & -1.03    &-2.131    &-1.112    & -2.343\\
+\hline
+$s_3$  & -24.961  &-23.865   &-22.866   & -21.647\\ 
+\hline
+\end{tabular}
+\end{table}
 
 Uma vez que o sistema é estável na faixa de variação dos parâmetros de $G(s)$, o
 controle é robusto. Como a resposta de regime transitório e permanente é
@@ -252,6 +281,15 @@ projetado é, portanto:
 \begin{flalign*}
 G_c(s) = 20\frac{s+0.3}{s+0.0022}
 \end{flalign*}
+
+Assim, a equação final do sistema com o controlador é dada por:
+
+\begin{equation}\label{eq:gmf_final}
+\vmedio{G_{MF}} = \vmedio{G}G_c = 
+                  \frac{1.5+s}{2+4.5s+s^2}\cdotp
+                  20\frac{0.3+s}{0.0022+s} = 
+                  \frac{9+36s+20s^2}{0.0044 + 2.0099s + 4.5022s^2 + s^3}
+\end{equation}
 
 Os {\it scripts} do \Matlab desenvolvidos para a resolução dessa questão podem
 ser encontrados no Apêndices \ref{ap:cod_q2_kharitonov_a} a

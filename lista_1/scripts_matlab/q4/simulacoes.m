@@ -1,12 +1,10 @@
 % Universidade Federal do Rio Grande do Norte
 % Programa de Pos-Graduacao em Engenharia Eletrica e de Computacao
-% Controle Avancado
-% Projeto do controlador PI para a questao 4 da lista 1
-% Autores:
-%        Anna Giselle Camara Dantas Ribeiro
-%        Cristiano Gurgel de Castro
-%        Diogo Leite Reboucas
-%        Thiago Medeiros Barros
+% Lista 1 - Questao 4 - Simulacoes
+% Autores: Anna Giselle Camara Dantas Ribeiro
+%          Cristiano Gurgel de Castro
+%          Diogo Leite Reboucas
+%          Thiago Medeiros Barros
 
 %% Limpando o workspace
 clear;
